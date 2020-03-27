@@ -1,0 +1,224 @@
+
+	<!--코어-->
+	<!--@import(/_sp/core.html)-->
+
+	<!--푸터-->
+	<!--@css(/_sp/apps/layout/footer/footer-3/footer.css)-->
+	<!--@js(/_sp/apps/layout/footer/footer-3/footer.js)-->
+	<div id="sp-footer">
+
+		<!--디자인-->
+		<div id="sp-footer-design-3" class="sp-box" module="Layout_footer">
+
+			<!--하단 공통슬라이더-->
+			<!--SLICK:v1.12.4
+			<!--css(/_sp/apps/addon/slick/slick.css)
+			<!--js(/_sp/apps/addon/slick/slick.js)
+
+			<div class="sp-footer-slider">
+				<div class="sp-slider" data-initialslide="0" data-autoplayspeed="15000" data-slidestoshow="4" data-variablewidth="300" data-infinite="true" data-centermode="true" data-centerpadding="100" data-speed="500" arrows="blk-h-m" arrowsArea="h-in-46" arrowfix="true" dots="circle-m" dotsArea="out-b-c" between="20">
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_1.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_2.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_3.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_4.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_5.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_6.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_7.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_8.png"></div>
+				</div>
+			</div><!--//여기까지-->
+			<!--
+			<div class="sp-footer-instagram">
+
+					<!--module="instagramwidget_display_1" 는 위젯리스트중 적용하고자 하는 위젯의 코드로 변경하여 사용하시면 됩니다.
+
+				<div module="instagramwidget_display_1" class="widget {$sWidgetClass}" style="{$sWidgetStyle}">
+					<!--@css(/apps/instagramwidget/skin1/skin1.css--)
+					<h2><a target="_blank" class="widget-title">{$sWidgetTitle}</a></h2>
+					<strong class="idTag {$sIdTagClass}">
+						<a target="_blank" class="widget-id-tag" href="{$sIdTagLink}">{$sIdTag}</a>
+						<a target="_blank" class="widget-id-tag" href="{$sIdTagLink}">{$sIdTag}</a>
+					</strong>
+					<div class="thumb {$sThumbClass}" style="{$sThumbStyle}"></div>
+				</div>
+			</div>-->
+
+			<div class="sp-footer-content">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li>
+
+						<h3>cs center</h3>
+						<h2>{$phone}</h2>
+						<p class="sp-footer-content-runtime">{$runtime}</p>
+						<div class="sp-btn-group sp-left mgt1" grid="0">
+							<!--마이페이지-->
+							<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+							<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+							<a href="#none" mypagemain data-url="/_sp/apps/module/mypage/mypage_main.html" class="sp-btn" theme="my" scale="small" change="list">M Y</a>
+							<a href="/board/index.html" class="sp-btn" theme="white" scale="small" change="right">고객센터</a>
+						</div>
+
+					</li>
+					<li>
+
+						<h3>bank info</h3>
+						<div class="sp-bank">
+							<!--인터넷 뱅킹-->
+							<!--@css(/_sp/apps/addon/banklink/banklink.css)-->
+							<!--@js(/_sp/apps/addon/banklink/banklink.js)-->
+							<p banklink data-url="/_sp/apps/addon/banklink/banklink.html"><span>인터넷뱅킹 바로가기</span></p>
+						</div>
+						<!--은행정보-->
+						<div class="sp-footer-content-bank">
+							<!--@import(/_sp/html/bank_information.html)-->
+						</div>
+						<div class="sp-btn-group sp-left mgt1" grid="0">
+							<!--인터넷 뱅킹-->
+							<a href="#none" banklink data-url="/_sp/apps/addon/banklink/banklink.html" class="sp-btn" theme="my" scale="small" change="list">B A N K</a>
+							<!--미확인 입금자-->
+							<!--@css(/_sp/apps/addon/bankmiss/bankmiss.css)-->
+							<!--@js(/_sp/apps/addon/bankmiss/bankmiss.js)-->
+							<a href="#none" bankmiss data-url="/_sp/apps/addon/bankmiss/bankmiss.html" class="sp-btn" theme="white" scale="small" change="dot">미확인입금</a>
+							<!--무이자 할부-->
+							<!--@css(/_sp/apps/addon/cardinfo/cardinfo.css)-->
+							<!--@js(/_sp/apps/addon/cardinfo/cardinfo.js)-->
+							<!--<a href="#none" cardinfo data-url="/_sp/apps/addon/cardinfo/cardinfo.html" class="sp-btn" theme="white" scale="small" change="dot">무이자할부</a>-->
+						</div>
+
+					</li>
+					<li style="padding-right:0">
+
+						<h3>store guide</h3>
+						<div class="sp-footer-content-split">
+							<a href="/board/index.html">
+								<i theme="notice" cover="true"></i>
+								<i theme="notice"></i>
+								<p>
+									<strong>HELP</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">고객센터</span>
+								</p>
+							</a>
+							<a href="/myshop/order/list.html">
+								<i theme="order" cover="true"></i>
+								<i theme="order"></i>
+								<p>
+									<strong>ORDER</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">배송조회</span>
+								</p>
+							</a>
+							<a href="/board/product/list.html?board_no=6">
+								<i theme="qna" cover="true"></i>
+								<i theme="qna"></i>
+								<p>
+									<strong>Q &amp; A</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">제품문의</span>
+								</p>
+							</a>
+							<a href="/board/product/list.html?board_no=4" replaceurl>
+								<i theme="review" cover="true"></i>
+								<i theme="review"></i>
+								<p>
+									<strong>REVIEW</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">제품후기</span>
+								</p>
+							</a>
+						</div>
+
+					</li>
+					<li class="last">
+
+						<h3>return · exchange</h3>
+
+						<!--탭-->
+						<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+						<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+						<div class="sp-footer-tab" tabs data-start="1" data-speed="300">
+							<!--@import(/_sp/html/return_exchange.html)-->
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="sp-footer-linkline">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li class="sp-left">
+						<a href="/company/company.html">회사소개</a>
+                        <a href="/company/principle.html">제조원칙</a>
+                        <a href="/company/society.html">사회활동</a>
+                        <a href="/company/catalogue.html">E-카탈로그</a>
+                        <a href="/company/location.html">오시는길</a>
+						<a href="/shopinfo/guide.html">이용방법</a>
+						<a href="/board/index.html">고객센터</a>
+                        <a href="/member/agreement.html">이용약관</a>
+						<a href="/member/privacy.html">개인정보취급방침</a>
+                        <a href="http://www.moonhill.co.kr/" class="active" target="_blank">달맞이한의원</a>
+					</li>
+					<li module="bannermanage2_display_14" scope="social" class="sp-right">
+						<p>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="sp-footer-description">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li class="sp-left">
+						<p>
+							<span><strong>{$company_name}</strong></span>
+							<span>대표 <em></em> {$president_name}</span>
+							<span>사업자 등록번호 <em></em> {$company_regno}</span>
+							<span>통신판매업 신고 <em></em> {$network_regno} <em></em> <a href="#none" class="{$action_biz_info|display} mh-btn-check-link" onclick="{$action_biz_info}">CHECK</a></span>
+						</p>
+						<p>
+							<span>주소 <em></em> {$mall_addr1} {$mall_addr2} ( {$mall_zipcode} )</span>
+							<span>개인정보관리책임자 <em></em> <a href="mailto:{$cpo_email}">{$cpo_name}</a></span>
+							<span>이메일 <em></em> <a href="mailto:{$email}">{$email}</a></span>
+
+						</p>
+						<p style="color:#000">
+							<span>마케팅/제휴/입점 문의 <em></em> 070-4652-3191</span>
+						</p>
+					</li>
+					<li module="bannermanage2_display_14" scope="footer" class="sp-right">
+						<p>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+						</p>
+						<img src="" alt="">
+
+					</li>
+				</ul>
+			</div>
+
+			<div class="sp-footer-copyright">
+			    <p class="mh-copyright-work">
+                    달맞이자연식품 온라인 스토어는 본사 구입제품에 대하여 주문취소, 교환 및 환불에 책임을 지며 본사 온라인 스토어 거래 내역이 확인되지 않을경우 책임지지 않습니다.<br>
+                    달맞이자연식품 온라인 스토어 내의 모든 콘텐츠(글, 이미지, 구매후기 등)에 대한 저작권은 달맞이자연식품에 귀속되어 있습니다. 유사한 콘텐츠를 만들거나 기획내용을 무단 도용 할 경우 법적인 처벌을 받습니다.
+			    </p>
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li module="bannermanage2_display_1" scope="bottom" class="sp-left">
+						<p class="displaynone" scope="{$title}"><a href="/">{$banner}</a></p>
+						<p class="displaynone" scope="{$title}"><a href="/">{$banner}</a></p>
+						<p class="mh-copyright-text">COPYRIGHT © 2019 <strong>{$mall_name}</strong>. ALL RIGHTS RESERVED.
+						</p>
+					</li>
+					<li module="bannermanage2_display_14" scope="mark" class="sp-right">
+						<span class="displaynone" scope="{$title}">{$banner}</span>
+						<span class="displaynone" scope="{$title}">{$banner}</span>
+					</li>
+				</ul>
+			</div>
+       
+
+		</div><!--종료-->
+
+	</div><!--종료-->
+<style>
+#sp-footer-design-3 .sp-footer-content-runtime,
+#sp-footer-design-3 .sp-footer-content-bank p,
+#sp-footer-design-3 .sp-footer-tab p {
+	font-size:12px;
+	line-height:1.45;
+}
+</style>

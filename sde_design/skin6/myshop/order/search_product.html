@@ -1,0 +1,130 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div class="ec-base-layer" module="Myshop_OrderSearchproductForm">
+    <!--@css(/css/module/myshop/searchProduct.css)-->
+    <div class="header">
+        <h1>상품 검색</h1>
+    </div>
+    <div class="content">
+        <div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" summary="">
+                    <caption>상품 검색</caption>
+                    <colgroup>
+                        <col style="width:90px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상품분류</th>
+                            <td>{$form.category_no}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>{$form.search_type} {$form.keyword}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="sp-btn-group mgt1 mgb2" grid="0">
+                <a href="#none" onClick="{$search_product}" class="sp-btn" theme="black" scale="pong">SEARCH</a>
+            </p>
+            
+            <div class="listCtrl {$ctrl_display|display}">
+                <p class="result">TOTAL<strong>{$total_count}</strong>PRODUCTS</p>
+                <span class="select">{$form.limit}</span>
+            </div>
+
+                <div module="Myshop_OrderSearchproductList">
+                <div class="ec-base-table typeList" id="{$order_search_product_list_id}">
+                    <table border="1" summary="">
+                        <caption>검색결과</caption>
+                        <colgroup>
+                            <col style="width:auto;" />
+                            <col style="width:130px;" />
+                            <col style="width:100px;" />
+                            <col style="width:100px;" />
+                        </colgroup>
+                        <tbody class="head center">
+                            <tr>
+                                <td>상품명</td>
+                                <td>판매가격</td>
+                                <td>상품코드</td>
+                                <td>선택</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="scroll">
+                        <table border="1" summary="">
+                            <caption>검색결과</caption>
+                            <colgroup>
+                                <col style="width:auto;" />
+                                <col style="width:130px;" />
+                                <col style="width:100px;" />
+                                <col style="width:83px;" />
+                            </colgroup>
+                            <tbody class="center {$search_display|display}">
+                                <tr>
+                                    <td class="product left">
+                                        <span class="thumbnail"><img src="{$image_tiny}" onerror="this.src='/_sp/image/cafe24/thumb/img_product_small.gif';" alt="" /></span>
+                                        <p>{$product_name}</p>
+                                    </td>
+                                    <td class="price">{$product_price}</td>
+                                    <td class="code">{$product_code}</td>
+                                    <td class="select"><a href="#none" onClick="{$selected_item_js}" class="sp-btn" theme="white" scale="small">선택</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="product left">
+                                        <span class="thumbnail"><img src="{$image_tiny}" onerror="this.src='/_sp/image/cafe24/thumb/img_product_small.gif';" alt="" /></span>
+                                        <p>{$product_name}</p>
+                                    </td>
+                                    <td class="price">{$product_price}</td>
+                                    <td class="code">{$product_code}</td>
+                                    <td class="select"><a href="#none" onClick="{$selected_item_js}" class="sp-btn" theme="white" scale="small">선택</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sp-no-result-found {$search_fail_display|display}" theme="product" scale="medium">
+                            <p>검색 결과가 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--페이지-->
+            <!--@css(/_sp/apps/module/pagination/pagination.css)-->
+            <div class="sp-pagination mgt3" module="Myshop_OrderSearchproductPaging">
+                <!--
+					$relation_post = yes
+				-->
+                <ul class="sp-pagination-arrow sp-left">
+                    <li><a href="{$param_first}" class="first">FIRST</a></li>
+                    <li><a href="{$param_prev}" class="prev">PREV</a></li>
+                </ul>
+                <ul class="sp-pagination-page">
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                </ul>
+                <ul class="sp-pagination-arrow sp-right">
+                    <li><a href="{$param_next}" class="next">NEXT</a></li>
+                    <li><a href="{$param_last}" class="last">LAST</a></li>
+                </ul>
+            </div><!--종료-->
+
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <p class="sp-btn-group" grid="0">
+            <a href="#none" onclick="{$closeSearchPopup}" class="sp-btn" theme="white" scale="medium" change="close"><span>닫기</span></a>
+        </p>
+    </div>
+    <a class="close" onclick="{$closeSearchPopup}"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>

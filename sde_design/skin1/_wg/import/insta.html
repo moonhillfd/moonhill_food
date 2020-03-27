@@ -1,0 +1,133 @@
+<!----------------------------------------------------------------------------------------------------------------------------------------
+
+    ### 인스타그램 위젯(C스토어)으로 설정하는 방법 ####
+
+    • http://webgood.co.kr/board/free/read.html?no=41338&board_no=3  링크를 확인해주세요.
+    • 아래 코드를 수정하시면 디자인이 깨지거나 오류가 생길 수 있습니다.
+
+----------------------------------------------------------------------------------------------------------------------------------------->
+<!--@css(/_wg/css/insta.css)-->
+
+<link rel="stylesheet" href="/_wg/css/insta_mh_3.css">
+<!--<div module="instagramwidget_display_1" class="insta_widget mh_insta {$sWidgetClass}" style="{$sWidgetStyle}">
+	<div class="idTag_wrap mh_insta_title">
+		<h2><a href="http://instagram.com/" target="_blank" class="widget-title">INSTAGRAM</a></h2>
+		<p class="desc"><a class="mh_hash" target="_blank" href="{$sIdTagLink}">{$sIdTag}</a> 해시태그를 달면 이곳에 보여집니다.</p>
+	</div>
+
+	<div class="mh_insta_thumb_wrap">
+	    <div class="thumb {$sThumbClass} mh_insta_thumb" style="{$sThumbStyle}"></div>
+	</div>
+</div>-->
+
+<style>
+.mh_insta {
+	border:0;
+}
+    
+#instafeed {
+    width:100%;
+    clear: both;
+    overflow: hidden;
+}
+#instafeed > a {
+    width:9.5%;
+    float:left;
+    border:3px solid transparent;
+}
+#instafeed > a:hover {
+    border-color:#cf9591;
+    opacity: .7;
+}
+/*#instafeed > a:hover .insta_like,
+#instafeed > a:hover .insta_comment {
+    display: block
+}*/
+#instafeed > a > img {
+    width:100%;
+    height:122px;
+}
+.thumb.mh_insta_thumb {
+    width:1000px;
+	margin: 0 auto;
+}
+.insta_content {
+    position: relative;
+}
+.insta_content i {
+    font-size:20px;
+    color:#fff;
+}
+.insta_content .text {
+    display: inline-block;
+    padding-left:3px;
+    font-size:20px;
+    font-weight: 900;
+    color:#fff;
+}
+
+.insta_content .insta_like {
+    display: none;
+    width:100%;
+    position: absolute;
+    top:35px;
+    text-align: center
+}
+
+.insta_content .insta_comment {
+    display: none;
+    width:100%;
+    position: absolute;
+    bottom:40px;
+    text-align: center
+}
+</style>
+<div class="insta_widget mh_insta" style="{$sWidgetStyle}">
+	<h2 class="mh_insta_title"><a href="http://instagram.com/" target="_blank" class="widget-title">INSTAGRAM</a></h2>
+	<p class="mh_insta_user"><a href="https://www.instagram.com/moonhillfood_official/" target="_blank">@moonhillfood_official</a></p>
+	<p class="mh_insta_hashtag">
+		<a href="https://www.instagram.com/explore/tags/달맞이자연식품" target="_blank">#달맞이자연식품</a>,
+		<a href="https://www.instagram.com/explore/tags/제나차" target="_blank">#제나차</a> 
+		<a href="https://www.instagram.com/explore/tags/가벼워지는티타임" target="_blank">#가벼워지는티타임</a> 
+	</p>
+	
+	<div class="mh_insta_thumb_wrap">
+	    <div class="thumb mh_insta_thumb">
+	        <div id="instafeed"></div>
+	    </div>
+	</div>
+	<a class="scroll_top">
+		<img src="/_wg/img/scroll_top.png" alt="위로">
+	</a>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="/_wg/js/mh_instafeed.min.js"></script>
+
+    <!--@js(/_wg/js/jquery.cookie.js)-->
+<script>
+$(document).ready(function(){
+	$(".scroll_top").click(function(){
+		$("html, body").animate({scrollTop : 0}, 600);
+		return false;
+	});
+})
+    
+  
+var userFeed = new Instafeed({
+  get: 'user',
+  userId: 4061458299,
+  clientId: 'cc1f522375fb49999de3b02ef210cb10',
+  accessToken: '4061458299.cc1f522.b10224655a4643439c64ed52b6b6210e',
+  resolution: 'standard_resolution',
+  template: '<a class="insta_content" href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><p class="insta_like"><i class="xi-heart"></i><span class="text">{{likes}}</span></p><p class="insta_comment"><i class="xi-speech-o"></i><span class="text">{{comments}}</p></a>',
+  sortBy: 'most-recent',
+  limit: 20,
+  links: false,
+  sortBy: 'most-recent'
+});
+userFeed.run();
+</script>
+

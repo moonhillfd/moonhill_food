@@ -1,0 +1,78 @@
+
+<!--포토리뷰-->
+<!--@css(/_sp/apps/module/photoreview/photoreview.css)-->
+<!--@js(/_sp/apps/module/photoreview/photoreview.js)-->
+<!--@css(/_sp/css/company.css)-->
+
+<!--		<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+		<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>-->
+
+
+
+<div module="photoreview_display" class="mh_phtoreview slider">
+	<i class="jq_lister_guide_co size"></i>
+	<!-- 
+	   $count=10
+	   $size=
+	   $point=show
+	   $board_no=4
+	-->
+
+	<div class="mh_phtoreview_header">
+		<img src="/image/main/title_photoreview.png" alt="포토리뷰타이틀" />
+	</div>
+	<ul>
+		<li>
+			<div class="sp-photoreview-box">
+				<p class="thumb"><a href="/article/상품-구매후기/4/{$rno}/"><img src="{$rhimg}" alt="" /></a></p>
+				<div class="photoreview-content">
+					<a href="/article/상품-구매후기/4/{$rno}/">
+						<p class="title">{$rsub}</p>
+						<div class="description">{$rcont}</div>
+						<p class="user">
+							<span class="writer">{$rwriter}</span>
+							<span class="date">{$rdate|date:m-d}</span>
+						</p>
+					</a>
+					<a class="product" href="/product/detail.html?product_no={$pno}">
+						<p class="img"><img src="{$pimg_tiny}"></p>
+						<p class="desc">
+							<span class="name">{$pname}</span>
+							<span class="name trick">상품정보가 없습니다.</span>
+							<span class="count">평점 <img src="/_sp/image/cafe24/board/ico_point{$rpoint}.gif"></span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="sp-photoreview-box">
+				<p class="thumb"><a href="/article/상품-구매후기/4/{$rno}/"><img src="{$rhimg}" alt="" /></a></p>
+				<div class="photoreview-content">
+					<a href="/article/상품-구매후기/4/{$rno}/">
+						<p class="title">{$rsub}</p>
+						<div class="description">{$rcont}</div>
+						<p class="user">
+							<span class="writer">{$rwriter}</span>
+							<span class="date">{$rdate|date:m-d}</span>
+						</p>
+					</a>
+					<a class="product" href="/product/detail.html?product_no={$pno}">
+						<p class="img"><img src="{$pimg_tiny}"></p>
+						<p class="desc">
+							<span class="name">{$pname}</span>
+							<span class="name trick">상품정보가 없습니다.</span>
+							<span class="count">평점 <img src="/_sp/image/cafe24/board/ico_point{$rpoint}.gif"></span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<p class="morebtn sp-btn-group sp-left mgt1 mh_review_btn" grid="0">
+		<!--<a href="#none" class="more sp-btn" theme="black" scale="large" change="dot">포토후기 더보기</a>-->
+		<a href="/board/product/list.html?board_no=4" class="sp-btn" theme="white" scale="large" change="right">M O R E</a>
+	</p>
+
+</div>

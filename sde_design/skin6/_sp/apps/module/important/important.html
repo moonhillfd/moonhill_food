@@ -1,0 +1,53 @@
+
+	<!-- 참고: 결제를 위한 필수 영역 -->
+	<div id="progressPaybar" style="display:none;">
+		<div id="progressPaybarBackground" class="layerProgress"></div>
+		<div id="progressPaybarView">
+			<div class="box">
+				<p class="graph">
+					<span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+					<span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt="" /></span>
+				</p>
+				<p class="txt">
+					본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br />
+					주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- //참고 -->
+
+	<!-- 쉬핑, 배송국가 선택 -->
+	<div id="sp-shipping" module="Layout_multishopShipping">
+		<!--@js(/js/module/layout/multishopShipping.js)-->
+		<button><p></p></button>
+		<div class="cover"></div>
+		<div class="worldshipLayer">
+			<div class="header">
+				<h3>─ &nbsp; WORLD SHIPPING &nbsp; ─</h3>
+			</div>
+			<div class="content">
+				<p class="desc">PLEASE SELECT THE DESTINATION<br />COUNTRY AND LANGUAGE</p>
+				<div class="select">
+					<select module="Layout_multishopShippingCountrylist">
+						<option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+						<option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+					</select>
+				</div>
+				<div class="select">
+					<select module="Layout_multishopShippingLanguagelist">
+						<option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+						<option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+					</select>
+				</div>
+			</div>
+			<div class="ec-base-button sp-btn-group" grid="0">
+				<a href="#none" class="sp-btn" scale="large" theme="black" change="check">C H A N G E</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 모바일 화면보기 -->
+	<div id="sp-mobile-version" module="Layout_conversionPc">
+		<a href="{$mobile_url}">모바일 화면보기</a>
+	</div><div class="sp-mobile-version-trick">&nbsp;</div>

@@ -1,0 +1,155 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="myshop" path="deposit" file="list"></i>
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" module="Myshop_DepositHead">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">MYPAGE</a>
+			<a href="#none">{$deposit_name}</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--예치금-->
+<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+<div layout="sp-layout-fixed">
+
+	<div module="Myshop_depositHistoryPackage">
+	<!--@css(/css/module/myshop/depositHistoryPackage.css)-->
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title" module="Myshop_DepositHead">
+			<h1>MY · {$deposit_name}</h1>
+		</div><!--//종료-->
+
+		<!--박스테이블-->
+		<div class="sp-base-box sp-box" grid="2" module="Myshop_DepositSummary">
+			<ul>
+				<li class="sp-clear">
+					<div class="sp-head">누적 {$deposit_name}</div>
+					<div class="sp-data"><strong>{$all_deposit}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">사용된 {$deposit_name}</div>
+					<div class="sp-data"><strong>{$used_deposit}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">사용가능 {$deposit_name}</div>
+					<div class="sp-data"><strong>{$total_deposit}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">현금환불요청 {$deposit_name}</div>
+					<div class="sp-data"><strong>{$deposit_refund_wait}</strong></div>
+				</li>
+			</ul>
+		</div><!--//종료-->
+
+		<div module="Myshop_DepositHistoryList">
+			<!--
+				$count = 10
+				$only_html = no
+				$login_page = /member/login.html
+			-->
+			<div class="sp-btn-group" grid="0">
+				<p class="sp-right">
+					<a href="#none" id="{$btn_deposit_refund_id}" class="sp-btn" theme="white" scale="small">현금환불 요청</a>
+				</p>
+			</div>
+
+			<div class="ec-base-table typeList">
+				<table border="1" summary="">
+					<caption>{$deposit_name} 내역</caption>
+					<colgroup>
+						<col style="width:20%" />
+						<col style="width:15%" />
+						<col style="width:20%" />
+						<col style="width:auto" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">주문날짜</th>
+							<th scope="col">{$deposit_name}</th>
+							<th scope="col">관련 주문</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody class="{$display_history|display} center">
+						<tr>
+							<td>{$deposit_date}</td>
+							<td>{$deposit_money}</td>
+							<td>{$deposit_order_id}</td>
+							<td>{$deposit_detail}</td>
+						</tr>
+						<tr>
+							<td>{$deposit_date}</td>
+							<td>{$deposit_money}</td>
+							<td>{$deposit_order_id}</td>
+							<td>{$deposit_detail}</td>
+						</tr>
+						<tr>
+							<td>{$deposit_date}</td>
+							<td>{$deposit_money}</td>
+							<td>{$deposit_order_id}</td>
+							<td>{$deposit_detail}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="sp-no-result-found {$display_history_none|display}" theme="board" scale="medium">
+					<p>{$deposit_name} 내역이 없습니다.</p>
+				</div>
+			</div>
+		</div>
+
+		<!--페이지-->
+		<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+		<div layout="sp-layout-fixed">
+			<div class="sp-pagination mgt3 mgb5" module="myshop_DepositHistoryPaging">
+				<!--
+					$relation_post = yes
+				-->
+				<ul class="sp-pagination-arrow sp-left">
+					<li><a href="$first_url" class="first">FIRST</a></li>
+					<li><a href="{$prev_url}" class="prev">PREV</a></li>
+				</ul>
+				<ul class="sp-pagination-page">
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+					<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				</ul>
+				<ul class="sp-pagination-arrow sp-right">
+					<li><a href="{$next_url}" class="next">NEXT</a></li>
+					<li><a href="{$last_url}" class="last">LAST</a></li>
+				</ul>
+			</div>
+		</div><!--종료-->
+	</div>
+
+	<div class="ec-base-help" module="Myshop_DepositHead">
+		<h3>{$deposit_name} 안내</h3>
+		<div class="inner">
+			<ol>
+				<li class="item1">{$deposit_name}은 주문취소 등의 결제대금 환불, 초과 입금차액 환불 등으로 발생한 금액입니다.</li>
+				<li class="item2">사용가능 {$deposit_name}(누적 {$deposit_name}-사용된 {$deposit_name}-현금환불요청 {$deposit_name})은 상품 구매 시 현금과 동일하게 언제든지 사용 가능합니다.</li>
+				<li class="item3">현금으로 환불을 원하실 경우, 본인 명의의 은행 계좌로 환불 신청을 할 수 있습니다.</li>
+			</ol>
+		</div>
+	</div>
+
+</div><!--종료-->

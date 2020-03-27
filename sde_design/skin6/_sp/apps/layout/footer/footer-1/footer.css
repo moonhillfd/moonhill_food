@@ -1,0 +1,28 @@
+
+	#sp-footer-design-1 { margin:30px 0 30px 0; }
+	#sp-footer-design-1 > ul { border-top:1px solid #f0f0f0; }
+
+	#sp-footer-design-1 .sp-footer-design-linked {  }
+	#sp-footer-design-1 .sp-footer-design-linked > ul {  }
+	#sp-footer-design-1 .sp-footer-design-linked > ul > li.sp-left { float:left; font-size:0; }
+	#sp-footer-design-1 .sp-footer-design-linked > ul > li.sp-left a { font-size:11px; display:inline-block; line-height:60px; letter-spacing:0.05em; }
+	#sp-footer-design-1 .sp-footer-design-linked > ul > li.sp-left a + a { margin-left:30px; }
+	#sp-footer-design-1 .sp-footer-design-linked > ul > li.sp-right { float:right; }
+	#sp-footer-design-1 .sp-footer-design-linked > ul > li.sp-right button { font-size:9px; letter-spacing:0.1em; line-height:60px; background:none; border:0; }
+
+	#sp-footer-design-1 .sp-footer-design-content {  }
+	#sp-footer-design-1 .sp-footer-design-content > ul {  }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left { float:left; color:#bbb; font-size:11px; letter-spacing:0.05em; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left span { display:inline-block; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left span + span { margin-left:10px; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left span em { display:inline-block; position:relative; width:10px; vertical-align:top; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left span em:before { content:''; top:7px; left:50%; margin:-5px 0 0 -1px; width:1px; height:10px; background:#eaeaea; position:absolute; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-left strong { color:#333; }
+	#sp-footer-design-1 .sp-footer-design-content > ul > li.sp-right { float:right; }
+
+	#sp-footer-design-1 .sp-footer-design-copyright { position:relative; }
+	#sp-footer-design-1 .sp-footer-design-copyright span { font-size:9px; line-height:60px; color:#bbb; letter-spacing:0.05em; }
+	#sp-footer-design-1 .sp-footer-design-copyright strong { color:#333; }
+	#sp-footer-design-1 .sp-footer-design-sns { font-size:0; position:absolute; top:12px; right:0; }
+	#sp-footer-design-1 .sp-footer-design-sns a { display:inline-block; }
+	#sp-footer-design-1 .sp-footer-design-sns a + a { margin-left:8px; }

@@ -1,0 +1,90 @@
+
+	/*
+		data-cookie="test-cookie-name"				쿠키를 위한 고유값 ( 영문 언더바 조합 )
+		data-wait="2000"							화면에 언제 나타날지 결정한다
+		data-url="/_sp/apps/floating/floating.html" 실제 연결될 컨텐츠의 주소 ( 규약지켜야 함 )
+
+		플로팅은 변수가 많으므로 출력에 중점을 둔다.
+		모바일은 변수가 상대적으로 작으므로, 센터 정렬 반응형으로 셋팅한다.
+		최초 셋팅은 우측 하단으로 지정한다.
+
+		기본 마크업
+
+		쿠키명칭은 반드시 유니크하게 이어서 지어라. 특문이나 숫자시작 그딴거좀 쓰지마
+		<!--플로팅 쿠키배너-->
+		<!--@css(/_sp/apps/addon/floating/floating.css)-->
+		<!--@js(/_sp/apps/addon/floating/floating.js)-->
+		<i floating data-cookie="uniqueCookieName1" data-wait="몇초기다렸다가나올까" data-speed="페이드인속도" data-url="/_sp/apps/layout/tee/tee-1/tee.html" style="height:100px;display:block;"></i>
+	*/
+	#sp-floating { z-index:99; position:fixed; }
+	#sp-floating,
+	#sp-floating * { font-family:'nanumgothic','malgun gothic','Open Sans','dotum'; outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+			-ms-box-sizing : border-box;
+			 -o-box-sizing : border-box;
+				box-sizing : border-box;
+	}
+	#sp-floating button.sp-close { z-index:3; position:absolute; top:0; right:0; display:block; color:#fff; line-height:31px; background-image:url(/_sp/image/opacity/blk-70.png); }
+	/*#sp-floating button { background-color:rgba(0,0,0,0.1); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#10000000', endColorstr='#10000000'); }*/
+	#sp-floating button.sp-close:after { content:'×'; vertical-align:top; display:inline-block; width:31px; height:31px; font-size:16px; font-family:'dotum'; text-align:center; }
+	#sp-floating button.sp-close:before { content:'오늘하루 열지않음'; background:#333; white-space:nowrap; vertical-align:top; display:block; padding:0 9px 0 12px; visibility:hidden; position:absolute; top:0; right:100%; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0); 
+		-webkit-transition : opacity 300ms ease, visibility 300ms ease;
+		 -khtml-transition : opacity 300ms ease, visibility 300ms ease;
+		   -moz-transition : opacity 300ms ease, visibility 300ms ease;
+			-ms-transition : opacity 300ms ease, visibility 300ms ease;
+			 -o-transition : opacity 300ms ease, visibility 300ms ease;
+				transition : opacity 300ms ease, visibility 300ms ease;
+	}
+	#sp-floating button.sp-close:hover:before { visibility:visible; opacity:1; filter:alpha(opacity=100); -ms-filter:alpha(opacity=100); }
+
+	#sp-floating button.sp-close.sp-tiny { border-radius:50%; width:24px; height:24px; line-height:24px; top:20px; right:20px; }
+	#sp-floating button.sp-close.sp-tiny:after { width:24px; height:24px; font-size:12px; }
+	#sp-floating button.sp-close.sp-tiny:hover:before { display:none; }
+
+	[floating] { position:relative; z-index:999; }
+	[floating].active { z-index:998; }
+	.sp-floating-open { visibility:hidden; position:fixed; 
+		will-change:transform;
+		-webkit-transform : scale(0);
+		   -moz-transform : scale(0);
+		    -ms-transform : scale(0);
+			 -o-transform : scale(0);
+				transform : scale(0);
+		-webkit-transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		 -khtml-transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		   -moz-transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			-ms-transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			 -o-transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+				transition : transform 600ms cubic-bezier(0.970, 0.000, 0.750, 0.750);
+	}
+	.sp-floating-open.active { visibility:visible; 
+		-webkit-transform : scale(1);
+		   -moz-transform : scale(1);
+		    -ms-transform : scale(1);
+			 -o-transform : scale(1);
+				transform : scale(1);
+	}
+	.sp-floating-open[data-cookie="uniqueCookieName1"] { bottom:20px; left:20px; }
+	.sp-floating-open[data-cookie="uniqueCookieName2"] { bottom:70px; left:20px; }
+	.sp-floating-open[data-cookie="uniqueCookieName3"] { bottom:20px; left:20px; }
+	.sp-floating-open button { position:relative; z-index:2; font-size:11px; width:41px; height:41px; color:#fff; border-radius:50%; border:0; background:#333; }
+	.sp-floating-open:hover:before { content:'팝업창을 다시 열어서 볼 수 있습니다.'; z-index:1; position:absolute; left:100%; font-size:11px; white-space:nowrap; left:5px; line-height:41px; background:#f0f0f0; border-radius:20px; padding:0 20px 0 50px; }
+
+	@media screen and ( min-width:1px ) and ( max-width:800px ){
+		#sp-floating { width:100%; height:100%; top:0; left:0; }
+
+		/* 선택사항 */
+		#sp-floating { background-image:url(/_sp/image/opacity/blk-80.png); }
+		/* #sp-floating { background-color:rgba(0,0,0,0.8); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000'); } */
+
+		#sp-floating ul { display:table; width:100%; height:100%; }
+		#sp-floating ul li { display:table-cell; vertical-align:middle; }
+		#sp-floating ul li div { width:80%; margin:0 auto; }
+		#sp-floating ul li div a { display:block; }
+		#sp-floating ul li div img { width:100%; max-width:100%; }
+		#sp-floating button { color:#fff; position:fixed; left:0; bottom:0; }
+		#sp-floating button { padding-top:2px; padding-left:20px; font-size:13px; height:49px; line-height:49px; }
+		#sp-floating button:after { padding-top:2px; width:49px; font-size:24px; }
+	}

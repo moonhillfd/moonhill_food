@@ -1,0 +1,29 @@
+#ec-shop_orderConfirmLayer { display:none; }
+.orderConfirmLayer .orderConfirmLayer { position:fixed; top:90px; left:50%; width:850px; margin:0 0 0 -426px; }
+.orderConfirmLayer .content { padding:30px; }
+.orderConfirmLayer .confirm { overflow-y:auto; height:450px; padding:0 10px 0 0; margin:0 0 0; }
+/*
+.orderConfirmLayer .confirm .title { margin:20px 0 10px 10px; }
+.orderConfirmLayer .confirm > .title:first-child { margin-top:0; }
+.orderConfirmLayer .confirm .title h4 { color:#353535; font-size:12px; }
+*/
+
+.orderConfirmLayer .confirm .detail .ec-base-table table { margin:0; }
+.orderConfirmLayer .confirm .ec-base-table .thumb img { max-width:75px; }
+.orderConfirmLayer .confirm .ec-base-table .name .ec-set-product-name { display:block; }
+.orderConfirmLayer .confirm .ec-base-table .txt23 { font-size:23px; letter-spacing:-1px; }
+.orderConfirmLayer .confirm .detaill .ec-base-table .grid { display:inline-block; min-width:90px; }
+.orderConfirmLayer .confirm .totalArea { margin:40px 0 0; }
+.orderConfirmLayer .ec-base-button { padding:9px 0; border-bottom:0; }
+
+.orderConfirmLayer .content p.desc { margin:0 0 20px 0; color:#777; background:#f9f9f9; border-radius:10px; text-align:center; padding:20px 0; }
+.orderConfirmLayer .confirm .title { margin:40px 0 10px 0; }
+.orderConfirmLayer .confirm > .title:first-child { margin-top:0; }
+.orderConfirmLayer .confirm .title h4 {
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 40px 8px 40px;
+}

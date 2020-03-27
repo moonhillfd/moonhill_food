@@ -1,0 +1,124 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="lookbook" path="read" file=""></i>
+
+<!--상품정보-->
+<div id="sp-detail" layout="sp-layout-fixed">
+
+	<!--상단제품정보-->
+	<div class="displaynone" module="product_detail">
+		<div class="detailArea">
+			<div class="imgArea" module="product_image">
+				<div class="displaynone sp-detail-otherlink" module="product_action"></div>
+			</div><!--이미지 종료-->
+		</div>
+	</div><!--상단제품정보 종료-->
+
+	<!--하단제품정보-->
+	<div id="sp-detail-additional" module="product_additional">
+		<!--@css(/css/module/product/additional.css)-->
+		<!-- 상품상세정보 -->
+		<div id="prdDetail" class="ec-base-tab grid5">
+			<!--상품설명부-->
+			<div id="sp-detail-description" class="cont lookbook">{$product_detail}</div>
+		</div><!-- //상품상세정보 -->
+
+		<!--상품목록 애드온-->
+		<!--@css(/_sp/apps/layout/product/product-1/product_detail.css)-->
+		<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+		<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+		<!--관련상품-->
+		<div id="prdRelated" module="product_relation">
+			<!--타이틀-->
+			<!--@css(/_sp/apps/module/title/title.css)-->
+			<div id="sp-title">
+				<h1>WITH ITEM</h1>
+			</div><!--//종료-->
+			<div id="sp-detail-relation" class="sp-slider" buy="false" data-speed="700" data-slidestoshow="5" data-infinite="false" hover="true" arrows="blk-h-l" arrowsArea="h-out-46" dots="circle-s" dotsArea="out-b-c" between="30" module="product_relationlist">
+				<div class="sp-slider-loop sp-detail-relation-loop select-trick">
+					<div class="sp-product-item sp-detail-relation-element">
+						<a href="{$link_product_detail}" class="sp-product-item-thumb sp-detail-relation-thumb"><img src="{$img_medium}" /></a>
+						<div class="sp-detail-relation-desc">
+							<p class="sp-detail-relation-name">{$name}</p>
+							<p class="sp-detail-relation-price {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</p>
+							<p class="sp-detail-relation-sale {$sale_price_display|display}">{$disp_sale_price}</p>
+							<p class="sp-detail-relation-icon">{$product_icons}{$soldout_icon}</p>
+						</div>
+						<p class="sp-product-inputs"><input class="price" value="{$product_price|striptag}" /><input class="sale {$sale_price_display|display}" value="{$disp_sale_price|striptag}" /></p>
+					</div>
+					<!--옵션-->
+					<div class="sp-detail-relation-option sp-box">
+						<table>
+							<caption>옵션 정보</caption>
+							<colgroup>
+								<col style="width:auto;" />
+								<col style="width:94px;" />
+							</colgroup>
+							<tbody>
+								<tr module="Product_Option" rel="{$rel_option_name}">
+									<td colspan="2">{$form.rel_option}</td>
+								</tr>
+								<tr module="Product_Addoption" rel="{$rel_add_option_name}">
+									<td colspan="2">{$form.rel_add_option}</td>
+								</tr>
+								<tr>
+									<td class="sp-detail-relation-label"><label class="sp-label-trick">{$form.checkbox}<i></i></label></td>
+									<td class="sp-detail-relation-qty">
+										<button class="sp-down {$quantity_down_class}">－</button>
+										{$form.quantity}
+										<button class="sp-up {$quantity_up_class}">＋</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--종료-->
+				</div>
+				<div class="sp-slider-loop sp-detail-relation-loop select-trick">
+					<div class="sp-product-item sp-detail-relation-element">
+						<a href="{$link_product_detail}" class="sp-product-item-thumb sp-detail-relation-thumb"><img src="{$img_medium}" /></a>
+						<div class="sp-detail-relation-desc">
+							<p class="sp-detail-relation-name">{$name}</p>
+							<p class="sp-detail-relation-price {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</p>
+							<p class="sp-detail-relation-sale {$sale_price_display|display}">{$disp_sale_price}</p>
+							<p class="sp-detail-relation-icon">{$product_icons}{$soldout_icon}</p>
+						</div>
+						<p class="sp-product-inputs" data-price="{$product_price|striptag}" data-sale="{$disp_sale_price|striptag}"></p>
+					</div>
+					<!--옵션-->
+					<div class="sp-detail-relation-option sp-box">
+						<table>
+							<caption>옵션 정보</caption>
+							<colgroup>
+								<col style="width:auto;" />
+								<col style="width:94px;" />
+							</colgroup>
+							<tbody>
+								<tr module="Product_Option" rel="{$rel_option_name}">
+									<td colspan="2">{$form.rel_option}</td>
+								</tr>
+								<tr module="Product_Addoption" rel="{$rel_add_option_name}">
+									<td colspan="2">{$form.rel_add_option}</td>
+								</tr>
+								<tr>
+									<td class="sp-detail-relation-label"><label class="sp-label-trick">{$form.checkbox}<i></i></label></td>
+									<td class="sp-detail-relation-qty">
+										<button class="sp-down {$quantity_down_class}">－</button>
+										{$form.quantity}
+										<button class="sp-up {$quantity_up_class}">＋</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--종료-->
+				</div>
+			</div>
+		</div><!--관련상품 종료-->
+
+		<br /><br /><br /><br />
+
+	</div><!--하단제품정보 종료-->
+</div><!--종료-->
+
+<!--@define(cmc_log)-->

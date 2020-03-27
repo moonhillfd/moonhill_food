@@ -1,0 +1,74 @@
+
+	/*
+		스크롤바 플러그인
+	
+		scrollbar : 스크롤바로 생성한다.
+		outside : 스크롤을 외부에 둔다
+		<div scrollbar outside style="가로세로가 지정되어야 한다">
+			...
+		</div>
+
+		https://github.com/mzubala/jquery-custom-scrollbar
+
+	*/
+	.scrollable { position: relative; }
+	.scrollable:focus { outline: 0; }
+	.scrollable .viewport { position: relative; overflow-y: hidden; }
+	.scrollable .viewport .overview { position: absolute; }
+	.scrollable .scroll-bar { display: none; }
+	.scrollable .scroll-bar.vertical {position: absolute; right: -5px; height: 100%; }
+	.scrollable[outside] .scroll-bar.vertical { right:-3px; }
+	.scrollable .scroll-bar.horizontal { position: relative; width: 100%; }
+	.scrollable .scroll-bar .thumb { position: absolute; border-radius:3px; }
+	.scrollable .scroll-bar.vertical .thumb { width: 100%; min-height: 10px; }
+	.scrollable .scroll-bar.horizontal .thumb { height: 100%; min-width: 10px; left: 0; }
+	.not-selectable { 
+		-webkit-touch-callout : none;
+		  -webkit-user-select : none;
+		   -khtml-user-select : none;
+		     -moz-user-select : none;
+		      -ms-user-select : none;
+		          user-select : none;
+	}
+
+	/* customize */
+	.scrollable { padding:0; }
+	/*
+	.scrollable .scroll-bar,
+	.scrollable .scroll-bar .thumb {
+		will-change:background;
+		-webkit-backface-visibility : hidden;
+		   -moz-backface-visibility : hidden;
+			 -o-backface-visibility : hidden;
+				backface-visibility : hidden;
+				-webkit-perspective : 1000;
+				   -moz-perspective : 1000;
+					 -o-perspective : 1000;
+						perspective : 1000;
+			-webkit-transform : translate3d(0,0,0);
+			   -moz-transform : translate3d(0,0,0);
+				-ms-transform : translate3d(0,0,0);
+				 -o-transform : translate3d(0,0,0);
+					transform : translate3d(0,0,0);
+		-webkit-transition-property : width,background-color;
+		 -khtml-transition-property : width,background-color;
+		   -moz-transition-property : width,background-color;
+			-ms-transition-property : width,background-color;
+			 -o-transition-property : width,background-color;
+				transition-property : width,background-color;
+		-webkit-transition : 0.3s ease;
+		 -khtml-transition : 0.3s ease;
+		   -moz-transition : 0.3s ease;
+			-ms-transition : 0.3s ease;
+			 -o-transition : 0.3s ease;
+				transition : 0.3s ease;
+	}
+	*/
+	.scrollable .scroll-bar { border:0; background-color:#eee; z-index:100}
+	.scrollable .scroll-bar .thumb { background-color:#aaa; }
+	.scrollable .scroll-bar.vertical { width:4px; }
+	.scrollable .scroll-bar.vertical .thumb { width:4px; }
+	.scrollable .scroll-bar.horizontal { height:10px; margin-top:2px; }
+
+	.scrollable:hover .scroll-bar { background-color:#ccc; }
+	.scrollable:hover .scroll-bar .thumb { width:4px; background-color:#333; }

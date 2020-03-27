@@ -1,0 +1,183 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" module="product_headcategory">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/">제품구매</a>
+			<a href="{$link_product_list_1}" class="{$disp_cate_1|display}">{$name_1}</a>
+			<a href="{$link_product_list_2}" class="{$disp_cate_2|display}">{$name_2}</a>
+			<a href="{$link_product_list_3}" class="{$disp_cate_3|display}">{$name_3}</a>
+			<a href="{$link_product_list_4}" class="{$disp_cate_4|display}">{$name_4}</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title"  module="product_headcategory">
+	<h1 class="mh-title-item">
+		<span>{$top_image1_tag}</span><span>{$top_image2_tag}</span><span>{$top_image3_tag}</span>
+		<span class="en">ZENA</span>
+		<span class="ko">SHOPPING</span>
+		<!--<span class="ko">{$title_text_or_image}</span>-->
+		<i class="sp-title-like {$disp_likecate_class}"><button type="button">{$disp_likecate_icon}<strong count="{$disp_likecate_count|striptag}">{$disp_likecate_count}</strong></button></i>
+	</h1>
+</div><!--//종료-->
+
+
+<!--서브카테고리-->
+<div layout="sp-layout-fixed">
+	<div class="sp-subcategory">
+		<div getcategory="single">
+			<div category data-no><!--single 카테고리 연동-->
+				<div addcategory></div>
+			</div>
+		</div>
+	</div><p class="sp-subcategory-trick"></p>
+</div><!--//종료-->
+
+<!--탭-->
+<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+<div layout="sp-layout-fixed">
+	<div tabs design="xbar" data-start="1" data-speed="300">
+		<div tabsContainer>
+			<div tabsLoop data-title="BEST ITEMS" module="product_listrecommend">
+				<!--추천상품-->
+				<!--마스테이블-->
+				<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+				<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+				<h3><span><em>BEST ITEM</em></span></h3>
+				<div class="sp-mastable-cover">
+					<table class="sp-mastable" grade="BEST">
+						<!--
+							$count = 8
+						-->
+						<tr>
+							<td width="40%" ratio="1" colspan="2" rowspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="20%" ratio="1"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+						</tr>
+						<tr>
+							<td width="20%" ratio="1"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+						</tr>
+					</table>
+				</div><!--//종료-->
+			</div>
+			<div tabsLoop data-title="NEW ARRIVALS" module="product_listnew">
+				<!--신상품-->
+				<!--마스테이블-->
+				<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+				<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+				<h3><span><em>NEW ARRIVALS</em></span></h3>
+				<div class="sp-mastable-cover">
+					<table class="sp-mastable" grade="TOP">
+						<!--
+							$count = 8
+						-->
+						<tr>
+							<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="20%" ratio="1"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="40%" ratio="1" colspan="2" rowspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+						</tr>
+						<tr>
+							<td width="20%" ratio="1"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+							<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/layout/product/product-1/product_mastable.html)--></td>
+						</tr>
+					</table>
+				</div><!--//종료-->
+			</div>
+		</div>
+	</div>
+</div><!--//종료-->
+
+<!--상품소트-->
+<div layout="sp-layout-fixed">
+	<div class="sp-sort-result" module="product_normalpackage">
+		<ul class="sp-clear" module="product_normalmenu">
+			<!--
+				$compare_page = /product/compare.html
+			-->
+			<li class="sp-left">
+				<div class="sp-sort-element">
+					<a href="#none" class="wide active"><strong>{$total_count}</strong>PRODUCT RESULT</a>
+					<p class="{$product_compare_display|display}">
+						<button onclick="{$product_compare_action}" class="sp-btn" theme="white" scale="pong" hover="상품 비교">COMPARE</button>
+					</p>
+				</div>
+			</li>
+			<li class="sp-right">
+				<div class="sp-sort-element" module="product_Orderby">
+					<a name="Product_ListMenu"></a>
+					<a href="{$param}" {$style} text="{$sort_name}"><span>{$sort_name}</span></a>
+					<a href="{$param}" {$style} text="{$sort_name}"><span>{$sort_name}</span></a>
+				</div>
+				<div class="sp-sort-element">
+					<div class="sp-product-style" theme="single" grid="4">
+						<button grid="0"></button>
+						<button grid="2"></button>
+						<button grid="3"></button>
+						<button grid="4"></button>
+						<button grid="5"></button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--상품목록-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-product" module="product_listnormal" grid="3" control="false" compare="true">
+		<!--
+			$count = 24
+			$basket_result = /product/add_basket.html
+			$basket_option = /product/basket_option.html
+		-->
+		<!--@import(/_sp/apps/layout/product/product-1/product_list_package.html)-->
+	</div>
+	<div class="sp-no-result-found" module="product_normalmenu">
+		<p>검색 결과가 없습니다.</p>
+	</div><!--//종료-->
+</div><!--//여기까지-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="product_normalpaging">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="{$param_first}" class="first">FIRST</a></li>
+			<li><a href="{$param_before}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="{$param_last}" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->
+

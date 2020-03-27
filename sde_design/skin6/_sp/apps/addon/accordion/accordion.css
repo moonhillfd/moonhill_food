@@ -1,0 +1,47 @@
+
+	/*
+		아코디언 디자인
+
+		기본적인 마크업
+		<div accordion data-start="0" data-close="all">
+			<div accordion-loop>
+				<a accordion-button>버튼 1</a>
+				<div accordion-inside><img src="https://dummyimage.com/400x60/333333/fff&text=1"></div>
+			</div>
+			<div accordion-loop>
+				<a accordion-button>버튼 2</a>
+				<div accordion-inside><img src="https://dummyimage.com/400x120/ff3300/fff&text=2"></div>
+			</div>
+			<div accordion-loop>
+				<a accordion-button>버튼 3</a>
+				<div accordion-inside><img src="https://dummyimage.com/400x50/999999/fff&text=3"></div>
+			</div>
+		</div>
+
+		온 상태
+		data-start="" // 모두 닫힌채로 시작한다.
+		data-start="1" // 첫번째 로우를 연채로 시작.
+		data-start="2" // 두번째 로우를 연채로 시작.
+		data-close="all" // 한개의 아코디언만 남긴다.
+	*/
+
+	[accordion] { max-width:100%; }
+	[accordion] img { max-width:100%; }
+	[accordion] [accordion-inside] { 
+		display:none; 
+		will-change:height;
+		-webkit-backface-visibility : hidden;
+		   -moz-backface-visibility : hidden;
+			 -o-backface-visibility : hidden;
+				backface-visibility : hidden;
+				-webkit-perspective : 1000;
+				   -moz-perspective : 1000;
+					 -o-perspective : 1000;
+						perspective : 1000;
+			-webkit-transform : translate3d(0,0,0);
+			   -moz-transform : translate3d(0,0,0);
+				-ms-transform : translate3d(0,0,0);
+				 -o-transform : translate3d(0,0,0);
+					transform : translate3d(0,0,0);
+	}
+	[accordion] [accordion-loop].sp-active [accordion-button] {  } /* 버튼 엑티브 */

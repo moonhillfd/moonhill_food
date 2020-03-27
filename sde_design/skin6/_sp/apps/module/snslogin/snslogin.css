@@ -1,0 +1,117 @@
+
+	/*
+		소설 로그인의 디자인은 종속한다.
+		향후 업그레이드가 있으므로, 애드온으로 제작
+
+		원형 인라인
+		<div id="sp-social-login" theme="circle">
+	*/
+
+	#sp-social-login {  }
+	#sp-social-login ul {}
+	#sp-social-login ul li { margin:2px; }
+	#sp-social-login ul li a { display:block; }
+
+	#sp-social-login [sns] { display:block; border-radius:3px; overflow:hidden; position:relative; 
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+		-webkit-transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		 -khtml-transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		   -moz-transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			-ms-transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			 -o-transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+				transition : opacity 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+	}
+	#sp-social-login [sns]:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); -moz-opacity: 0.8; -khtml-opacity: 0.8; opacity: 0.8; }
+	#sp-social-login [sns]:after { content:' › '; font-family:'dotum'; position:absolute; right:13px; font-size:16px; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: alpha(opacity=30); -moz-opacity: 0.3; -khtml-opacity: 0.3; opacity: 0.3; }
+	#sp-social-login [sns]:hover:after { content:' › '; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; opacity: 1; }
+	#sp-social-login [sns] span { position:relative; bottom:0; display:inline-block; vertical-align:top; margin-left:8px; font-weight: bold;
+		will-change:bottom;
+	-webkit-backface-visibility : hidden;
+	   -moz-backface-visibility : hidden;
+		 -o-backface-visibility : hidden;
+			backface-visibility : hidden;
+			-webkit-perspective : 1000;
+			   -moz-perspective : 1000;
+				 -o-perspective : 1000;
+					perspective : 1000;
+		-webkit-transform : translateZ(0px);
+		   -moz-transform : translateZ(0px);
+			-ms-transform : translateZ(0px);
+			 -o-transform : translateZ(0px);
+				transform : translateZ(0px);
+		-webkit-transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		 -khtml-transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		   -moz-transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			-ms-transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			 -o-transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+				transition : bottom 0.2s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+	}
+	#sp-social-login [sns] span:after { content:''; font-size:11px; display:block; letter-spacing:0.07em; }
+	#sp-social-login [sns]:hover span { bottom:100%; }
+	#sp-social-login [sns][icons] { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+	#sp-social-login [sns][icons]:before { content:''; display:inline-block; background:transparent url('/_sp/apps/module/snslogin/snslogin.gif') no-repeat 0 0; }
+	#sp-social-login [sns][icons="large"] { height:150px; line-height:150px; }
+	#sp-social-login [sns][icons="medium"] { height:100px; line-height:100px; }
+	#sp-social-login [sns][icons="small"] { height:50px; line-height:50px; font-size:12px; }
+	#sp-social-login [sns][icons="tiny"] { height:35px; line-height:35px; font-size:12px; padding-left:6px; }
+	#sp-social-login [sns][icons="large"]:before { width:150px; height:150px; line-height:150px; }
+	#sp-social-login [sns][icons="medium"]:before { width:100px; height:100px; line-height:100px; }
+	#sp-social-login [sns][icons="small"]:before { width:50px; height:50px; line-height:50px; }
+	#sp-social-login [sns][icons="tiny"]:before { width:35px; height:35px; line-height:35px; }
+
+	#sp-social-login[theme="circle"] ul { font-size:0; text-align:center; }
+	#sp-social-login[theme="circle"] ul li { display:inline-block; }
+	#sp-social-login[theme="circle"] [sns]:after { display:none; }
+	#sp-social-login[theme="circle"] [sns][icons] { padding:0; border-radius:50%; overflow:hidden; }
+	#sp-social-login[theme="circle"] [sns][icons="large"] { width:150px; }
+	#sp-social-login[theme="circle"] [sns][icons="medium"] { width:100px; }
+	#sp-social-login[theme="circle"] [sns][icons="small"] { width:50px; }
+	#sp-social-login[theme="circle"] [sns][icons="tiny"] { width:35px; }
+
+
+	#sp-social-login [sns="naver"] { color:#fff; background-color:#00c63b; text-shadow:0 0 2px rgba(0,0,0,0.2); }
+	#sp-social-login [sns="naver"][icons="large"]:before { background-position:0 0; }
+	#sp-social-login [sns="naver"][icons="medium"]:before { background-position:-150px 0; }
+	#sp-social-login [sns="naver"][icons="small"]:before { background-position:-150px -100px; }
+	#sp-social-login [sns="naver"][icons="tiny"]:before { background-position:-200px -100px; }
+	#sp-social-login [sns="naver"] span:after { content:'Login with naver'; }
+
+	#sp-social-login [sns="facebook"] { color:#fff; background-color:#38599c; text-shadow:0 0 2px rgba(0,0,0,0.2); }
+	#sp-social-login [sns="facebook"][icons="large"]:before { background-position:0 -150px; }
+	#sp-social-login [sns="facebook"][icons="medium"]:before { background-position:-150px -150px; }
+	#sp-social-login [sns="facebook"][icons="small"]:before { background-position:-150px -250px; }
+	#sp-social-login [sns="facebook"][icons="tiny"]:before { background-position:-200px -250px; }
+	#sp-social-login [sns="facebook"] span:after { content:'Login with facebook'; }
+
+	#sp-social-login [sns="google"] { color:#fff; background-color:#dc4a38; text-shadow:0 0 2px rgba(0,0,0,0.2); }
+	#sp-social-login [sns="google"][icons="large"]:before { background-position:0 -300px; }
+	#sp-social-login [sns="google"][icons="medium"]:before { background-position:-150px -300px; }
+	#sp-social-login [sns="google"][icons="small"]:before { background-position:-150px -400px; }
+	#sp-social-login [sns="google"][icons="tiny"]:before { background-position:-200px -400px; }
+	#sp-social-login [sns="google"] span:after { content:'Login with google'; }
+
+	#sp-social-login [sns="kakao"] { color:#3b1e00; background-color:#fbe300; }
+	#sp-social-login [sns="kakao"][icons="large"]:before { background-position:0 -450px; }
+	#sp-social-login [sns="kakao"][icons="medium"]:before { background-position:-150px -450px; }
+	#sp-social-login [sns="kakao"][icons="small"]:before { background-position:-150px -550px; }
+	#sp-social-login [sns="kakao"][icons="tiny"]:before { background-position:-200px -550px; }
+	#sp-social-login [sns="kakao"] span:after { content:'Login with kakao'; }
+
+	#sp-social-login [sns="line"] { color:#fff; background-color:#21ce26; text-shadow:0 0 2px rgba(0,0,0,0.2); }
+	#sp-social-login [sns="line"][icons="large"]:before { background-position:0 -600px; }
+	#sp-social-login [sns="line"][icons="medium"]:before { background-position:-150px -600px; }
+	#sp-social-login [sns="line"][icons="small"]:before { background-position:-150px -700px; }
+	#sp-social-login [sns="line"][icons="tiny"]:before { background-position:-200px -700px; }
+	#sp-social-login [sns="line"] span:after { content:'Login with line'; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+		#sp-social-login { width:80%; }
+		#sp-social-login [sns] span { margin-left:8px; }
+		#sp-social-login [sns][icons="tiny"] { padding-left:8px; }
+		#sp-social-login [sns][icons]:before { background-size:70px; }
+		#sp-social-login [sns="naver"][icons="tiny"]:before { background-position:0 0; }
+		#sp-social-login [sns="facebook"][icons="tiny"]:before { background-position:0 -35px; }
+		#sp-social-login [sns="google"][icons="tiny"]:before { background-position:0 -70px; }
+		#sp-social-login [sns="kakao"][icons="tiny"]:before { background-position:0 -105px; }
+		#sp-social-login [sns="line"][icons="tiny"]:before { background-position:0 -140px; }
+	}

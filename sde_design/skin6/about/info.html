@@ -1,0 +1,197 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_sp/css/company.css)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">브랜드</a>
+			<a href="#none">원료이야기</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<div class="head_title">
+			<span class="en">ZENA</span>
+			<span class="ko">원료이야기</span>
+		</div>
+	</h1>
+</div><!--//종료-->
+
+<!--어바웃어스-->
+<div layout="sp-layout-fixed">
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+		<div class="{$map_display|display}">
+			<!--타이틀-->
+			<!--@css(/_sp/apps/module/title/title.css)-->
+			<div id="sp-title">
+				<h1>LOCATION</h1>
+			</div><!--//종료-->
+			<p>{$map_image}</p>
+		</div>
+	</div>
+</div>
+
+<div class="layout_sub_item">
+	<div class="info_subtitle"><img src="/image/common/info_subtitle01.png" alt="서브타이틀" /></div>
+	<div class="content">
+		<ul class="material">
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_pumpkin.png" alt="늙은호박" /></p>
+				<div class="text">
+					<p class="tit">늙은호박</p>
+					<p class="con">우리 몸속에서 항이뇨호르몬이 분비되는 것을
+					억제해 이뇨 작용을 촉진하는 효과가 있으며,
+					베타카로틴이 풍부해 체내에 불순물을 제거하여 
+					혈액 내 콜레스테롤을 배출하는 데 도움이 된다. 
+					산후 부기나 당뇨병으로 인한 부기를 빼는 
+					대표적인 식품이다. 
+					</p>
+					<p class="from">우수 식재료 디렉토리</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_corn.png" alt="옥수수수염" /></p>
+				<div class="text">
+					<p class="tit">옥수수수염</p>
+					<p class="con">
+					부종을 제거 하거나 고혈압과 심혈관 질환 
+					치료에 좋은 효과를 나타낸다. 옥수수수염은 
+					말려서 한약재로 사용되어 왔으며,  
+					‘옥촉수(玉蜀鬚)’ 또는 ‘옥촉서예’라고 부르기도 
+					한다. 이뇨효과 외에도 혈압을 떨어뜨리는 
+					작용을 하며 전립선비대증의 치료에도 
+					효과적이다. 
+					</p>
+					<p class="from">우수 식재료 디렉토리</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_beans.png" alt="팥" /></p>
+				<div class="text">
+					<p class="tit">팥</p>
+					<p class="con">
+					팥에 들어있는 사포닌은 이뇨작용을 하고, 피부와 모공의 오염물질을 없애주어 아토피 피부염과 기미 제거에  도움을 주며 짠 음식을 먹을 때 섭취되는 나트륨이 체외로 잘 배출되도록 도와주어 부기를 빼주고, 혈압 상승을 억제해준다.
+					</p>
+					<p class="from">우수 식재료 디렉토리</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_jujube.png" alt="대추" /></p>
+				<div class="text">
+					<p class="tit">대추</p>
+					<p class="con">
+					당질과 비타민 A ·B1 ·B2상당량 들어 있어 예로부터 보건차로서 애용되어 왔으며,  신경쇠약 ·빈혈증 ·식욕부진 ·무기력, 그 밖에 피부를 윤택하게 하는 데 효과가 있다.
+					</p>
+					<p class="from">두산백과</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_bamboo.png" alt="대나무잎" /></p>
+				<div class="text">
+					<p class="tit">대나무잎</p>
+					<p class="con">
+					열을 내리고 가슴이 답답한 것을 낫게 하며 가래를 삭이고 경련을 진정시킨다.
+					</p>
+					<p class="from">한의학대사전(죽엽)</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_soybean.png" alt="약콩" /></p>
+				<div class="text">
+					<p class="tit">약콩</p>
+					<p class="con">
+					식이섬유가 풍부하게 함유되어 있어 포만감을 주므로 체중관리에 효과적이고, 당뇨 예방에 도움을 준다. 피부 관리와 야맹증에도 효과적이고, 해독력이 뛰어나 체내의 독성을 풀어주는 역할을 한다.
+					</p>
+					<p class="from">우수 식재료 디렉토리</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_sunberry.png" alt="까마중" /></p>
+				<div class="text">
+					<p class="tit">까마중</p>
+					<p class="con">
+					강장약으로서 피로 회복에 효과적이다. 꽃을 달인 물은 가래약으로 효과적이며 눈을 자주 씻으면 눈이 밝아진다고 한다. 설사와 이질을 중단시킨다.
+					</p>
+					<p class="from">숲과 들을 접시에 담다(약이 되는 잡초음식)...</p>
+				</div>
+			</li>
+			<li>
+				<p class="image"><img src="/_sp/image/about/material_ginger.png" alt="생강" /></p>
+				<div class="text">
+					<p class="tit">생강</p>
+					<p class="con">
+					혈액순환을 활성화해 몸과 신체 내부가 따뜻해지고, 혈압과 체온이 정상화돼 수족냉증 개선에 도움이 될 뿐 아니라 혈관에 쌓인 콜레스테롤을 몸 밖으로 배출해 혈관계 질환인 동맥경화나 고혈압 등 성인병을 예방하는 데 효과적이다.
+					</p>
+					<p class="from">우수 식재료 디렉토리</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="layout_sub_item">
+	<div class="plus">+</div>
+	<div class="info_subtitle"><img src="/image/common/info_subtitle02.png" alt="서브타이틀" /></div>
+	<div class="content">
+		<ul class="material brand">
+			<li>
+				<div class="text">
+					<p class="tit">실력</p>
+					<p class="con">
+						우리는 그 누구도 따라올 수 없는 오랜 경험과 실력을 이미 가지고 있었습니다.
+						상품으로 출시되기전부터 이미 많은 노하우를 쌓아왔습니다.<br/>
+						우리는 자신 있었습니다.
+					</p>
+					<p class="from">달맞이한의원</p>
+				</div>
+			</li>
+			<li>
+				<div class="text">
+					<p class="tit">진심</p>
+					<p class="con">
+						소비자 마음을 순간 혹하게 만드는 반짝상품, 현혹상품을 만들지 않겠다는 다짐.
+						가격을 낮추기 위해 품질과 타협하는 일반적인 관례를 따르지 않았습니다.
+					</p>
+					<p class="from">제나식구 일동</p>
+				</div>
+			</li>
+			<li>
+				<div class="text">
+					<p class="tit">눈물</p>
+					<p class="con">
+						제나차는 한번에 만들어지지 않았습니다.
+						무려 3번의 시행착오, 10만킬로를 달렸고 수 없는 설득끝에 우리의 생각대로 만들 수 있는 공정을 찾을 수 있었습니다.
+						그날 우리는 서로를 부둥켜 안고 울었습니다.
+					</p>
+					<p class="from">제나차 개발진</p>
+				</div>
+			</li>
+			<li>
+				<div class="text">
+					<p class="tit">간절함</p>
+					<p class="con">
+						꼭 성공해야겠다라는 욕심이 아닌 제나차의 가치를 소비자분들이 꼭 알아볼 수 있기를 간절히 바랬습니다.
+						결국 우리의 간절한 기도는 통했고 소비자들이 감동하는 브랜드가 되었습니다.
+					</p>
+					<p class="from">달맞이자연식품</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

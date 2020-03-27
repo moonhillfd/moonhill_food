@@ -1,0 +1,36 @@
+<div id="sp-result">
+	<div id="sp-couponload">
+		<div class="sp-couponload-inside">
+			<!--
+				$count = 100
+			-->
+			<button class="sp-couponload-close"></button>
+			<h3>쿠폰</h3>
+			<div class="sp-couponload-loop" scrollbar rule="winsize,prison" data-height="406" module="myshop_CouponList">
+				<ul class="{$display_coupon_list|display}">
+					<li>
+						<div class="box">
+							<strong>{$coupon_name}</strong>
+							<p>금액 : {$coupon_use_price} / {$coupon_benefit_result}</p>
+							<span>{$coupon_paymethod}</span>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<strong>{$coupon_name}</strong>
+							<p>금액 : {$coupon_use_price} / {$coupon_benefit_result}</p>
+							<span>{$coupon_paymethod}</span>
+						</div>
+					</li>
+				</ul>
+				<div class="sp-no-result">
+					<p>보유하고 계신 쿠폰 내역이 없습니다.</p>
+				</div>
+			</div>
+
+			<div class="sp-btn-group" grid="1">
+				<a href="/myshop/coupon/coupon.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span wishcount>쿠폰 전체보기</span></a>
+			</div>
+		</div>
+	</div>
+</div>

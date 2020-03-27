@@ -1,0 +1,25 @@
+.xans-calendar-headmonth { position:relative; text-align:center; }
+.xans-calendar-headmonth .date { display:inline; color: #333; font-size: 30px; letter-spacing:0; font-weight:bold; }
+.xans-calendar-headmonth .date img { vertical-align:middle; position:relative; top:-2px; }
+.xans-calendar-headmonth .date .day { margin:0 5px; }
+.xans-calendar-headmonth .button { position:absolute; right:0; top:0px; }
+
+.xans-calendar-listmonth { margin:20px 0 0; }
+.xans-calendar-listmonth th { padding:15px 0; color:#999; border-top:1px solid #f0f0f0; letter-spacing:0.1em; }
+.xans-calendar-listmonth th.sun { color:#e5541e; }
+.xans-calendar-listmonth th.sat { color:#7cbed7; }
+.xans-calendar-listmonth td { border:1px solid #f0f0f0; background:#f7f4ec; }
+.xans-calendar-listmonth td.cal_day_select { background:#fff; }
+.xans-calendar-listmonth td.cal_day_select .day { color:#333; }
+.xans-calendar-listmonth td.cal_day { background:#f9f9f9; }
+
+.xans-calendar-listmonth td div.day { min-height:90px; padding:8px 6px; color:#8f8f8f; }
+.xans-calendar-listmonth td div.today { background:#f3fcf8; }
+.xans-calendar-listmonth td div.today .day { font-weight:bold; color:#75a039; }
+
+.xans-calendar-listmonth td p { padding:10px 10px 5px 10px; color:#8f8f8f; }
+.xans-calendar-listmonth td p .count { display:inline-block; margin:0 0 0 8px; padding:2px 0 2px 21px; color:#75a039; background:url("/_sp/image/cafe24/calendar/ico_count.gif") 0 0 no-repeat; }
+.xans-calendar-listmonth .xans-calendar-list li { padding-left:23px; margin:0 10px; position:relative; }
+.xans-calendar-listmonth .xans-calendar-list li:before { content:''; position:absolute; width:4px; height:1px; background:#999; top:8px; left:8px; }
+.xans-calendar-listmonth .xans-calendar-list li a,
+.xans-calendar-listmonth .xans-calendar-list li a:hover { line-height:18px; color:#8f8f91; }

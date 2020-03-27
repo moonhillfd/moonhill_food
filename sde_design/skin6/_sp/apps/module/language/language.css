@@ -1,0 +1,50 @@
+
+	/*
+		<!--언어선택-->
+		<!--@css(/_sp/apps/language/language.css)-->
+		<!--@js(/_sp/apps/language/language.js)-->
+		<button chooselanguage>언어선택</button>
+
+		<!--필요하다면 버튼도 사용하자. 딱히 이 기능을 요청했던 업체는 없다.
+		<div class="sp-language-text" module="Layout_multishopList">
+		   <div module="Layout_multishopListmultioption" class="multiOption">
+			   <a href="#none">
+				   <span module="Layout_multishopListmultioptionCountry" class="ship">
+					   <strong>Ship to</strong><span> : </span>
+				   </span>
+				   <span module="Layout_multishopListmultioptionLanguage" class="language">
+					  <strong>Language</strong><span> : {$language_name}</span>
+				   </span>
+			   </a>
+		   </div>
+		</div>-->
+	*/
+
+	#sp-language-loading { z-index:99998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-language { text-align:center; z-index:99999; position:fixed; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-language { background-image:url(/_sp/image/opacity/blk-80.png); }
+	/* #sp-language { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-language,
+	#sp-language * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-language .sp-language-inside { display:inline-block; top:220px; position:relative; }
+	#sp-language button { position:absolute; right:0; top:0; border:0; background:#000; }
+	#sp-language button p { width:35px; height:35px; line-height:35px; color:#fff; font-size:16px; font-family:'dotum'; }
+	#sp-language button p:after { content:'×'; padding-left:1px; }
+
+	#sp-language h2 { color:#fff; font-size:16px; letter-spacing:0.2em; padding-bottom:80px; }
+	#sp-language ul { font-size:0; }
+	#sp-language ul li { display:inline-block; padding:15px; }
+	#sp-language ul li .name { font-size:13px; color:#fff; padding:20px 0 0 0; }
+	#sp-language ul li .unit { font-size:9px; color:#666; letter-spacing:0.2em; }
+	#sp-language ul li .language-loop { position:relative; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; }

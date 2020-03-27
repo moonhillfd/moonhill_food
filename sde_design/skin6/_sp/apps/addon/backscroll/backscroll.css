@@ -1,0 +1,75 @@
+
+	/*
+	
+		배경이미지 스크롤링
+
+		기본 마크업
+		<div backscroll data-height="500">
+			<div backscrolltext>
+				<ul>
+					<li>
+						<div>TEXT</div>
+					</li>
+				</ul>
+			</div>
+			<p backscrolliamge 여기에 모듈을 연결하면 좋겠다><img src="http://app-storage-006.cafe24.com/bannermanage2/ecudemo35258/2016/03/17/d2d62a4a99a419ea1f394d7dfabca572.jpg"></p>
+		</div>
+
+		backscroll // 호출
+		<p backscrolliamge></p> // 이 속의 이미지를 배경으로 지정한다. 첫번째 이미지 외 모든 요소를 무시한다.
+	*/
+
+	[backscroll] { 
+		overflow:hidden; 
+		position:relative; 
+		-webkit-backgound-size: cover;
+		-o-backgound-size: cover;
+		-moz-backgound-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		will-change:height;
+		-webkit-backface-visibility : hidden;
+		   -moz-backface-visibility : hidden;
+			 -o-backface-visibility : hidden;
+				backface-visibility : hidden;
+				-webkit-perspective : 1000;
+				   -moz-perspective : 1000;
+					 -o-perspective : 1000;
+						perspective : 1000;
+			-webkit-transform : translate3d(0,0,0);
+			   -moz-transform : translate3d(0,0,0);
+				-ms-transform : translate3d(0,0,0);
+				 -o-transform : translate3d(0,0,0);
+					transform : translate3d(0,0,0);
+		-webkit-transition-property : height;
+		 -khtml-transition-property : height;
+		   -moz-transition-property : height;
+			-ms-transition-property : height;
+			 -o-transition-property : height;
+				transition-property : height;
+		-webkit-transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		 -khtml-transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+		   -moz-transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			-ms-transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+			 -o-transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+				transition : 0.3s cubic-bezier(0.970, 0.000, 0.750, 0.750);
+	}
+	[backscroll] [backscrolliamge] { display:none; }
+	[backscroll] [backscrolltext] { position:absolute; width:100%; height:100%; }
+
+	/* 선택사항 */
+	[backscroll] [backscrolltext] { background-image:url(/_sp/image/opacity/blk-70.png); }
+	/* [backscroll] [backscrolltext] { background-color:rgba(0,0,0,0.7); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#70000000', endColorstr='#70000000'); } */
+
+	[backscroll] [backscrolltext] > ul { display:table; width:100%; height:100%; }
+	[backscroll] [backscrolltext] > ul > li { display:table-cell; vertical-align:middle; text-align:center; }
+	[backscroll] [backscrolltext] > ul > li > div { display:inline-block; color:#fff; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+		[backscroll] { 
+			background-attachment: scroll;
+		}
+	}

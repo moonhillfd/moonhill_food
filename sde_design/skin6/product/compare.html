@@ -1,0 +1,155 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/product/search.html">COMPARE</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title">
+	<h1>COMPARE PRODUCT</h1>
+</div><!--//종료-->
+
+<!--상품비교-->
+<!--@js(/_sp/apps/module/compare/compare.js)-->
+<!--@css(/_sp/apps/module/compare/compare.css)-->
+<div layout="sp-layout-fixed">
+	<div id="sp-compare" module="Product_ListCompare" class="ec-base-table gBorder">
+		<!--@css(/css/module/product/compare.css)-->
+		<!--
+			$max_count = auto
+			max_count는 auto면 검색한 상품 수량만큼, 1~4는 해당 숫자 만큼, 그외의 모든 값은 4로 고정
+			정상적인 반복을 위해 <td>를 두번이상 입력해주세요.
+		-->
+		<table border="1" summary="">
+		<tbody>
+			<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+			<tr module='Product_Productimagemedium'>
+				<th class="sp-compare-th" scope="row">상품이미지</th>
+				<td class="sp-compare-td center">
+					<span class="thumb"><a href="{$link_product_detail}"><img src="{$Productimagemedium}" alt="" /></a></span>
+					<input type="checkbox" class="{$product_select_class}" />
+				</td>
+				<td class="sp-compare-td center">
+					<span class="thumb"><a href="{$link_product_detail}"><img src="{$Productimagemedium}" alt="" /></a></span>
+					<input type="checkbox" class="{$product_select_class}" />
+				</td>
+			</tr><!-- //참고 -->
+			<tr module='Product_Productname'>
+				<th scope="row">상품명</th>
+				<td>
+					<strong class="prdName">{$Productname}</strong>
+					<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+					<ul class="item" module='Product_CompareSetList' class="{$is_new_product|display}">
+						<li>{$product_name}({$product_count})</li>
+						<li>{$product_name}({$product_count})</li>
+					</ul><!-- //참고 -->
+				</td>
+				<td>
+					<strong class="prdName">{$Productname}</strong>
+					<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+					<ul class="item" module='Product_CompareSetList' class="{$is_new_product|display}">
+						<li>{$product_name}({$product_count})</li>
+						<li>{$product_name}({$product_count})</li>
+					</ul><!-- //참고 -->
+				</td>
+			</tr>
+			<tr module='Product_Productcustom'>
+				<th scope="row">소비자가</th>
+				<td><em id="product_price_nf{$product_no}">{$Productcustom}</em></td>
+				<td><em id="product_price_nf{$product_no}">{$Productcustom}</em></td>
+			</tr>
+			<tr module='Product_Productprice'>
+				<th scope="row">판매가</th>
+				<td><span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productprice}</strong></span>{$product_tax_type_text}</td>
+				<td><span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productprice}</strong></span>{$product_tax_type_text}</td>
+			</tr>
+			<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+			<tr module='Product_Productsaleprice'>
+				<th scope="row">할인판매가</th>
+				<td><span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong></span></td>
+				<td><span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong></span></td>
+			</tr><!-- //참고 -->
+			<tr module='Product_Quantity'>
+				<th scope="row">수량</th>
+				<td><span class="quantity">{$form.quantity}</span></td>
+				<td><span class="quantity">{$form.quantity}</span></td>
+			</tr>
+			<tr>
+				<th scope="row">옵션</th>
+				<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+				<td module='Product_CompareOptionList'>
+					<ul>
+						<li module="Product_CompareAddOption"><span class="optionName">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span></li>
+					</ul>
+					<ul>
+						<li module="Product_CompareOption"><span class="optionName">{$option_name}</span> <span class="fWidthFull">{$form.option}</span></li>
+					</ul>
+				</td><!-- //참고 -->
+			</tr>
+			<tr module='Product_Model'>
+				<th scope="row">모델명</th>
+				<td>{$Model}</td>
+				<td>{$Model}</td>
+			</tr>
+			<tr module='Product_Madein'>
+				<th scope="row">원산지</th>
+				<td>{$Madein}</td>
+				<td>{$Madein}</td>
+			</tr>
+			<tr module='Product_Manuname'>
+				<th scope="row">제조사</th>
+				<td>{$Manuname}</td>
+				<td>{$Manuname}</td>
+			</tr>
+			<tr module='Product_Brand'>
+				<th scope="row">브랜드</th>
+				<td>{$Brand}</td>
+				<td>{$Brand}</td>
+			</tr>
+			<tr module='Product_Allotperiod'>
+				<th scope="row">무이자할부</th>
+				<td>{$Allotperiod} {$Allotcard}</td>
+				<td>{$Allotperiod} {$Allotcard}</td>
+			</tr>
+			<tr module='Product_Mileage'>
+				<th scope="row">{$mileage_name}</th>
+				<td>{$Mileage}</td>
+				<td>{$Mileage}</td>
+			</tr>
+			<tr module='Product_Selfproductcode'>
+				<th scope="row">자체상품코드</th>
+				<td>{$Selfproductcode}</td>
+				<td>{$Selfproductcode}</td>
+			</tr>
+			<tr module='Product_Description'>
+				<th scope="row">상품간략설명</th>
+				<td>{$Description}</td>
+				<td>{$Description}</td>
+			</tr>
+		</tbody>
+		</table>
+		<p class="description {$description_display|display}">세트상품의 경우 상품비교는 가능하지만 장바구니 담기 및 주문은 불가능합니다.</p>
+
+		<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+		<div class="ec-base-button">
+			<span class="gRight">
+				<a class="sp-btn {$basket_display|display} {$basket_class}" theme="white" scale="large" change="plus">장바구니 담기</a>
+				<a class="sp-btn {$wishlist_display|display} {$wishlist_class}" theme="white" scale="large" change="plus">관심상품 등록</a>
+				<a class="sp-btn {$buy_display|display} {$buy_class}" theme="my" scale="large" change="check">바로 구매하기</a>
+			</span>
+		</div><!-- //참고 -->
+	</div>
+</div>

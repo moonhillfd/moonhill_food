@@ -1,0 +1,213 @@
+
+	/*
+		쿠폰 디자인
+
+		<!--쿠폰-->
+		<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+		<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+		<div id="sp-coupon" module="coupon_join">
+			<ul>
+				<p class="sp-coupon-message">쿠폰이 발급되었습니다</p>
+				<li couponsale data-promotion="{$coupon_period}">
+					<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+						<div class="detail">
+							<p class="title">{$coupon_name}</p>
+							<p class="discount">{$coupon_content}</p>
+							<p class="period">{$coupon_period}</p>
+						</div>
+					</div>
+					<div couponsale-counter></div>
+				</li>
+				<li couponsale data-promotion="{$coupon_period}">
+					<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+						<div class="detail">
+							<p class="title">{$coupon_name}</p>
+							<p class="discount">{$coupon_content}</p>
+							<p class="period">{$coupon_period}</p>
+						</div>
+					</div>
+					<div couponsale-counter></div>
+				</li>
+			</ul>
+			<p class="sp-btn-group" grid="0">
+				<a href="/myshop/coupon/coupon.html" class="sp-btn" theme="white" scale="bubble" change="right">MY COUPONS</a>
+			</p>
+		</div>
+		<div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div>
+	*/
+	#sp-coupon * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+
+	#sp-coupon {}
+	#sp-coupon > ul { font-size:0; text-align:center; }
+	#sp-coupon > ul > li { display:inline-block; margin:0 12px 10px 12px; position:relative; }
+	#sp-coupon .coupon { display:inline-block; width:216px; height:105px; margin-bottom:15px; background-repeat:no-repeat; position:relative; text-align:left; }
+	#sp-coupon .coupon.hand { cursor:pointer; }
+	#sp-coupon .coupon.hand:hover:before { content:''; position:absolute; top:0; left:0; bottom:0; right:0; border:1px solid rgba(0,0,0,0.1); }
+	#sp-coupon .coupon .detail { padding:18px 20px 3px 25px; }
+	#sp-coupon .coupon .title { font-size:11px; color:#999; padding-right:40px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	#sp-coupon .coupon .discount { text-decoration:none; font-size:14px; font-weight:bold; letter-spacing:0.05em; }
+	#sp-coupon .coupon .period { font-size:9px; color:#999; }
+	#sp-coupon .coupon .button { margin:3px 0 0 0; }
+	#sp-coupon .check { z-index:2; position:absolute; right:8px; top:9px; }
+
+	#sp-coupon .sp-coupon-message { text-align:center; font-size:11px; background:#f9f9f9; padding:15px 0; margin:0 0 20px 0; border-radius:5px; }
+
+	#sp-coupon-empty { display:block; padding:133px 0; background:#f9f9f9; font-size:11px; color:#999; text-align:center; }
+	#sp-coupon + #sp-coupon-empty { display:none; }
+
+	#sp-coupon .sp-coupon-field { padding:0 0 20px 10px; }
+	#sp-coupon .sp-coupon-field-timer { font-size:0; text-align:center; position:relative; line-height:17px; }
+	#sp-coupon .sp-coupon-field-timer span,
+	#sp-coupon .sp-coupon-field-timer strong { font-size:14px; display:inline-block; margin:0 1px 0 0; padding:0 5px; text-align:center;}
+	#sp-coupon .sp-coupon-field-timer span { margin:0 3px 0 1px; }
+	#sp-coupon .sp-coupon-field-timer strong { color:#fff; background-color:#bbb; text-align:center; border-radius:3px; min-width:10px; }
+	#sp-coupon .sp-coupon-field-timer strong.-on { color:#fff; background-color:#333; }
+	#sp-coupon .sp-coupon-field-enddate { text-align:center; font-size:11px; background-color:#f9f9f9; }
+
+	#sp-coupon-cover {  }
+	#sp-coupon-cover #sp-coupon > ul { padding:0 0 30px 0; }
+	#sp-coupon-cover .sp-coupon-field { padding:0 0 30px 10px; }
+	#sp-coupon-cover [tabs] [tabsContainer] [tabsLoop] { padding:50px 0 0 0; border:1px solid #eaeaea; border-top:0; }
+	#sp-coupon-cover .sp-coupon-clickbtn { text-align:center; font-size:0; padding:25px 0 70px 0; }
+	#sp-coupon-cover .sp-coupon-clickbtn a { display:inline-block; }
+
+	#sp-coupon[all] > ul > li { margin:0 38px 30px 38px; }
+
+	#sp-coupon[grade] { margin:20px 0 30px 0; }
+	#sp-coupon[grade] .grade { z-index:1; position:absolute; left:50%; margin-left:-20px; top:-22px; font-size:18px; width:40px; line-height:40px; text-align:center; font-style:normal; background:#fff; border:1px solid #f0f0f0; border-radius:50%; }
+	#sp-coupon[grade] .grade.best { color:#fff; background:#333; border:0; font-weight:bold; }
+	#sp-coupon[grade] .grade.best:before { content:attr(title); font-size:11px; position:absolute; width:300px; left:50%; margin-left:-150px; text-align:center; color:#333; margin-top:43px; letter-spacing:0.1em; }
+	#sp-coupon[grade] .gradetext { position:relative; font-style:normal; display:block; text-align:center; padding:0 20px; font-size:11px; letter-spacing:0.05em; margin:0 30px; line-height:40px; margin-top:60px; background:#f9f9f9; border-radius:20px; }
+	#sp-coupon[grade] .grade.best + .gradetext { color:#fff; background:#912b45; }
+	#sp-coupon[grade] .gradetext span { display:inline-block; width:180px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+	#sp-coupon[grade] > ul { padding:0 0 0 0; }
+	#sp-coupon[grade] > ul > li { border:1px solid #f0f0f0; border-radius:20px; margin:0 10px 0 10px; }
+	#sp-coupon[grade] > ul > li .coupon { margin:30px; }
+	#sp-coupon[grade] .sp-coupon-field { padding:0 0 50px 10px; }
+	#sp-coupon[grade] .sp-coupon-field-timer span,
+	#sp-coupon[grade] .sp-coupon-field-timer strong { font-size:12px; }
+	#sp-coupon[grade] .sp-coupon-field-timer strong { width:14px; padding:2px 0 1px 0; }
+
+	#sp-coupon-cover #sp-coupon-empty { margin:0 50px 50px 50px; background:#fff; border:1px solid #f0f0f0; border-radius:10px; }	
+
+	/* 상세페이지는 UI를 달리하자 */
+	#sp-coupon[grade][theme="detail"] > ul { padding:30px 0 0 0; margin:0 0 0 -20px; }
+	#sp-coupon[grade][theme="detail"] > ul > li { width:300px; margin:0 0 40px 20px; }
+
+	@media screen and ( min-width:1px ) and ( max-width:600px ){
+		#sp-coupon .sp-coupon-field-timer { line-height:14px; }
+		#sp-coupon .sp-coupon-field-timer span,
+		#sp-coupon .sp-coupon-field-timer strong { font-size:9px; }
+		#sp-coupon .sp-coupon-field-timer span { margin:0 5px 0 0; }
+		#sp-coupon .sp-coupon-field-timer strong { width:10px; border-radius:2px; }
+		#sp-coupon .sp-coupon-field-enddate { font-size:9px; }
+	}
+
+
+
+
+
+
+
+
+
+
+
+	/*
+		<!--최근 본 상품-->
+		<!--@css(/_sp/apps/module/couponload/couponload.css)-->
+		<!--@js(/_sp/apps/module/couponload/couponload.js)-->
+		<button couponload data-url="/_sp/apps/module/couponload/couponload.html">최근 본 상품</button>
+	*/
+
+
+	/*
+		<!--위시리스트 미리보기-->
+		<!--@css(/_sp/apps/module/wishlist/wishlist.css)-->
+		<!--@js(/_sp/apps/module/wishlist/wishlist.js)-->
+		<button wishlist data-url="/_sp/apps/module/wishlist/wishlist.html">최근 본 상품</button>
+	*/
+
+	#sp-couponload-loading { z-index:998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-couponload { z-index:999; position:fixed; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-couponload { background-image:url(/_sp/image/opacity/wht-50.png); }
+	/* #sp-couponload { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-couponload,
+	#sp-couponload * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-couponload .sp-couponload-inside { 
+		top:50%;
+		width:400px;
+		height:500px;
+		margin:-250px auto 0 auto;
+		position:relative;
+		background-image:url(/_sp/image/opacity/wht-95.png);
+		box-shadow:0 1px 3px 0 rgba(0,0,0,0.15),0 4px 8px 3px rgba(0,0,0,0.07);
+	}
+
+	#sp-couponload .sp-couponload-inside { visibility:hidden; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0); 
+		-moz-transform: translate(0, 10px);
+		-webkit-transform: translate(0, 10px);
+		-o-transform: translate(0, 10px);
+		-ms-transform: translate(0, 10px);
+		transform: translate(0, 10px);
+		-webkit-transition : all 0.3s ease;
+		-khtml-transition : all 0.3s ease;
+		-moz-transition : all 0.3s ease;
+		-ms-transition : all 0.3s ease;
+		-o-transition : all 0.3s ease;
+		transition : all 0.3s ease;
+	}
+	#sp-couponload .sp-couponload-inside.active { visibility:visible; opacity:1; filter:alpha(opacity=100); -ms-filter:alpha(opacity=100); 
+		-moz-transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+
+	#sp-couponload .sp-couponload-close { position:absolute; width:50px; height:50px; right:0; top:0; border:0; background:transparent url(/_sp/image/cafe24/common/btn_close.gif) no-repeat center center; }
+	#sp-couponload h3 { font-size:13px; color:#fff; text-align:left; line-height:52px; height:50px; padding-left:25px; background:#444 url(/_sp/image/cafe24/layer_background.gif) no-repeat center left; }
+
+	#sp-couponload .overview { width:100%; }
+	#sp-couponload .scroll-bar { z-index:9; }
+	#sp-couponload .sp-couponload-loop {}
+	#sp-couponload .sp-couponload-loop ul {}
+	#sp-couponload .sp-couponload-loop ul li {}
+	#sp-couponload .sp-couponload-loop ul li + li { border-top:1px solid #f0f0f0; }
+	#sp-couponload .sp-couponload-loop ul li .box { position:relative; display:block; *display:inline-block;_width /**/:100%;padding:15px 25px 15px 25px; }
+	#sp-couponload .sp-couponload-loop ul li .box:hover { background:#f9f9f9; }
+	#sp-couponload .sp-couponload-loop ul li .box:after { clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; }
+	#sp-couponload .sp-couponload-loop ul li .box strong { font-size:13px; }
+	#sp-couponload .sp-couponload-loop ul li .box p { padding-top:3px; }
+	#sp-couponload .sp-couponload-loop ul li .box span { display:block; color:#999; font-size:11px; padding:10px 0 0 0; position:relative; border-top:1px dashed #f0f0f0; margin-top:10px; }
+	#sp-couponload .sp-couponload-loop ul li .box img { height:16px; margin-left:5px; }
+	#sp-couponload .sp-couponload-loop .box:before { content:'COUPON'; position:absolute; top:25px; right:25px; font-size:9px; line-height:20px; width:60px; text-align:center; background:#333; color:#fff; margin-top:-7px; }
+	#sp-couponload .sp-couponload-count { font-size:11px; font-weight:bold; font-style:normal; position:absolute; top:50%; margin:-10px 0 0 7px; line-height:21px; height:20px; padding:0 7px 0 7px; border-radius:10px; background:#912b45; color:#fff; }
+	#sp-couponload .sp-couponload-count[count="0"] { background:#666; }
+
+	#sp-couponload .sp-no-result { display:none; font-size:11px; color:#666; margin:20px; background:#f9f9f9; text-align:center; padding:20px; }
+	#sp-couponload ul.displaynone + .sp-no-result { display:block !important; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+
+	}

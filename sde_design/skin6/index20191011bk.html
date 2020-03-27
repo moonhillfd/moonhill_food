@@ -1,0 +1,307 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+	<!--컨플릭트-->
+	<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+	<i id="sp-path" scope="index" path="" file=""></i>
+
+	<!--플로팅 쿠키배너 1-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<div module="bannermanage2_display_18" floating data-cookie="uniqueCookieName1" data-wait="2000" data-speed="600" data-width="500" data-height="400" data-top="" data-left="30" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating.html"><div class="sp-floating-open" data-cookie="uniqueCookieName1"><button>팝업<br>보기</button></div>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	</div>
+
+	<!--플로팅 쿠키배너 2-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<div module="bannermanage2_display_19" floating data-cookie="uniqueCookieName2" data-wait="3000" data-speed="600" data-width="300" data-height="300" data-top="" data-left="550" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating_2.html"><div class="sp-floating-open" data-cookie="uniqueCookieName2"><button>새소식</button></div>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	</div>
+
+	<!--인덱스-->
+	<!--@css(/_sp/apps/addon/slick/slick.css)-->
+	<!--@js(/_sp/apps/addon/slick/slick.js)-->
+	<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+	<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+	<!--@js(/_sp/apps/layout/index/index-1/index.js)-->
+	<!--@css(/_sp/apps/layout/index/index-1/index.css)-->
+	<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+	<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+	<!--
+		<div lazyhtmlelem="1"></div>
+		이 모습의 영역은 /_sp/apps/layout/index/index-1/index_load.html 에서 실제로 수정합니다.
+	-->
+
+
+
+	<div lazyhtml data-url="/_sp/apps/layout/index/index-1/index_load.html"></div>
+
+	<!--대배너-->
+	<div module="bannermanage2_display_7" class="sp-slider-index-1 sp-slider full hold" data-fade="true" data-autoplayspeed="2000" data-custompaging="true" data-speed="500" hover="false" arrows="blk-h-l" arrowsArea="h-in-46" arrowfix="true" dots="button" dotsArea="in-b-c">
+		<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+		<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+		<!--
+			동영상은 수동으로 등록합니다.
+			<div class="sp-slider-loop" data-title="[ ▶ ] ZARA SPRING SUMMER 2016">
+				<div youtubeouter="fixed"><div youtube data-id="0Rmz9_jagKo" data-start="true" data-sound="false" data-loop="true" data-width="3000" data-height="1350" data-fixheight="1000" data-center="true"></div></div>
+			</div>
+		-->
+	</div><!--//여기까지-->
+
+
+	<i class="nav" data-title="최신소식"></i><!--네비게이션-->
+	<div class="mh_main_zenanotice" module="board_listpackage_1">
+		<div module="board_list_3001">
+		<!--
+			$count = 4
+			$main_list = yes
+        -->
+			<span class="label">today zena notice</span>
+			<ul class="sp-slider" data-infinite="true" data-autoplayspeed="2000" data-speed="700" data-variableWidth="true" hover="true" between="20">
+				<li class="sp-slider-loop">
+					<a class="title" href="/board/product/read.html{$param_read}">
+						<span class="text">{$subject|cut:22,..}</span>
+						<span class="date">{$write_date|date:Y/m/d}</span>
+					</a>
+				</li>
+				<li class="sp-slider-loop">
+					<a class="title" href="/board/product/read.html{$param_read}">
+						<span class="text">{$subject|cut:22,..}</span>
+						<span class="date">{$write_date|date:Y/m/d}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--주요배너-->
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-index-point-1" grid="3">
+			<ul>
+				<!-- 공지사항 -->
+				<li module="board_listpackage_1">
+					<div class="sp-index-point-1-board">
+						<a href="/board/free/list.html?board_no=1">NOTICE<span class="desc">새로운 소식을 알려드립니다.</span><span>MORE</span></a>
+						<div class="sp-index-point-1-board-inside">
+							<!--SLICK:v1.12.4-->
+							<!--@css(/_sp/apps/addon/slick/slick.css)-->
+							<!--@js(/_sp/apps/addon/slick/slick.js)-->
+							<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_1">
+								<!--
+									$count = 10
+									$main_list = yes
+									$main_list_reply_view = no
+								-->
+								<div module="board_notice_1"  class="sp-slider-loop notice "><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+								<div module="board_notice_1"  class="sp-slider-loop notice"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i>{$subject}</a></div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="mh_event_banner">
+					<div module="bannermanage2_display_8" class="sp-slider" data-infinite="true" data-autoplayspeed="2000" data-speed="600" hover="true" arrows="wht-h-m" arrowsArea="h-in-99" dots="circle-s" dotsArea="in-b-l" between="30">
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div><!--//여기까지-->
+
+
+
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-index-point-1 mh_section_2" grid="3">
+			<ul>
+				<!-- FAQ -->
+				<li class="mh_main_info_banner">
+					<div module="bannermanage2_display_9" class="sp-slider" data-fade="true" data-autoplayspeed="13000" data-speed="600" hover="true" arrows="wht-h-m" arrowsArea="h-in-99" dots="circle-s" dotsArea="in-b-l" between="30">
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+					</div>
+				</li>
+				<li module="board_listpackage_1" class="mh_main_faq">
+					<div class="sp-index-point-1-board">
+						<a href="/board/free/list.html?board_no=3">FAQ<span class="desc">자주묻는 질문에 대한 답변입니다.</span><span>MORE</span></a>
+						<div class="sp-index-point-1-board-inside">
+							<!--SLICK:v1.12.4-->
+							<!--@css(/_sp/apps/addon/slick/slick.css)-->
+							<!--@js(/_sp/apps/addon/slick/slick.js)-->
+
+							<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_3">
+								<!--
+									$count = 10
+									$main_list = yes
+									$main_list_reply_view = no
+								-->
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+								<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="9"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	<!-- 대표상품 -->
+	<i class="nav" data-title="대표상품"></i><!--네비게이션-->
+	<div class="mh_main_product">
+		<div class="mh_main_product_header">
+			<p class="title">대표상품</p>
+			<p class="desc">달맞이자연식품 대표 브랜드 제나차</p>
+		</div>
+		<div class="mh_main_product_container">
+			<a class="main_product" href="/product/제나선-다이어트-차-1set-30일분-60포/41/category/49/display/1/">
+				<p class="image"><img src="_sp/image/main/main_product_set2.png" alt="제나선 다이어트 차"></p>
+				<p class="text">
+					<strong>제나선 다이어트 차 1set</strong> 30일분 60포<br>
+					(11g × 20스틱 × 3case)<br>
+					<span class="deco">提(제) 끌어올릴 제, 娜(나) 날씬하고 아리따워지는, 嬋(선) 고울 선 <br>‘내 안의 고운 선’ 을 찾는 시간</span>
+				</p>
+			</a>
+			<a class="main_product incase" href="/product/detail.html?product_no=15">
+				<p class="image"><img src="_sp/image/main/main_product_set.png" alt="제나차"></p>
+				<p class="text">
+					<strong>제나차 1set</strong> 30일분 60포<br>
+					(10g × 20스틱 × 3case)<br>
+					<span class="deco">除(제) 덜어내어, 娜(나) 날씬하고 아리따워지는, 茶(차)<br>‘제 것으로 아름다운 나’ 를 만나는 시간</span>
+				</p>
+			</a>
+		</div>
+	</div>
+	<!-- //대표상품 -->
+
+
+
+	<!-- 동영상 -->
+	<i class="nav" data-title="브랜드 스토리"></i><!--네비게이션-->
+	<div class="brand_story_wrap">
+		<div class="brand_story_item">
+			<div class="brand_story_content">
+				<p class="title">달맞이자연식품 브랜드 스토리</p>
+				<p class="desc">
+					전통의 지혜를 찻잔에 담다.<br>
+					제나의 제품들은 원래의 건강하고 맑은 나로 돌아 올 수 있게 합니다.<br>
+					건강한 아름다움을 위한 비움과 채움으로 '나'를 찾는 경험을 해보세요.
+				</p>
+				<a class="btn_view" href="/board/gallery/list.html?board_no=12">다른 영상보기</a>
+			</div>
+			<div class="brand_story_video">
+				<a class="btn_view_list" href="/board/gallery/list.html?board_no=12"><img src="_sp/image/main/icon_list_view.png" alt="제나차 영상 리스트"></a>
+				<div id="playerMain" class="video"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	  var tag = document.createElement('script');
+
+	  tag.src = "https://www.youtube.com/iframe_api";
+	  var firstScriptTag = document.getElementsByTagName('script')[0];
+	  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	  var player;
+	  function onYouTubeIframeAPIReady() {
+		player = new YT.Player('playerMain', {
+		  height: '330',
+		  width: '480',
+		  videoId: 'Dl30NKIVh6M',
+
+		  playerVars: {
+			autoplay: 1,            // Auto-play the video on load
+			controls: 1,            // Show pause/play buttons in player
+			showinfo: 1,            // Hide the video title
+			modestbranding: 1,      // Hide the Youtube Logo
+			fs: 1,                  // Hide the full screen button
+			cc_load_policy: 1,      // Hide closed captions
+			iv_load_policy: 3,      // Hide the Video Annotations
+			autohide: 1, // Hide video controls when playing
+			enablejsapi: 1,
+			mute : 1,
+			loop: 1,
+			playlist: 'l-HtAtC-bmU',
+			rel : 0,
+			modestbranding: 1,
+		  },
+			events: {
+			  onReady: function(e) {
+				e.target.mute();
+
+			  },
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+
+		});
+
+	  }
+
+	  function onPlayerReady(event) {
+		   event.target.setVolume(2);
+	   event.target.playVideo();
+	  }
+
+	  var done = true;
+	  function onPlayerStateChange(event) {
+		if (event.data == YT.PlayerState.ENDED) {
+	//      setTimeout(stopVideo, 6000);
+				  player.playVideo();
+		}
+		   event.target.setVolume(2);
+	  }
+	</script>
+
+
+	<!--포토리뷰-->
+	<i class="nav" data-title="제품 구매후기"></i><!--네비게이션-->
+	<!--@import(/_sp/apps/module/photoreview/photoreview.html)-->
+
+
+	<!-- 동영상 -->
+	<i class="nav" data-title="공식 SNS"></i><!--네비게이션-->
+	<div class="mh_main_product_header" style="padding-top:0">
+		<p class="title">공식 SNS</p>
+		<p class="desc">달맞이자연식품 소통채널 인스타그램, 페이스북, 네이버 블로그 </p>
+	</div>
+	<!--@import(/company/mainSns.html)-->
+
+	<!--회원가입-->
+	<!--@css(/_sp/apps/addon/cookies/cookies.css)-->
+	<!--@js(/_sp/apps/addon/cookies/cookies.js)-->
+	<div class="sp-index-userbox" module="Layout_statelogoff" spcookie="cover" data-cookie="sp_index_userbox_1" data-reset="false">
+		<div layout="sp-layout-fixed"><button spcookie="button"><p></p></button></div>
+		<ul module="Layout_footer">
+			<li class="msg-1">아직 {$mall_name} 회원이 아니신가요?<!--{$company_name}--></li>
+			<li class="msg-2">지금 회원가입을 하시면 <span class="point">3,000원 할인 쿠폰</span> 과 각종 다양한 혜택으로 즐거운 쇼핑을 할 수 있습니다 :D</li>
+			<li>
+				<a href="/member/login.html" class="login"><span>로그인</span></a>
+				<a href="/member/join.html" class="joinus"><span>회원가입</span></a>
+			</li>
+		</ul>
+	</div>
+
+
+<!--@define(cmc_log)-->

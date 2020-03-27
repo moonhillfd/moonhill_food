@@ -1,0 +1,166 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">마이페이지</a>
+			<a href="#none">INQUIRY · MODIFY</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title">
+	<h1>INQUIRY · MODIFY</h1>
+</div><!--//종료-->
+
+<!--게시판-->
+<!--@js(/_sp/apps/module/board/board.js)-->
+<!--@css(/_sp/apps/module/board/board.css)-->
+<div id="sp-board" theme="inquiry" path="modify" layout="sp-layout-fixed">
+
+	<div module="board_inquiryModify">
+
+		<!--상품정보-->
+		<div grid="1" class="sp-base-box sp-box" module="board_InquiryHead">
+			<ul>
+				<li class="sp-clear">
+					<i class="sp-base-userdot"></i>
+					<i product class="sp-base-userboxline"></i>
+					<div product class="sp-base-userbox">
+						<p class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" onerror="this.src='/_sp/image/cafe24/thumb/img_product_small.gif';" class="myshop_benefit_group_image_tag"></a></p>
+						<div class="sp-base-description">
+							<h4 class="sp-base-usertitle">PRODUCT INFORMATION</h4>
+							<p>{$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}</p>
+							<p><a href="/product/detail.html{$param_product}">{$product_name}</a></p>
+							<p><strong class="txtWarn">{$product_price}</strong> {$product_tax_type_text}</p>
+							<br />
+							<p><a href="/product/detail.html{$param_product}" title="새창으로 이동" target="_blank" class="sp-btn" theme="white" scale="medium" change="search">상품정보 상세보기</a></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div><!--종료-->
+
+		<!--리콰이어-->
+		<br /><br />
+		<div class="sp-required-title"><span>대량구매문의 글 수정하기</span></div>
+
+		<!--@css(/css/module/board/inquiryModify.css)-->
+		<div class="ec-base-table typeWrite">
+			<table border="1" summary="">
+			<caption>대량구매문의 글 수정 폼</caption>
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">구매 예정 수량 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>
+						<span class="ec-base-qty">
+							{$form.bi_product_cnt}
+							<a href="#none"><img src="/_sp/image/cafe24/common/btn_quantity_up.gif" alt="수량증가" class="up" onclick="{$action_amount_up}" /></a>
+							<a href="#none"><img src="/_sp/image/cafe24/common/btn_quantity_down.gif" alt="수량감소" class="down" onclick="{$action_amount_down}" /></a>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">제목 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td select="1" input="1">{$form.bi_inquire_subject}</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="clear">
+						{$form.bi_inquire_content}
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일1</th>
+					<td>{$form.inquiry_file1}<p class="gBlank5 txtInfo txt11">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p></td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일2</th>
+					<td>{$form.inquiry_file2}<p class="gBlank5 txtInfo txt11">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p></td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일3</th>
+					<td>{$form.inquiry_file3}<p class="gBlank5 txtInfo txt11">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p></td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일4</th>
+					<td>{$form.inquiry_file4}<p class="gBlank5 txtInfo txt11">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p></td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일5</th>
+					<td>{$form.inquiry_file5}<p class="gBlank5 txtInfo txt11">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p></td>
+				</tr>
+				<tr>
+					<th scope="row">카탈로그 신청 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>{$form.bi_is_catalog}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<!--리콰이어-->
+		<br /><br />
+		<div class="sp-required-title"><span>고객정보 작성하기</span></div>
+
+		<div class="ec-base-table typeWrite" select="1" input="1">
+			<table border="1" summary="">
+			<caption>대량구매문의 고객정보</caption>
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">국가 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>{$form.bi_country_code}</td>
+				</tr>
+				<tr>
+					<th scope="row">고객명 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>{$form.bi_inquirer_name}</td>
+				</tr>
+				<tr>
+					<th scope="row">회사명</th>
+					<td>{$form.bi_inquirer_company_name}</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>{$form.bi_inquirer_email}</td>
+				</tr>
+				<tr>
+					<th scope="row">주소 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>
+						{$form.bi_zipcode1} {$form.none_zipcode}<br />
+						{$form.bi_inquirer_addr1}<br />
+						{$form.bi_inquirer_addr2}
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락처 <img src="/_sp/image/cafe24/ico_required.gif" alt="필수" /></th>
+					<td>{$form.bi_inquirer_phone} (숫자만 입력해주세요.)</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<!--버튼-->
+		<div class="ec-base-button">
+			<p class="sp-btn-group" grid="0">
+				<a href="#none" onclick="{$action_modify}" class="sp-btn" theme="black" scale="large" change="check">수정</a>
+			</p>
+		</div>
+	</div>
+
+</div><!--종료-->

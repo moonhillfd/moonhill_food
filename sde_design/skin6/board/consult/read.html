@@ -1,0 +1,132 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="consult" path="read" module="board_ReadPackage_9">
+
+    <!--@css(/css/module/board/readPackage_9.css)-->
+    <div module="board_title_9">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/board/index.html">COMMUNITY</a>
+					<a href="/myshop/index.html">MYPAGE</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_title}</span>
+				<span class="ko">{$board_info}</span>
+			</h1>
+		</div><!--//종료-->
+    </div>
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<div module="Board_Read_9">
+			<!--
+				$delete_success_url = /board/consult/list.html
+				$login_page_url = /member/login.html
+			-->
+			<div class="ec-base-table gLayoutFixed">
+				<table border="1" summary="">
+				<caption>1:1 맞춤상담 상세</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="3">{$subject}</td>
+					</tr>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>{$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span></td>
+						<th scope="row">답변여부</th>
+						<td><i class="sp-answer-{$consult|lower}"></i><span class="txtNum">{$consult}</span></td>
+					</tr>
+					<tr class="{$config.use_date|display}">
+						<th scope="row">문의일시</th>
+						<td colspan="3">{$write_date}</td>
+					</tr>
+					<tr class="view">
+						<td colspan="4">
+							<div class="detail">{$content}{$content_image}</div>
+						</td>
+					</tr>
+					<tr class="attach {$config.use_attach|display}" >
+						<th scope="row">첨부파일</th>
+						<td colspan="3">{$attach_file}</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+
+			<div class="{$display_consult_reply}">
+				<div class="ec-base-table">
+					<table border="1" summary="">
+					<caption>1:1 맞춤상담 답변</caption>
+					<colgroup>
+						<col style="width:130px;" />
+						<col style="width:auto;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">답변자</th>
+							<td>{$reply_name}</td>
+						</tr>
+						<tr>
+							<th scope="row">답변일시</th>
+							<td>{$reply_date}</td>
+						</tr>
+						<tr class="view">
+							<td colspan="2">
+								<div class="detail">{$reply_content}</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!--대기메세지-->
+			<div grid="1" class="sp-base-box sp-box mgt2 {$display_consult_noreply}">
+				<ul>
+					<li class="sp-clear">
+						<p class="sp-message"><span>빠른시간내에 답변드리겠습니다. 잠시만 기다려 주세요!</span></p>
+					</li>
+				</ul>
+			</div><!--종료-->
+
+			<!--버튼-->
+			<div class="sp-btn-group mgt2" grid="0">
+				<p class="sp-left">
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+				</p>
+				<p class="sp-right">
+					<a href="/board/consult/reply.html{$param_reply}" class="sp-btn {$config.is_admin|display} {$reply_button_auth|display}" theme="black" scale="large" change="edit">답변하기</a>
+					<a href="/board/consult/modify.html{$param_modify}" class="sp-btn {$modify_button_auth|display}" theme="white" scale="large" change="edit">수정</a>
+					<a href="#none" onclick="{$action_delete}" class="sp-btn {$delete_button_auth|display}" theme="white" scale="large" change="close">삭제</a>
+				</p>
+			</div><!--//종료-->
+		</div>
+
+	</div>
+</div><!--종료-->

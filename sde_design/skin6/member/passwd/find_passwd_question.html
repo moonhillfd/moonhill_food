@@ -1,0 +1,100 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">LOGIN</a>
+			<a href="/member/passwd/find_passwd_info.html">FIND PASSWORD</a>
+			<a href="#none">QUESTION</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>FIND PASSWORD QUESTION</h1>
+	</div><!--//종료-->
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_findPasswdQuestion">
+						<!--
+							$nextURL = /member/passwd/find_passwd_method.html
+						-->
+						<div class="sp-join-result">
+							<fieldset>
+								<legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
+								<ul class="sp-find-othertype">
+									<li class="method {$form.check_method|display}"><!-- 이거 유의하자. form 인자는 display 테스트가 확실치 않다. -->
+										<strong class="term">&nbsp;</strong> 
+										<span class="desc">{$form.check_method}</span>
+									</li>
+									<li class="question">
+										<strong class="term">질문</strong> 
+										<span class="desc onlytext">{$passwd_question}</span>
+									</li>
+                                    <hr class="sp-form-textline minus mgb" />
+									<li class="answer">
+										<strong class="term"><label for="passwd_answer">답변</label></strong> 
+										<span class="desc">{$form.passwd_answer}</span>
+									</li>
+
+                                    <hr class="sp-form-textline mgb2" />
+									<p class="sp-btn-group" grid="1">
+										<a href="#none" onclick="{$action_func_find_passwd}" class="sp-btn" theme="black" scale="bubble" change="check"> OK</a>
+									</p>
+								</ul>
+							</fieldset>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<!--메신저-->
+					<div class="sp-login-messenger">
+						<p>
+							<span class="message">
+								회원 가입시 작성한 질문에 대한 답변입니다.<br />
+								혹시 기억나지 않으신다면, 다른 방법을 이용해주세요.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								혹시 기억나셨다면 로그인을 해주세요.<br />
+								아이디가 없으시다면, 회원가입을 해주세요.
+								<br /><br />
+								<a href="/member/login.html" class="sp-btn" theme="white" scale="small" change="right">로그인</a>
+								<a href="/member/join.html" class="sp-btn" theme="white" scale="small" change="right">회원가입</a>
+								<br /><br />
+								: D
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

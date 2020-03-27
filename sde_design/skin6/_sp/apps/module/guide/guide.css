@@ -1,0 +1,51 @@
+
+	.xans-mall-faq #sp-typography { color:#333; padding:60px 0 70px 0; }
+	.xans-mall-faq .sp-faq-box { min-height:180px; position:relative; border:1px solid #f0f0f0; border-top:0; padding:100px 100px 100px 400px; }
+	.xans-mall-faq .sp-faq-box h2 { position:relative; font-size:16px; font-weight:normal; padding-bottom:22px; margin-bottom:22px; border-bottom:1px solid #f0f0f0; }
+	.xans-mall-faq .sp-faq-box h2:before { content:''; position:absolute; width:14px; height:3px; bottom:-2px; background-color:#333;}
+	.xans-mall-faq .sp-faq-box h2:after { content:''; position:absolute; width:30px; height:30px; right:0; background:transparent url(/_sp/apps/module/guide/guide.gif) no-repeat -300px 0; }
+	.xans-mall-faq .sp-faq-box .sp-faq-content { font-size:13px; color:#666; line-height:1.6em; }
+	.xans-mall-faq .sp-faq-box .sp-faq-content-split { position:relative; padding:0 0 8px 90px; }
+	.xans-mall-faq .sp-faq-box .sp-faq-content-split span { position:absolute; top:-2px; left:0; background:#f0f0f0; width:70px; text-align:center; padding:2px; border-radius:5px; font-size:11px; }
+	.xans-mall-faq[tabs][design="xbar"] [tabsControl] li span { letter-spacing:0 !important; }
+
+	.xans-mall-faq .sp-faq-icon { position:absolute; top:175px; left:130px; width:150px; height:150px; background:#fafafa url(/_sp/apps/module/guide/guide.gif) no-repeat 0 0; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-sero { width:30px; height:30px; background-position:-300px 0; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-1 { background-position:0 0; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-2 { background-position:0 -150px; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-3 { background-position:0 -300px; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-4 { background-position:0 -450px; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-5 { background-position:0 -600px; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-6 { background-position:0 -750px; }
+	.xans-mall-faq .sp-faq-icon.sp-faq-icon-7 { background-position:0 -900px; }
+
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-1 { background-position:-150px 0; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-2 { background-position:-150px -150px; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-3 { background-position:-150px -300px; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-4 { background-position:-150px -450px; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-5 { background-position:-150px -600px; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-6 { background-position:-150px -750px; }
+	.xans-mall-faq [tabsLoop].active .sp-faq-icon.sp-faq-icon-7 { background-position:-150px -900px; }
+
+	.xans-mall-faq .sp-faq-icon {
+		will-change:background;
+	-webkit-backface-visibility : hidden;
+	   -moz-backface-visibility : hidden;
+	     -o-backface-visibility : hidden;
+		    backface-visibility : hidden;
+		    -webkit-perspective : 1000;
+			   -moz-perspective : 1000;
+			     -o-perspective : 1000;
+				    perspective : 1000;
+		-webkit-transform : translateZ(0px);
+		   -moz-transform : translateZ(0px);
+		    -ms-transform : translateZ(0px);
+			 -o-transform : translateZ(0px);
+				transform : translateZ(0px);
+		-webkit-transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+		 -khtml-transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+		   -moz-transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+			-ms-transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+			 -o-transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+				transition : background-position 900ms cubic-bezier(0.970, 0.000, 0.370, 1);
+	}

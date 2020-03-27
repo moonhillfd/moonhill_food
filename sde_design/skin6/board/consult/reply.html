@@ -1,0 +1,110 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="consult" path="reply" module="board_ReplyPackage_9">
+
+    <!--@css(/css/module/board/replyPackage_9.css)-->
+    <div module="board_title_9">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/board/index.html">COMMUNITY</a>
+					<a href="/myshop/index.html">MYPAGE</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_title}</span>
+				<span class="ko">{$board_info}</span>
+			</h1>
+		</div><!--//종료-->
+    </div>
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<div module="Board_Read_9">
+			<!--
+				$login_page_url = /member/login.html
+			-->
+			<div class="ec-base-table gLayoutFixed">
+				<table border="1" summary="">
+				<caption>1:1 맞춤상담 상세</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="3">{$subject}</td>
+					</tr>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>{$writer}</td>
+						<th scope="row">답변여부</th>
+						<td><i class="sp-answer-{$consult|lower}"></i><span class="txtNum">{$consult}</span></td>
+					</tr>
+					<tr class="{$config.use_date|display}">
+						<th scope="row">문의일시</th>
+						<td colspan="3">{$write_date}</td>
+					</tr>
+					<tr class="view">
+						<td colspan="4">
+							<div class="detail">{$content}</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				</div>
+			</div>
+
+			<div module="board_reply_9">
+				<!--
+					$reply_success_url = /board/consult/list.html
+					$deny_access_url = /board/consult/list.html
+				 -->
+				<div class="ec-base-table typeWrite">
+					<table border="1" summary="">
+					<caption>1:1 맞춤상담 답변쓰기 폼</caption>
+					<tbody>
+						<tr>
+							<td class="clear">
+								{$form.content}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!--버튼-->
+			<div class="sp-btn-group mgt2" grid="0">
+				<p class="sp-left">
+					<a href="#none" onclick="{$action_comment_admin}" class="sp-btn {$config.is_admin|display}" theme="white" scale="large" change="dot">관리자 답변보기</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+				</p>
+				<p class="sp-right">
+					<a href="#none" onclick="{$action_reply}" class="sp-btn" theme="black" scale="large" change="check">등록</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">취소</a>
+				</p>
+			</div><!--//종료-->
+		</div>
+
+	</div>
+</div><!--종료-->

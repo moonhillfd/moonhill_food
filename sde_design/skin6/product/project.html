@@ -1,0 +1,64 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer" module="product_headcategory">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">PROJECT</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title" module="product_headcategory">
+	<h2 class="{$top_image1_tag|display}"><span>{$top_image1_tag}</span><span>{$top_image2_tag}</span><span>{$top_image3_tag}</span></h2>
+	<h1 class="with-image{$title_image|display}">
+		<span>{$title_text_or_image}</span>
+		<i class="sp-title-like {$disp_likecate_class}"><button type="button">{$disp_likecate_icon}<strong count="{$disp_likecate_count|striptag}">{$disp_likecate_count}</strong></button></i>
+	</h1>
+</div><!--//종료-->
+
+<!--기획전-->
+<!--@css(/_sp/apps/module/project/project.css)-->
+<!--@js(/_sp/apps/module/project/project.js)-->
+<div id="sp-project" layout="sp-layout-fixed" module="Project_Package">
+
+	<!--타이틀-->
+    <ul class="sp-project-category">
+        <li module="product_projectcategory" style="display:{$display};">
+            <a href="#{$cate_id}" data-title="{$category_name}" data-count="{$product_count}" data-countdisplay="{$product_count_display|display}"></a>
+        </li>
+    </ul><!--//종료-->
+
+	<p class="sp-btn-group sp-center mgt3">
+		<a href="#none" project data-url="/_sp/apps/module/project/project.html" class="sp-btn" theme="my" scale="medium" change="list">더 많은 기획전 보기</a>
+	</p>
+
+	<!--상품목록-->
+	<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+	<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+	<div id="{$cate_id}" class="sp-project-loop" module="project_list">
+		<div class="sp-product" module="project_productlist" grid="4" control="true" compare="false">
+			<!--
+				$basket_result = /product/add_basket.html
+				$basket_option = /product/basket_option.html
+			-->
+			<!--@import(/_sp/apps/layout/product/product-1/product_project_package.html)-->
+		</div>
+		<div class="sp-no-result-found">
+			<p>검색 결과가 없습니다.</p>
+		</div><!--//종료-->
+	</div>
+	<div class="sp-no-result-found">
+		<p>검색 결과가 없습니다.</p>
+	</div><!--//종료-->
+
+</div><!--//종료-->

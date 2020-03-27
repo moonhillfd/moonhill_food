@@ -1,0 +1,23 @@
+
+	/* Çì´õ */
+	#sp-header-design-2 {  }
+	#sp-header-design-2 .sp-header-box { position:relative; }
+	#sp-header-design-2 .sp-header-logo { width:100%; margin:0 auto; text-align:left; }
+	#sp-header-design-2 .sp-header-logo a { display:inline-block; }
+	#sp-header-design-2 .sp-header-logo a img { max-width:100%; }
+	#sp-header-design-2 .sp-header-layer { position:absolute; height:100%; }
+	#sp-header-design-2 .sp-header-layer.sp-left { top:0; right:300px; }
+	#sp-header-design-2 .sp-header-layer.sp-right { top:0; right:0; }
+	#sp-header-design-2 .sp-header-layer > ul { display:table; table-layout:fixed; height:100%; }
+	#sp-header-design-2 .sp-header-layer > ul > li { display:table-cell; vertical-align:middle; }
+
+	#sp-header-design-2 .sp-slider { width:300px; }
+	#sp-header-design-2 .sp-slider .sp-header-ranked { display:block; padding:5px; }
+
+	#sp-header-design-2 .sp-slider-keyword { display:block; font-size:11px; padding:0 0 0 0; margin-left:100px; line-height:20px; text-align:left !important; }
+	#sp-header-design-2 .sp-slider-keyword:hover,
+	#sp-header-design-2 .slick-current + .slick-active .sp-slider-keyword { color:#912b45; }
+	#sp-header-design-2 .sp-slider-keyword i { display:inline-block; width:30px; font-size:9px; font-style:normal; }
+	#sp-header-design-2 .sp-slider-keyword i:before { content:attr(rank); font-size:9px; display:inline-block; background:#f9f9f9; padding:0 5px; line-height:16px; border:1px solid #f5f5f5; }
+	#sp-header-design-2 .sp-slider-keyword:hover i:before,
+	#sp-header-design-2 .slick-current + .slick-active .sp-slider-keyword i:before { background:#912b45; color:#fff; }

@@ -1,0 +1,16 @@
+.xans-board-movement { border:1px solid #f0f0f0; margin:-11px 0 20px 0; }
+.xans-board-movement li { position:relative; overflow:hidden; padding:0 0; border-bottom:1px solid #f0f0f0; background:#f9f9f9; }
+.xans-board-movement li strong,
+.xans-board-movement li a { float:left; padding:13px 0 13px 0; }
+.xans-board-movement li strong { width:88px; font-weight:normal; background:url("/_sp/image/cafe24/board/ico_move_prev.gif") no-repeat center center; text-indent:-9999px; }
+.xans-board-movement li a {  }
+
+.xans-board-movement li.next { border:0; }
+.xans-board-movement li.next strong { background:url("/_sp/image/cafe24/board/ico_move_next.gif") no-repeat center center; }
+
+
+.xans-board-movement li.prev:before,
+.xans-board-movement li.next:before { position:absolute; top:50%; right:23px; font-size:9px; letter-spacing:0.1em; margin-top:-8px; color:#ccc; }
+
+.xans-board-movement li.prev:before { content:'PREV'; }
+.xans-board-movement li.next:before { content:'NEXT'; }

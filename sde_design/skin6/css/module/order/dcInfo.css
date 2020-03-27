@@ -1,0 +1,14 @@
+.xans-order-dcinfo { margin:0; }
+.xans-order-dcinfo h3 { width:165px !important; font-size:12px; }
+.xans-order-dcinfo .description { padding:10px 20px !important; }
+.xans-order-dcinfo .description .mileage { margin:10px 0 0; padding:10px 0 0; border-top:1px solid #f0f0f0; *zoom:1; }
+.xans-order-dcinfo .description .mileage:after { content:""; display:block; clear:both; }
+.xans-order-dcinfo .description .displaynone + .mileage { margin:0; padding:0; border:0; }
+.xans-order-dcinfo .description .mileage li { float:left; margin:0 30px 0 0; }
+.xans-order-dcinfo .description .mileage li a { text-decoration:none; }
+.xans-order-dcinfo .description .mileage li a:before { content:' ¡¤ '; display:inline-block; padding:0 5px; }
+.xans-order-dcinfo .description .mileage li strong { display:inline-block; background:#f5f5f5; margin-left:8px; padding:4px 15px 4px 14px; border-radius:5px; border-radius:5px; }
+.xans-order-dcinfo .description .mileage li a:hover strong { background:#eaeaea; }
+
+.xans-order-dcinfo .description .member { padding-left:14px; }
+.xans-order-dcinfo .description .member:before { content:' ¡¤ '; position:absolute; margin:0 0 0 -9px; }

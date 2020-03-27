@@ -1,0 +1,81 @@
+
+	#sp-content select { padding-top:7px !important; padding-bottom:7px !important; }
+
+	#sp-sky-design-2 .sp-sky-board .sp-sky-board-layer { z-index:1; margin-top:-1px; }
+
+	#sp-tee > button span { left:auto; right:100%; visibility:hidden; }
+	#sp-tee > button:hover span { visibility:visible; }
+
+	#sp-detail-relation select,
+	#sp-detail-relation select { padding:6px 7px 8px 10px; background:#fff; }
+	#sp-detail-relation .sp-detail-relation-option,
+	#sp-detail-relation .sp-detail-relation-option { visibility:hidden; bottom:0; }
+	#sp-detail-relation .sp-detail-relation-loop:hover .sp-detail-relation-option,
+	#sp-detail-relation .sp-detail-relation-loop:hover .sp-detail-relation-option { visibility:visible; display:inline; }
+
+	#sp-detail [select="2"] select,
+	#sp-detail [select="2"] select { padding:6px 7px 8px 10px; background:#fff; }
+
+	.sp-slider[dots] .slick-dots li button,
+	.sp-slider[hover="true"] .slick-dots,
+	.sp-slider[hover="true"] .slick-arrow { filter:none !important; -ms-filter:none !important; }
+
+	.sp-find-othertype select { padding:10px 15px; }
+	.sp-login-form p[forms] select { padding:10px 15px; }
+
+	#sp-detail .sp-detail-otherlink ul,
+	#sp-detail .sp-detail-otherlink ul li a p,
+	#sp-category-1-all > div,
+	#sp-category-1-event > div,
+	#sp-category-1-normal a.sp-more:before,
+	#sp-category-1-normal .sp-sub-category,
+	#sp-category-1-normal .sp-sub-category ul,
+	#sp-footer-design-3 .sp-footer-content-split i[cover="true"],
+	#sp-detail .sp-detail-otherlink > ul,
+	#sp-detail .sp-detail-otherlink > ul > li a p,
+	#sp-detail-buying > ul > li a.buy:after,
+	#sp-detail-buying > ul > li a.line:after,
+	#sp-sky-design-2 .sp-icon,
+	#sp-sky-design-2 .sp-sky-board .sp-sky-board-layer,
+	.sp-subcategory .sp-sub-category-2,
+	.sp-subcategory .sp-sub-category-3,
+	.sp-subcategory.fixed:hover .sp-sub-category-1,
+	.sp-product-style button,
+	.sp-product-check input + label,
+	.sp-product .sp-product-spec,
+	.sp-product-item-thumb-origin.change,
+	.sp-product-item-thumb-origin.change img,
+	.sp-product-item .sp-product-layer-func,
+	#sp-footer-design-3 .sp-footer-content-split i,
+	.sp-board-gallery-item .thumb img,
+	.sp-board-gallery-item .sp-board-gallery-desc,
+	#sp-board-allview-layer p,
+	#sp-board-allview-layer ul,
+	#sp-board .sp-board-onpage-ux-icon i,
+	.xans-mall-faq .sp-faq-icon,
+	#sp-myorder a.active span,
+	#sp-myorder .sp-myordercon,
+	#sp-mypage-ajax-btn,
+	#sp-myshop-main .sp-myshop-cardlink,
+	#sp-myshop-main .sp-myshop-cardlink p,
+	#sp-myshop-main .sp-myshop-cardcon,
+	#sp-navigation .sp-navigation-layer-toggle,
+	#sp-navigation .sp-navigation-poll .sp-navigation-poll-layer,
+	.sp-order-step-ui .sp-order-step-icon,
+	.sp-order-step-ui .sp-order-step-icon p,
+	#sp-social-login [sns],
+	#sp-social-login [sns] span,
+	#sp-category-1-all > div,
+	#sp-today a .sp-today-detail-layer,
+	.sp-mastable .sp-mastable-element ul,
+	.sp-footer-slider .slick-slide,
+	#sp-category-1-normal .sp-sub-category {
+		filter:none; 
+		-ms-filter:none;
+		-webkit-transition : none;
+		 -khtml-transition : none;
+		   -moz-transition : none;
+			-ms-transition : none;
+			 -o-transition : none;
+				transition : none;
+	}

@@ -1,0 +1,73 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">이용약관</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">ZENA</span>
+		<span class="ko">이용약관</span>
+	</h1>
+</div>
+<div id="sp-login">
+
+	<!--분기
+	<div class="sp-terms-privacy-line">
+		<a href="/member/agreement.html" class="sp-left active">© 이용약관</a>
+		<a href="/member/privacy.html" class="sp-right">개인정보보호정책</a>
+	</div>-->
+
+	<!--타이포 이펙트-->
+	<!--<div id="sp-typography">
+		<ul>
+			<li>
+				<i>T</i><i>E</i><i>R</i><i>M</i><i>S</i><br />
+				<i>O</i><i></i><i>©</i><i></i><i>F</i><br />
+				<i>U</i><i></i><i>S</i><i></i><i>E</i>
+			</li>
+		</ul>
+	</div>-->
+
+	<!--타이머 이팩트-->
+	<div id="sp-timesleep"></div>
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box sp-single">
+			<ul>
+				<li class="sp-center">
+
+					<!--프로그래스 이펙트-->
+					<div class="sp-terms-privacy-progress"></div>
+
+					<!--이용약관-->
+					<div class="sp-terms-privacy" module="mall_term">
+						{$mall_agreement}
+					</div><!--//종료-->
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

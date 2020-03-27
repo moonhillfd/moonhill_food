@@ -1,0 +1,49 @@
+<!--@css(/_sp/apps/module/insta/insta.css)-->
+<!-- 인스타그램 -->
+<div class="insta">
+    <h2 class="insta_title">
+        <img src="/image/main/title_instagram.png" alt="인스타그램">
+    </h2>
+    <p class="insta_hashtag">
+        <a href="https://www.instagram.com/zenatea_official/" target="_blank">@zenatea_official</a><br />
+        <a href="https://www.instagram.com/explore/tags/제나차" target="_blank">#제나차</a>
+    </p>
+    
+    <div class="mh_insta_thumb_wrap">
+        <div class="thumb mh_insta_thumb">
+            <div id="instafeed"></div>
+        </div>
+    </div>
+    
+    <!--
+    <ul class="insta_thumb">
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_01.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_02.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_03.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_04.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_05.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_06.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_07.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_08.jpg" alt="thumb" /></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/제나차" target="_blank"><img src="/image/main/insta_thumb_09.jpg" alt="thumb" /></a></li>
+    </ul>
+	-->
+</div>
+
+<script src="/_sp/apps/module/insta/instafeed.min.js"></script>
+<script>
+var userFeed = new Instafeed({
+  get: 'user',
+  userId: 4061458299,
+  clientId: 'cc1f522375fb49999de3b02ef210cb10',
+  accessToken: '4061458299.cc1f522.30a56b8b63334df1be6304392a12c4ec',
+  resolution: 'standard_resolution',
+  template: '<a class="insta_content" href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><p class="insta_like"><i class="xi-heart"></i><span class="text">{{likes}}</span></p><p class="insta_comment"><i class="xi-speech-o"></i><span class="text">{{comments}}</p></a>',
+  sortBy: 'most-recent',
+  limit: 12,
+  links: false,
+  sortBy: 'most-recent'
+});
+userFeed.run();
+</script>
+

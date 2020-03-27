@@ -1,0 +1,38 @@
+
+	/*
+		기본적으로 추가
+		/layout/basic/layout.html
+		<meta name="viewport" content="width=1260, user-scalable=yes"/>
+
+		기본적으로 삭제
+		/layout/basic/common.css
+		body,code { ---font:0.75em Verdana,Dotum,AppleGothic,sans-serif; color:#353535; background:#fff;--- }
+		body { ---min-width:1480px;--- }
+		input,select,textarea { font-size:100%; ---font-family:"돋움", Dotum; color:#353535; --- vertical-align:middle; }
+	*/
+
+	/* 전체 컨트롤 */
+	body { min-width:1260px; }
+	[layout="sp-layout-fixed"] { width:1260px; margin:0 auto; }
+
+	/* 드래그 텍스트 */
+	::-moz-selection { background:#333; color:#fff; }
+	::selection { background:#333; color:#fff; }
+
+	#sp-layout		{ position:relative; background:#fff; }
+	#sp-tee			{ z-index:99; position:relative; }
+	#sp-sky			{ z-index:98; position:relative; }
+	#sp-header		{ z-index:97; position:relative; }
+	#sp-category	{ z-index:97; position:relative; }
+	#sp-content		{ position:relative; min-width:1200px; padding-top: 90px;}
+	#sp-footer		{ position:relative; }
+	#sp-panel		{ position:relative; }
+	#sp-navigation	{ z-index:70; padding-top: 0 !important; }
+
+	/* 결과없음 */
+	.sp-no-result-found { position:relative; text-align:center; }
+	.sp-no-result-found p { text-align:left; text-indent:-9999px; display:inline-block; width:150px; height:350px; background:transparent url(/_sp/image/no-result-found.gif) no-repeat center center; }
+	table.displaynone + .sp-no-result-found { border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; }
+	.sp-no-result-found[theme=""] {}
+	.sp-no-result-found[scale="small"] p { height:150px; }
+	.sp-no-result-found[scale="medium"] p { height:250px; }

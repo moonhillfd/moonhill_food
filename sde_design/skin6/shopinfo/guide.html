@@ -1,0 +1,192 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">이용안내</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">ZENA</span>
+		<span class="ko">이용안내</span>
+	</h1>
+</div>
+<div layout="sp-layout-fixed">
+
+
+	<div module="mall_faq">
+		<!--@css(/css/module/mall/faq.css)-->
+		<div id="member" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li class="selected"><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">교환/반품 안내</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>회원가입 안내</h3>
+				{$member_info}
+			</div>
+		</div>
+
+		<div id="order" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li class="selected"><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">교환/반품 안내</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>주문 안내</h3>
+				{$order_info}
+			</div>
+		</div>
+
+		<div id="payment" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li class="selected"><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">교환/반품 안내</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>결제안내</h3>
+				{$payment_info}
+			</div>
+		</div>
+
+		<div id="delivery" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li class="selected"><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">교환/반품 안내</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>배송안내</h3>
+				<ul>
+					<li>배송 방법 : {$shipping_method}</li>
+					<li>배송 지역 : {$shipping_area}</li>
+					<li>배송 비용 : {$shipping_fee}</li>
+					<li>배송 기간 : {$shipping_period}</li>
+					<li>배송 안내 : {$shipping_agreement}</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="change" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li class="selected"><a href="#change">교환/반품 안내</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>교환/반품안내</h3>
+				{$product_change_info}
+				<div>
+				<!--<ul class="mh_text_decoration_under">
+						<li><strong>달맞이자연식품 온라인 스토어</strong>는 소비자의 보호를 위해서 규정한 제반 법규를 준수합니다.</li>
+						<li><strong>주문 완료 후 7일 이내</strong> 상품 결제 대금을 입금해주셔야 합니다. 7일 이후에는 주문이 자동 취소되오니 유의하시기 바랍니다.</li>
+						<li>결제 후 취소는 저희 <strong>고객센터(1544-6850)</strong>로 문의해주셔야 하며, 이미 택배사로 집하된 경우에는 상품 교환 및 주문 취소가 되지 않습니다.<br>
+						<span class="point">(평일 오후 2시 전에 문의 주셔야 합니다.)</span></li>
+						<li><strong>고객님의 책임 있는 사유로 상품 등이 훼손된 경우</strong>에는 교환 및 반품이 어려우며, 임의로 반품을 보내주셔도 거절, 다시 반송될 수 있습니다. </li>
+						<li>본 제품은 스티커 마감이 되어있어 스티커가 훼손되면 상품 가치의 하락이 불가피 합니다. 이러한 사유로 제품 개봉 후에는 변심으로 인한 교환 및 반품이 불가합니다.
+						<br><span class="line">단, 제조상의 하자 (용량부족/부패, 변질/유통기한 경과/이물혼입 등)가 증명되었을 시 교환 및 환불이 가능합니다.</span></li>
+						<li>주문 취소의 경우 결제 방법 중 쿠폰은 반환되지 않으며 주문 결제 완료 건은 당일 오후 2시 전까지 주문 취소가 가능합니다.</li>
+						<li>불량제품은 생산 향상 및 정확한 원인 규명을 위해 회수가 필요 합니다. 수거를 요청할 경우 번거로우시더라도 협조를 부탁드립니다.</li>
+						<li>수거 또는 클레임 접수 이후 문제원인조사를 통한 원인규명을 통해 일부 혹은 전량 교환 또는 환불조치가 가능합니다.</li>
+					</ul>-->
+				</div>
+			</div>
+		</div>
+
+		<!--<div id="refund" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">교환/반품 안내</a></li>
+				<li class="selected"><a href="#refund">환불 안내</a></li>
+				<li><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>환불안내</h3>
+				{$refund_info}
+			</div>
+		</div>-->
+
+		<div id="etc" class="ec-base-tab grid7">
+			<ul class="menu">
+				<li><a href="#member">회원가입 안내</a></li>
+				<li><a href="#order">주문 안내</a></li>
+				<li><a href="#payment">결제 안내</a></li>
+				<li><a href="#delivery">배송 안내</a></li>
+				<li><a href="#change">주문 취소, 교환 및 환불 정보</a></li>
+				<li><a href="#refund">환불 안내</a></li>
+				<li class="selected"><a href="#etc">기타 안내</a></li>
+			</ul>
+			<div class="cont">
+				<h3>기타안내</h3>
+				{$etc_info}
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+.mh_text_decoration_under li {
+	line-height:2.65;
+	letter-spacing:-1px;
+	font-size:13px;
+	font-family:"Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, AppleGothic, sans-serif;
+}
+.mh_text_decoration_under li:before {
+	display:inline-block;
+	content:"-";
+	padding-right:5px;
+	
+}
+.mh_text_decoration_under li .point {
+	display:inline-block;
+	padding-left:10px;
+	font-weight:900;
+}
+.mh_text_decoration_under li .line {
+	display:inline-block;
+	padding-left:10px;
+}
+</style>

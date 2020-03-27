@@ -1,0 +1,152 @@
+
+	<!--패널-->
+	<!--@css(/_sp/apps/layout/panel/panel-1/panel.css)-->
+	<!--@js(/_sp/apps/layout/panel/panel-1/panel.js)-->
+	<div id="sp-panel">
+
+		<!--디자인-->
+		<div id="sp-panel-design-1" data-cookie="panel-1-toggle" data-start="close">
+
+			<!--위로-->
+			<button class="sp-panel-design-1-scroll sp-goto" data-target="#sp-ontop">위로</button>
+
+			<div class="sp-panel-design-1-btnbox sp-box sp-clear">
+				<button class="sp-panel-design-1-toggle"></button>
+				<!--검색-->
+				<!--@css(/_sp/apps/module/search/search.css)-->
+				<!--@js(/_sp/apps/module/search/search.js)-->
+				<a href="#none" class="sp-panel-design-1-img sp-icons" theme="search" search data-url="/_sp/apps/module/search/search.html"><span>상품 검색</span></a>
+				<!--최근 본 상품-->
+				<!--@css(/_sp/apps/module/today/today.css)-->
+				<!--@js(/_sp/apps/module/today/today.js)-->
+				<a href="#none" class="sp-panel-design-1-img sp-icons" theme="recent" today data-url="/_sp/apps/module/today/today.html"><span>최근 본 상품</span></a>
+
+                <!--기타-->
+				<i class="sp-panel-design-etc-check" module="Layout_statelogoff"></i>
+                <div class="sp-panel-design-etc" module="myshop_main">
+                    <!--관심상품-->
+                    <!--@css(/_sp/apps/module/wishlist/wishlist.css)-->
+                    <!--@js(/_sp/apps/module/wishlist/wishlist.js)-->
+                    <a href="#none" class="sp-panel-design-1-img sp-icons" theme="wishlist" wishlist data-url="/_sp/apps/module/wishlist/wishlist.html"><span>관심상품</span></a>
+                    <!--좋아요-->
+                    <!--@css(/_sp/apps/module/like/like.css)-->
+                    <!--@js(/_sp/apps/module/like/like.js)-->
+                    <a href="#none" class="sp-panel-design-1-img sp-icons {$myLike_display|display}" theme="like" like data-url="/_sp/apps/module/like/like.html"><span>좋아요</span></a>
+                    <!--쿠폰-->
+                    <!--@css(/_sp/apps/module/coupon/coupon.css)-->
+                    <!--@js(/_sp/apps/module/coupon/coupon.js)-->
+                    <a href="#none" class="sp-panel-design-1-img sp-icons {$coupon_display|display}" theme="coupon" coupon data-url="/_sp/apps/module/coupon/coupon.html"><span>쿠폰</span></a>
+					<!--적립금-->
+                    <!--@css(/_sp/apps/module/mileage/mileage.css)-->
+                    <!--@js(/_sp/apps/module/mileage/mileage.js)-->
+                    <a href="#none" class="sp-panel-design-1-img sp-icons" theme="mileage" mileage data-url="/_sp/apps/module/mileage/mileage.html"><span>{$mileage_name}</span></a>
+					<!--예치금-->
+                    <!--@css(/_sp/apps/module/deposit/deposit.css)-->
+                    <!--@js(/_sp/apps/module/deposit/deposit.js)-->
+                    <a href="#none" class="sp-panel-design-1-img sp-icons {$deposit_display|display}" theme="deposit" deposit data-url="/_sp/apps/module/deposit/deposit.html"><span>{$deposit_name}</span></a>
+					 <a href="/myshop/order/list.html" class="sp-panel-design-1-img sp-icons" theme="delivery"><span>배송조회</span></a>
+                </div> 
+
+				<div module="bannermanage2_display_14" scope="panel">
+					<a href="{$href}" {$target} class="sp-panel-design-1-img displaynone" scope="{$title}">{$banner}</a>
+					<a href="{$href}" {$target} class="sp-panel-design-1-img displaynone" scope="{$title}">{$banner}</a>
+				</div>
+			</div>
+			<ul>
+				<li>
+
+					<!--SLICK:v1.12.4-->
+					<!--@css(/_sp/apps/addon/slick/slick.css)-->
+					<!--@js(/_sp/apps/addon/slick/slick.js)-->
+					<div module="bannermanage2_display_13" class="sp-slider" data-autoplayspeed="15000" data-speed="600" hover="true" arrows="wht-h-s" arrowsArea="h-in-99" dots="circle-s" dotsArea="in-b-l">
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+						<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+					</div>
+
+					<!--아코디언-->
+					<!--@css(/_sp/apps/addon/accordion/accordion.css)-->
+					<!--@js(/_sp/apps/addon/accordion/accordion.js)-->
+					<h3>STORE GUIDE<a href="/shopinfo/guide.html"></a></h3>
+					<div accordion data-start="2" data-speed="300" data-close="all">
+						<div accordion-loop>
+							<a accordion-button>주문 / 배송</a>
+							<div accordion-inside>
+								<a href="/myshop/order/list.html?order_status=shipped_before">입금전</a>
+								<a href="/myshop/order/list.html?order_status=shipped_standby">배송준비중</a>
+								<a href="/myshop/order/list.html?order_status=shipped_begin">배송중</a>
+								<a href="/myshop/order/list.html?order_status=shipped_complate">배송완료</a>
+								<a href="/myshop/order/list.html?order_status=order_cancel">취소</a>
+								<a href="/myshop/order/list.html?order_status=order_exchange">교환</a>
+								<a href="/myshop/order/list.html?order_status=order_return">반품</a>
+							</div>
+						</div>
+						<div accordion-loop module="Layout_BoardInfo">
+							<a accordion-button>커뮤니티</a>
+							<div accordion-inside>
+								<a href="{$board_list_url}" replaceurl>{$board_name}</a>
+								<a href="{$board_list_url}" replaceurl>{$board_name}</a>
+							</div>
+						</div>
+						<div accordion-loop>
+							<a accordion-button>쿠폰 / 적립금</a>
+							<div accordion-inside>
+								<a href="/myshop/mileage/historyList.html">적립금</a>
+								<a href="/myshop/deposits/historyList.html">예치금</a>
+								<a href="/myshop/coupon/coupon.html">나의 쿠폰</a>
+								<p module="Layout_couponzoneBanner"><a event href="/coupon/coupon_zone.html">발행중인 쿠폰</a></span>
+							</div>
+						</div>
+						<div accordion-loop>
+							<a accordion-button>고객지원센터</a>
+							<div accordion-inside>
+								<a href="/board/index.html">고객센터</a>
+								<p module="myshop_main"><a help href="/board/consult/list.html" class="{$consult_display|display}">1:1 상담하기</a></p>
+								<p module="Layout_sosBanner"><a help href="/board/urgency/urgency.html">긴급 문의하기</a></span>
+								<a href="/shopinfo/company.html">about us</a>
+								<a href="/member/agreement.html">agreement</a>
+								<a href="/member/privacy.html">privacy policy</a>
+								<a href="/shopinfo/guide.html">stire guide</a>
+							</div>
+						</div>
+						<div accordion-loop>
+							<a accordion-button>쇼핑 / 이벤트</a>
+							<div accordion-inside>
+
+								<p module="Layout_attendBanner">
+									<!--
+										$stamp_type_url = /attend/stamp.html
+										$comment_type_url = /attend/comment.html
+									-->
+									<a event href="{$attend_url}">출석 체크하기</a>
+								</p>
+								<p module="Layout_giftBanner"><a event href="/order/gift_list.html">사은품 증정 이벤트</a></span>
+								<p module="Layout_opdiaryBanner"><a help href="/board/opdiary/list.html">스토어 운영일지</a></span>
+								<p module="Layout_calendarBanner"><a help href="{$calendar_view_page}">스토어 캘린더</a></span>
+								<p module="Layout_project">
+									<a event href="/product/project.html{$param}" class="single">{$category_text}</a>
+									<a event href="/product/project.html{$param}" class="single">{$category_text}</a>
+								</p>
+
+							</div>
+						</div>
+					</div>
+
+					<h3>CS CENTER<a href="/board/index.html"></a></h3>
+					<div class="sp-panel-design-1-cscenter" module="Layout_footer">
+						<h4>{$phone}</h4>
+						<p class="sp-footer-content-runtime">{$runtime|nl2br}</p>
+					</div>
+
+					<div module="bannermanage2_display_14" scope="social">
+						<h3>SOCIAL</h3>
+						<div class="sp-panel-design-1-social">
+							<a href="{$href}" {$target} scope="{$title}" class="displaynone">{$banner}</a>
+							<a href="{$href}" {$target} scope="{$title}" class="displaynone">{$banner}</a>
+						</div>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+
+	</div>

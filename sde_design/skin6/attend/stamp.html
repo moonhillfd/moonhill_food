@@ -1,0 +1,129 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">출석체크</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--출석체크-->
+<!--@js(/_sp/apps/module/attend/attend.js)-->
+<div id="sp-attend">
+	<div layout="sp-layout-fixed" style="padding-bottom:150px;">
+
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">Attendance Check · STAMP</span>
+				<span class="ko">출석체크</span>
+			</h1>
+		</div><!--//종료-->
+
+		<div module="Attend_calendarPackage">
+			<!--@css(/css/module/attend/calendarPackage.css)-->
+			<div module="attend_calendarhead">
+				<!--
+					$login_page = /member/login.html
+				-->
+				<div class="date">
+					<a href="{$prev_month}"><img src="/_sp/image/cafe24/calendar/btn_prev.gif" alt="이전" /></a>
+					<span class="day">{$year}.{$month}</span>
+					<a href="{$next_month}"><img src="/_sp/image/cafe24/calendar/btn_next.gif" alt="다음" /></a>
+				</div>
+			</div>
+
+			<table module="attend_calendar" border="1" summary="">
+				<!--
+					$login_page = /member/login.html
+				-->
+				<caption>출석이벤트 달력</caption>
+				<colgroup>
+					<col style="width:15%;" />
+					<col style="width:14%;" />
+					<col style="width:14%;" />
+					<col style="width:14%;" />
+					<col style="width:14%;" />
+					<col style="width:14%;" />
+					<col style="width:15%;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="sun">SUN</th>
+						<th scope="col">MON</th>
+						<th scope="col">TUE</th>
+						<th scope="col">WED</th>
+						<th scope="col">THU</th>
+						<th scope="col">FRI</th>
+						<th scope="col" class="sat">SAT</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p>{$sun}</p></td>
+						<td><p>{$mon}</p></td>
+						<td><p>{$the}</p></td>
+						<td><p>{$wed}</p></td>
+						<td><p>{$thu}</p></td>
+						<td><p>{$fri}</p></td>
+						<td><p>{$sat}</p></td>
+					</tr>
+					<tr>
+						<td><p>{$sun}</p></td>
+						<td><p>{$mon}</p></td>
+						<td><p>{$the}</p></td>
+						<td><p>{$wed}</p></td>
+						<td><p>{$thu}</p></td>
+						<td><p>{$fri}</p></td>
+						<td><p>{$sat}</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div module="attend_button">
+				<!--
+					$login_page = /member/login.html
+				-->
+				<div class="sp-btn-group mgt2" grid="0">
+					<a href="#none" onclick="{$action_attend}" class="sp-btn" theme="black" scale="large" change="check">출석 체크하기</a>
+				</div>
+
+				<div class="{$attendSecurityLayer}" style="display:none; top:50%; left:50%; margin-left:-160px; text-align:left;">
+					<h3>스팸 출석체크 방지 문자 입력</h3>
+					<div class="content">
+						<fieldset>
+							<legend>보안문자 입력</legend>
+							<p class="form">
+								<img src="{$secure_img}" alt="보안문자" />
+								{$form.secure_text}
+							</p>
+							<p class="ec-base-help txt11">
+								왼쪽의 문자를 공백없이 입력하세요. <br />
+								대소문자를 구분하니 참고하시길 바랍니다.
+							</p>
+						</fieldset>
+					</div>
+					<div class="btnArea">
+						<div class="sp-btn-group" grid="0">
+							<a href="#none" onclick="{$action_capcha_do}" class="sp-btn" theme="black" scale="large" change="check">확인</a>
+							<a href="#none" onclick="{$action_capcha_undo}" class="sp-btn" theme="white" scale="large" change="close">취소</a>
+						</div>
+					</div>
+					<div class="close"><a href="#none" onclick="$('.attendSecurityLayer').hide();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

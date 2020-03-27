@@ -1,0 +1,13 @@
+/*
+.xans-board-function { padding:10px 10px 0; color:#757575; font-size:12px; }
+.xans-board-function p { padding:0 0 0 7px; line-height:25px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle3.gif") no-repeat 0 10px; }
+*/
+
+	.sp-board-admin { font-size:0; line-height:30px; padding-top:20px; padding-bottom:80px;}
+	.sp-board-admin + form .sp-board-admin { padding-top:0; }
+	.sp-board-admin + .sp-board-admin { margin-top:5px; }
+	.sp-board-admin span { display:inline-block; font-size:11px; vertical-align:top; }
+	.sp-board-admin span + span { padding-left:5px; }
+	.sp-board-admin .ec-base-help { margin:0; }
+	.sp-board-admin .sp-board-admin-inside { position:relative; padding:8px 20px; border:1px solid #f0f0f0; background:#fdfdfd; margin-bottom:5px; }
+	.sp-board-admin .sp-board-admin-inside:after { content:'ADMINISTRATOR FUNCTION'; color:#aaa; font-size:9px; letter-spacing:0.1em; position:absolute; right:20px; top:9px; }

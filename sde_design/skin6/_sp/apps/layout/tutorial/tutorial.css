@@ -1,0 +1,167 @@
+
+	#tutorial * { font-family:'dotum'; letter-spacing:-1px; font-size:11px; }
+	#tutorial { 
+		display:none;
+		z-index:99998;
+		position:fixed;
+		top:328px;
+		left:20px;
+		border:1px solid #ccc;
+		border-radius:3px;
+		background:#fff;
+		font-size:11px;
+		box-shadow:0 2px 10px rgba(0,0,0,0.1);
+	}
+	#tutorial h3 {
+		cursor:move;
+		padding:10px 45px 7px 15px;
+		border-bottom:1px solid #dadee4;
+		background:#f5f5f5;
+		position:relative;
+	}
+	#tutorial h3 span {
+		cursor:pointer;
+		position:absolute;
+		top:0;
+		right:9px;
+		width:30px;
+		text-align:center;
+		line-height:35px;
+		font-weight:normal;
+	}
+	#tutorial h3 span:before { content:'¿­±â'; }
+	#tutorial.active h3 span:before { content:'x'; }
+	#tutorial .tutorial-tabs {
+		display:none;
+		padding:10px 0 0 0;
+		white-space:nowrap;
+		/*overflow:hidden;*/
+		text-overflow:ellipsis;
+	}
+	#tutorial.active .tutorial-tabs {
+		display:block;
+	}
+	#tutorial .tutorial-tabs > ul {
+		width:100px;
+		display:inline-block;
+		vertical-align:top;
+	}
+	#tutorial .tutorial-tabs > ul > li {
+		width:100% !important;
+		display:block !important;
+		padding:3px 0 1px 0;
+	}
+	#tutorial .tutorial-tabs > ul > li.active {
+		font-weight:bold;
+	}
+	#tutorial .tutorial-tabs > ul > li + li {
+		border-top:1px solid #f0f0f0;
+	}
+	#tutorial .tutorial-tabs > ul > li > span {
+		text-align:left !important;
+		padding:0 15px;
+	}
+	#tutorial .tutorial-tabs > div {
+		display:inline-block;
+		vertical-align:top;
+		padding:0 20px;
+	}
+	#tutorial .tutorial-tabs > div:before {
+		content:'';
+		position:absolute;
+		width:1px;
+		height:100%;
+		background:#dadee4;
+		margin-left:-23px;
+		top:0;
+		bottom:0;
+	}
+	#tutorial .tutorial-tabs > a {
+		display:block;
+		width:100%;
+		text-align:center;
+		background:#f5f5f5;
+		position:relative;
+		z-index:3;
+		margin-top:10px;
+		padding:7px 0 5px 0;
+		border-top:1px solid #f0f0f0;
+	}
+	#tutorial .tutorial-layout {
+		width:70px;
+		position:relative;
+		margin:0 auto;
+	}
+	#tutorial .tutorial-layout p {
+		line-height:100%;
+		background:#f0f0f0;
+		text-align:center;
+		height:3px;
+		margin:0 0 3px 0;
+	}
+	#tutorial .tutorial-layout p.active {
+		background:#333;
+	}
+	#tutorial .tutorial-layout p.tutorial-header {
+		height:10px;
+	}
+	#tutorial .tutorial-layout p.tutorial-content {
+		height:30px;
+	}
+	#tutorial .tutorial-layout p.tutorial-footer {
+		height:15px;
+	}
+	#tutorial .tutorial-layout p.tutorial-panel {
+		width:5px;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:0;
+		border-left:3px solid #fff;
+	}
+	#tutorial .tutorial-layout-btn {
+		
+	}
+	#tutorial .tutorial-layout-btn button {
+		width:100%;
+		display:block;
+		margin:0 0 3px 0;
+		border:1px solid #999;
+		background:#fff;
+	}
+	#tutorial .tutorial-layout-btn button.active {
+		color:#fff;
+		background:#333;
+		border:1px solid #333;
+	}
+	#tutorial .tutorial-layout-btn p {
+		padding:10px 20px;
+		background:#f0f0f0;
+		text-align:center;
+		border-radius:10px;
+	}
+	#tutorial .tutorial-desc {
+		padding:15px;
+		color:#666;
+		margin-top:10px;
+		background:#f5f5f5;
+		position:relative;
+		z-index:3;
+	}
+	#tutorial .tutorial-desc span {
+		display:block;
+		font-weight:bold;
+		padding:0 0 10px 0;
+	}
+	#highlight {
+		z-index:9999;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background-color:#fff9c4;
+		background-color:rgba(255,249,196,0.7);
+	}
+
+	#tutorial-loading { z-index:99999; position:absolute; left:100%; margin:-4px 0 0 -10px; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 5px 0 6px; letter-spacing:-1px; }

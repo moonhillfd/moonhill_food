@@ -1,0 +1,57 @@
+
+	#sp-project {}
+	#sp-title h1 { padding:110px 0.1em 10px 0; }
+	#sp-project .sp-project-loop { padding-top:29px; }
+	#sp-project .sp-project-navigation { margin-top:20px; padding:20px 0; font-size:0; text-align:center; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; }
+	#sp-project .sp-project-navigation a { letter-spacing:0.05em; color:#999; display:inline-block; font-size:12px; padding:1px 0 0 0; margin:0 15px; line-height:34px; position:relative; }
+	#sp-project .sp-project-navigation a:hover { color:#000; }
+	#sp-project .sp-project-navigation a.active { font-weight:bold; color:#fff; background:#333; z-index:2; padding:1px 20px 0 21px; }
+	#sp-project .sp-project-navigation a + a:before { content:''; z-index:1; position:absolute; width:1px; height:12px; top:50%; left:-15px; margin-top:-6px; background:#eaeaea; }
+	#sp-project .sp-project-navigation a span { font-size:9px; margin-left:7px; top:-1px; display:inline-block; position:relative; min-width:20px; min-height:20px; line-height:20px; border-radius:10px; color:#333; background:#f0f0f0; }
+	#sp-project .sp-project-navigation a.active span { position:absolute; right:5px; top:-10px; background:#912b45; color:#fff; }
+
+
+	/*
+		<!--미확인 입금자-->
+		<!--@css(/_sp/apps/banklink/banklink.css)-->
+		<!--@js(/_sp/apps/banklink/banklink.js)-->
+		<button banklink>미확인입금자안내</button>
+
+		홈 > 상점관리 > 기본정보 > 관리 > 기타이용안내 설정 [ 회원가입안내 ] 의 html에 아래의 코드를 입력하면 모바일과 연동이 가능하다.
+
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+	*/
+
+	#sp-projectajax-loading { z-index:99998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-projectajax { z-index:99999; position:absolute; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-projectajax { background-image:url(/_sp/image/opacity/blk-50.png); }
+	/* #sp-projectajax { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-projectajax,
+	#sp-projectajax * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-projectajax .sp-projectajax-inside { width:600px; margin:0 auto; border:1px solid #333; background:#fff; padding:30px; position:relative; -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1); -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1); box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1);	}
+	#sp-projectajax button { position:absolute; right:0; top:0; border:0; background:#333; }
+	#sp-projectajax button p { width:35px; height:35px; line-height:35px; color:#fff; font-size:16px; font-family:'dotum'; }
+	#sp-projectajax button p:after { content:'×'; padding-left:1px; }
+	#sp-projectajax h2 { font-size:15px; font-weight:normal; padding-left:10px; position:relative; }
+	#sp-projectajax h2:before { content:''; width:3px; height:13px; background:#333; position:absolute; top:2px; left:-1px; }
+	#sp-projectajax h3 { font-size:11px; font-weight:normal; color:#777; padding:3px 0 0 11px; }
+	#sp-projectajax table { margin-top:20px; }
+	#sp-projectajax table thead td { background:#f9f9f9; padding:8px 10px; font-size:11px; }
+	#sp-projectajax table tbody td { background:#ffffff; padding:8px 10px; font-size:11px; border-bottom:1px solid #f0f0f0; }
+	#sp-projectajax a { display:block; font-size:16px; padding:20px 0; border-bottom:1px solid #f0f0f0; }
+	#sp-projectajax a:before { content:'·'; display:inline-block; padding:0 8px; }
+	#sp-projectajax a p { padding:17px 0 0 0; }
+	#sp-projectajax h3 { text-align:center; font-weight:bold; color:#333; font-size:16px; letter-spacing:0.05em; border-bottom:2px solid #333; padding:20px 0; }

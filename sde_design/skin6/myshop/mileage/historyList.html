@@ -1,0 +1,162 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="myshop" path="mileage" file="list"></i>
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" module="Myshop_Head">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">MYPAGE</a>
+			<a href="#none">{$mileage_name}</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--적립금-->
+<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+<div layout="sp-layout-fixed">
+
+	<div module="Myshop_mileageHistoryPackage">
+	<!--@css(/css/module/myshop/mileageHistoryPackage.css)-->
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title" module="myshop_head">
+			<h1>MY · {$mileage_name}</h1>
+		</div><!--//종료-->
+
+		<!--박스테이블-->
+		<div class="sp-base-box sp-box" grid="2" module="myshop_summary">
+			<ul>
+				<li class="sp-clear">
+					<div class="sp-head">총 {$mileage_name}</div>
+					<div class="sp-data"><strong>{$total_mileage}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">사용가능 {$mileage_name}</div>
+					<div class="sp-data"><strong>{$avail_mileage}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">사용된 {$mileage_name}</div>
+					<div class="sp-data"><strong>{$used_mileage}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">미가용 {$mileage_name}</div>
+					<div class="sp-data"><strong>{$unavail_mileage}</strong></div>
+				</li>
+				<li class="sp-clear">
+					<div class="sp-head">환불예정 {$mileage_name}</div>
+					<div class="sp-data"><strong>{$refunded_mileage}</strong></div>
+				</li>
+			</ul>
+		</div><!--//종료-->
+
+		<br />
+		<div class="sp-tab ec-base-tab">
+			<ul class="menu">
+				<li class="selected"><a href="/myshop/mileage/historyList.html">적립내역보기</a></li>
+				<li><a href="/myshop/mileage/unavailList.html">미가용적립내역보기</a></li>
+				<li><a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급적립내역</a></li>
+			</ul>
+		</div>
+
+		<div module="myshop_historyList">
+			<!--
+				$only_html = no
+				$count = 10
+				$login_page = /member/login.html
+			-->
+			<div class="ec-base-table typeList">
+				<table border="1" summary="">
+					<caption>{$mileage_name} 내역</caption>
+					<colgroup>
+						<col style="width:15%" />
+						<col style="width:15%" />
+						<col style="width:25%" />
+						<col style="width:auto" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">주문날짜</th>
+							<th scope="col">{$mileage_name}</th>
+							<th scope="col">관련 주문</th>
+							<th scope="col">내용</th>
+						</tr>
+					</thead>
+					<tbody class="{$display_history|display} center">
+						<tr>
+							<td>{$issue_date|date:Y-m-d}</td>
+							<td><strong>{$mileage_money}</strong></td>
+							<td>{$order_id_with_link}</td>
+							<td>{$mileage_type}</td>
+						</tr>
+						<tr>
+							<td>{$issue_date|date:Y-m-d}</td>
+							<td><strong>{$mileage_money}</strong></td>
+							<td>{$order_id_with_link}</td>
+							<td>{$mileage_type}</td>
+						</tr>
+						<tr>
+							<td>{$issue_date|date:Y-m-d}</td>
+							<td><strong>{$mileage_money}</strong></td>
+							<td>{$order_id_with_link}</td>
+							<td>{$mileage_type}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="sp-no-result-found {$display_history_none|display}" theme="board" scale="medium">
+					<p>{$mileage_name} 내역이 없습니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--페이지-->
+	<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+	<div layout="sp-layout-fixed">
+		<div class="sp-pagination mgt3 mgb5" module="myshop_historyPaging">
+			<!--
+				$relation_post = yes
+			-->
+			<ul class="sp-pagination-arrow sp-left">
+				<li><a href="$first_url" class="first">FIRST</a></li>
+				<li><a href="{$prev_url}" class="prev">PREV</a></li>
+			</ul>
+			<ul class="sp-pagination-page">
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+				<li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+			</ul>
+			<ul class="sp-pagination-arrow sp-right">
+				<li><a href="{$next_url}" class="next">NEXT</a></li>
+				<li><a href="{$last_url}" class="last">LAST</a></li>
+			</ul>
+		</div>
+	</div><!--종료-->
+
+	<div class="ec-base-help" module="myshop_head">
+		<h3>{$mileage_name} 안내</h3>
+		<div class="inner">
+			<ol module="myshop_historyInfo">
+				<li class="item1">주문으로 발생한 {$mileage_name}은 배송완료 후 {$mileage_period} 부터 실제 사용 가능한 {$mileage_name}으로 전환됩니다. 배송완료 시점으로부터 {$mileage_period} 동안은 미가용 {$mileage_name}으로 분류됩니다. </li>
+				<li class="item2">미가용 {$mileage_name}은 반품, 구매취소 등을 대비한 임시 {$mileage_name}으로 사용가능 {$mileage_name}으로 전환되기까지 상품구매에 사용하실 수 없습니다.</li>
+				<li class="item3">사용가능 {$mileage_name}(총{$mileage_name} - 사용된{$mileage_name} - 미가용{$mileage_name})은 상품구매 시 바로 사용가능합니다.</li>
+			</ol>
+		</div>
+	</div>
+
+</div><!--종료-->

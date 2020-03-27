@@ -1,0 +1,31 @@
+#popup { width:600px; min-height: 360px; }
+.xans-myshop-ordersearchproductform .ec-base-table.typeWrite table { table-layout:fixed; }
+.xans-myshop-ordersearchproductform .ec-base-table.typeWrite img { vertical-align:middle; }
+.xans-myshop-ordersearchproductform .ec-base-table.typeWrite select { max-width:95%; height:24px; }
+.xans-myshop-ordersearchproductform .ec-base-table.typeWrite input { width:250px; }
+.xans-myshop-ordersearchproductform .btnSearch { margin:10px 0 20px; text-align:center; }
+.xans-myshop-ordersearchproductform .listCtrl { overflow:hidden; margin:0 0 10px; }
+.xans-myshop-ordersearchproductform .listCtrl .result { float:left; }
+.xans-myshop-ordersearchproductform .listCtrl .select { float:right; }
+.xans-myshop-ordersearchproductform .ec-base-table .scroll { max-height:285px; }
+.xans-myshop-ordersearchproductform .ec-base-table .scroll .message td { height:84px; }
+.xans-myshop-ordersearchproductform .ec-base-table td.product { overflow:hidden; padding-left:10px; }
+.xans-myshop-ordersearchproductform .ec-base-table td.product a { color:#747474; }
+.xans-myshop-ordersearchproductform .ec-base-table td.product p { margin:0 0 0 10px; max-width:150px; }
+.xans-myshop-ordersearchproductform .ec-base-table td.product p,
+.xans-myshop-ordersearchproductform .ec-base-table td.product .thumbnail { display:inline-block; vertical-align:middle; }
+.xans-myshop-ordersearchproductform .ec-base-table td.product .thumbnail img { width:46px; }
+
+.xans-myshop-ordersearchproductform .ec-base-table.typeList .scroll { max-height:230px; margin-top:0; }
+
+#exchange_product_search_form input,
+#exchange_product_search_form select {
+	font-size:11px;
+    display:inline-block; vertical-align:top;
+	height:30px; line-height:30px; padding:0 10px;
+	background:#f5f5f5; border:0; border-radius:5px;
+}
+#search_type { width:125px; margin-right:5px; }
+
+.xans-myshop-ordersearchproductform .listCtrl .result { margin:13px 0 0 10px; font-size:9px; letter-spacing:0.05em; }
+.xans-myshop-ordersearchproductform .listCtrl .result strong { display:inilne-block; color:#912b45; margin:0 6px 0 5px; }

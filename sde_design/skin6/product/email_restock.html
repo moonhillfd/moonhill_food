@@ -1,0 +1,51 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Product_RestockEmail" class="ec-base-layer">
+    <!--@css(/css/module/product/restock_email.css)-->
+    <div class="header">
+        <h1>재입고 알림 메일</h1>
+    </div>
+    <div class="content">
+        <div class="ec-base-box typeProduct">
+            <p class="thumbnail"><img src="{$product_image}" alt="" onerror="this.src='/_sp/image/cafe24/thumb/75x75.gif'" /></p>
+            <div class="information">
+                <h2>{$product_name}</h2>
+                <p>옵션정보</p>
+                <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                <div class="optionWrap">
+                    <ul module="Product_optionstock">
+                        <li>
+                            <span class="name">{$option_name}</span>
+                            <div class="option">{$form.option}<p class="value">{$option_desc}</p></div>
+                        </li>
+                    </ul>
+                </div><!-- //참고 -->
+            </div>
+        </div>
+        <div class="emailArea">
+            <p class="ec-base-help txtWarn txt11 "> 품절된 상품의 재입고시 이메일로 알려드립니다.</p>
+            <div class="contact">
+                <p><strong>{$member_id}</strong>님의 메일주소</p>
+                <p>{$form.email}</p>
+            </div>
+            <div class="ec-base-help nude">
+                <h3>재입고 메일발송 안내</h3>
+                <div class="inner">
+                    <ol>
+                        <li class="item1">알림 요청이 완료된 상품은 관심상품 목록에 등록됩니다.</li>
+                        <li class="item2">
+                            알림 요청 상품의 가격, 옵션 구성 등의 상품 정보가 변동될 수 있으므로<br />
+                            재입고시 상품정보를 확인하신 후에 구매하시기 바랍니다.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <p class="sp-btn-group" grid="0">
+            <a href="#none" onclick="{$action_write}" class="sp-btn" theme="black" scale="medium">확인하기</a>
+            <a href="#none" onclick="window.close();" class="sp-btn" theme="white" scale="medium">취소하기</a>
+        </p>
+    </div>
+    <a href="#none" class="close" onClick="window.close();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>

@@ -1,0 +1,80 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Order_BoardListPackage" class="ec-base-layer">
+    <!--@css(/css/module/order/boardListPackage.css)-->
+    <div class="header">
+        <h1>주문정보 선택</h1>
+    </div>
+
+    <div class="content">
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>주문정보 선택</caption>
+                <colgroup>
+                    <col style="width:90px" />
+                    <col style="width:auto" />
+                    <col style="width:140px" />
+                    <col style="width:80px" />
+                    <col style="width:100px" />
+                </colgroup>
+                <thead module="Order_BoardListhead">
+                    <tr>
+                        <th scope="col">이미지</th>
+                        <th scope="col">상품정보</th>
+                        <th scope="col">주문번호</th>
+                        <th scope="col">주문일시</th>
+                        <th scope="col">{$form.limit_select}</th>
+                    </tr>
+                </thead>
+                <tbody module="Order_BoardList" class="center">
+                    <tr>
+                        <td class="thumb"><img src="{$image_medium}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></td>
+                        <td class="left"><strong>{$product_name}</strong><span class="gBlank5">{$product_price}</span> {$product_tax_type_text}</td>
+                        <td>{$order_id}</td>
+                        <td>{$order_date}</td>
+                        <td><a href="#none" onclick="{$action_product_select}" class="sp-btn" theme="white" scale="medium" change="check">선택</td>
+                    </tr>
+                    <tr>
+                        <td class="thumb"><img src="{$image_medium}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></td>
+                        <td class="left"><strong>{$product_name}</strong><span class="gBlank5">{$product_price}</span> {$product_tax_type_text}</td>
+                        <td>{$order_id}</td>
+                        <td>{$order_date}</td>
+                        <td><a href="#none" onclick="{$action_product_select}" class="sp-btn" theme="white" scale="medium" change="check">선택</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--페이지-->
+        <!--@css(/_sp/apps/module/pagination/pagination.css)-->
+		<div class="sp-pagination mgt2" module="Order_BoardPaging">
+			<ul class="sp-pagination-arrow sp-left">
+				<li><a href="{$param_first}" class="first">FIRST</a></li>
+				<li><a href="{$param_before}" class="prev">PREV</a></li>
+			</ul>
+			<ul class="sp-pagination-page">
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			</ul>
+			<ul class="sp-pagination-arrow sp-right">
+				<li><a href="{$param_next}" class="next">NEXT</a></li>
+				<li><a href="{$param_last}" class="last">LAST</a></li>
+			</ul>
+		</div><!--종료-->
+    </div>
+
+	<div class="ec-base-button">
+		<p class="sp-btn-group" grid="0">
+			<a href="#none" onclick="window.close();" class="sp-btn" theme="black" scale="medium" change="close">닫기</a>
+		</p>
+	</div>
+	<a class="close" onclick="window.close();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+
+</div>

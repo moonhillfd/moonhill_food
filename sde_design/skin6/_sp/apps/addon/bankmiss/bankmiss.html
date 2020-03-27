@@ -1,0 +1,47 @@
+
+<div id="sp-result">
+	<div id="sp-bankmiss">
+		<div class="sp-bankmiss-inside">
+			<button><p></p></button>
+			<h2>미확인 입금자 명단</h2>
+			<h3>* Ctrl + F 를 이용해서 검색하시면 편리합니다.</h3>
+			<table>
+				<colgroup>
+					<col style="width:120px;" />
+					<col style="width:100px;" />
+					<col style="width:auto;" />
+					<col style="width:130px;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<td>날짜</td>
+						<td>이름</td>
+						<td>입금은행</td>
+						<td>금액</td>
+					</tr>
+				</thead>
+				<!----------------------
+					수정범위
+				----------------------->
+				<tbody connectbox>
+					
+					<tr>
+						<td colspan="4" class="empty">미확인 입급자가 없습니다.</td>
+					</tr>
+					<!--
+					<tr>
+						<td>2017-07-24</td>
+						<td>판다씨</td>
+						<td>국민은행</td>
+						<td>158,000원</td>
+					</tr>
+					-->
+				</tbody>
+				<div class="displaynone" module="mall_faq">{$member_info}</div>
+				<!----------------------
+					종료
+				----------------------->
+			</table>
+		</div>
+	</div>
+</div>

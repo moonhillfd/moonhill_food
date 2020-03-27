@@ -1,0 +1,39 @@
+<div id="sp-result">
+	<div id="sp-mileage">
+		<div class="sp-mileage-inside" module="Myshop_mileageHistoryPackage">
+			<button class="sp-mileage-close"></button>
+			<h3 module="myshop_head">{$mileage_name}</h3>
+			<div class="sp-mileage-loop" scrollbar rule="winsize,prison" data-height="206" module="myshop_historyList">
+				<!--
+					$count = 100
+				-->
+				<ul class="{$display_history|display}">
+					<li>
+						<div class="box">
+							<div class="left">{$issue_date|date:Y-m-d}</div>
+							<div class="center">
+								[{$mileage_name}] - <strong>{$mileage_type}</strong> <a href="/myshop/order/detail.html?order_id={$order_id}">{$order_id}</a>
+							</div>
+							<div class="right">{$mileage_money}</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="left">{$issue_date|date:Y-m-d}</div>
+							<div class="center">
+								[{$mileage_name}] - <strong>{$mileage_type}</strong> <a href="/myshop/order/detail.html?order_id={$order_id}">{$order_id}</a>
+							</div>
+							<div class="right">{$mileage_money}</div>
+						</div>
+					</li>
+				</ul>
+				<div class="sp-no-result {$display_history_none|display}">
+					<p>{$mileage_name} 내역이 없습니다.</p>
+				</div>
+			</div>
+			<div class="sp-btn-group" grid="1" module="myshop_head">
+				<a href="/myshop/mileage/historyList.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span mileagecount>{$mileage_name} 전체보기</span></a>
+			</div>
+		</div>
+	</div>
+</div>

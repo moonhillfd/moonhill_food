@@ -1,0 +1,47 @@
+<style>
+	@font-face {
+		font-family: 'nanum square';
+		src: url('/_sp/font/nanum_square/NanumSquareR.eot');
+		src: url('/_sp/font/nanum_square/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/nanum_square/NanumSquareR.woff2') format('woff2'),
+			 url('/_sp/font/nanum_square/NanumSquareR.woff') format('woff'),
+			 url('/_sp/font/nanum_square/NanumSquareR.ttf') format('truetype'),
+			 url('/_sp/font/nanum_square/NanumSquareR.svg#source_sans_proregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'nanum square';
+		src: url('/_sp/font/nanum_square/NanumSquareB.eot');
+		src: url('/_sp/font/nanum_square/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/nanum_square/NanumSquareB.woff2') format('woff2'),
+			 url('/_sp/font/nanum_square/NanumSquareB.woff') format('woff'),
+			 url('/_sp/font/nanum_square/NanumSquareB.ttf') format('truetype'),
+			 url('/_sp/font/nanum_square/NanumSquareB.svg#source_sans_proregular') format('svg');
+		font-weight: bold;
+		font-style: normal;
+	}
+	.sp-font-ready body {
+		font-family: 'nanum square', "³ª´®°íµñ","NanumGothic","NanumGothicWebFont","Malgun Gothic","¸¼Àº °íµñ","Dotum","µ¸¿ò","Helvetica","Apple SD Gothic Neo","sans-serif";
+	}
+</style>
+<script src="/_sp/font/fontfaceobserver.js"></script>
+<script>
+(function( w ){
+	// if the class is already set, we're good.
+	if( w.document.documentElement.className.indexOf('sp-font-ready') > -1 ){
+		return;
+	}
+	var fontA = new w.FontFaceObserver('nanum square', {
+		weight: 400
+	});
+	var fontB = new w.FontFaceObserver('nanum square', {
+		weight: 700
+	});
+	w.Promise
+		.all([fontA.load(), fontB.load()])
+		.then(function(){
+			w.document.documentElement.className += ' sp-font-ready';
+		});
+}( this ));
+</script>

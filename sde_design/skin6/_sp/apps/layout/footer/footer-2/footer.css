@@ -1,0 +1,17 @@
+
+	#sp-footer-design-2 { margin:50px 0 80px 0; }
+
+	#sp-footer-design-2 .sp-linked { font-size:0; text-align:center; padding:30px 0; }
+	#sp-footer-design-2 .sp-linked a { display:inline-block; font-size:12px; line-height:30px; padding:0 20px; letter-spacing:0.1em; }
+
+	#sp-footer-design-2 .sp-description { text-align:center; font-size:11px; color:#aaa; letter-spacing:0.05em; }
+	#sp-footer-design-2 .sp-description span + span { margin-left:10px; }
+	#sp-footer-design-2 .sp-description span em { display:inline-block; position:relative; width:10px; vertical-align:top; }
+	#sp-footer-design-2 .sp-description span em:before { content:''; top:7px; left:50%; margin:-5px 0 0 -1px; width:1px; height:10px; background:#eaeaea; position:absolute; }
+
+	#sp-footer-design-2 .sp-copyright { text-align:center; font-size:0; padding:30px 0 0 0; }
+	#sp-footer-design-2 .sp-copyright span { font-size:9px; color:#bbb; letter-spacing:0.05em; }
+	#sp-footer-design-2 .sp-copyright span strong { color:#333; }
+	#sp-footer-design-2 .sp-copyright .sp-sns { padding:0 0 20px 0; }
+	#sp-footer-design-2 .sp-copyright .sp-sns a { display:inline-block; }
+	#sp-footer-design-2 .sp-copyright .sp-sns a + a { margin-left:12px; }

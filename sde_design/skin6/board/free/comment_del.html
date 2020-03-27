@@ -1,0 +1,57 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="product" path="delete" module="board_CommentDeletePackage_1002">
+
+    <!--@css(/css/module/board/commentDeletePackage.css)-->
+    <div module="board_title_1002">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation" class="layer">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a id="depthTwo" href="/board/index.html">커뮤니티</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_title}</span>
+				<span class="ko">{$board_info}</span>
+			</h1>
+		</div><!--//종료-->
+    </div>
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<div class="sp-board-onpage-ux sp-box" module="Board_CommentDel_1002">
+			<p class="sp-board-onpage-ux-icon">
+				<i></i>
+				<span>
+					이 글을 삭제하기 위해서 비밀번호가 필요합니다.<br />
+					관리자는 확인버튼만 누르시면 됩니다.
+				</span>
+			</p>
+			<p class="sp-board-onpage-ux-input">
+				<label for="comment_password" hold="PASSWORD"></label>{$form.comment_password}
+			</p>
+			<p class="sp-btn-group" grid="2">
+				<a href="{$link_board_list}" class="sp-btn" theme="white" scale="bubble" change="list">LIST</a>
+				<button class="sp-btn" theme="black" scale="bubble" change="check">DELETE</button>
+			</p>
+		</div>
+
+	</div>
+</div><!--종료-->

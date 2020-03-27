@@ -1,0 +1,135 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">로그인</a>
+			<a href="#none">비밀번호 찾기</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>비밀번호 찾기</h1>
+	</div><!--//종료-->
+
+	<div layout="sp-layout-fixed">
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">Verification</span>
+				<span class="ko">비밀번호 찾기</span>
+			</h1>
+		</div><!--//종료-->
+
+
+			<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_passwordverification">
+						<div class="findPw">
+							<h3>비밀번호 찾기</h3>
+							<fieldset>
+								<legend>비밀번호 찾기 본인확인 인증</legend>
+								<ul class="sp-find-othertype">
+									<li><strong class="term">본인확인 인증</strong><span class="desc onlytext">{$form.user_verification_method_type}</span></li>
+									<hr class="sp-form-textline minus" />
+									<li id="{$user_verification_email_info}"><strong class="term">이메일</strong>
+										<span class="desc onlytext"><strong class="txtEm-x">{$user_verification_email}</strong> 
+											<p class="sp-btn-group" grid="1">
+												<a href="#none" onclick="{$action_func_user_verification}" class="sp-btn" theme="white" scale="small" change="right">인증번호 받기</a>
+											</p>
+										</span>
+									</li>
+									<hr class="sp-form-textline mgb" />
+									<li id="{$user_verification_mobile_info}"><strong class="term">휴대폰 번호</strong>
+										<span class="desc onlytext"><strong class="txtEm-x number">{$user_verification_mobile}</strong> 
+											<p class="sp-btn-group" grid="1">
+												<a href="#none" onclick="{$action_func_user_verification}" class="sp-btn" theme="black" scale="small" change="right">인증번호 받기</a>
+											</p>
+										</span>
+									</li>
+									<li class="verify">
+										<strong class="term">인증번호</strong>
+										<div class="desc">{$form.verification_code}
+											<div class="txtInfo">
+												<p id="{$user_verification_email_desc}" class="{$display_user_verification_email_desc|display}">1회 발송된 인증번호의 유효 시간은 60분이며,<br /> 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+												<p id="{$user_verification_mobile_desc}" class="{$display_user_verification_mobile_desc|display}">1회 발송된 인증번호의 유효 시간은 3분이며,<br /> 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<hr class="sp-form-textline mgt mgb2" />
+								<p class="sp-btn-group" grid="2">
+									<a href="#none" onclick="{$action_func_user_verification_submit}" class="sp-btn" theme="black" scale="bubble" change="bubble">OK</a>
+									<a href="#none" onclick="{$action_func_user_verification_cancel}" class="sp-btn" theme="white" scale="bubble" change="dot">CANCEL</a>
+								</p>
+							</fieldset>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<!--메신저-->
+					<div class="sp-login-messenger">
+						<p>
+							<span class="message">
+								인증방법을 선택해주세요.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								이메일로 발송할 경우, 수분이 소요될 수 있으며<br />
+								정크 메일함도 꼭! 함께 확인해주시길 부탁드립니다.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								본인확인은 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.<br />
+								정보를 정확하게 입력하셔서 기다리는 일 없도록 해주시길 바랍니다. ^^
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								혹시 기억나셨다면 로그인을 해주세요.<br />
+								아이디가 없으시다면, 회원가입을 해주세요.
+								<br /><br />
+								<a href="/member/login.html" class="sp-btn" theme="white" scale="small" change="right">로그인</a>
+								<a href="/member/join.html" class="sp-btn" theme="white" scale="small" change="right">회원가입</a>
+								<br /><br />
+								: D
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

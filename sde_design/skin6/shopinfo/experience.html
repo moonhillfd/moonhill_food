@@ -1,0 +1,59 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">구매후기</a>
+			<a href="#none">체험단 후기</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">Best review</span>
+		<span class="ko">체험단 후기</span>
+	</h1>
+</div><!--//종료-->
+<div layout="sp-layout-fixed">
+	<div class="mh_content_w_fix">
+
+		<div class="titleArea mh_title_item">
+			<h2>블로그 후기</h2>
+		</div>
+		
+		<div>   
+			<iframe src="https://www.moonhillfood.com/shopinfo/mh_experience2.html" style="width:100%; height:460px;border:0"></iframe>
+		</div>    
+			
+		
+		
+		<div class="titleArea mh_title_item">
+			<h2>인스타그램 후기</h2>
+		</div>
+		<p class="postion_desc">※ 0.8L을 통해 본 제품을 제공하여 작성된 후기 포스팅입니다. 후기를 보시려면 0.8L의 계정이 있어야 합니다.</p>
+		<iframe src="https://img.08liter.com/release/widget/42e7b127e8a04389979688dd95a5c010.html" scrolling="yes" style="border:0px;width:100%;height:2980px;"></iframe>
+	</div>
+</div>
+<style>
+.postion_desc {
+        width:1150px;
+        margin: 0;
+        padding: 10px 0 15px 0;
+        text-align: right;
+        color: #555;
+        font-size: 12px;
+    }
+</style>

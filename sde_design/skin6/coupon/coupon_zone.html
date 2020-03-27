@@ -1,0 +1,225 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">COUPON ZONE</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--쿠폰존-->
+<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+<div id="sp-coupon-cover" module="Coupon_zonePackage">
+	<div layout="sp-layout-fixed">
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h1>COUPON · ZONE</h1>
+		</div><!--//종료-->
+
+		<br /><br />
+
+		<!--탭-->
+		<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+		<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+		<div tabs design="xbar" data-start="1" data-speed="300">
+			<div tabsContainer>
+				<div tabsLoop data-title="BEST COUPONS">
+
+					<!--쿠폰-->
+					<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+					<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+					<div id="sp-coupon" grade="TODAY BEST" module="Coupon_Zonebest">
+						<!--
+							$count = 4
+						-->
+						<ul>
+							<li couponsale data-promotion="{$coupon_period}">
+								<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+									<div class="detail">
+										<p class="title">{$coupon_name}</p>
+										<p class="discount">{$coupon_content}</p>
+										<p class="period">{$coupon_period}</p>
+										<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+									</div>
+								</div>
+								<div couponsale-counter></div>
+							</li>
+							<li couponsale data-promotion="{$coupon_period}">
+								<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+									<div class="detail">
+										<p class="title">{$coupon_name}</p>
+										<p class="discount">{$coupon_content}</p>
+										<p class="period">{$coupon_period}</p>
+										<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+									</div>
+								</div>
+								<div couponsale-counter></div>
+							</li>
+						</ul>
+					</div><div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div><!--종료-->
+
+				</div>
+				<div tabsLoop data-title="NEW COUPONS">
+
+					<!--쿠폰-->
+					<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+					<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+					<div id="sp-coupon" grade="HOT &amp; NEW" module="Coupon_Zonenew">
+						<!--
+							$count = 4
+						-->
+						<ul>
+							<li couponsale data-promotion="{$coupon_period}">
+								<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+									<div class="detail">
+										<p class="title">{$coupon_name}</p>
+										<p class="discount">{$coupon_content}</p>
+										<p class="period">{$coupon_period}</p>
+										<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+									</div>
+								</div>
+								<div couponsale-counter></div>
+							</li>
+							<li couponsale data-promotion="{$coupon_period}">
+								<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+									<div class="detail">
+										<p class="title">{$coupon_name}</p>
+										<p class="discount">{$coupon_content}</p>
+										<p class="period">{$coupon_period}</p>
+										<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+									</div>
+								</div>
+								<div couponsale-counter></div>
+							</li>
+						</ul>
+					</div><div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div><!--종료-->
+
+				</div>
+				<div tabsLoop data-title="ALL COUPONS">
+
+					<!--전체쿠폰-->
+					<div module="Coupon_Zone">
+						<!--
+							$coupon_down_result_url = /coupon/coupon_down_result.html
+						-->
+						<!--배열-->
+						<div>
+
+							<!--버튼-->
+							<div class="sp-coupon-clickbtn" data-title="{$zone_title}">
+								<a href="#none" onclick="couponZone.allCheck('{$zone_form_id}')">
+									<img alt="전체선택" src="/_sp/image/cafe24/coupon/btn_select.gif" id="imgZonecheckAll" img_on="/_sp/image/cafe24/coupon/btn_select.gif" img_off="/_sp/image/cafe24/coupon/btn_select_cancel.gif" />
+								</a>
+								<a href="#none" onclick="couponZone.setDown('{$zone_form_id}')">
+									<img alt="선택쿠폰 다운받기" src="/_sp/image/cafe24/coupon/btn_select_down.gif">
+								</a>
+							</div>
+
+							<!--쿠폰-->
+							<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+							<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+							{$form_start}
+							<div id="sp-coupon" all module="Coupon_aZonelist">
+								<!--
+									$count = 2
+								-->
+								<ul>
+									<li couponsale-x data-promotion="{$coupon_period}">
+										<p class="check">{$coupon_checkbox}</p>
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+												<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+									<li couponsale-x data-promotion="{$coupon_period}">
+										<p class="check">{$coupon_checkbox}</p>
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+												<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+								</ul>{$form_end}
+							</div><div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div><!--종료-->
+						</div><!--배열종료-->
+
+						<!--배열-->
+						<div>
+							<!--쿠폰-->
+							<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+							<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+							{$form_start}
+							<div id="sp-coupon" module="Coupon_aZonelist">
+								<!--
+									$count = 2
+								-->
+								<ul>
+									<li couponsale data-promotion="{$coupon_period}">
+										<p class="check">{$coupon_checkbox}</p>
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+												<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+									<li couponsale data-promotion="{$coupon_period}">
+										<p class="check">{$coupon_checkbox}</p>
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+												<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+								</ul>{$form_end}
+							</div><div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div><!--종료-->
+						</div><!--배열종료-->
+
+					</div><!--전체쿠폰종료-->
+
+				</div>
+			</div>
+		</div><!--//종료-->
+
+		<div class="ec-base-help">
+			<h3>쿠폰이용안내</h3>
+			<div class="inner">
+				<ol>
+					<li class="item1">쿠폰 다운로드 및 사용은 <strong>로그인 후 이용가능</strong>합니다.</li>
+					<li class="item2">쿠폰 상세정보는 쿠폰을 클릭하면 확인하실 수 있습니다.</li>
+					<li class="item3">쿠폰의 이용기간이 만료되면 별도의 통보없이 자동 소멸됩니다.</li>
+					<li class="item4">동일쿠폰은 1장 이상 중복 소유가 불가능합니다. (쿠폰 사용 후 재발급은 가능합니다.)</li>
+					<li class="item5">쿠폰의 할인 적용은 <strong>쿠폰 할인 속성에 따라 다르게 적용</strong>될 수 있습니다.</li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+</div><!--출석체크종료-->

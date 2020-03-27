@@ -1,0 +1,326 @@
+<!--@layout(/layout/basic/layout.html)-->
+	
+
+
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+
+	<style>
+		.sp-index-media { line-height:1.3; background:#f6f6f6; padding:60px; }
+		.sp-index-media h2 { font-size:21px; text-align:center; padding:0 0 60px 0; }
+		.sp-index-media h3 { font-size:21px; }
+		.sp-index-media h4 { padding-top:20px; color:#999; font-size:14px; font-weight:normal; }
+		.sp-index-media > div { background:#fff; padding:60px; }
+		.sp-index-media > div ul {  }
+		.sp-index-media .left { float:left; }
+		.sp-index-media .right { width:320px; float:right; padding:80px 0 0 0; }
+	</style>
+	<!--미디어영역-->
+	<!--유투브 플레이어-->
+	<!--@css(/_sp/apps/addon/youtube/youtube.css)-->
+	<!--@js(/_sp/apps/addon/youtube/youtube.js)-->
+	<div class="sp-index-media sp-box" layout="sp-layout-fixed">
+		<h2>CELLAPY CLIP</h2>
+        <div >
+            <ul class="sp-clear">
+                <li class="left">
+                    <div youtubeouter><div youtube data-id="Z6VggexqzRE" data-start="false" data-sound="true" data-loop="true" data-width="636" data-height="358"></div></div>
+                </li>
+                <li class="right">
+					<h3>
+						소중한 내 피부를 위한<br />
+						뷰티 시그널
+					</h3>
+					<h4>
+						보습대신<br />
+						A 리페어 하세요
+					</h4>
+					<div class="sp-btn-group sp-left mgt2" grid="0">
+						<a href="/board/free/list.html?board_no=2" class="sp-btn" theme="black" scale="medium" change="right"><span>이벤트 보러가기</span></a>
+					</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+	</head>
+
+	<br /><br /><br />
+
+	<!--베이스-->
+	<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+	<!--@import(/_sp/base.html)-->
+
+	<hr />
+	<!--최근 본 상품-->
+	<!--@css(/_sp/apps/module/today/today.css)-->
+	<!--@js(/_sp/apps/module/today/today.js)-->
+	<a href="#none" today data-url="/_sp/apps/module/today/today.html">최근 본 상품</a>
+
+	<hr />
+	<!--페이지-->
+	<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+	페이지네이션
+	<div class="sp-pagination">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="#" class="first">FIRST</a></li>
+			<li><a href="#" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="#" class="">1</a></li>
+			<li><a href="#" class="">2</a></li>
+			<li><a href="#" class="">3</a></li>
+			<li><a href="#" class="this">4</a></li>
+			<li><a href="#" class="">5</a></li>
+			<li><a href="#" class="">6</a></li>
+			<li><a href="#" class="">7</a></li>
+			<li><a href="#" class="">8</a></li>
+			<li><a href="#" class="">9</a></li>
+			<li><a href="#" class="">10</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="#" class="next">NEXT</a></li>
+			<li><a href="#" class="last">LAST</a></li>
+		</ul>
+	</div>
+
+	<hr />
+	<!--줌슬라이더-->
+	<!--@css(/_sp/apps/module/zoom/zoom.css)-->
+	<!--@js(/_sp/apps/module/zoom/zoom.js)-->
+	<a href="#none" detailzoom data-url="/_sp/apps/module/zoom/zoom.html?product_no=10">줌이미지</a>
+
+	<hr />
+	<!--검색-->
+	<!--@css(/_sp/apps/module/search/search.css)-->
+	<!--@js(/_sp/apps/module/search/search.js)-->
+	<a href="#none" search data-url="/_sp/apps/module/search/search.html">검색하기</a>
+
+	<hr />
+	<!--언어선택-->
+	<!--@css(/_sp/apps/module/language/language.css)-->
+	<!--@js(/_sp/apps/module/language/language.js)-->
+	<a href="#none" chooselanguage data-url="/_sp/apps/module/language/language.html">언어선택</a>
+
+	<hr />
+	<!--회원가입포인트-->
+	<!--@css(/_sp/apps/addon/joinus/joinus.css)-->
+	<!--@js(/_sp/apps/addon/joinus/joinus.js)-->
+	<a href="#none" class="sp-join-message">회원가입 포인트는 가로 사이즈를 인지해낸다.</a>
+
+	<hr />
+	<!--마스테이블-->
+	<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+	<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+	<div style="width:1400px;margin:0 auto;">
+
+
+		<table class="sp-mastable" module="product_listmain_4">
+			<!--
+				$count = 8
+			-->
+			<tr>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1-2" rowspan="2"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="40%" ratio="2-2" colspan="2" rowspan="2"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+			</tr>
+			<tr>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+			</tr>
+		</table>
+
+
+		<table class="sp-mastable" module="product_listmain_1">
+			<!--
+				$count = 8
+			-->
+			<tr>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+			</tr>
+			<tr>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="40%" ratio="2-1" colspan="2"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+				<td width="20%" ratio="1"><!--@import(/_sp/apps/addon/mastable/mastable_element.html)--></td>
+			</tr>
+		</table>
+	</div>
+
+	<hr />
+	<!--카테고리 패키지-->
+	<!--@import(/_sp/apps/module/category/category.html)-->
+
+	<hr />
+	<!--인터넷 뱅킹-->
+	<!--@css(/_sp/apps/addon/banklink/banklink.css)-->
+	<!--@js(/_sp/apps/addon/banklink/banklink.js)-->
+	<a href="#none" banklink data-url="/_sp/apps/addon/banklink/banklink.html">인터넷 뱅킹</a>
+
+	<hr />
+	<!--미확인 입금자-->
+	<!--@css(/_sp/apps/addon/bankmiss/bankmiss.css)-->
+	<!--@js(/_sp/apps/addon/bankmiss/bankmiss.js)-->
+	<a href="#none" bankmiss data-url="/_sp/apps/addon/bankmiss/bankmiss.html">미확인 입금자</a>
+
+	<hr />
+	<!--무이자 할부-->
+	<!--@css(/_sp/apps/addon/cardinfo/cardinfo.css)-->
+	<!--@js(/_sp/apps/addon/cardinfo/cardinfo.js)-->
+	<a href="#none" cardinfo data-url="/_sp/apps/addon/cardinfo/cardinfo.html">무이자 할부 안내</a>
+
+	<hr />
+	<!--타임세일-->
+	<!--@css(/_sp/apps/module/timesale/timesale.css)-->
+	<!--@js(/_sp/apps/module/timesale/timesale.js)-->
+	<div id="sp-timesale">
+		<div timesale data-promotion="남은시간 32일 11:39:11 (1,750원 할인)2017-03-17 00:00 ~ 2019-12-31 23:11">
+			<div timesale-counter></div>
+		</div>
+	</div>
+	<div id="sp-timesale">
+		<div timesale data-saleend="2018-11-08 23:55">
+			<div timesale-counter></div>
+		</div>
+		<div timesale data-saleend="3018-11-08 23:55">
+			<div timesale-counter></div>
+		</div>
+	</div>
+
+	<hr />
+	<!--유투브 플레이어-->
+	<!--@css(/_sp/apps/addon/youtube/youtube.css)-->
+	<!--@js(/_sp/apps/addon/youtube/youtube.js)-->
+	<div youtubeouter><div youtube data-id="M7lc1UVf-VE" data-start="false" data-sound="false" data-loop="true" data-width="640" data-height="360"></div></div>
+	<a href="#none" youtubeplayer data-id="M7lc1UVf-VE" data-start="true" data-sound="true" data-loop="false">유투브 영상레이어</a>
+
+	<hr />
+	<!--비메오 플레이어-->
+	<!--@css(/_sp/apps/addon/vimeo/vimeo.css)-->
+	<!--@js(/_sp/apps/addon/vimeo/vimeo.js)-->
+	<div vimeoouter><div vimeo data-id="59777392" data-start="true" data-sound="false" data-loop="true" data-width="640" data-height="360"></div></div>
+	<a href="#none" vimeoplayer data-id="59777392" data-start="true" data-sound="true" data-loop="false">비메오 영상레이어</a>
+
+	<hr />
+	<!--플로팅 쿠키배너-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<i floating data-cookie="uniqueCookieName1" data-wait="1000" data-url="/_sp/apps/addon/floating/floating.html"></i>
+
+	<hr />
+	<!--백그라운드-->
+	<!--@css(/_sp/apps/addon/backscroll/backscroll.css)-->
+	<!--@js(/_sp/apps/addon/backscroll/backscroll.js)-->
+	<div backscroll data-height="500">
+		<div backscrolltext>
+			<ul>
+				<li>
+					<div>TEXT</div>
+				</li>
+			</ul>
+		</div>
+		<p backscrolliamge><img src="http://app-storage-006.cafe24.com/bannermanage2/ecudemo35258/2016/03/17/d2d62a4a99a419ea1f394d7dfabca572.jpg"></p>
+	</div>
+
+	<hr />
+	<!--스크롤바-->
+	<!--@css(/_sp/apps/addon/scrollbar/scrollbar.css)-->
+	<!--@js(/_sp/apps/addon/scrollbar/scrollbar.js)-->
+	<div scrollbar rule="winsize,prison" data-height="100">
+		asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />
+		asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />
+		asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />
+		asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />
+		asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />asdas kjdklasj dkl <br />
+	</div>
+
+	<hr />
+	<!--BXSLIDER:v1.12.4-->
+	<!--@css(/_sp/apps/addon/bxslider/bxslider.css)-->
+	<!--@js(/_sp/apps/addon/bxslider/bxslider.js)-->
+	<div style="width:100px;">
+		<div class="bxslider">
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=1"></div>
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=2"></div>
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=3"></div>
+		</div>
+	</div>
+
+	<hr />
+	<!--SLICK:v1.12.4-->
+	<!--@css(/_sp/apps/addon/slick/slick.css)-->
+	<!--@js(/_sp/apps/addon/slick/slick.js)-->
+	<div style="width:100px;">
+		<div class="slick">
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=1"></div>
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=2"></div>
+			<div><img src="https://dummyimage.com/100x100/000/fff&text=3"></div>
+		</div>
+	</div>
+
+	<hr />
+	<!--아코디언-->
+	<!--@css(/_sp/apps/addon/accordion/accordion.css)-->
+	<!--@js(/_sp/apps/addon/accordion/accordion.js)-->
+	<div accordion data-start="1" data-speed="300" data-close="all">
+		<div accordion-loop>
+			<a accordion-button>버튼 1</a>
+			<div accordion-inside scrollbar data-height="100"><img src="https://dummyimage.com/300x160/333333/fff&text=1"></div>
+		</div>
+		<div accordion-loop>
+			<a accordion-button>버튼 2</a>
+			<div accordion-inside scrollbar data-height="30"><img src="https://dummyimage.com/300x220/ff3300/fff&text=2"></div>
+		</div>
+		<div accordion-loop>
+			<a accordion-button>버튼 3</a>
+			<div accordion-inside><img src="https://dummyimage.com/300x70/999999/fff&text=3"></div>
+		</div>
+	</div>
+
+	<hr />
+	<!--페이지필러-->
+	<a href="/_sp/apps/addon/pagepiling/pagepiling.html">/_sp/apps/addon/pagepiling/pagepiling.html</a>
+
+	<hr />
+	<!--탭-->
+	<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+	<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+	<div style="width:500px;max-width:100%;border:1px solid #333;">
+		<div tabs data-start="2" data-speed="300">
+			<div tabsContainer>
+				<div tabsLoop data-title="TAB 1">1</div>
+				<div tabsLoop data-title="TAB 2">2<br />2</div>
+				<div tabsLoop data-title="TAB 3 LONG TITLE" scrollbar data-height="100">
+					3<br />3<br />3<br />3<br />
+					3<br />3<br />3<br />3<br />
+					3<br />3<br />3<br />3<br />
+					3<br />3<br />3<br />3<br />
+					3<br />3<br />3<br />3<br />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr />
+	<!--폰트-->
+	<!--@import(/_sp/font/set_noto_sans.html)-->
+	<!--@import(/_sp/font/fontfaceobserver.html)-->
+
+	<hr />
+	<!--소셜 로그인-->
+	<!--@css(/_sp/apps/module/snslogin/snslogin.css)-->
+	<!--@js(/_sp/apps/module/snslogin/snslogin.js)-->
+	<!--@import(/_sp/apps/module/snslogin/snslogin.html)-->
+
+	<br /><br /><br />
+
+<!--@define(cmc_log)-->

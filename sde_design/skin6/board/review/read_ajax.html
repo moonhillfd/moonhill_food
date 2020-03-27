@@ -1,0 +1,59 @@
+<div id="sp-result">
+
+	<!-- ★ 로그인체크 -->
+	<div module="board_read_4">
+		<!--
+			$login_page_url = /member/login.html
+			$deny_access_url = /board/review/list.html
+		-->
+	</div>
+
+	<!-- ★ 댓글 패키지-->
+	<div id="sp-board" theme="product" path="read" module="board_ReadPackage_4">
+		<div id="sp-board-reply" emptycheck class="sp-box" input="1" selecr="1" textarea="1">
+			<div module="board_CommentPackage_4">
+				<!-- 코멘트 리스트 OK -->
+				<div class="sp-board-reply-list" module="board_commentlist_4">
+					<!--
+						$delete_page_url = /board/product/comment_del.html
+						$delete_success_url = /board/product/read.html
+					-->
+					<ul class="boardComment">
+						<!--댓글-->
+						<li class="{$comment_reply_css}">
+							<div class="sp-board-reply-list-element">
+								<div class="sp-user">
+									<p>{$checkbox}</p>
+									<span>{$member_icon} {$comment_name}</span>
+								</div>
+								<div class="sp-content">
+									<p class="sp-star {$config.is_use_point|display}"><img src="/_sp/image/cafe24/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></p>
+									<span class="sp-spam {$is_spam_display|display}">스팸글</span>
+									<span class="sp-content-desc"><i class="sp-lock">{$comment_icon_lock}</i>{$comment_content}</span>
+									<p class="sp-content-date">{$comment_write_date}</p>
+								</div>
+							</div>
+						</li><!--종료-->
+						<!--댓글-->
+						<li class="{$comment_reply_css}">
+							<div class="sp-board-reply-list-element">
+								<div class="sp-user">
+									<p>{$checkbox}</p>
+									<span>{$member_icon} {$comment_name}</span>
+								</div>
+								<div class="sp-content">
+									<p class="sp-star {$config.is_use_point|display}"><img src="/_sp/image/cafe24/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></p>
+									<span class="sp-spam {$is_spam_display|display}">스팸글</span>
+									<span class="sp-content-desc"><i class="sp-lock">{$comment_icon_lock}</i>{$comment_content}</span>
+									<p class="sp-content-date">{$comment_write_date}</p>
+								</div>
+							</div>
+						</li><!--종료-->
+					</ul><!--종료-->
+				</div><!--종료-->
+			</div><!--종료-->
+		</div><!--종료-->
+	</div><!--종료-->
+
+</div>
+<!--@define(cmc_log)-->

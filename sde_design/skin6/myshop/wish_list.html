@@ -1,0 +1,287 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--레이어호출-->
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<i id="sp-path" scope="myshop" path="wishlist" file=""></i>
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">MYPAGE</a>
+			<a href="#none">WISHLIST</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title">
+	<h1>WISHLIST</h1>
+</div><!--//종료-->
+
+<!--내 게시물 관리-->
+<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+<div layout="sp-layout-fixed">
+
+	<div module="myshop_wishlist" class="ec-base-table typeList">
+		<!--@css(/css/module/myshop/wishlist.css)-->
+		<!--
+			$login_page = /member/login.html
+			$count = 10
+		-->
+		<table border="1" summary="" class="{$list_display|display}">
+			<caption>관심상품 목록</caption>
+			<colgroup>
+				<col style="width:27px;" />
+				<col style="width:92px" />
+				<col style="width:auto" />
+				<col style="width:105px" />
+				<col style="width:100px" />
+				<col style="width:100px" />
+				<col style="width:85px" />
+				<col style="width:105px" />
+				<col style="width:110px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col"><input type="checkbox" onclick="{$chk_wishlist}" /></th>
+					<th scope="col">이미지</th>
+					<th scope="col">상품정보</th>
+					<th scope="col">판매가</th>
+					<th scope="col">{$mileage_name}</th>
+					<th scope="col">배송구분</th>
+					<th scope="col">배송비</th>
+					<th scope="col">합계</th>
+					<th scope="col">선택</th>
+				</tr>
+			</thead>
+			<tbody module="myshop_wishlistitem" class="center">
+				<tr>
+					<td>{$checkbox}</td>
+					<td class="thumb"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+					<td class="left">
+						<strong class="name">{$product_name_link}</strong>
+						<ul class="option" module="Myshop_optionAll">
+							<li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+							<p><a href="#none" onclick="{$action_option_change}" class="{$option_change_display|display}"><img src="/_sp/image/cafe24/ordered/btn_option.gif" alt="옵션변경" /></a></p>
+								<!-- 참고 : 옵션변경 레이어 -->
+								<div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+									<div class="header">
+										<h3>옵션변경</h3>
+									</div>
+									<div class="content">
+										<ul class="prdInfo">
+											<li>{$product_name}</li>
+											<li class="option">{$layer_option_str}</li>
+										</ul>
+										<div class="prdModify">
+											<h4>PRODUCT OPTION</h4>
+											<ul module="Myshop_optionList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+											<ul module="Myshop_optionAddList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ec-base-button">
+										<p class="sp-btn-group" grid="0">
+											<a href="#none" onclick="{$action_option_add}" class="sp-btn {$option_add_display|display}" theme="black" scale="medium" change="plus">옵션추가</a>
+											<a href="#none" onclick="{$action_option_modify}" class="sp-btn" theme="white" scale="medium">변경</a>
+										</p>
+									</div>
+									<a href="#none" class="close" onclick="$('.optionModify').hide();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+								</div><!-- //참고 -->
+							</li>
+							<li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+							<p><a href="#none" onclick="{$action_option_change}" class="{$option_change_display|display}"><img src="/_sp/image/cafe24/ordered/btn_option.gif" alt="옵션변경" /></a></p>
+								<!-- 참고 : 옵션변경 레이어 -->
+								<div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+									<div class="header">
+										<h3>옵션변경</h3>
+									</div>
+									<div class="content">
+										<ul class="prdInfo">
+											<li>{$product_name}</li>
+											<li class="option">{$layer_option_str}</li>
+										</ul>
+										<div class="prdModify">
+											<h4>PRODUCT OPTION</h4>
+											<ul module="Myshop_optionList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+											<ul module="Myshop_optionAddList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ec-base-button">
+										<p class="sp-btn-group" grid="0">
+											<a href="#none" onclick="{$action_option_add}" class="sp-btn {$option_add_display|display}" theme="black" scale="medium" change="plus">옵션추가</a>
+											<a href="#none" onclick="{$action_option_modify}" class="sp-btn" theme="white" scale="medium">변경</a>
+										</p>
+									</div>
+									<a href="#none" class="close" onclick="$('.optionModify').hide();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+								</div><!-- //참고 -->
+							</li>
+						</ul>
+					</td>
+					<td class="price center"><strong class="{$discount}">{$product_price}{$product_tax_type_text}</strong><br /><strong class="{$product_sale_price_display|display}">{$product_sale_price}</strong></td>
+					<td><span class="txtInfo">{$mileage}</span></td>
+					<td><div class="txtInfo">{$ship_type}<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+					<td><span class="{$delv_price_display|display}">{$delv_price}<br /></span> {$delv_type}</td>
+					<td class="price center">{$sum_price}</td>
+					<td class="button">
+						<a href="#none" onclick="{$act_order}" class="{$disp_order|display}"><img src="/_sp/image/cafe24/ordered/btn_order.gif" alt="주문하기" /></a>
+						<a href="#none" onclick="{$act_basket}" class="{$disp_basket|display}"><img src="/_sp/image/cafe24/ordered/btn_basket.gif" alt="장바구니담기" /></a>
+						<a href="#none" class="{$class_del}" rel="{$rel_del}"><img src="/_sp/image/cafe24/ordered/btn_delete.gif" alt="삭제" /></a>
+					</td>
+				</tr>
+				<tr>
+					<td>{$checkbox}</td>
+					<td class="thumb"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+					<td class="left">
+						<strong class="name">{$product_name_link}</strong>
+						<ul class="option" module="Myshop_optionAll">
+							<li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+							<p><a href="#none" onclick="{$action_option_change}" class="{$option_change_display|display}"><img src="/_sp/image/cafe24/ordered/btn_option.gif" alt="옵션변경" /></a></p>
+								<!-- 참고 : 옵션변경 레이어 -->
+								<div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+									<div class="header">
+										<h3>옵션변경</h3>
+									</div>
+									<div class="content">
+										<ul class="prdInfo">
+											<li>{$product_name}</li>
+											<li class="option">{$layer_option_str}</li>
+										</ul>
+										<div class="prdModify">
+											<h4>PRODUCT OPTION</h4>
+											<ul module="Myshop_optionList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+											<ul module="Myshop_optionAddList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ec-base-button">
+										<p class="sp-btn-group" grid="0">
+											<a href="#none" onclick="{$action_option_add}" class="sp-btn {$option_add_display|display}" theme="black" scale="medium" change="plus">옵션추가</a>
+											<a href="#none" onclick="{$action_option_modify}" class="sp-btn" theme="white" scale="medium">변경</a>
+										</p>
+									</div>
+									<a href="#none" class="close" onclick="$('.optionModify').hide();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+								</div><!-- //참고 -->
+							</li>
+							<li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+							<p><a href="#none" onclick="{$action_option_change}" class="{$option_change_display|display}"><img src="/_sp/image/cafe24/ordered/btn_option.gif" alt="옵션변경" /></a></p>
+								<!-- 참고 : 옵션변경 레이어 -->
+								<div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+									<div class="header">
+										<h3>옵션변경</h3>
+									</div>
+									<div class="content">
+										<ul class="prdInfo">
+											<li>{$product_name}</li>
+											<li class="option">{$layer_option_str}</li>
+										</ul>
+										<div class="prdModify">
+											<h4>PRODUCT OPTION</h4>
+											<ul module="Myshop_optionList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+											<ul module="Myshop_optionAddList">
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+												<li><span>{$option_name}</span> {$form.option_value}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ec-base-button">
+										<p class="sp-btn-group" grid="0">
+											<a href="#none" onclick="{$action_option_add}" class="sp-btn {$option_add_display|display}" theme="black" scale="medium" change="plus">옵션추가</a>
+											<a href="#none" onclick="{$action_option_modify}" class="sp-btn" theme="white" scale="medium">변경</a>
+										</p>
+									</div>
+									<a href="#none" class="close" onclick="$('.optionModify').hide();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+								</div><!-- //참고 -->
+							</li>
+						</ul>
+					</td>
+					<td class="price center"><strong class="{$discount}">{$product_price}{$product_tax_type_text}</strong><br /><strong class="{$product_sale_price_display|display}">{$product_sale_price}</strong></td>
+					<td><span class="txtInfo">{$mileage}</span></td>
+					<td><div class="txtInfo">{$ship_type}<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+					<td><span class="{$delv_price_display|display}">{$delv_price}<br /></span> {$delv_type}</td>
+					<td class="price center">{$sum_price}</td>
+					<td class="button">
+						<a href="#none" onclick="{$act_order}" class="{$disp_order|display}"><img src="/_sp/image/cafe24/ordered/btn_order.gif" alt="주문하기" /></a>
+						<a href="#none" onclick="{$act_basket}" class="{$disp_basket|display}"><img src="/_sp/image/cafe24/ordered/btn_basket.gif" alt="장바구니담기" /></a>
+						<a href="#none" class="{$class_del}" rel="{$rel_del}"><img src="/_sp/image/cafe24/ordered/btn_delete.gif" alt="삭제" /></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="sp-no-result-found {$empty_display|display}">
+			<p>관심상품 내역이 없습니다.</p>
+		</div>
+	</div>
+
+	<div module="Myshop_WishlistButton" class="ec-base-button">
+		<span class="gLeft">
+			<strong class="text">선택상품을</strong>
+			<a href="#none" onclick="{$action_delete}"><img src="/_sp/image/cafe24/ordered/btn_delete2.gif" alt="삭제하기" /></a>
+			<a href="#none" onclick="{$action_basket}"><img src="/_sp/image/cafe24/ordered/btn_basket2.gif" alt="장바구니 담기" /></a>
+		</span>
+		<span class="gRight">
+			<a href="#none" onclick="{$action_order_all}"><img src="/_sp/image/cafe24/ordered/btn_order_all.gif" alt="전체상품주문" /></a> &nbsp; 
+			<a href="#none" onclick="{$action_delete_all}"><img src="/_sp/image/cafe24/ordered/btn_order_empty.gif" alt="관심상품 비우기" /></a>
+		</span>
+	</div>
+
+	<!--페이지-->
+	<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+	<div layout="sp-layout-fixed">
+		<div class="sp-pagination mgt3 mgb5" module="myshop_wishlistpaging">
+			<!--
+				$relation_post = yes
+			-->
+			<ul class="sp-pagination-arrow sp-left">
+				<li><a href="{$param_first}" class="first">FIRST</a></li>
+				<li><a href="{$param_prev}" class="prev">PREV</a></li>
+			</ul>
+			<ul class="sp-pagination-page">
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			</ul>
+			<ul class="sp-pagination-arrow sp-right">
+				<li><a href="{$param_next}" class="next">NEXT</a></li>
+				<li><a href="{$param_last}" class="last">LAST</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div><!--종료-->

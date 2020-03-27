@@ -1,0 +1,55 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="product" path="detail" file=""></i>
+
+<!--포토리뷰-->
+<!--@import(/_sp/apps/module/photoreview/photoreview.html--)-->
+
+<!--포토리뷰 2-->
+				<!--게시판 : 상품후기-->
+				<div class="sp-board-group-element" theme="product" module="board_listpackage_4">
+					<h3 module="board_title_4">{$home_title}<a href="/board/product/list.html?board_no=4">more</a></h3>
+					<ul module="board_list_4">
+						<!--
+							$count = 5
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li>
+	<table><tr><td>
+		<a href="{$link_board_detail}" class="sp-clear" boardpreview data-board="{$board_no}" data-onclick="{$action_content_spread}">
+			<p class="thumb" theme="gallery"><img src="{$img_src}" onerror="this.src='/_sp/image/cafe24/thumb/500x500.gif';"></p>
+			<p class="thumb" theme="product">{$product_img|replace:border="0",onerror="this.src='/_sp/image/cafe24/thumb/500x500.gif';"}</p>
+			<p class="thumb backup"><img src="/_sp/image/cafe24/thumb/500x500.gif"></p>
+			<p class="description">
+				<span class="point {$point_display} {$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></span>
+				<span class="subject {$subject|display}"><em>{$icon_lock}</em>{$subject}<em>{$icon_new}{$icon_hit}{$icon_file}<em><i>{$comment_count}</i></span>
+				<span class="writer">{$member_icon}{$writer}</span>
+				<span class="date {$date_display|display}">{$write_date}</span>
+				<span class="fold"><img src="/_sp/image/cafe24/board/btn_unfold.png"></span>
+			</p>
+		</a>
+	</td></tr></table>
+						</li>
+						<li>
+	<table><tr><td>
+		<a href="{$link_board_detail}" class="sp-clear" boardpreview data-board="{$board_no}" data-onclick="{$action_content_spread}">
+			<p class="thumb" theme="gallery"><img src="{$img_src}" onerror="this.src='/_sp/image/cafe24/thumb/500x500.gif';"></p>
+			<p class="thumb" theme="product">{$product_img|replace:border="0",onerror="this.src='/_sp/image/cafe24/thumb/500x500.gif';"}</p>
+			<p class="thumb backup"><img src="/_sp/image/cafe24/thumb/500x500.gif"></p>
+			<p class="description">
+				<span class="point {$point_display} {$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></span>
+				<span class="subject {$subject|display}"><em>{$icon_lock}</em>{$subject}<em>{$icon_new}{$icon_hit}{$icon_file}<em><i>{$comment_count}</i></span>
+				<span class="writer">{$member_icon}{$writer}</span>
+				<span class="date {$date_display|display}">{$write_date}</span>
+				<span class="fold"><img src="/_sp/image/cafe24/board/btn_unfold.png"></span>
+			</p>
+		</a>
+	</td></tr></table>
+						</li>
+					</ul>
+				</div><!--종료-->
+
+<!--@define(cmc_log)-->

@@ -1,0 +1,91 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title" module="product_headcategory">
+	<h2><span>{$top_image1_tag}</span><span>{$top_image2_tag}</span><span>{$top_image3_tag}</span></h2>
+	<h1 class="with-image{$title_image|display}">
+		<span>{$title_text_or_image}</span>
+	</h1>
+</div><!--//종료-->
+
+<!--마손리 카테고리-->
+<div class="sp-masonry-category" layout="sp-layout-fixed">
+	<ul>
+		<li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+			<a href="/_sp/apps/addon/masonry/masonry.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+		</li>
+	</ul>
+</div>
+
+<!--상품목록-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<!--마손리-->
+<!--@css(/_sp/apps/addon/masonry/masonry.css)-->
+<!--@js(/_sp/apps/addon/masonry/masonry.js)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-masonry sp-product" module="product_listnormal" grid="" control="false" compare="true" >
+		<!--
+			$count = 24
+			$basket_result = /product/add_basket.html
+			$basket_option = /product/basket_option.html
+		-->
+		<p class="sp-text {$category_title_text|display}"><span><em>{$category_title_text}</em></span></p>
+		<span class="sp-image {$category_title_img|display}"><span><img src="{$category_title_img}"></span></span>
+		<div class="sp-product-style">
+			<button grid="0"></button>
+			<button grid="2"></button>
+			<button grid="3"></button>
+			<button grid="4"></button>
+			<button grid="5"></button>
+		</div>
+		<div class="sp-product-box">
+			<div class="sp-product-item {$product_name|striptag}" id="anchorBoxId_{$product_no}">
+				<div class="sp-product-item-thumb">
+					<a href="/_sp/apps/addon/masonry/masonry_read.html?product_no={$product_no}" class="sp-product-item-thumb-href"><p class="sp-product-item-thumb-cover"><!--<img src="{$image_small}" alt="{$seo_alt_tag}" />--></p><i class="sp-product-item-thumb-origin"><img src="{$image_medium}" alt="{$seo_alt_tag}" /></i><span class="sp-product-imagestyle" module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				</div>
+				<a href="/_sp/apps/addon/masonry/masonry_read.html?product_no={$product_no}" class="sp-product-more"></a>
+			</div>
+			<div class="sp-product-item {$product_name|striptag}" id="anchorBoxId_{$product_no}">
+				<div class="sp-product-item-thumb">
+					<a href="/_sp/apps/addon/masonry/masonry_read.html?product_no={$product_no}" class="sp-product-item-thumb-href"><p class="sp-product-item-thumb-cover"><!--<img src="{$image_small}" alt="{$seo_alt_tag}" />--></p><i class="sp-product-item-thumb-origin"><img src="{$image_medium}" alt="{$seo_alt_tag}" /></i><span class="sp-product-imagestyle" module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				</div>
+				<a href="/_sp/apps/addon/masonry/masonry_read.html?product_no={$product_no}" class="sp-product-more"></a>
+			</div>
+		</div>
+	</div>
+	<div class="sp-no-result-found" module="product_normalmenu">
+		<p>검색 결과가 없습니다.</p>
+	</div><!--//종료-->
+</div><!--//여기까지-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="product_normalpaging">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="{$param_first}" class="first">FIRST</a></li>
+			<li><a href="{$param_before}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="{$param_last}" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->

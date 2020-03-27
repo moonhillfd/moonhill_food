@@ -1,0 +1,25 @@
+
+	#sp-tee { top:0; left:0; right:0; }
+	#sp-tee > button { z-index:3; position:absolute; right:0; top:0; border:0; }
+	#sp-tee > button p { z-index:5; position:relative; width:30px; height:30px; line-height:30px; color:#fff; background:#333; font-size:16px; font-family:'dotum'; }
+	#sp-tee > button p:after { content:'¡¿'; padding-left:1px; }
+	#sp-tee > button span { z-index:4; font-size:11px; color:#fff; background:#333; padding:0 15px; letter-spacing:-1px; bottom:100%; right:100%; position:absolute; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:30px;
+		-webkit-transform : translateY(0);
+		   -moz-transform : translateY(0);
+			-ms-transform : translateY(0);
+			 -o-transform : translateY(0);
+				transform : translateY(0);
+		-webkit-transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+		 -khtml-transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+		   -moz-transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+			-ms-transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+			 -o-transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+				transition : transform 300ms cubic-bezier(1, 0.000, 0.000, 0.750);
+	}
+	#sp-tee > button:hover span {
+		-webkit-transform : translateY(100%);
+		   -moz-transform : translateY(100%);
+			-ms-transform : translateY(100%);
+			 -o-transform : translateY(100%);
+				transform : translateY(100%);
+	}

@@ -1,0 +1,156 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">로그인</a>
+			<a href="#none">비밀번호 변경</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+<!--타이틀-->
+	<div id="sp-title">
+		<h1>CHANGE PASSWORD</h1>
+	</div><!--//종료-->
+<!--타이틀-->
+
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<!--@css(/_sp/css/mh-title.css)-->
+	<div id="sp-title">
+		<h1 class="mh-title-item">
+			<span class="en">Change Password</span>
+			<span class="ko">비밀번호 변경</span>
+		</h1>
+	</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_changepasswd">
+						{$form.enc_password}
+						{$form.returnUrl}
+						<div class="findPw">
+							<h3>DETAIL INFO</h3>
+							<p class="event {$display_update_event|display}">이벤트 안내 - 비밀번호 변경 시 {$update_event_reward} 지급됩니다.</p>
+							<fieldset>
+								<legend>비밀번호 변경</legend>
+								<ul class="sp-find-othertype">
+									<li>
+										<strong class="term">아이디</strong>
+										<span class="desc onlytext">{$member_id}</span>
+									</li>
+									<hr class="sp-form-textline minus mgb" />
+									<li class="ninput">
+										<strong class="term">현재 비밀번호</strong>
+										<span class="desc">{$form.passwd}</span>
+									</li>
+									<hr class="sp-form-textline mgb" />
+									<li class="ninput">
+										<strong class="term">새 비밀번호</strong>
+										<span class="desc">
+											{$form.new_passwd}
+											<span class="txtInfo gBlank5">{$passwd_type_desc}</span>
+										</span>
+									</li>
+									<li class="ninput">
+										<strong class="term">새 비밀번호 확인</strong>
+										<span class="desc">{$form.new_passwd_confirm}</span>
+									</li>
+								</ul>
+
+								<hr class="sp-form-textline mgb" />
+								<div class="sp-array-messege">
+									<p>
+										회원님께서 {$check_period}일 이상 비밀번호를 변경하지 않으신 경우,<br />
+										비밀번호 변경을 권장하고 있으니 참고해 주시길 바랍니다.
+									</p>
+								</div>
+								<hr class="sp-form-textline mgt mgb2" />
+
+								<p class="sp-btn-group" grid="2">
+									<a href="#none" onclick="{$change_password_action}" class="sp-btn" theme="black" scale="bubble" hover="비밀번호 변경하기">CHANGE</a>
+									<a href="#none" onclick="{$after_action}" class="sp-btn" theme="white" scale="bubble" hover="다음에 변경하기">CANCEL</a>
+								</p>
+							</fieldset>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<h3 class="message">MATER TALK</h3>
+					<!--메신저-->
+					<div class="sp-login-messenger">
+						<p class="me">
+							<span class="time">00:00</span>
+							<span class="message">
+								비밀번호를 변경할래요.
+							</span>
+						</p>
+						<p class="me">
+							<span class="time">00:00</span>
+							<span class="message">
+								어떻게 변경하면 좋을지 알려주세요.
+							</span>
+						</p>
+						<p>
+							<span class="message">
+								회원님의 개인정보를 안전하게 보호하고<br />
+								개인정보 도용으로 인한 피해를 예방하기 위함입니다.
+							</span>
+							<span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								비밀번호는 본인만 기억할 수 있는 특수문자를 조합해서<br />
+								기억하기 쉽고, 다른사람이 유추할 수 없는 조합을 사용하세요.
+							</span>
+							<span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								비밀번호는 최소 6개월 안에 한번씩은 변경하세요.
+							</span>
+							<span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								대소문자, 특수문자를 섞어주면 강력한 보안이 완성됩니다.
+							</span>
+							<span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								기억하세요! 비밀번호는 여러분의 정말 중요한 정보입니다.<br />
+								절대 공유하거나, 유출되어서는 안되므로 각별히 주의를 요합니다.<br />
+								<br />
+								: D
+							</span>
+							<span class="time">00:00</span>
+						</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

@@ -1,0 +1,15 @@
+#popup { width:800px; }
+.xans-myshop-depositrefundform table .price1 { font-size:14px; color:#912b45; }
+.xans-myshop-depositrefundform table .price2 { font-size:14px; }
+.xans-myshop-depositrefundform table th,
+.xans-myshop-depositrefundform table td { font-size:11px; }
+.xans-myshop-depositrefundform table td #request_deposit_amt { width:100px; }
+.xans-myshop-depositrefundform table td #request_account_name { width:100px; }
+.xans-myshop-depositrefundform table td #request_account_no { width:200px; }
+.xans-myshop-depositrefundform table td #request_bank_code { width:160px; }
+
+#frm_refund_deposit .xans-myshop-depositrefundform input,
+#frm_refund_deposit .xans-myshop-depositrefundform select {
+	height:30px; line-height:30px; padding:0 10px;
+	background:#f5f5f5; border:0; border-radius:5px;
+}

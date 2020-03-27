@@ -1,0 +1,14 @@
+#popup { width:600px; }
+.xans-myshop-orderissuecash table #regno { width:120px; }
+.xans-myshop-orderissuecash table #ssn1 { width:90px; margin:0 4px 0 0; }
+.xans-myshop-orderissuecash table #ssn2 { width:90px; margin:0 4px; }
+.xans-myshop-orderissuecash table #mobile1 { width:70px; margin:0 4px 0 0; }
+.xans-myshop-orderissuecash table #mobile2,
+.xans-myshop-orderissuecash table #mobile3 { width:60px; margin:0 4px; }
+
+#cashForm input,
+#cashForm select {
+	font-size:11px;
+	height:30px; line-height:30px; padding:0 10px;
+	background:#f5f5f5; border:0; border-radius:5px;
+}

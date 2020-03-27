@@ -1,0 +1,23 @@
+
+	<!--게시판배너-->
+	<div layout="sp-layout-fixed">
+		<div id="sp-board-banner" module="bannermanage2_display_20" scope="">
+			<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+			<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+		</div>
+	</div>
+
+	<!--카테고리분기-->
+	<div layout="sp-layout-fixed">
+		<div id="sp-board-category-split"></div>
+	</div>
+
+	<!--전체게시판:복제함-->
+	<div id="sp-board-allview-layer" class="displaynone" module="Layout_BoardInfo">
+		<p></p>
+		<ul>
+			<li><a href="/board/index.html">ALL</a></li>
+			<li><a href="{$board_list_url}">{$board_name}</a></li>
+			<li><a href="{$board_list_url}">{$board_name}</a></li>
+		</ul>
+	</div>

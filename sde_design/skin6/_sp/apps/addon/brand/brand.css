@@ -1,0 +1,29 @@
+
+	#sp-brand {}
+	#sp-brand [brand-search] { padding:10px 0 30px 0;  text-align:center; font-size:0; }
+	#sp-brand [brand-search] ul { padding:5px; position:relative; }
+	#sp-brand [brand-search] ul:before { content:attr(area); display:inline-block; color:#999; font-size:11px; border-right:1px solid #f0f0f0; line-height:21px; padding:1px 15px 0 15px; letter-spacing:0.2em; margin-right:10px; }
+	#sp-brand [brand-search] span { cursor:pointer; font-size:11px; display:inline-block; vertical-align:top; line-height:21px; padding:1px 10px 0 11px; letter-spacing:0.2em; border-radius:3px; }
+	#sp-brand [brand-search] span:hover { background:#f0f0f0; }
+	#sp-brand [brand-search] span.active { background:#333; color:#fff; }
+	#sp-brand [brandall="0"] + .sp-no-result-found { display:block; }
+	#sp-brand [brandall="1"] + .sp-no-result-found { display:none; }
+	#sp-brand [brand-group] > p { font-size:24px; display:block; padding:55px 0 20px 0; }
+	#sp-brand [brand-group] { display:none; border-bottom:1px solid #f0f0f0; padding-bottom:45px; }
+	#sp-brand [brand-group].active { display:block; }
+	#sp-brand [brand] { display:none; position:relative; }
+	#sp-brand [brand].active { display:inline-block; width:16.666%; }
+	#sp-brand [brand] a { display:block; color:#888; margin-right:30px; font-size:11px; letter-spacing:0.03em; line-height:26px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	#sp-brand [brand] a:hover { color:#000; font-weight:bold; }
+	#sp-brand [brand][favo="Y"] a { font-weight:bold; color:#912b45; }
+	#sp-brand [brand][favo="Y"]:before { content:'*'; position:absolute; color:#912b45; left:-11px; top:3px; font-size:16px; }
+
+	#sp-brand [brand] a,
+	#sp-brand [brand-search] span {
+		-webkit-transition : color 0.3s ease, background-color 0.3s ease;
+		 -khtml-transition : color 0.3s ease, background-color 0.3s ease;
+		   -moz-transition : color 0.3s ease, background-color 0.3s ease;
+			-ms-transition : color 0.3s ease, background-color 0.3s ease;
+			 -o-transition : color 0.3s ease, background-color 0.3s ease;
+				transition : color 0.3s ease, background-color 0.3s ease;
+	}

@@ -1,0 +1,4 @@
+.xans-myshop-boardlist .notice .subject { font-weight:bold; word-break:break-all; word-wrap:break-word; }
+
+.xans-myshop-boardlisthead { text-align:right; }
+.xans-myshop-boardlisthead select { border:0; height:30px; line-height:30px; padding:0 10px 0 10px; font-size:11px; background:#f5f5f5; border-radius:5px; }

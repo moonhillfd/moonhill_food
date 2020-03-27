@@ -1,0 +1,4 @@
+
+	#sp-compare { visibility:hidden; overflow:hidden; }
+	#sp-compare.show { visibility:visible; overflow:unset; }
+	#sp-compare .sp-compare-td input { margin:15px 0 3px 0; }

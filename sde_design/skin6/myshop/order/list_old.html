@@ -1,0 +1,124 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="myshop" path="order" file="listold"></i>
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" module="Myshop_Head">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">MYPAGE</a>
+			<a href="#none">OLD ORDER</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--주문내역/올드-->
+<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+<div layout="sp-layout-fixed">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>MY · OLD · ORDER</h1>
+	</div><!--//종료-->
+
+	<div module="Myshop_OrderHistoryTab" class="sp-tab ec-base-tab">
+		<ul class="menu">
+			<li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+			<li class="{$tab_class_cs}"><a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a></li>
+			<li class="{$tab_class_old} {$old_list_display|display}"><a href="/myshop/order/list_old.html{$param_old}">이전 주문내역 ({$total_orders_old})</a></li>
+		</ul>
+	</div>
+
+	<div module="Myshop_OrderOldHistoryList" class="ec-base-table typeList">
+		<!--@css(/css/module/myshop/orderOldHistoryList.css)-->
+		<!--
+			$login_url = /member/login.html
+		-->
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)--><!--
+		<div id="sp-title">
+			<span class="sp-rounder">주문상품정보</span>
+		</div>--><!--//종료-->
+
+		<table border="1" summary="">
+			<caption>주문 상품 정보</caption>
+			<colgroup>
+				<col style="width:125px;" />
+				<col style="width:auto;" />
+				<col style="width:111px;" />
+				<col style="width:111px;" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">주문일자<br />[주문번호]</th>
+					<th scope="col">상품정보</th>
+					<th scope="col">상품구매금액</th>
+					<th scope="col">주문처리상태</th>
+				</tr>
+			</thead>
+			<tbody class="center {$list_display|display}">
+				<tr>
+					<td>
+						{$order_date}
+						<p><a href="detail_old.html{$param_detail}" class="line">[{$order_id}]</a></p>
+					</td>
+					<td class="left top"><strong>{$product_name}</strong> <span>(총 {$product_count}개 품목)</span></td>
+					<td class="right"><strong>{$product_price}</strong></td>
+					<td><p class="txtEm">{$cur_state}</p></td>
+				</tr>
+				<tr>
+					<td>
+						{$order_date}
+						<p><a href="detail_old.html{$param_detail}" class="line">[{$order_id}]</a></p>
+					</td>
+					<td class="left top"><strong>{$product_name}</strong> <span>(총 {$product_count}개 품목)</span></td>
+					<td class="right"><strong>{$product_price}</strong></td>
+					<td><p class="txtEm">{$cur_state}</p></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="sp-no-result-found {$empty_display|display}" theme="order" scale="medium">
+			<p>주문 내역이 없습니다.</p>
+		</div>
+	</div>
+
+	<!--페이지-->
+	<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+	<div layout="sp-layout-fixed">
+		<div class="sp-pagination mgt3 mgb5" module="Myshop_OrderHistoryPaging">
+			<!--
+				$relation_post = yes
+			-->
+			<ul class="sp-pagination-arrow sp-left">
+				<li><a href="{$param_first}" class="first">FIRST</a></li>
+				<li><a href="{$param_prev}" class="prev">PREV</a></li>
+			</ul>
+			<ul class="sp-pagination-page">
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+				<li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+			</ul>
+			<ul class="sp-pagination-arrow sp-right">
+				<li><a href="{$param_next}" class="next">NEXT</a></li>
+				<li><a href="{$param_last}" class="last">LAST</a></li>
+			</ul>
+		</div>
+	</div><!--종료-->
+
+</div><!--종료-->

@@ -1,0 +1,50 @@
+/* 빨간느낌표 */
+span.ec-base-help,
+p.ec-base-help,
+ul.ec-base-help li { margin:2px 9px; padding:1px 0 1px 20px; line-height:1.4; /*background:url('//img.echosting.cafe24.com/skin/base/common/ico_info.gif') no-repeat 0 2px;*/ }
+
+/* 블록 공통 */
+div.ec-base-help { margin:20px 0; border:1px solid #f0f0f0; line-height:18px; }
+div.ec-base-help > h2,
+div.ec-base-help > h3 { padding:11px 0 10px 20px; border-bottom:1px solid #f0f0f0; color:#101010; font-size:12px; background:#f9f9f9; }
+div.ec-base-help .inner { padding:0 9px 12px; }
+div.ec-base-help h4 { margin:18px 0 0 10px; color:#404040; font-size:12px; font-weight:normal; }
+div.ec-base-help h4:first-child { margin-top:14px; }
+div.ec-base-help p { margin:15px 0 0 10px; color:#707070; }
+div.ec-base-help ul,
+div.ec-base-help ol { margin:15px 0 0 11px; }
+div.ec-base-help li { color:#777; }
+div.ec-base-help li strong { color:#444 }
+
+/* 숫자형 */
+div.ec-base-help ol li { font-size:12px; margin:1px 0 3px 0; padding:0 0 0 25px; /*background:url('//img.echosting.cafe24.com/skin/base/common/ico_number.png') no-repeat;*/ }
+div.ec-base-help ol .item1 { background-position:-484px 0; }
+div.ec-base-help ol .item2 { background-position:-434px -99px; }
+div.ec-base-help ol .item3 { background-position:-384px -199px; }
+div.ec-base-help ol .item4 { background-position:-334px -299px; }
+div.ec-base-help ol .item5 { background-position:-284px -399px; }
+div.ec-base-help ol .item6 { background-position:-234px -499px; }
+div.ec-base-help ol .item7 { background-position:-184px -599px; }
+div.ec-base-help ol .item8 { background-position:-134px -699px; }
+div.ec-base-help ol .item9 { background-position:-84px -799px; }
+div.ec-base-help ol .item10 { background-position:-34px -899px; }
+
+/* 대쉬형 */
+div.ec-base-help ul li { padding:0 0 0 11px; /*background:url('//img.echosting.cafe24.com/skin/base/common/ico_dash.gif') no-repeat 0 7px;*/ }
+
+
+/********************************************************************
+	판다씨 시작
+********************************************************************/
+.ec-base-help {font-family:"Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, AppleGothic, sans-serif;}
+span.ec-base-help,
+p.ec-base-help,
+ul.ec-base-help li { background:url('/_sp/image/cafe24/ico_info.gif') no-repeat 0 1px; }
+div.ec-base-help ol li { background:url('/_sp/image/cafe24/ico_number.png') no-repeat; }
+div.ec-base-help ul li { background:url('/_sp/image/cafe24/ico_dash.gif') no-repeat 0 7px; }
+.ec-base-help.mb150 {margin-bottom:150px;}
+.ec-base-help .sp-coupon-serial-box ul li p { font-size:12px;}
+.ec-base-help .sp-coupon-serial-box h3 { font-weight:900 }
+/********************************************************************
+	판다씨 종료
+********************************************************************/

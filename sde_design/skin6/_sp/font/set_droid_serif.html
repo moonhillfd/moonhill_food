@@ -1,0 +1,48 @@
+<style>
+	@font-face {
+		font-family: 'nanum gothic';
+		src: url('/_sp/font/droid_serif/DroidSerif-Regular.eot');
+		src: url('/_sp/font/droid_serif/DroidSerif-Regular.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/droid_serif/DroidSerif-Regular.woff2') format('woff2'),
+			 url('/_sp/font/droid_serif/DroidSerif-Regular.woff') format('woff'),
+			 url('/_sp/font/droid_serif/DroidSerif-Regular.ttf') format('truetype'),
+			 url('/_sp/font/droid_serif/DroidSerif-Regular.svg#source_sans_proregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'nanum gothic';
+		src: url('/_sp/font/droid_serif/DroidSerif-Bold.eot');
+		src: url('/_sp/font/droid_serif/DroidSerif-Bold.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/droid_serif/DroidSerif-Bold.woff2') format('woff2'),
+			 url('/_sp/font/droid_serif/DroidSerif-Bold.woff') format('woff'),
+			 url('/_sp/font/droid_serif/DroidSerif-Bold.ttf') format('truetype'),
+			 url('/_sp/font/droid_serif/DroidSerif-Bold.svg#source_sans_proregular') format('svg');
+		font-weight: bold;
+		font-style: normal;
+	}
+	.sp-font-ready body {
+		letter-spacing:-0.03em;
+		font-family: 'droid serif', "나눔고딕","NanumGothic","NanumGothicWebFont","Malgun Gothic","맑은 고딕","Dotum","돋움","Helvetica","Apple SD Gothic Neo","sans-serif";
+	}
+</style>
+<script src="/_sp/font/fontfaceobserver.js"></script>
+<script>
+(function( w ){
+	// if the class is already set, we're good.
+	if( w.document.documentElement.className.indexOf('sp-font-ready') > -1 ){
+		return;
+	}
+	var fontA = new w.FontFaceObserver('droid serif', {
+		weight: 400
+	});
+	var fontB = new w.FontFaceObserver('droid serif', {
+		weight: 700
+	});
+	w.Promise
+		.all([fontA.load(), fontB.load()])
+		.then(function(){
+			w.document.documentElement.className += ' sp-font-ready';
+		});
+}( this ));
+</script>

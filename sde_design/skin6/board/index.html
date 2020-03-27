@@ -1,0 +1,252 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">커뮤니티</a>
+			<a href="#none">고객센터</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--고객지원센터-->
+<!--@css(/_sp/apps/module/board/cscenter.css)-->
+<div id="sp-cscenter">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<!--@css(/_sp/css/mh-title.css)-->
+	<div id="sp-title" theme="cscenter">
+		<h1 class="mh-title-item">
+			<div class="head_title"><img src="/image/common/title_cs.png" alt="고객센터타이틀" /></div>
+		</h1>
+	</div><!--//종료-->
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<!--고객센터 메인데이터-->
+		<div class="sp-cscenter-index" module="Layout_footer">
+			<ul>
+				<li>
+					<div class="sp-cscenter-index-element">
+						<p class="sp-cscenter-iconpack" theme="cs"></p>
+						<div class="sp-cscenter-index-description">
+							<h3>Call center</h3>
+							<h2>{$phone}</h2>
+							<div class="sp-cscenter-text">{$runtime|nl2}</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sp-cscenter-index-element">
+						<p class="sp-cscenter-iconpack" theme="bank"></p>
+						<div class="sp-cscenter-index-description">
+							<h3>Bank info</h3>
+							<!--은행정보-->
+							<div class="sp-cscenter-bank">
+								<!--@import(/_sp/html/bank_information.html)-->
+							</div>
+							<p class="sp-btn-group sp-left mgt2" grid="0">
+								<!--인터넷 뱅킹-->
+								<!--@css(/_sp/apps/addon/banklink/banklink.css)-->
+								<!--@js(/_sp/apps/addon/banklink/banklink.js)-->
+								<a href="#none" banklink data-url="/_sp/apps/addon/banklink/banklink.html" class="sp-btn" theme="my" scale="small" change="list">인터넷뱅킹</a>
+								<!--미확인 입금자-->
+								<!--@css(/_sp/apps/addon/bankmiss/bankmiss.css)-->
+								<!--@js(/_sp/apps/addon/bankmiss/bankmiss.js)-->
+								<a href="#none" bankmiss data-url="/_sp/apps/addon/bankmiss/bankmiss.html" class="sp-btn" theme="white" scale="small" change="dot">미확인입금</a>
+								<!--무이자 할부-->
+								<!--@css(/_sp/apps/addon/cardinfo/cardinfo.css)-->
+								<!--@js(/_sp/apps/addon/cardinfo/cardinfo.js)-->
+								<a href="#none" cardinfo data-url="/_sp/apps/addon/cardinfo/cardinfo.html" class="sp-btn" theme="white" scale="small" change="dot">무이자할부</a>
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="sp-cscenter-index-element">
+						<p class="sp-cscenter-iconpack" theme="return"></p>
+						<div class="sp-cscenter-index-description">
+							<h3>Return · exchange</h3>
+							<!--탭-->
+							<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+							<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+							<div class="sp-cscenter-tab sp-box" tabs data-start="1" data-speed="300" data-lock="unlock">
+								<!--@import(/_sp/html/return_exchange.html)-->
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sp-cscenter-index-element">
+						<p class="sp-cscenter-iconpack" theme="board"></p>
+						<div class="sp-cscenter-index-description">
+							<h3>Store · community</h3>
+							<div class="sp-cscenter-board sp-box sp-clear" module="Layout_BoardInfo">
+								<a href="{$board_list_url}">{$board_name}</a>
+								<a href="{$board_list_url}">{$board_name}</a>
+							</div>
+							
+							<div class="sp-cscenter-board sp-box sp-clear" style="margin:0">
+								<span module="Layout_project">
+									<a event href="/product/project.html{$param}" class="single">{$category_text}</a>
+									<a event href="/product/project.html{$param}" class="single">{$category_text}</a>
+								</span>
+								<span module="Layout_attendBanner">
+									<!--
+										$stamp_type_url = /attend/stamp.html
+										$comment_type_url = /attend/comment.html
+									-->
+									<a event href="{$attend_url}">출석 체크하기</a>
+								</span>
+								<span module="Layout_couponzoneBanner"><a event href="/coupon/coupon_zone.html">쿠폰 전체보기</a></span>
+								<span module="Layout_giftBanner"><a event href="/order/gift_list.html">사은품 증정 이벤트</a></span>
+								<span module="Layout_opdiaryBanner"><a help href="/board/opdiary/list.html">스토어 운영일지</a></span>
+								<span module="Layout_calendarBanner"><a help href="{$calendar_view_page}">스토어 캘린더</a></span>
+								<span module="Layout_sosBanner"><a help href="/board/urgency/urgency.html">긴급 문의하기</a></span>
+								<span module="myshop_main"><a help href="/board/consult/list.html" class="{$consult_display|display}">1:1 상담하기</a></span>
+							</div>
+
+
+						</div>
+					</div>
+
+				</li>
+			</ul>
+			<ul>
+				<p class="sp-cscenter-index-message"> ※ 상품에 대해 궁금한점이 있으시다면, 언제든지 상품게시판에 글을 남겨주시길 바랍니다. 이용해주셔서 감사합니다. &nbsp; <a href="/board/product/list.html?board_no=6" class="sp-btn" theme="white" scale="small" change="right">상품문의 바로가기</a></p>
+			</ul>
+		</div>
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h1>QUICK · LINK</h1>
+		</div><!--//종료-->
+
+		<!--마이페이지 컨텐츠-->
+		<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+		<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+		<!--@import(/_sp/apps/module/mypage/mypage_main_content.html)-->
+
+	</div><!--종료-->
+
+	<!--맴버쉽 혜택-->
+	<!--@import(/_sp/html/membership_benefit.html)-->
+
+	<!--다시 묶어줘-->
+	<div layout="sp-layout-fixed">
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h1>달맞이자연식품 소식</h1>
+		</div><!--//종료-->
+
+		<!--게시판묶음-->
+		<div class="sp-board-group" grid="2">
+			<!--루프-->
+			<div class="sp-board-group-loop">
+
+				<!--게시판 : 공지사항-->
+				<div class="sp-board-group-element" theme="list" module="board_listpackage_1">
+					<h3 module="board_title_1">{$home_title}<a href="/board/free/list.html?board_no=1">more</a></h3>
+					<ul module="board_list_1">
+						<!--
+							$count = 8
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+					</ul>
+				</div><!--종료-->
+
+				<!--게시판 : FAQ-->
+				<div class="sp-board-group-element" theme="list" module="board_listpackage_3">
+					<h3 module="board_title_3">{$home_title}<a href="/board/free/list.html?board_no=3">more</a></h3>
+					<ul module="board_list_3">
+						<!--
+							$count = 5
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+					</ul>
+				</div><!--종료-->
+
+				<!--게시판 : 상품문의-->
+				<div class="sp-board-group-element" theme="product" module="board_listpackage_6">
+					<h3 module="board_title_6">{$home_title}<a href="/board/product/list.html?board_no=6">more</a></h3>
+					<ul module="board_list_6">
+						<!--
+							$count = 5
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+					</ul>
+				</div><!--종료-->
+
+				<!--게시판 : 상품후기-->
+				<div class="sp-board-group-element" theme="product" module="board_listpackage_4">
+					<h3 module="board_title_4">{$home_title}<a href="/board/product/list.html?board_no=4" replaceurl>more</a></h3>
+					<ul module="board_list_4">
+						<!--
+							$count = 5
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+					</ul>
+				</div><!--종료-->
+
+			</div><!--종료-->
+		</div><!--종료-->
+
+		<!--게시판묶음-->
+		<div class="sp-board-group" grid="0">
+			<!--루프-->
+			<div class="sp-board-group-loop">
+
+				<!--게시판 : 룩북-->
+				<div class="sp-board-group-element" theme="lookbook" grid="4" module="board_listpackage_8">
+					<h3 module="board_title_8">{$home_title}<a href="/board/product/list.html?board_no=8">more</a></h3>
+					<ul module="board_list_8">
+						<!--
+							$count = 8
+							$main_list = yes
+							$main_list_reply_view = no
+						-->
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+						<li><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+					</ul>
+				</div><!--종료-->
+
+			</div><!--종료-->
+		</div><!--종료-->
+
+	</div><!--종료-->
+
+	<!--포토리뷰-->
+	<!--@import(/_sp/apps/module/photoreview/photoreview.html)-->
+
+</div><!--종료-->
+

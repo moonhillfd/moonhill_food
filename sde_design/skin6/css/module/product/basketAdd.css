@@ -1,0 +1,4 @@
+.xans-product-basketadd { position:fixed; top:50%; left:50%; z-index:1000; width:450px; margin:-175px 0 0 -225px; }
+.xans-product-basketadd .content { text-align:center; background-color:#fff; }
+.xans-product-basketadd .content p { font-weight:normal; color:#2e2e2e; padding:10px 0; }
+.xans-product-basketadd .content > img { margin:30px 0 20px 0; }

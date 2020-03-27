@@ -1,0 +1,81 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_sp/css/company.css)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">회사소개</a>
+			<a href="#none">사회활동</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">ZENA</span>
+		<span class="ko">사회활동</span>
+	</h1>
+</div><!--//종료-->
+
+<!--어바웃어스-->
+<div layout="sp-layout-fixed">
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+		<div class="{$map_display|display}">
+			<!--타이틀-->
+			<!--@css(/_sp/apps/module/title/title.css)-->
+			<div id="sp-title">
+				<h1>LOCATION</h1>
+			</div><!--//종료-->
+			<p>{$map_image}</p>
+		</div>
+	</div>
+
+	
+	
+
+
+</div>
+
+<div class="pr_wrap">
+	<div class="logo_sponsor_item">
+		<img class="logo_sponsor" src="/_sp/image/company/logo_pr_cancer.jpg" alt="소아암재단 후원지정 달맞이자연식품"/>
+		<p class="desc_text">
+			<span class="en">Sharing Happiness with Healthy Conclusion.</span>
+			<span class="ko">건강한 맺음으로 행복의 나눔을 실천합니다.</span>
+		</p>
+	</div>
+	<div class="sub_visual"></div>
+	<div class="mh_content_w_fix">
+		<p class="title_pr">
+			<img src="/_sp/image/company/title_pr.gif" alt="건강한 사회공헌 활동으로 지역사회와 행복을 나누는 달맞이자연식품이 되겠습니다."/>
+		</p>
+		<div class="pr_content_item">
+			<img class="pr_content_img" src="/_sp/image/company/pr_sponsor.png" alt="소아암재단 후원 명패, 사회봉사단체 ‘늘 처음처럼’ 정기활동"/>
+			<p class="pr_content_txt">
+
+				<strong>달맞이자연식품</strong>은 저희가 창출하는 모든 가치가<br>
+				고객의 건강은 물론 공익에도 기여해야한다는<br>
+				마음으로 제품 하나하나를 만들고 있습니다.<br><br>
+
+				오늘도 달맞이자연식품의 임직원들은 개인의 건강과 아름다움은 물론<br>
+				지역사회, 더 나아가 모든 국민이 더 편안하고 행복한 삶을 누릴 수 있도록<br>
+				변함없는 마음으로 최선을 다하고 있습니다.<br>
+				언제나 달맞이자연식품에 보내주시는 관심과 사랑에 감사합니다.
+			</p>
+		</div>
+	</div>
+</div>

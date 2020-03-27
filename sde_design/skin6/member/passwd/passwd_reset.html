@@ -1,0 +1,109 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">LOGIN</a>
+			<a href="/member/passwd/find_passwd_info.html">FIND PASSWORD</a>
+			<a href="#none">RESET</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>RESET PASSWORD</h1>
+	</div><!--//종료-->
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_passwordreset">
+						<div class="findPw">
+							<h3>CONFIRM PASSWORD</h3>
+							<fieldset>
+								<legend>비밀번호 재설정</legend>
+								<ul class="sp-find-othertype">
+									<li><strong class="term">아이디</strong><span class="desc onlytext"><strong class="txtEm-x">{$member_id}</strong></span></li>
+									<hr class="sp-form-textline minus mgb" />
+									<li class="new_pwd">
+										<strong class="term">새 비밀번호</strong>
+										<div class="desc">
+											{$form.new_passwd}
+											<div class="txtInfo">
+												{$passwd_type_desc}
+											</div>
+										</div>
+									</li>
+									<li class="new_pwd"><strong class="term">새 비밀번호 확인 *</strong><span class="desc">{$form.new_passwd_confirm}</span></li>
+								</ul>
+								<hr class="sp-form-textline mgb2" />
+								<p class="sp-btn-group" grid="2">
+									<a href="#none" onclick="{$action_func_password_reset_submit}" class="sp-btn" theme="black" scale="bubble" hover="변경하기">CHANGE</a>
+									<a href="#none" onclick="{$action_func_password_reset_cancel}" class="sp-btn" theme="white" scale="bubble" change="dot">CANCEL</a>
+								</p>
+							</fieldset>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<!--메신저-->
+					<div class="sp-login-messenger">
+						<p class="me">
+							<span class="time">00:00</span>
+							<span class="message">
+								비밀번호를 재설정 할래요.
+							</span>
+						</p>
+						<p>
+							<span class="message">
+								비밀번호는 주기적으로 변경해주세요.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								유추 가능한 전화번호, 생년월일 등은<br />
+								비밀번호에 포함하지 마시길 당부드립니다.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								혹시 기억나셨다면 로그인을 해주세요.<br />
+								아이디가 없으시다면, 회원가입을 해주세요.
+								<br /><br />
+								<a href="/member/login.html" class="sp-btn" theme="white" scale="small" change="right">로그인</a>
+								<a href="/member/join.html" class="sp-btn" theme="white" scale="small" change="right">회원가입</a>
+								<br /><br />
+								: D
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

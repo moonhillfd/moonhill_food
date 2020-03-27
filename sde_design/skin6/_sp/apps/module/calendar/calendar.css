@@ -1,0 +1,13 @@
+
+	#sp-calendar {  }
+	#sp-calendar .sp-calendar-tab { margin:40px 0 70px 0; }
+	#sp-calendar .sp-calendar-tab ul { font-size:0; text-align:center; }
+	#sp-calendar .sp-calendar-tab ul li { display:inline-block; margin:0 5px; }
+	#sp-calendar .sp-calendar-tab ul li a { display:block; width:130px; font-size:11px; letter-spacing:0.1em; border:1px solid #eaeaea; padding:10px 0 9px 0; border-radius:20px; }
+	#sp-calendar .sp-calendar-tab ul li a:hover { border:1px solid #bbb; }
+	#sp-calendar .sp-calendar-tab ul li a.active { color:#fff; background-color:#444; border:1px solid #444; }
+	#sp-calendar .sp-calendar-tab ul li a.etc { background-color:#f9f9f9; }
+
+	#sp-calendar .sp-date { display:inline-block; margin-right:5px; background:#999; color:#fff; font-size:9px; letter-spacing:0.1em; padding:2px 10px 1px 11px; border-radius:5px; }
+
+	.sp-more { display:inline-block; margin-right:5px; margin-bottom:3px; background:#f0f0f0; color:#666; font-size:9px; letter-spacing:0.1em; padding:2px 10px 1px 11px; border-radius:5px; }

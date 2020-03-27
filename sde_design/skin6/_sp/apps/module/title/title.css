@@ -1,0 +1,41 @@
+
+	/*
+		타이틀 타입
+	
+		더블박스
+		<h3 class="doublebox"><span><em>BEST ITEM</em></span></h3>
+	*/
+
+	#sp-title { position:relative; }
+	#sp-title h1 { text-align:center; font-size:18px; line-height:1.25em; font-weight:normal; letter-spacing:0.05em; overflow:hidden; padding:70px 0.1em 40px 0; }
+
+	#sp-title[scale="layersingle"] h1 { padding:100px 0 50px 0; }
+
+	#sp-title h1.with-image { padding:0; }
+	#sp-title h2 { text-align:center; overflow:hidden; }
+	#sp-title h1 > span,
+	#sp-title h2 > span { position:relative; display:block; width:5000px; left:50%; margin-left:-2500px; text-align:center; }
+	#sp-title h1.with-imagedisplaynone { height:15px; }
+	#sp-title h1.with-imagedisplaynone > span { width:auto; display:inline-block; left:auto; margin:0; vertical-align:top; }
+
+	#sp-title .sp-title-like { display:inline-block; vertical-align:top; margin-left:-5px; }
+	#sp-title h1.with-image .sp-title-like { display:none; }
+	#sp-title .sp-title-like button { width:30px; height:30px; position:relative; background:none; border:0; top:-5px; left:5px; margin-right:20px; }
+	#sp-title .sp-title-like button img { max-width:100%; }
+	#sp-title .sp-title-like button strong { position:absolute; top:50%; left:100%; line-height:20px; font-size:9px; margin-top:-10px; color:#fff; background:#912b45; padding:0 8px; border-radius:10px; }
+	#sp-title .sp-title-like button strong[count='0'] { color:#333; background:#f0f0f0; }
+
+	#sp-title h1[scale="small"] { font-size:14px; }
+	#sp-title h1[scale="medium"] { font-size:16px; }
+
+	/* 타입 2 : 그림자 박스형 */
+	#sp-title h3.doublebox { padding:50px 0.1em 40px 0; color:#ff3000; position:relative; text-align:center; font-size:0; top:-21px; }
+	#sp-title h3.doublebox span { position:relative; display:inline-block !important; }
+	#sp-title h3.doublebox span.sp-fix {  }
+	#sp-title h3.doublebox span:before { content:''; z-index:1; width:100%; height:100%; position:absolute; border:2px solid #333; top:4px; left:4px; -webkit-box-sizing:border-box; -khtml-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+	#sp-title h3.doublebox span.sp-fix:before  { background:none !important; }
+	#sp-title h3.doublebox span em { letter-spacing:0.1em; position:relative; z-index:2; display:block; font-size:11px; border:2px solid #333; color:#333; padding:9px 19px 8px 19px; line-height:100%; background:#fff; font-weight:bold; font-style:normal; }
+
+	#sp-title .sp-rounder { display:inline-block; height:36px; line-height:36px; border:2px solid #f0f0f0; padding:0 40px; border-radius:18px; }
+
+	#sp-title .sp-title-message { display:none; }

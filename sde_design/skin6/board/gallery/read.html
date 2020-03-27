@@ -1,0 +1,336 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="board" path="gallery" file="read"></i>
+
+<div id="sp-board" theme="gallery" path="read" module="board_ReadPackage_8">
+
+    <!--@css(/css/module/board/readPackage.css)-->
+    <div module="board_title_8">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a id="depthTwo" href="/board/index.html">커뮤니티</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_info}</span>
+				<span class="ko">{$board_title}</span>
+			</h1>
+		</div><!--//종료-->
+    </div>
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<div module="board_read_8">
+			<!--
+				$delete_success_url = /board/gallery/list.html
+				$login_page_url = /member/login.html
+				$deny_access_url = /board/gallery/list.html
+			-->
+			<div class="ec-base-table typeWrite">
+				<table border="1" summary="">
+				<caption>게시판 상세</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td>{$subject}</td>
+					</tr>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>{$member_icon} {$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="sp-board-etcarea">
+								<ul>
+									<li class="{$config.is_use_point|display}">
+										<strong>POINT</strong> <img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점">
+									</li>
+									<li class="{$config.use_date|display}">
+										<strong>DATE</strong> <span class="txtNum">{$write_date}</span>
+									</li>
+									<li class="{$config.is_use_recom|display}">
+										<strong>VOTE</strong> <span class="txtNum">{$vote_count} &nbsp;<a href="#none" onclick="{$action_vote}"><img src="/_sp/image/cafe24/board/btn_recommend.gif" alt="추천하기" /></a></span>
+									</li>
+									<li class="{$config.use_cnt|display}">
+										<strong>READ</strong> <span class="txtNum">{$hit_count}</span>
+									</li>
+								</ul>
+							</div>
+							<div class="detail">{$content_image}{$content}</div>
+						</td>
+					</tr>
+					<tr class="attach {$config.use_attach|display}">
+						<th scope="row">첨부파일</th>
+						<td>{$attach_file}</td>
+					</tr>
+					<tr class="{$delete_button_auth|display} {$config.use_password|display}">
+						<th scope="row">비밀번호</th>
+						<td>{$form.password} <span class="ec-base-help txtInfo">삭제하려면 비밀번호를 입력하세요.</span></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+
+			<!--버튼-->
+			<div class="sp-btn-group mgt2 mgb3" grid="0">
+				<p class="sp-left">
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+				</p>
+				<p class="sp-left {$config.is_admin|display}">
+					<a href="#none" onclick="{$action_post}" class="sp-btn {$config.is_post|display}" theme="white" scale="large" change="dot">관리자게시</a>
+					<a href="#none" onclick="{$action_post}" class="sp-btn {$config.not_post|display}" theme="white" scale="large" change="dot">게시안함</a>
+					<a href="#none" onclick="{$action_spam}" class="sp-btn" theme="white" scale="large" change="check">스팸신고</a>
+					<a href="#none" onclick="{$action_spam_cancle}" class="sp-btn" theme="white" scale="large" change="check">스팸해제</a>
+				</p>
+				<p class="sp-right">
+					<a href="#none" onclick="{$action_delete}" class="sp-btn {$delete_button_auth|display}" theme="white" scale="large" change="close">삭제</a>
+					<a href="/board/gallery/modify.html{$param_modify}" class="sp-btn {$modify_button_auth|display}" theme="white" scale="large" change="edit">수정</a>
+					<a href="/board/gallery/reply.html{$param_reply}" class="sp-btn {$reply_button_auth|display}" theme="black" scale="large" change="edit">답변</a>
+				</p>
+			</div><!--//종료-->
+		</div>
+
+		<!-- ★ 댓글 패키지-->
+		<div id="sp-board-reply" emptycheck class="sp-box" input="1" selecr="1" textarea="1">
+
+			<div module="board_CommentPackage_8">
+				<!--@css(/css/module/board/commentPackage.css--not use--)-->
+
+				<!-- 댓글쓰기 OK -->
+				<div class="sp-board-reply-form" module="board_commentwrite_8">
+					<ul class="{$comment_write_display|display}">
+						<li>
+							<p class="sp-re-head">USER<br />COMMENT</p>
+							<p class="sp-re-star sp-board-write-point {$config.is_use_point|display}">{$form.comment_point}</p>
+							<p class="sp-re-user">
+								<span class="sp-re-id {$comment_input_name|display}" holder="ID or NAME">{$form.comment_name}</span>
+								<span class="sp-re-pwd" holder="PASSWORD">{$form.comment_password}</span>
+								<span class="sp-re-secret {$comment_secret_display|display}"><label>{$form.secure} 비밀글</label></span>
+								<span class="sp-re-admin {$config.is_admin|display}"><a href="#none" onclick="{$action_comment_admin}" class="sp-btn {$config.is_admin|display}" theme="white" scale="medium" change="dot">관리자답변보기</a></span>
+							</p>
+							<p class="sp-re-comment">
+								<span class="sp-re-byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</span>
+								<a href="#none" onclick="{$action_comment_insert}" class="sp-btn {$comment_button|display}" theme="black" scale="bubble" change="check">OK</a>
+								{$form.comment}
+							</p>
+							<p class="sp-re-captcha {$config.use_captcha_comment|display}">
+								{$captcha_image} {$captcha_refresh}
+								{$form.captcha}
+								<span class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+							</p>
+							<p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+						<li>
+					</ul>
+					<!--권한없음-->
+					<ul class="{$comment_write_display_none|display}">
+						<li>
+							<p class="sp-re-head">USER<br />COMMENT</p>
+							<div class="sp-re-auth {$comment_write_display_none|display}">
+								<span>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</span>
+								<p class="sp-btn-group sp-left mgt" grid="0">
+									<a href="/member/login.html" class="sp-btn" theme="white" scale="small">로그인</a>
+									<a href="/member/join.html" class="sp-btn" theme="black" scale="small">회원가입</a>
+								</p>
+							</div>
+						<li>
+					</ul><!--종료-->
+				</div><!--종료-->
+
+				 <!-- 코멘트 리스트 OK -->
+				<div class="sp-board-reply-list" module="board_commentlist_8">
+					<!--
+						$delete_page_url = /board/product/comment_del.html
+						$delete_success_url = /board/product/read.html
+					-->
+					<ul class="boardComment">
+						<!--댓글-->
+						<li class="{$comment_reply_css}">
+							<div class="sp-board-reply-list-element">
+								<div class="sp-user">
+									<p>{$checkbox}</p>
+									<span>{$member_icon} {$comment_name}</span>
+								</div>
+								<div class="sp-content">
+									<p class="sp-star {$config.is_use_point|display}"><img src="/_sp/image/cafe24/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></p>
+									<span class="sp-spam {$is_spam_display|display}">스팸글</span>
+									<span class="sp-content-desc"><i class="sp-lock">{$comment_icon_lock}</i>{$comment_content}</span>
+									<p class="sp-content-date">{$comment_write_date}</p>
+								</div>
+								<div class="sp-button-box">
+									<a href="javascript:;" onclick="{$action_comment_reply}" class="sp-btn {$comment_reply_display|display}" theme="white" scale="small" change="edit">댓글작성</a>
+									<a href="javascript:;" onclick="{$action_comment_update}" class="sp-btn" theme="white" scale="small" change="edit">수정</a>
+									<a href="javascript:;" onclick="{$action_comment_delete}" class="sp-btn" theme="white" scale="small" change="close">삭제</a>
+								</div>
+							</div>
+						</li><!--종료-->
+						<!--댓글-->
+						<li class="{$comment_reply_css}">
+							<div class="sp-board-reply-list-element">
+								<div class="sp-user">
+									<p>{$checkbox}</p>
+									<span>{$member_icon} {$comment_name}</span>
+								</div>
+								<div class="sp-content">
+									<p class="sp-star {$config.is_use_point|display}"><img src="/_sp/image/cafe24/board/ico_point{$comment_point_count}.gif" alt="{$comment_point_count}점" /></p>
+									<span class="sp-spam {$is_spam_display|display}">스팸글</span>
+									<span class="sp-content-desc"><i class="sp-lock">{$comment_icon_lock}</i>{$comment_content}</span>
+									<p class="sp-content-date">{$comment_write_date}</p>
+								</div>
+								<div class="sp-button-box">
+									<a href="javascript:;" onclick="{$action_comment_reply}" class="sp-btn {$comment_reply_display|display}" theme="white" scale="small" change="edit">댓글작성</a>
+									<a href="javascript:;" onclick="{$action_comment_update}" class="sp-btn" theme="white" scale="small" change="edit">수정</a>
+									<a href="javascript:;" onclick="{$action_comment_delete}" class="sp-btn" theme="white" scale="small" change="close">삭제</a>
+								</div>
+							</div>
+						</li><!--종료-->
+					</ul><!--종료-->
+					<!--페이지-->
+					<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+					<div class="sp-pagination" module="board_commentpaging_8">
+						<ul class="sp-pagination-arrow sp-left">
+							<li><a href="#none" class="first">FIRST</a></li>
+							<li><a href="{$param_prev}" class="prev">PREV</a></li>
+						</ul>
+						<ul class="sp-pagination-page">
+							<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+							<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+						</ul>
+						<ul class="sp-pagination-arrow sp-right">
+							<li><a href="{$param_next}" class="next">NEXT</a></li>
+							<li><a href="#none" class="last">LAST</a></li>
+						</ul>
+					</div><!--종료-->
+					<!--스팸신고-->
+					<div class="sp-btn-group sp-board-reply-spam {$config.is_admin|display}" grid="0">
+						<p class="sp-left">선택한 댓글을 스팸으로 처리할 수 있습니다.</p>
+						<p class="sp-right">
+							<a href="#none" onclick="{$action_spam}" class="sp-btn" theme="white" scale="medium" change="check">스팸신고</a>
+							<a href="#none" onclick="{$action_spam_cancle}" class="sp-btn" theme="white" scale="medium" change="close">스팸해제</a>
+						</p>
+					</div><!--//종료-->
+				</div><!--종료-->
+
+				<!-- 댓글 수정 OK -->
+				<div class="sp-board-reply-re-form" module="board_commentform_8">
+					<ul>
+						<li>
+							<span class="sp-re-pwd" holder="PASSWORD">{$form.comment_password} </span>
+							<span class="secret {$comment_secret_display|display}"><label>{$form.secure} 비밀글</label></span>
+						</li>
+						<li>
+							<div class="sp-board-reply-re-content">
+								<span class="sp-re-byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</span>
+								<p>
+									<a href="#none" onclick="{$action_comment_update}" class="sp-btn" theme="black" scale="bubble" change="check">수정</a>
+									<a href="#none" onclick="{$action_comment_cancel}" class="sp-btn" theme="white" scale="bubble" change="close">취소</a>
+								</p>
+								{$form.comment_modify}
+							</div>
+						<li>
+					</ul>
+				</div><!--종료-->
+
+				<!-- 비밀글 확인 OK -->
+				<div class="sp-board-reply-repass" module="board_commentformsecret_1002">
+					<p>비밀번호<em></em>{$form.secure_password}
+						<a href="#none" onclick="{$action_secret_submit}" class="sp-btn" theme="white" scale="medium" change="check">확인</a>
+						<a href="#none" onclick="{$action_secret_cancel}" class="sp-btn" theme="white" scale="medium" change="close">취소</a>
+					</p>
+				</div>
+
+				<!-- 댓글의 댓글 쓰기 OK -->
+				<div class="sp-board-reply-form" theme="clone" module="board_commentreply_8">
+					<ul class="{$comment_write_display|display}">
+						<li>
+							<p class="sp-re-user">
+								<span class="sp-re-id {$comment_input_name|display}" holder="ID or NAME">{$form.comment_name}</span>
+								<span class="sp-re-pwd" holder="PASSWORD">{$form.comment_password}</span>
+								<span class="sp-re-secret {$comment_secret_display|display}"><label>{$form.secure} 비밀글</label></span>
+							</p>
+							<p class="sp-re-comment">
+								<span class="sp-re-byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</span>
+								<a href="#none" onclick="{$action_comment_insert}" class="sp-btn {$comment_button|display}" theme="white" scale="bubble" change="check">OK</a>
+								{$form.comment}
+							</p>
+							<p class="sp-re-captcha {$config.use_captcha_comment|display}">
+								{$captcha_image} {$captcha_refresh}
+								{$form.captcha}
+								<span class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+							</p>
+							<p class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+						<li>
+					</ul>
+					<!-- 댓글권한 없음 -->
+					<div class="sp-re-auth {$comment_write_display_none|display}">
+						<span>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</span>
+						<p class="sp-btn-group sp-left mgt" grid="0">
+							<a href="/member/login.html" class="sp-btn" target="_blank" theme="white" scale="small">로그인</a>
+							<a href="/member/join.html" class="sp-btn" target="_blank" theme="black" scale="small">회원가입</a>
+						</p>
+					</div>
+				</div><!--종료-->
+
+			</div><!--종료-->
+
+		</div><!--종료-->
+
+		<div module="board_movement_8">
+			<!--@css(/css/module/board/movement.css)-->
+			<ul>
+				<li class="prev {$prev_display|display}"><strong>이전글</strong><a href="{$link_board_detail_prev}">{$prev_subject}</a></li>
+				<li class="next {$next_display|display}"><strong>다음글</strong><a href="{$link_board_detail_next}">{$next_subject}</a></li>
+			</ul>
+		</div>
+
+	</div><!--종료-->
+</div><!--종료-->
+
+<!-- 관리자 전용 메뉴 -->
+<div class="sp-board-admin" layout="sp-layout-fixed" module="board_function_8" select="1" scale="150">
+    <!--
+        $success_return_url = /board/product/list.html
+    -->
+	<!--@css(/css/module/board/function.css)-->
+	<div class="sp-board-admin-inside">
+		<span>선택된 글을</span>
+		<span>{$form.boardGroup}</span>
+		<span>
+			<a href="#none" onclick="{$action_article_move}" class="sp-btn" theme="white" scale="medium" change="check">글 이동</a>
+			<a href="#none" onclick="{$action_article_copy}" class="sp-btn" theme="white" scale="medium" change="check">글 복사</a>			
+		</span>
+	</div>
+	<div class="ec-base-help">
+		<div class="inner">
+			<h4>관리자 전용 메뉴</h4>
+			<ol>
+				<li class="item1">이동과 복사를 잘 구분해서 사용하시길 바랍니다.</li>
+				<li class="item2">게시글의 댓글은 이동시 포함되지만, 답변은 포함되지 않습니다.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+<!-- //관리자 전용 메뉴 -->
+
+<!--@define(cmc_log)-->

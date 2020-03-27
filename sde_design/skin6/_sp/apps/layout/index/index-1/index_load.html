@@ -1,0 +1,159 @@
+
+	<!--로더-->
+	<div id="sp-result">
+
+		<!--탭 슬라이더-->
+		<div lazyhtmltarget="1">
+			<div layout="sp-layout-fixed">
+				<br /><br /><br /><br /><br /><br />
+				<br /><br /><br /><br /><br />
+				<div class="sp-slider" data-fade="true" data-custompaging="true" data-autoplayspeed="8000" data-speed="300" hover="false" dots="bubble" dotsArea="out-t-c">
+					<div class="sp-slider-loop sp-product" module="product_listmain_23" data-title="{$category_title_text}" grid="4" hover="blackbottom">
+						<!--
+							$count = 4
+						-->
+						<div class="sp-product-box">
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						</div>
+					</div>
+					<div class="sp-slider-loop sp-product" module="product_listmain_24" data-title="{$category_title_text}" grid="4" hover="whitebottom">
+						<!--
+							$count = 4
+						-->
+						<div class="sp-product-box">
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						</div>
+					</div>
+					<div class="sp-slider-loop sp-product" module="product_listmain_25" data-title="{$category_title_text}" grid="4" hover="blackbottom">
+						<!--
+							$count = 4
+						-->
+						<div class="sp-product-box">
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						</div>
+					</div>
+					<div class="sp-slider-loop sp-product" module="product_listmain_26" data-title="{$category_title_text}" grid="4" hover="whitebottom">
+						<!--
+							$count = 4
+						-->
+						<div class="sp-product-box">
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+							<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						</div>
+					</div>
+				</div>
+				<br /><br />
+			</div><!--//여기까지-->
+		</div>
+
+		<!--카로셀 상품 슬라이더-->
+		<div lazyhtmltarget="2">
+			<div class="sp-index-product-carousel-1">
+				<br /><br />
+				<ul>
+					<div class="sp-product" module="product_listmain_20" grid="2" header="normal" hover="leftright">
+						<!--
+							$count = 6
+						-->
+						<p class="sp-text {$category_title_text|display}"><span><em>{$category_title_text}</em></span></p>
+						<span class="sp-image {$category_title_img|display}"><span><img src="{$category_title_img}"></span></span>
+						<div class="sp-product-box sp-slider" data-initialslide="1" data-autoplayspeed="10000" data-slidestoshow="1" data-variablewidth="620" data-infinite="true" data-centermode="true" data-centerpadding="100" data-speed="400" arrows="blk-h-m" arrowsArea="h-in-46" arrowfix="true" dots="circle-m" dotsArea="out-b-c" between="20">
+							<div class="sp-slider-loop"><!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)--></div>
+							<div class="sp-slider-loop"><!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)--></div>
+						</div>
+					</div>
+				</ul>
+				<br /><br /><br /><br /><br />
+			</div>
+		</div>
+
+		<!--좌우슬라이더-->
+		<div lazyhtmltarget="3" module="bannermanage2_display_10">
+			<div layout="sp-layout-fixed">
+				<br /><br /><br /><br /><br /><br /><br />
+				<div class="sp-slider" data-autoplayspeed="12000" data-speed="800" data-slidestoshow="2" hover="false" arrows="blk-h-l" arrowsArea="h-out-46" dots="circle-m" dotsArea="out-b-c" between="20">
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+				</div>
+				<br /><br /><br /><br /><br /><br />
+			</div>
+		</div>
+
+		<!--포퓰러-->
+		<div lazyhtmltarget="4">
+			<div class="sp-index-popular-1">
+				<br /><br /><br /><br /><br />
+				<ul>
+					<div layout="sp-layout-fixed">
+						<div class="sp-index-popular-title">
+							<span>POPULAR / TREND</span>
+							<p>최신 트렌드를 한눈에 확인하세요</p>
+						</div>
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+						<div layout="sp-layout-fixed">
+							<div class="sp-slider" data-fade="true" data-custompaging="true" data-autoplayspeed="14000" data-speed="600" hover="false" arrows="blk-h-l" arrowsArea="h-out-46" dots="bubble" dotsArea="out-t-c" between="30">
+								<!-- 1 PAGE -->
+								<div module="bannermanage2_display_11" class="sp-slider-loop" data-title="Spring 2018">
+									<table class="sp-mastable" line="f9f9f9">
+										<tr>
+											<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+										<tr>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+										<tr>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+										<tr>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+									</table>
+								</div>
+								<!-- 2 PAGE -->
+								<!--
+								<div module="bannermanage2_display_12" class="sp-slider-loop" data-title="What's Now">
+									<table class="sp-mastable" line="f9f9f9">
+										<tr>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+										<tr>
+											<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+											<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										</tr>
+									</table>
+								</div>
+								-->
+							</div>
+						</div>
+					</div>
+				</ul>
+				<br /><br />
+			</div><!--//여기까지-->
+		</div>
+
+		<!--포인트배너-->
+		<div lazyhtmltarget="5" module="bannermanage2_display_12">
+			<br />
+			<div layout="sp-layout-fixed">
+				<div class="sp-slider full" data-fade="true" data-autoplayspeed="5000" data-speed="300" hover="false" arrows="blk-h-l" arrowsArea="h-in-46" arrowfix="true" dots="button" dotsArea="in-b-c">
+					<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+					<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+				</div>
+			</div>
+			<br /><br /><br /><br />
+		</div>
+
+	</div><!-- 종료 -->

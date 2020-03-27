@@ -1,0 +1,25 @@
+#popup { width:800px; }
+.xans-coupon-selectnew .title { margin:20px 0 10px; }
+.xans-coupon-selectnew .title h3 { color:#353535; font-size:12px; }
+
+.xans-coupon-selectnew .ec-base-table td { font-size:11px; }
+.xans-coupon-selectnew .ec-base-table td.thumb img { max-width:60px; }
+.xans-coupon-selectnew .ec-base-table td div.option  { color:#999; font-size:11px; letter-spacing:0.03em; }
+.xans-coupon-selectnew .ec-base-table td div.type { margin:9px 0 0; }
+.xans-coupon-selectnew .ec-base-table td.select select { max-width:100%; }
+
+.xans-coupon-selectnew .ec-base-table.total table { /*border:1px solid #777;*/ }
+.xans-coupon-selectnew .ec-base-table.total tfoot td .total { margin:0 0 0 15px; }
+.xans-coupon-selectnew .ec-base-table.total td .box { min-height:40px; line-height:2; word-break:normal; }
+.xans-coupon-selectnew .ec-base-table.total td .txt23 { font-size:23px; letter-spacing:-1px; }
+.xans-coupon-selectnew .ec-base-table.total .detail td { height:auto; line-height:inherit; font-size:12px; color:#707070; }
+.xans-coupon-selectnew .ec-base-table.total .detail li { margin:0 18px 3px 0; padding:0 0 0 9px; /*background:url("/_sp/image/cafe24/ico_dash.gif") no-repeat 0 7px;*/ }
+
+.xans-coupon-selectnew.ec-base-layer .content { max-height:600px; overflow:auto; }
+
+.xans-coupon-selectnew select {
+	height:30px; line-height:30px; padding:0 10px;
+	font-size:11px; background:#f5f5f5; border:0; border-radius:5px;
+}
+.xans-coupon-selectnew .ec-base-table.total td { padding:15px; border:1px solid #f0f0f0; }
+.xans-coupon-selectnew .ec-base-table.total tfoot td { padding:20px !important; }

@@ -1,0 +1,15 @@
+.xans-product-recentlist table td a,
+.xans-product-recentlist table td .strike strong { font-size:12px; letter-spacing:0.03em; color:inherit; }
+.xans-product-recentlist table td.product strong { display:block; color:#008bcc; }
+.xans-product-recentlist table td.image img { max-width:78px; /*border:1px solid #d6d6d6;*/ }
+.xans-product-recentlist table td.button img { margin:1px 0; }
+.xans-product-recentlist table td .xans-product-setproduct { margin:5px 0 0; }
+.xans-product-recentlist table td .xans-product-setproduct li { margin:2px 0 0; color:#757575; }
+
+.xans-product-recentlist select { height:30px; line-height:30px; padding:0 10px; background:#f5f5f5; border:0; border-radius:5px; font-size:11px; color:#666; }
+
+.xans-product-recentlist .optbox { padding-left:70px; }
+.xans-product-recentlist .optbox > li { position:relative; }
+.xans-product-recentlist .optbox > li + li { margin-top:1px; }
+
+.xans-product-recentlist .optbox .optl { position:absolute; width:70px; left:-70px; top:50%; margin-top:-7px; color:#999; font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }

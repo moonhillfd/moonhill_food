@@ -1,0 +1,162 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="consult" path="list" module="Board_ListPackage_9">
+
+	<!--@css(/css/module/board/listPackage.css)-->
+	<div module="board_title_9">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/board/index.html">COMMUNITY</a>
+					<a href="/myshop/index.html">MYPAGE</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_title}</span>
+				<span class="ko">{$board_info}</span>
+			</h1>
+		</div><!--//종료-->
+	</div>
+
+	<!--게시판 공통-->
+	<!--@import(/_sp/apps/module/board/board_header.html)-->
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<!--박스-->
+		<div class="sp-board-box">
+			<ul class="sp-clear">
+				<li class="sp-left">
+					<!--소트-->
+					<div select="1">
+						<span scale="150" module="board_category_9">{$form.board_category}</span>
+						<span module="board_ReplySort_9">{$reply_sort}</span>
+					</div>
+				</li>
+				<li class="sp-right">
+					<!--검색-->
+					<div class="sp-board-search" position="left" input="1" select="1" module="board_search_9">
+						<!--@css(/css/module/board/search.css--not use--)-->
+						<fieldset>
+							<legend>게시물 검색</legend>
+							<ul>
+								<li>{$form.consult}</li>
+								<li>{$form.search_date}</li>
+								<li>{$form.search_key}</li>
+								<li>
+									{$form.search}
+									<a href="#none" onclick="{$action_search}" class="sp-btn" theme="black" scale="medium" change="search">찾기</a>
+								</li>
+							</ul>
+						</fieldset>
+					</div><!--//종료-->
+				</li>
+			</ul>
+		</div>
+
+		<div class="ec-base-table typeList gBorder">
+			<table border="1" summary="">
+			<caption>1:1 맞춤상담 목록</caption>
+			<colgroup module="board_listheader_9">
+				<col style="width:90px;" />
+				<col style="width:135px;" class="{$config.is_category|display}" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:90px;" class="{$config.use_date|display}" />
+				<col style="width:100px;" />
+			</colgroup>
+			<thead module="board_listheader_9">
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col" class="{$config.is_category|display}">카테고리</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col" class="{$config.use_date|display}">작성일</th>
+					<th scope="col">답변</th>
+				</tr>
+			</thead>
+			<tbody module="board_list_9" class="center">
+				<!--
+					$login_page_url = /member/login.html
+				 -->
+				<tr style="{$list_bg_color} {$list_char_color}">
+					<td><span class="txtNum">{$no}</span></td>
+					<td class="{$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak"><a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td><i class="sp-answer-{$consult|lower}"></i><span class="txtNum">{$consult}</span></td>
+				</tr>
+				<tr style="{$list_bg_color} {$list_char_color}">
+					<td><span class="txtNum">{$no}</span></td>
+					<td class="{$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak"><a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td><i class="sp-answer-{$consult|lower}"></i><span class="txtNum">{$consult}</span></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<!--빈값-->
+		<div class="sp-no-result-found {$empty_display|display}" module="board_empty_9" theme="board" scale="medium">
+			<p>{$empty_message}</p>
+		</div><!--//종료-->
+
+		<!--버튼-->
+		<div class="sp-btn-group mgt2" grid="0" module="board_ButtonList_9">
+			<p class="sp-left">
+				<a href="/board/consult/list.html" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+			</p>
+			<p class="sp-right">
+				<a href="/board/consult/write.html{$param_write}" class="sp-btn {$write_display|display}" theme="black" scale="large" change="edit">글쓰기</a>
+			</p>
+		</div><!--//종료-->
+
+	</div><!--픽스종료-->
+</div><!--패키지종료-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="board_paging_9">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="{$param_first}" class="first">FIRST</a></li>
+			<li><a href="{$param_prev}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="{$param_last}" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->

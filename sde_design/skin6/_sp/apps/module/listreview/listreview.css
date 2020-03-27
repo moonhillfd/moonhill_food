@@ -1,0 +1,166 @@
+
+	/* 왼쪽, 오른쪽 고정 100% */
+	#sp-listreview *,
+	#sp-listreview-layer *{
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-listreview > ul				{ *display:inline-block;_width /**/:100%; padding:20px 300px 20px 110px; }
+	#sp-listreview > ul.prod-displaynone { padding:20px 300px 20px 0; }
+	#sp-listreview > ul.prod-displaynone.reply- { padding:20px 300px 20px 110px; }
+	#sp-listreview > ul + ul		{ border-top:1px solid #eaeaea; }
+	#sp-listreview > ul:after		{ display:block;clear:both;content:''; }
+	#sp-listreview > ul > .left		{ float:left;position:relative;left:-110px;width:110px;margin-right:-110px; }
+	#sp-listreview > ul > .right	{ float:left;position:relative;left:300px;width:300px;margin-left:-300px; }
+	#sp-listreview > ul > .article	{ float:left;width:100%; }
+	#sp-listreview .prodthumb { display:block; width:90px; height:90px; background-repeat:no-repeat; background-position:center center; }
+	#sp-listreview .content {}
+	#sp-listreview .content .prdname { padding:1px 0 2px 0; }
+	#sp-listreview .content .prdname a { font-weight:bold; color:#666; }
+	#sp-listreview .content .prdpoint { font-size:11px; color:#aaa; }
+	#sp-listreview .content .prdpoint strong { color:#333; }
+	#sp-listreview .content .prdpoint .vote { padding:0 0 0 5px; }
+	#sp-listreview .content .prdpoint .hit { display:none; }
+	#sp-listreview .content .prdpoint[point] .point:after { content:''; display:inline-block; font-size:11px; color:#aaa; margin-left:5px; position:relative; top:2px; }
+	#sp-listreview .content .prdpoint[point="1"] .point:after { content:' - 별로예요'; }
+	#sp-listreview .content .prdpoint[point="2"] .point:after { content:' - 그냥 그래요'; }
+	#sp-listreview .content .prdpoint[point="3"] .point:after { content:' - 보통이예요'; }
+	#sp-listreview .content .prdpoint[point="4"] .point:after { content:' - 맘에 들어요'; }
+	#sp-listreview .content .prdpoint[point="5"] .point:after { content:' - 아주 좋아요'; }
+	#sp-listreview .content .prdpoint[point="0"],
+	#sp-listreview .content .prdpoint .vote[vote="0"],
+	#sp-listreview .content .prdpoint .hit[hit="0"] { display:none; }
+	#sp-listreview .content .reviewbox { padding:10px 0 0 0; }
+	#sp-listreview .content .prdpoint[point="0"] + .reviewbox { padding-top:8px; }
+	#sp-listreview .reviewtitle {}
+	#sp-listreview .reviewtitle span { font-weight:bold; color:#60adbd; }
+	#sp-listreview > ul.open .reviewtitle span { display:none; }
+	#sp-listreview .reviewuser {}
+	#sp-listreview .reviewnick { font-weight:bold; padding-bottom:5px; }
+	#sp-listreview .reviewip { font-size:11px; color:#999; }
+	#sp-listreview .reviewdate { font-size:11px; color:#999; }
+	#sp-listreview .checkbox { margin-left:5px; }
+	#sp-listreview .reviewicon.before img { margin-right:3px; }
+	#sp-listreview .reviewicon.after img { margin-left:5px; }
+	#sp-listreview .reviewicon.lock { color:#aaa; }
+	#sp-listreview .reviewcount { font-weight:bold; color:#60adbd; margin-top:10px; }
+	#sp-listreview .reviewcount span { letter-spacing:0.2em; }
+	#sp-listreview .reviewimage { font-size:0; padding:5px 0 0 0; }
+	#sp-listreview .reviewimage:empty { display:none; }
+	#sp-listreview .reviewimage a,
+	#sp-listreview .reviewcontent_image a { display:inline-block; background-repeat:no-repat; background-position:center center; margin:3px 0 0 3px; background-repeat:no-repeat; background-size:0 0; }
+	#sp-listreview .reviewimage a { width:40px; height:40px; }
+	#sp-listreview .reviewcontent_image a { width:128px; height:128px; }
+	#sp-listreview .reviewcontent { 
+		display:none; margin:22px 0 0 0; padding:20px 0 10px 0; border-top:1px solid #f0f0f0;
+		/* IE 8 */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		/* IE 5-7 */
+		filter:alpha(opacity=0);
+		/* Netscape */
+		-moz-opacity:0;
+		/* Safari 1.x */
+		-khtml-opacity:0;
+		/* Good browsers */
+		opacity:0;
+	}
+	#sp-listreview .reviewcontent_image { margin-top:10px; }
+	#sp-listreview [toggleopen],
+	#sp-listreview [toggleclose] { cursor:pointer; }
+	#sp-listreview [togglelayer] { cursor:zoom-in; }
+	#sp-listreview .reviewcontent_close { font-weight:bold; color:#60adbd; }
+	#sp-listreview .reviewcontent_vote { font-size:11px; color:#999; }
+	#sp-listreview .reviewcontent_vote:before { content:'-'; display:inline-block; padding:0 5px; }
+	#sp-listreview .reviewcontent_vote span { color:#333; font-weight:bold; }
+	#sp-listreview .reviewcontent hr { margin:19px 0 17px 0; border:0; height:1px; border-top:1px dashed #eaeaea; }
+	#sp-listreview .reviewcontent_desc { line-height:1.6; }
+	#sp-listreview .reviewcontent_link { padding:0 0 15px 0; }
+	#sp-listreview .reviewcontent_link .msg { font-size:11px; color:#999; padding-left:15px; position:relative; top:4px; }
+	#sp-listreview .reviewcontent_link .msg a { color:#333; font-style:normal; font-weight:bold; text-decoration:underline; }
+	#sp-listreview .reviewcontent_reply { margin:0 0 20px 0; }
+	#sp-listreview .sp-listreview-slider { display:none; }
+
+	#sp-listreview-layer { z-index:10998; position:fixed; top:0; left:0; width:100%; height:100%;
+		background-image:url(/_sp/image/opacity/blk-80.png);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;
+        -webkit-transition: opacity 300ms 150ms ease;
+        -moz-transition: opacity 300ms 150ms ease;
+        -ms-transition: opacity 300ms 150ms ease;
+        -o-transition: opacity 300ms 150ms ease;
+        transition: opacity 300ms 150ms ease;
+		-webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.3);
+		box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.3);
+	}
+	#sp-listreview-layer.show { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1; }
+	#sp-listreview-layer > ul { display:table; width:100%; height:100%; }
+	#sp-listreview-layer > ul > li { display:table-cell; width:100%; height:100%; vertical-align:middle; }
+	#sp-listreview-layer .sp-listreview-layer-inside { position:relative; margin:0 auto; min-height:300px; background:#fff; }
+	#sp-listreview-layer .slick-slide { background-size:auto 200%; background-repeat:no-repeat; background:center center; cursor:zoom-in; }
+	#sp-listreview-layer .slick-slide img { visibility:hidden; display:inline; max-width:100%; }
+	#sp-listreview-layer > button { z-index:9; position:absolute; right:0; top:0; border:0; background:#333; }
+	#sp-listreview-layer > button p { width:65px; height:65px; line-height:65px; color:#fff; font-size:26px; font-family:'dotum'; background-color:#000 }
+	#sp-listreview-layer > button p:after { content:'×'; padding-left:1px; }
+
+	#sp-listreview-layer > ul > li { padding-right:400px; }
+	#sp-listreview-layer .sp-listview-layer-content { position:absolute; width:400px; height:100%; padding:30px; top:0; left:100%; background:#fff; overflow-x:hidden; overflow-y:auto; }
+	#sp-listreview-layer .sp-listreview-slider { display:none; }
+
+	#sp-listreview-layer #sp-board-reply .sp-board-reply-list-element { padding:0; margin:0; }
+	#sp-listreview-layer #sp-board-reply .replyArea .sp-board-reply-list-element { padding:20px; }
+	#sp-listreview-layer #sp-board-reply .sp-board-reply-list-element .sp-content { padding:0; }
+	#sp-listreview-layer #sp-board-reply:before { display:none; }
+	#sp-listreview-layer #sp-board-reply .sp-board-reply-list-element .sp-user { position:relative; top:auto; left:auto; }
+	#sp-listreview-layer #sp-board-reply .sp-board-reply-list > ul > li { padding:20px; }
+
+	#sp-listreview-layer .reviewcontent_desc { border-top:1px dashed #eaeaea; padding-top:15px; margin-top:15px; }
+	#sp-listreview-layer .reviewcontent hr { margin:19px 0 17px 0; border:0; height:1px; border-top:1px dashed #eaeaea; }
+	#sp-listreview-layer .reviewbox { padding-top:7px; }
+	#sp-listreview-layer .reviewtitle { font-weight:bold; }
+	#sp-listreview-layer .prdname a { display:block; font-weight:bold; }
+	#sp-listreview-layer .checkbox,
+	#sp-listreview-layer .reviewcount,
+	#sp-listreview-layer .reviewtitle span,
+	#sp-listreview-layer .content .prdpoint .hit,
+	#sp-listreview-layer .reviewcontent_close { display:none; }
+	#sp-listreview-layer .sp-listview-layer-content > ul { padding:70px 0 0 0; }
+	#sp-listreview-layer .left { position:relative; z-index:2; }
+	#sp-listreview-layer .prodthumb { position:absolute; top:-60px; right:0; display:block; width:70px; height:70px; border:10px solid #fff; box-shadow: 0 0 0 1pt #f0f0f0; border-radius:50%; background-repeat:no-repeat; background-size:auto 100%; background-position:center center; }
+	#sp-listreview-layer .sp-listview-layer-content > ul > li.right { position:absolute; top:0; left:0; width:100%; padding:30px 30px 20px 30px; border-bottom:1px solid #f0f0f0; background:#fafafa; }
+	#sp-listreview-layer .sp-listview-layer-content > ul > li.right .reviewdate,
+	#sp-listreview-layer .sp-listview-layer-content > ul > li.right .reviewip { font-size:11px; color:#ccc; }
+	#sp-listreview-layer .reviewicon.before img { margin-right:3px; }
+	#sp-listreview-layer .reviewicon.after img { margin-left:5px; }
+	#sp-listreview-layer .reviewicon.lock { color:#aaa; }
+	#sp-listreview-layer .reviewcontent_reply { margin-bottom:20px; }
+	#sp-listreview-layer .reviewcontent_vote { display:block; color:#999; text-align:right; }
+	#sp-listreview-layer .reviewcontent_vote span { color:#333; font-weight:bold; }
+	#sp-listreview-layer .reviewcontent_link .msg { font-size:11px; color:#999; position:relative; display:block; padding:20px 0 0 0; text-align:right; }
+	#sp-listreview-layer .reviewcontent_link .msg a { color:#333; font-style:normal; font-weight:bold; text-decoration:underline; }
+	#sp-listreview-layer .reviewcontent_link [theme="black"] { display:block; }
+	/*#sp-listreview-layer .reviewcontent_link [theme="black"] { display:none; }
+	#sp-listreview-layer .reviewcontent_link [theme="my"] { display:block; }*/
+	#sp-listreview-layer .prdname,
+	#sp-listreview-layer .reviewheader { padding-right:70px; }
+	#sp-listreview-layer #sp-board-reply .sp-board-reply-list > ul > li:first-child { padding-bottom:0; }
+
+	#sp-listreview-layer .sp-listreview-layer-zoom { display:none; z-index:999; position:fixed; top:0; left:0; width:100%; height:100%; background-image:url(/_sp/image/opacity/blk-80.png); overflow-x:hidden; overflow-y:auto; }
+	#sp-listreview-layer .sp-listreview-layer-zoom ul { display:table; width:100%; height:100%; }
+	#sp-listreview-layer .sp-listreview-layer-zoom ul li { padding:50px 0; display:table-cell; text-align:center; vertical-align:middle; }
+	#sp-listreview-layer .sp-listreview-layer-zoom ul li img { max-width:100%; }
+	#sp-listreview-layer .sp-listreview-layer-zoom > button { position:fixed; right:0; top:0; border:0; background:#333; }
+	#sp-listreview-layer .sp-listreview-layer-zoom > button p { width:35px; height:35px; line-height:35px; color:#fff; font-size:16px; font-family:'dotum'; }
+	#sp-listreview-layer .sp-listreview-layer-zoom > button p:after { content:'×'; padding-left:1px; }
+	#sp-listreview-layer .sp-listreview-layer-origin { z-index:999; position:absolute; color:#fff; width:300px; top:50%; left:50%; margin:-25px 0 0 -150px; line-height:50px; text-align:center; background-image:url(/_sp/image/opacity/blk-50.png); border-radius:10px; }
+
+	body.disable { overflow:hidden; }
+
+	/* 반응형 웹을 위한 코드 */
+	@media screen and ( min-width:1px ) and ( max-width:600px ){
+		#sp-listreview-layer > ul > li { padding-right:0; }
+		#sp-listreview-layer .sp-listview-layer-content { z-index:1; position:fixed; top:auto; left:0; bottom:0; width:100%; height:300px; }
+	}

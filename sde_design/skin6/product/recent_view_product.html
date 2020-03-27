@@ -1,0 +1,154 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" module="product_headcategory">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">RECENT VIEW</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title" module="product_headcategory">
+	<h1>RECENT VIEW</h1>
+</div><!--//종료-->
+
+<!--최근본상품-->
+<div layout="sp-layout-fixed">
+	<div module="product_recentlist" class="ec-base-table typeList">
+		<!--@css(/css/module/product/recentlist.css)-->
+		<!--
+			$count = 10
+		-->
+		<table border="1" summary="" class="{$list_display|display}">
+			<caption>최근 본 상품 목록</caption>
+			<colgroup>
+				<col style="width:100px" />
+				<col style="width:auto" />
+				<col style="width:15%" />
+				<col style="width:15%" />
+				<col style="width:70px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">이미지</th>
+					<th scope="col">상품명</th>
+					<th scope="col">옵션정보</th>
+					<th scope="col">판매가</th>
+					<th scope="col">주문</th>
+				</tr>
+			</thead>
+			<tbody module="product_listitem">
+				<tr>
+					<td class="image center"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+					<td class="product">
+						<a href="{$link_product_detail}">{$product_name}</a>
+						{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$zoom_icon}
+
+						<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+						<ul module="product_setproduct">
+							<li>{$product_name}</li>
+							<li>{$product_name}</li>
+						</ul><!-- //참고 -->
+					</td>
+					<td class="option">
+						<ul class="optbox" module="product_mainoption">
+							<li><span class="optl">{$option_name}</span>{$form.option}</li>
+							<li><span class="optl">{$option_name}</span>{$form.option}</li>
+						</ul>
+						<ul class="optbox" module="product_addoption">
+							<li><span class="optl">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span></li>
+							<li><span class="optl">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span></li>
+						</ul>
+					</td>
+					<td class="price center right-x">
+						<p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+						<p class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</p>
+						<p class="{$product_sale_price_display|display} txtEm"><strong>{$product_sale_price}</strong></p>
+					</td>
+					<td class="button center-x">
+                        <p class="sp-btn-group" grid="1" vertical="1">
+                            <a href="#none" onclick="{$act_basket}" class="sp-btn {$disp_basket|display}" theme="black" scale="small">담기</a>
+                            <a href="#none" onclick="{$act_order}" class="sp-btn {$disp_order|display}" theme="white" scale="small">주문</a>
+                            <a href="#none" class="sp-btn {$class_del}" rel="{$rel_del}" theme="white" scale="small">삭제</a>
+                        </p>
+					</td>
+				</tr>
+				<tr>
+					<td class="image center"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+					<td class="product">
+						<a href="{$link_product_detail}">{$product_name}</a>
+						{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$zoom_icon}
+
+						<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+						<ul module="product_setproduct">
+							<li>{$product_name}</li>
+							<li>{$product_name}</li>
+						</ul><!-- //참고 -->
+					</td>
+					<td class="option">
+						<ul class="optbox" module="product_mainoption">
+							<li><span class="optl">{$option_name}</span>{$form.option}</li>
+							<li><span class="optl">{$option_name}</span>{$form.option}</li>
+						</ul>
+						<ul class="optbox" module="product_addoption">
+							<li><span class="optl">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span></li>
+							<li><span class="optl">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span></li>
+						</ul>
+					</td>
+					<td class="price center right-x">
+						<p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+						<p class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</p>
+						<p class="{$product_sale_price_display|display} txtEm"><strong>{$product_sale_price}</strong></p>
+					</td>
+					<td class="button center-x">
+                        <p class="sp-btn-group" grid="1" vertical="1">
+                            <a href="#none" onclick="{$act_basket}" class="sp-btn {$disp_basket|display}" theme="black" scale="small">담기</a>
+                            <a href="#none" onclick="{$act_order}" class="sp-btn {$disp_order|display}" theme="white" scale="small">주문</a>
+                            <a href="#none" class="sp-btn {$class_del}" rel="{$rel_del}" theme="white" scale="small">삭제</a>
+                        </p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+        <div class="sp-no-result-found {$empty_display|display}">
+            <p>최근본 상품 내역이 없습니다.</p>
+        </div><!--//종료-->
+	</div>
+</div><!--종료-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="product_recentlistpaging">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="{$param_first}" class="first">FIRST</a></li>
+			<li><a href="{$param_before}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="{$param_last}" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+.xans-member-join .joinConfirm { display:none; position:fixed; top:50%; left:50%; z-index:1000; width:620px; margin:-300px 0 0 -310px; }
+.xans-member-join .joinConfirm h3 { padding:0; color:#fff; }
+.xans-member-join .joinConfirm .content { overflow-y:auto; min-height:500px; max-height:500px; }
+.xans-member-join .joinConfirm .content p { color:#353535; }
+.xans-member-join .joinConfirm .content p strong { color:#008bcc; }
+.xans-member-join .joinConfirm .ec-base-table { margin:10px 0 20px; }
+
+/********************************************************************
+    판다씨 
+********************************************************************/
+.xans-member-join .joinConfirm h3 { padding:0 !important; letter-spacing:0 !important; text-align:left !important; }
+.xans-member-join .joinConfirm table { margin:0 !important; }
+.xans-member-join .joinConfirm .ec-base-table { margin:0; }
+.xans-member-join .joinConfirm .content > p { color:#666 !important; background:#f5f5f5; text-align:center; padding:20px; border-radius:5px; margin-bottom:10px; }
+@media screen and ( min-height:1px ) and ( max-height:600px ){
+    .xans-member-join .joinConfirm { position:absolute; top:0; margin-top:0; }
+}

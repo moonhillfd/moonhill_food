@@ -1,0 +1,54 @@
+<div id="sp-board" theme="consult" path="layer" module="Mall_UrgencycallSearchoutline" class="ec-base-layer">
+    <!--@css(/layout/basic/css/popup.css)-->
+    <!--@css(/css/module/board/urgencycallSearchoutline.css)-->
+    <div class="header">
+        <h3>{$sPrdOrdText}</h3>
+    </div>
+
+    <div class="content" select="1" input="1">
+        <div id="tablist" class="sp-tab ec-base-tab {$tabDisplay | display}">
+            <ul class="menu">
+                <li id="liOrdtab" class="selected" onClick="{$clickOrdTab}"><a href="#none" id="tabordno" name="tabordno">주문번호</a></li>
+                <li id="liPrdtab" onClick="{$clickPrdTab}" ><a href="#none" id="tabprdno" name="tabprdno">상품</a></li>
+            </ul>
+        </div>
+        {$form.isLogin}
+
+        <!-- 주문번호 검색 -->
+        <div id="urgencyOrder" class="urgencyOrder {$ordDisplay | display}"></div>
+        <!-- //주문번호 검색 -->
+
+        <!-- 상품 검색 -->
+        <div id="urgencyProduct" class="urgencyProduct {$prdDisplay | display}">
+            <div class="ec-base-table typeWrite">
+                <table border="1" summary="">
+                    <caption>상품검색</caption>
+                    <colgroup>
+                        <col style="width:120px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                {$form.selPrdsearch}
+                            </th>
+                            <td>
+                                {$form.txtProductInfo}
+                                <a href="#none" id="execSearch" name="execSearch" onClick="{$search_product}" class="sp-btn" theme="white" scale="medium">검색</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="prdSearchResult"></div>
+        </div>
+        <!-- //상품 검색 -->
+    </div>
+	<!--버튼-->
+    <div class="ec-base-button">
+        <p class="sp-btn-group" grid="0">
+            <a href="#none" id="TopCloseBtn" onClick="{$closeSearchLayer}" class="sp-btn" theme="black" scale="medium" change="close"><span>닫기</span></a>
+        </p>
+    </div><!--종료-->
+	<a href="#none" id="BottomCloseBtn" onClick="{$closeSearchLayer}" class="close"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>

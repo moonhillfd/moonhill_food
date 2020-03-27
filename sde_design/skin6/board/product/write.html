@@ -1,0 +1,174 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="product" path="write" module="board_writePackage_4">
+
+    <!--@css(/css/module/board/writePackage.css)-->
+    <div module="board_title_4">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/board/index.html">커뮤니티</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		
+		<!--타이틀-->		
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_title}</span>
+				<span class="ko">{$board_info}</span>
+			</h1>
+		</div><!--//종료-->
+
+    </div>
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<div module="board_write_4">
+			<!--
+				$write_success_url = /board/product/list.html
+				$product_select_url = /product/search_board_list.html
+				$order_select_url = /order/search_board_list.html
+				$login_page_url = /member/login.html
+				$deny_access_url = /index.html
+			-->
+
+			<!--상품정보-->
+			<div grid="1" class="sp-base-box sp-box {$display_product|display}">
+				<ul>
+					<li class="sp-clear">
+						<i class="sp-base-userdot"></i>
+						<i product class="sp-base-userboxline"></i>
+						<div product class="sp-base-userbox">
+							<p class="thumb"><a href="{$link_product_detail}" target="_blank"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='/_sp/image/cafe24/thumb/img_product_small.gif';"></a></p>
+							<div class="sp-base-description">
+								<h4 class="sp-base-usertitle">PRODUCT INFORMATION</h4>
+								<p>{$product_icon}</p>
+								<p><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></p>
+								<p><strong class="txtWarn">{$product_price}</strong> {$product_tax_type_text}</p>
+								<br />
+								<p class="sp-btn-group sp-left" grid="0">
+									<a href="/product/detail.html{$param_product}" id="{$product_link_id}" title="새창으로 이동" target="_blank" class="sp-btn" theme="white" scale="medium" change="search">상품상세보기</a>
+									<a href="#none" onclick="{$action_order_select}" class="sp-btn {$display_order_select|display}" theme="black" scale="medium" change="edit">주문상품 선택하기</a>
+									<a href="#none" onclick="{$action_product_select}" class="sp-btn {$display_product_select|display}" theme="white" scale="medium" change="edit">상품정보 선택하기</a>
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div><!--종료-->
+
+			<div class="ec-base-table typeWrite" select="1" input="1">
+				<table border="1" summary="">
+				<caption>글쓰기 폼</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+					</tr>
+					<tr class="{$config.is_login|display}">
+						<th scope="row">작성자</th>
+						<td>{$form.writer}</td>
+					</tr>
+					<tr class="{$config.use_write_email|display}">
+						<th scope="row">이메일</th>
+						<td>{$form.email}</td>
+					</tr>
+					<tr class="{$config.is_use_point|display}">
+						<th scope="row">평점</th>
+						<td class="sp-board-write-point">{$form.point}</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="clear">
+							{$form.content}
+						</td>
+					</tr>
+					<tr class="ucc">
+						<th scope="row">UCC URL</th>
+						<td>{$form.ucc}</td>
+					</tr>
+				</tbody>
+
+				<tbody class="{$config.use_attach|display}">
+					<tr>
+						<th scope="row">첨부파일1</th>
+						<td>{$form.attach_file}</td>
+					</tr>
+					<tr>
+						<th scope="row">첨부파일2</th>
+						<td>{$form.attach_file}</td>
+					</tr>
+					<tr>
+						<th scope="row">첨부파일3</th>
+						<td>{$form.attach_file}</td>
+					</tr>
+					<tr>
+						<th scope="row">첨부파일4</th>
+						<td>{$form.attach_file}</td>
+					</tr>
+					<tr>
+						<th scope="row">첨부파일5</th>
+						<td>{$form.attach_file}</td>
+					</tr>
+				</tbody>
+
+				<tbody>
+					<tr class="{$config.use_password|display}">
+						<th scope="row">비밀번호</th>
+						<td>{$form.password} <span class="{$password_rule_help_display|display}">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span></td>
+					</tr>
+					<tr class="{$config.use_secret|display}">
+						<th scope="row">비밀글설정</th>
+						<td>{$form.secure}</td>
+					</tr>
+					<tr class="captcha {$config.use_captcha_write|display}">
+						<th scope="row">보안문자</th>
+						<td>
+							{$captcha_image} {$captcha_refresh}
+							<p class="gBlank5">{$form.captcha} <span class="ec-base-help txtInfo">영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></p>
+						</td>
+					</tr>
+					<tr class="agree {$config.is_login|display}">
+						<th scope="row">개인정보 수집 및 <br />이용 동의</th>
+						<td>
+							{$form.privacy_agreement}<br />
+							개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+
+			<!--버튼-->
+			<div class="sp-btn-group mgt2" grid="0">
+				<p class="sp-left">
+					<a href="#none" onclick="{$action_comment_admin}" class="sp-btn {$config.is_admin|display}" theme="white" scale="large" change="dot">관리자 답변보기</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+				</p>
+				<p class="sp-right">
+					<a href="#none" onclick="{$action_write}" class="sp-btn" theme="black" scale="large" change="check">등록</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">취소</a>
+				</p>
+			</div><!--//종료-->
+		</div>
+
+	</div>
+</div><!--종료-->

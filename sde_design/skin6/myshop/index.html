@@ -1,0 +1,224 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="myshop" path="index" file=""></i>
+
+<!-- 로그인체크 사용안함 -->
+<div module="layout_logincheck--not use--">
+<!--
+    $url = /member/login.html
+-->
+</div><!--종료-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">마이페이지</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--css(/_sp/apps/module/title/title.css)
+<div id="sp-title">
+	<h1>MY STORE</h1>
+</div>-->
+
+
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">My Page</span>
+		<span class="ko">마이페이지</span>
+	</h1>
+</div><!--//종료-->
+
+
+<!--마이페이지-->
+<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+<div layout="sp-layout-fixed">
+
+	<br />
+
+	<!--트릭-->
+	<!--@import(/_sp/apps/module/mypage/myshop_trick.html)-->
+
+	<!--사용자정보-->
+	<i module="Layout_statelogoff"></i>
+	<div class="sp-base-box sp-box" grid="1" module="myshop_asyncbenefit">
+		<ul>
+			<li>
+				<!--베네핏-->
+				<i class="sp-base-userdot"></i>
+				<i class="sp-base-userboxline"></i>
+				<div class="sp-base-userbox {$display_benefit|display}">
+					<p class="thumb"><img src="{$group_image}" alt="" onerror="this.src='/_sp/image/cafe24/member/img_member_default.gif';" class="{$group_image_tag_class}" /></p>
+					<div class="sp-base-description">
+						<h4 class="sp-base-usertitle">USER · BENEFIT</h4>
+						<br />
+
+						<span>저희 쇼핑몰을 이용해 주셔서 감사합니다. 
+						<strong class="txtEm">{$member_name}</strong> 님은 <strong>[<span class="{$displayGroupIcon|display}"><img src="{$group_icon}" alt="" class="{$group_icon_tag_class}" /></span>{$group_name}]</strong> 회원이십니다.</span>
+						<p class="{$display_no_benefit|display} {$display_no_benefit_class}"><strong class="txtEm">{$dc_pay} {$dc_min_price}</strong> 구매시 <strong class="txtEm">{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+
+						<p class="{$display_with_all|display} {$display_with_all_class}"><strong class="txtEm">{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong class="txtEm">{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
+						
+						<div class="sp-base-description-more {$bGradeAutoDisplay|display}" id="{$sGradeAutoDisplayId}">
+							<p class="{$bChangeTypePrice|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
+							<p class="{$bChangeTypeCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
+							<p class="{$bChangeTypePriceAndCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
+							<p class="{$bChangeTypePriceOrCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
+							<p class="{$bChangeMaxTypePrice|display}" id="{$sChangeMaxTypePriceId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
+							<p class="{$bChangeMaxTypeCount|display}" id="{$sChangeMaxTypeCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
+							<p class="{$bChangeMaxTypePriceAndCount|display}" id="{$sChangeMaxTypePriceAndCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
+							<p class="{$bChangeMaxTypePriceOrCount|display}" id="{$sChangeMaxTypePriceOrCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
+							<p class="txtInfo txt11">승급 기준에 따른 예상 금액이므로 총주문 금액과 다를 수 있습니다.</p>
+						</div>
+					</div>
+				</div><!--종료-->
+				<div class="sp-base-invitebox {$display_reco|display}">
+					<h4 class="sp-base-usertitle">EVENT · INVITE A FRIEND</h4>
+					<p class="copy">
+						<input type="text" id="{$reco_url}" value="//{$shop_domain}/?reco_id={$member_id}" readonly="readonly" />
+						<a href="#none" onclick="{$copy_func}" class="sp-btn" theme="white" scale="medium">주소복사</a>
+					</p>
+					<p class="infos">주소를 복사하여 친구를 쇼핑몰에 초대해보세요.</p>
+					<p class="infos">친구에게는 가입즉시 {$reco_mileage2}의 {$mileage_name}이 지급됩니다.</p>
+					<p class="infos">{$reco_mileage}</p>
+				</div>
+			</li>
+		</ul>
+	</div><!--종료-->
+
+	<!--내 쇼핑정보-->
+	<i module="Layout_statelogoff"></i>
+	<div class="sp-base-box sp-box" grid="2" module="myshop_asyncbankbook">
+		<ul>
+			<!--<li class="sp-clear {$display_mileage|display}">
+				<div class="sp-head">가용 {$mileage_name}</div>
+				<div class="sp-data">
+					<strong>{$avail_mileage}</strong>
+					<a href="/myshop/mileage/historyList.html" class="sp-btn" theme="white" scale="medium">조회</a>
+				</div>
+			</li>
+			<li class="sp-clear">
+				<div class="sp-head">총 {$mileage_name}</div>
+				<div class="sp-data"><strong>{$total_mileage}</strong></div>
+			</li>
+			<li class="sp-clear">
+				<div class="sp-head">사용 {$mileage_name}</div>
+				<div class="sp-data"><strong>{$used_mileage}</strong></div>
+			</li>
+			<li class="sp-clear {$display_deposit|display}">
+				<div class="sp-head">{$deposit_name}</div>
+				<div class="sp-data">
+					<strong>{$total_deposit}</strong>
+					<a href="/myshop/deposits/historyList.html" class="sp-btn" theme="white" scale="medium">조회</a>
+				</div>
+			</li>-->
+			<li class="sp-clear">
+				<div class="sp-head">총 주문 금액(횟수)</div>
+				<div class="sp-data mh_data_num"><strong>{$total_order_price} ({$total_order_count}회)</strong></div>
+			</li>
+			<style>
+			.sp-base-box ul li .sp-data.mh_data_num {
+				font-size:14px;
+				color:#000
+			}
+			</style>
+			<li class="sp-clear {$display_coupon|display}">
+				<div class="sp-head">쿠폰</div>
+				<div class="sp-data mh_data_num">
+					<strong>{$coupon_cnt}개</strong>
+					<a href="/myshop/coupon/coupon.html" class="sp-btn" theme="white" scale="medium">조회</a>
+				</div>
+			</li>
+		</ul>
+	</div><!--//종료-->
+<style>
+#sp-myorder .mh_myorder_head {
+
+}
+#sp-myorder .mh_myorder_head .sp-myorder-head {
+	    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+}
+#sp-myorder .mh_myorder_head .mh_myorder_head_title {
+	padding-top:5px;
+	padding-bottom:70px;
+	text-align:center;
+	font-weight:bolder;
+	font-family:"Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, AppleGothic, sans-serif;
+	font-size:16px;
+	color:#333;
+}
+</style>
+	<div id="sp-myorder" class="sp-base-box sp-box" module="myshop_orderstate">
+		<!--@css(/css/module/myshop/orderState.css--not use--)-->
+		<ul>
+			<li style="vertical-align:top;">
+				<div class="mh_myorder_head">
+					<p class="sp-myorder-head"><span>My Tracking</span></p>
+					<p class="mh_myorder_head_title">주문배송 현황</p>
+				</div>
+				<a href="{$shppiedBeforeUrl}" order="1">{$shppiedBeforeCount}<i class="sp-myordercon" track="1" scale="medium"></i><strong>입금전</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="{$shppiedStandbyUrl}" order="2">{$shppiedStandbyCount}<i class="sp-myordercon" track="2" scale="medium"></i><strong>배송준비중</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="{$shppiedBeginUrl}" order="3">{$shppiedBeginCount}<i class="sp-myordercon" track="3" scale="medium"></i><strong>배송중</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="{$shppiedComplateUrl}" order="4">{$shppiedComplateCount}<i class="sp-myordercon" track="4" scale="medium"></i><strong>배송완료</strong><span class="sp-myordercon" track="0"></span></a>
+			</li>
+			<li>
+				<!-- 이용안내 -->
+				<div class="ec-base-help">
+					<h3>나의 주문현황</h3>
+					<div class="inner">
+						<!--<h4>아래 내용들을 읽어주세요</h4>-->
+						<ol>
+							<li class="item1">최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
+							<li class="item2">취소/교환/반품 신청은 주문완료일 기준 30일까지 가능합니다.</li>
+							<li>
+								<!--인터넷 뱅킹-->
+								<!--@css(/_sp/apps/addon/banklink/banklink.css)-->
+								<!--@js(/_sp/apps/addon/banklink/banklink.js)-->
+								<button banklink data-url="/_sp/apps/addon/banklink/banklink.html" class="sp-btn" theme="black" scale="large" change="dot">인터넷 뱅킹</button>
+								<!--미확인 입금자-->
+								<!--@css(/_sp/apps/addon/bankmiss/bankmiss.css)-->
+								<!--@js(/_sp/apps/addon/bankmiss/bankmiss.js)-->
+								<button bankmiss data-url="/_sp/apps/addon/bankmiss/bankmiss.html" class="sp-btn" theme="white" scale="large" change="dot">미확인 입금자</button>
+								<!--무이자 할부-->
+								<!--@css(/_sp/apps/addon/cardinfo/cardinfo.css)-->
+								<!--@js(/_sp/apps/addon/cardinfo/cardinfo.js)-->
+								<!--<button cardinfo data-url="/_sp/apps/addon/cardinfo/cardinfo.html" class="sp-btn" theme="white" scale="small" change="dot">무이자 할부 안내</button>-->
+							</li>
+						</ol>
+					</div>
+				</div>
+				<a href="{$orderCancelUrl}" order="5" scale="small">{$orderCancelCount}<i class="sp-myordercon" track="5" scale="small"></i><strong>취소</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="{$orderExchangeUrl}" order="6" scale="small">{$orderExchangeCount}<i class="sp-myordercon" track="6" scale="small"></i><strong>교환</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="{$orderReturnUrl}" order="7" scale="small">{$orderReturnCount}<i class="sp-myordercon" track="7" scale="small"></i><strong>반품</strong><span class="sp-myordercon" track="0"></span></a>
+				<a href="/myshop/order/list.html" order="8" scale="small"><span>&nbsp;</span><i class="sp-myordercon" track="8" scale="small"></i><strong>&nbsp;</strong></a>
+			</li>
+		</ul>
+	</div>
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>QUICK · LINK</h1>
+	</div><!--//종료-->
+
+	<!--마이페이지 컨텐츠-->
+	<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+	<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+	<!--@import(/_sp/apps/module/mypage/mypage_main_content.html)-->
+	<!--<a href="#none" mypagemain data-url="/_sp/apps/module/mypage/mypage_main.html">마이페이지</a>-->
+
+</div><!--종료-->

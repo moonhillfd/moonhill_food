@@ -1,0 +1,81 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">LOGIN</a>
+			<a href="/member/id/find_id.html">FIND PASSWORD</a>
+			<a href="#none">RESULT</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>FIND PASSWORD RESULT</h1>
+	</div><!--//종료-->
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box sp-single">
+			<ul>
+				<li class="sp-center">
+
+					<div class="sp-login-form" module="member_findpasswdresult">
+						<div class="sp-join-result">
+
+							<div class="sp-find-result-count {$display_email_method|display}">
+								<p>- 임시 비밀번호가 고객님 메일로 <span>1</span>개 전송되었습니다 -</p>
+							</div>
+							<div class="sp-find-result-count {$display_mobile_method|display}">
+								<p>- 임시 비밀번호가 고객님 휴대폰 번호로 <span>1</span>개 전송되었습니다. -</p>
+							</div>
+
+							<div class="sp-join-userinfo">
+								<p><img src="/_sp/image/cafe24/img_member_default.gif" /></p>
+								<div>
+									<ul>
+										<li><strong>결과</strong><span class="{$display_id_method|display}">{$id} 회원님,</span>임시 비밀번호를,</li>
+										<li class="{$display_email_method|display}"><strong>&nbsp;</strong>{$email} 으로 보내드렸습니다.</li>
+										<li class="{$display_mobile_method|display}"><strong>&nbsp;</strong>{$mobile} 으로 보내드렸습니다.</li>
+										<li><strong>&nbsp;</strong>고객님 즐거운 쇼핑 하세요!</li>
+									</ul>
+								</div>
+							</div>
+
+							<br />
+							<div class="sp-array-messege">
+								<p>고객님의 비밀번호가 성공적으로 발송되었습니다.</p>
+							</div>
+							<div class="sp-array-messege">
+								<p>항상 고객님의 즐겁고 편리한 쇼핑을 위해 최선의 노력을 다하는 쇼핑몰이 되도록 하겠습니다.</p>
+							</div>
+
+							<br /><br />
+							<p class="sp-btn-group" grid="0">
+								<a href="/member/login.html" class="sp-btn" theme="black" scale="bubble" change="check">LOGIN</a>
+							</p>
+
+						</div>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

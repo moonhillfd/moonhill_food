@@ -1,0 +1,107 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="opdiary" path="list" module="Board_ListPackage_11">
+
+	<!--@css(/css/module/board/listPackage_11.css)-->
+	<div module="board_title_11">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/myshop/index.html">MYPAGE</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h2><span>{$board_top_image}</span></h2>
+			<h1>
+				<span>{$board_title} {$board_adult_icon}</span>
+				<div class="sp-title-message">{$board_info}</div>
+			</h1>
+		</div><!--//종료-->
+	</div>
+
+	<!--게시판 공통-->
+	<!--@import(/_sp/apps/module/board/board_header.html)-->
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<!--박스-->
+		<div class="sp-board-box">
+			<ul class="sp-clear">
+				<li class="sp-left">&nbsp;</li>
+				<li class="sp-right">
+					<!--검색-->
+					<div class="sp-board-search" position="left" input="1" select="1" module="board_search_11">
+						<!--@css(/css/module/board/search.css--not use--)-->
+						<fieldset>
+							<legend>게시물 검색</legend>
+							<ul>
+								<li>{$form.search_date}</li>
+								<li>{$form.search_key}</li>
+								<li>
+									{$form.search}
+									<a href="#none" onclick="{$action_search}" class="sp-btn" theme="white" scale="medium" change="search">찾기</a>
+								</li>
+							</ul>
+						</fieldset>
+					</div><!--//종료-->
+				</li>
+			</ul>
+		</div>
+
+		<!--프레임-->
+		<div module="board_list_11">
+			<!--
+				$login_page_url = /member/login.html
+			-->
+			<iframe class="sp-board-iframe" name="blog_{$idx}" id="blog_{$idx}" src="/board/opdiary/read_blog.html{$param_read}" title="운영일지 상세" frameBorder="0" scrolling="auto" style="width:100%;"></iframe>
+		</div>
+
+		<!--빈값-->
+		<div class="sp-no-result-found {$empty_display|display}" module="board_empty_11" theme="board" scale="medium">
+			<p>{$empty_message}</p>
+		</div><!--//종료-->
+
+	</div>
+</div><!--종료-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="board_paging_11">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="#none" class="first">FIRST</a></li>
+			<li><a href="{$param_prev}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="#none" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->

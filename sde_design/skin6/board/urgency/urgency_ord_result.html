@@ -1,0 +1,91 @@
+<!-- 참고: 비회원인 경우 -->
+<div module="Mall_UrgencycallOrdLogout" class="ec-base-table typeWrite {$displayLogout|display}" select="1" input="1">
+    <table border="1" summary="">
+        <caption>주문번호 검색</caption>
+        <colgroup>
+            <col style="width:100px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">주문번호</th>
+                <td>
+                    <input type="text" id="{$order_id1}" class="inputOrdNum" /> - <input type="text" id="{$order_id2}" class="inputOrdNum" /> <a href="#none" onclick="{$insertfn}" class="sp-btn" theme="black" scale="medium">등록</a>
+                    <span class="gBlank5">예) 00000000 - 0000000</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div><!-- //참고 -->
+
+<div class="ec-base-table typeList">
+    <table border="1" summary="" module="Mall_UrgencycallOrdHeader" class="{$displayLogin|display}">
+        <caption>검색결과</caption>
+        <colgroup>
+            <col style="width:auto;" />
+            <col style="width:130px;" />
+            <col style="width:100px;" />
+        </colgroup>
+        <tbody class="head">
+            <tr>
+                <td scope="col">상품명</td>
+                <td scope="col">주문번호</td>
+                <td scope="col">{$form.ordPagenum}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div module="Mall_UrgencycallOrdResult" class="scroll {$displayLogin|display}">
+        <table border="1" summary="">
+            <caption>검색결과</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:130px;" />
+                <col style="width:85px;" />
+            </colgroup>
+            <tbody class="{$displayPrdlist|display} center">
+                <tr>
+                    <td class="product left">
+                        <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                        <p>{$product_name}</p>
+                    </td>
+                    <td>{$order_id}</td>
+                    <td><a href="#none" onClick="{$selectfn}" class="sp-btn" theme="white" scale="medium" change="check"><span>선택</span></a></td>
+                </tr>
+                <tr>
+                    <td class="product left">
+                        <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                        <p>{$product_name}</p>
+                    </td>
+                    <td>{$order_id}</td>
+                    <td><a href="#none" onClick="{$selectfn}" class="sp-btn" theme="white" scale="medium" change="check"><span>선택</span></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="message {$displayEmpty | display}">검색 결과가 없습니다.</p>
+    </div>
+</div>
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div class="sp-pagination mgt3 mgb5" module="Mall_UrgencycallOrdPage">
+	<ul class="sp-pagination-arrow sp-left">
+		<li><a href="#none" class="first">FIRST</a></li>
+		<li><a href="{$prev}" class="prev">PREV</a></li>
+	</ul>
+	<ul class="sp-pagination-page">
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+	</ul>
+	<ul class="sp-pagination-arrow sp-right">
+		<li><a href="{$next}" class="next">NEXT</a></li>
+		<li><a href="#none" class="last">LAST</a></li>
+	</ul>
+</div><!--종료-->

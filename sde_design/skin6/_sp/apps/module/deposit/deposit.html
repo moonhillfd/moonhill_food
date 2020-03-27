@@ -1,0 +1,39 @@
+<div id="sp-result">
+	<div id="sp-deposit">
+		<div class="sp-deposit-inside" module="Myshop_depositHistoryPackage">
+			<button class="sp-deposit-close"></button>
+			<h3 module="Myshop_DepositHead">{$deposit_name}</h3>
+			<div class="sp-deposit-loop" scrollbar rule="winsize,prison" data-height="206" module="Myshop_DepositHistoryList">
+				<!--
+					$count = 100
+				-->
+				<ul class="{$display_history|display}">
+					<li>
+						<div class="box">
+							<div class="left">{$deposit_date|date:Y-m-d}</div>
+							<div class="center">
+								<strong>{$deposit_detail}</strong> {$deposit_order_id}
+							</div>
+							<div class="right">{$deposit_money}</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="left">{$deposit_date|date:Y-m-d}</div>
+							<div class="center">
+								<strong>{$deposit_detail}</strong> {$deposit_order_id}
+							</div>
+							<div class="right">{$deposit_money}</div>
+						</div>
+					</li>
+				</ul>
+				<div class="sp-no-result {$display_history_none|display}">
+					<p>{$deposit_name} 내역이 없습니다.</p>
+				</div>
+			</div>
+			<div class="sp-btn-group" grid="1" module="Myshop_DepositHead">
+				<a href="/myshop/deposits/historyList.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span depositcount>{$deposit_name} 전체보기</span></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,110 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="mh_sub_visual">
+	
+</div>
+<div class="mh_content_w_fix">
+	<!--<div class="path">
+		<span>현재 위치</span>
+		<ol>
+			<li><a href="/">홈</a></li>
+			<li><a href="/shopinfo/company.html">회사소개</a></li>
+			<li title="현재 위치"><strong>오시는 길</strong></li>
+		</ol>
+	</div>-->
+
+	<div class="titleArea mh_title_item">
+		<h2>오시는 길</h2>
+		<p class="desc">
+			<span class="en">Good Food. Good Life.</span>
+			<span class="point">내가 먹는 음식이 바로 나 자신입니다.</span>
+		</p>
+	</div>
+
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+
+		<div class="{$map_display|display}">
+			<h3>위치</h3>
+			<p>{$map_image}</p>
+		</div>
+	</div>
+</div>
+
+<div style="margin-bottom:70px;">
+	<a class="mh_map_item" href="https://map.naver.com/?query=64us66ee7J207J6Q7Jew7Iud7ZKI&searchCoord=&tab=1&lng=edeb80f45ffaa1ed336b36061dd54213&type=SITE_1&mapMode=0&mpx=64f9bb6cee3f7ae6fe7521a507199dabf3b070185d169fe2dd367b2a1cacc478f35057a50e0efe4ee6eea7646d5ac83e&lat=0effd0f3cdd987ac77c0c3bd9d8ebbba&dlevel=14&enc=b64&menu=location&__fromRestorer=true" target="_blank">
+	<span class="hover">네이버 지도 바로가기</span>
+	</a>
+</div>
+
+<div class="mh_map_info_item">
+	<p>
+		<span class="label">주소.</span>
+		<span class="content">부산광역시 해운대구 달맞이길117번가길 149(중동) 3층 달맞이자연식품</span>
+	</p>
+	<p>
+		<span class="label">대표번호.</span>
+		<span class="content">1544 - 6850</span>
+	</p>
+
+	<p>
+		<span class="label">Fax.</span>
+		<span class="content">051 - 715 - 7719</span>
+	</p>
+</div>
+
+<style>
+
+.mh_map_item {
+	display:block;
+	position:relative;
+	width:100%;
+	height:500px;
+	background-image:url('/_wg/img/mh_location_map.png');
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	background-position:0 -40px;
+	cursor:pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mh_map_item .hover {
+	display:none;
+	position:absolute;
+	bottom:35px;
+	left:46%;
+	padding:10px 20px;
+	letter-spacing:-1px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	background-color:#000;
+	opacity:.8;
+	-webkit-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.mh_map_item:hover .hover {
+	display:inline-block;
+}
+.mh_map_info_item {
+	width:1260px;
+	margin:0 auto;
+	padding:60px 0;
+	text-align:center;
+	line-height:2;
+	letter-spacing:-1px;
+	border:15px solid #ecedef;
+}
+.mh_map_info_item > p {
+	font-size:16px;
+}
+.mh_map_info_item .label {
+	font-weight:bold;
+	color:#555;
+}
+</style>
+

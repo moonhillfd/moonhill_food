@@ -1,0 +1,305 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="board" path="gallery" file="list2"></i>
+
+<div id="sp-board" theme="gallery" path="list" module="Board_ListPackage_8">
+
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_8">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a id="depthTwo" href="/board/index.html">커뮤니티</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h2><span>{$board_top_image}</span></h2>
+			<h1>
+				<span>{$board_title} {$board_adult_icon}</span>
+				<div class="sp-title-message">{$board_info}</div>
+			</h1>
+		</div><!--//종료-->
+    </div>
+
+	<!--게시판 공통-->
+	<!--@import(/_sp/apps/module/board/board_header.html)-->
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<!--박스-->
+		<div class="sp-board-box">
+			<ul class="sp-clear">
+				<li class="sp-left">
+					<!--소트-->
+					<div select="1">
+						<span class="thumb" module="board_listheader_8">
+							<a class="{$list_type_display|display}" href="/board/gallery/list2.html{$param_list}"><img src="/_sp/image/cafe24/board/btn_type_list_on.gif" alt="리스트형으로 보기"></a>
+							<a class="{$list_type_display|display}" href="/board/gallery/list.html{$param_list}"><img src="/_sp/image/cafe24/board/btn_type_image.gif" alt="이미지형으로 보기"></a>
+						</span>
+						<span scale="150" module="board_category_8">{$form.board_category}</span>
+						<span module="board_ReplySort_8">{$reply_sort}</span>
+					</div>
+				</li>
+				<li class="sp-right">
+					<!--검색-->
+					<div class="sp-board-search" position="left" input="1" select="1" module="board_search_4">
+						<!--@css(/css/module/board/search.css--not use--)-->
+						<fieldset>
+							<legend>게시물 검색</legend>
+							<ul>
+								<li>{$form.search_date}</li>
+								<li>{$form.search_key}</li>
+								<li>
+									{$form.search}
+									<a href="#none" onclick="{$action_search}" class="sp-btn" theme="black" scale="medium" change="search">찾기</a>
+								</li>
+							</ul>
+						</fieldset>
+					</div><!--//종료-->
+				</li>
+			</ul>
+		</div>
+
+		<div class="ec-base-table typeList gBorder">
+			<table border="1" summary="">
+			<caption>게시판 목록</caption>
+			<colgroup module="board_listheader_8">
+				<col style="width:70px;" />
+				<col style="width:110px;" class="{$config.is_category|display}" />
+				<col style="width:auto;" />
+				<col style="width:84px;" />
+				<col style="width:110px;" class="{$config.use_date|display}" />
+				<col style="width:55px;" class="{$config.use_cnt|display}" />
+				<col style="width:55px;" class="{$config.is_use_recom|display}" />
+				<col style="width:80px;" class="{$config.is_use_point|display}" />
+			</colgroup>
+			<thead module="board_listheader_8">
+				<tr>
+					<th scope="col">{$checkbox} 번호</th>
+					<th scope="col" class="{$config.is_category|display}">카테고리</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col" class="{$config.use_date|display}">작성일</th>
+					<th scope="col" class="{$config.use_cnt|display}">조회</th>
+					<th scope="col" class="{$config.is_use_recom|display}">추천</th>
+					<th scope="col" class="{$config.is_use_point|display}">평점</th>
+				</tr>
+			</thead>
+			<tbody module="board_notice_8" class="center">
+				<!--
+					$count = 2
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$notice_icon}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<strong>{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$notice_icon}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<strong>{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+			</tbody>
+			<tbody module="board_fixed_8" class="center">
+				<!--
+					$count = 2
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$fixed_icon}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<strong>{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$fixed_icon}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<strong>{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+			</tbody>
+			<tbody module="board_list_8" class="center">
+				<!--
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$no}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$no}</span></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<!--빈값-->
+		<div class="sp-no-result-found {$empty_display|display}" module="board_empty_8" theme="board" scale="medium">
+			<p>{$empty_message}</p>
+		</div><!--//종료-->
+
+		<!--버튼-->
+		<div class="sp-btn-group mgt2 {$write_display|display}" grid="0" module="board_ButtonList_8">
+			<p class="sp-left">&nbsp;</p>
+			<p class="sp-right">
+				<a href="/board/gallery/write.html{$param_write}" class="sp-btn {$write_display|display}" theme="black" scale="large" change="edit">글쓰기</a>
+			</p>
+		</div><!--//종료-->
+
+	</div><!--픽스종료-->
+</div><!--패키지종료-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="board_paging_8">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="#none" class="first">FIRST</a></li>
+			<li><a href="{$param_prev}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="#none" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->
+
+<!-- 관리자 전용 메뉴 -->
+<div class="sp-board-admin" layout="sp-layout-fixed" module="board_catemove_8" select="1" scale="150">
+	<!--@css(/css/module/board/catemove.css--not use--)-->
+	<div class="sp-board-admin-inside">
+		<span>선택된 글을</span>
+		<span>{$form.board_category_move}</span>
+		<span><a href="#none" onclick="{$action_category_move}" class="sp-btn" theme="white" scale="medium" change="check">글 이동</a></span>
+	</div>
+</div>
+<div class="sp-board-admin" layout="sp-layout-fixed" module="board_function_8" select="1" scale="150">
+	<!--@css(/css/module/board/function.css)-->
+	<div class="sp-board-admin-inside">
+		<span>선택된 글을</span>
+		<span>{$form.boardGroup}</span>
+		<span>
+			<a href="#none" onclick="{$action_article_move}" class="sp-btn" theme="white" scale="medium" change="check">글 이동</a>
+			<a href="#none" onclick="{$action_article_copy}" class="sp-btn" theme="white" scale="medium" change="check">글 복사</a>			
+		</span>
+	</div>
+	<div class="ec-base-help">
+		<div class="inner">
+			<h4>관리자 전용 메뉴</h4>
+			<ol>
+				<li class="item1">이동과 복사를 잘 구분해서 사용하시길 바랍니다.</li>
+				<li class="item2">게시글의 댓글은 이동시 포함되지만, 답변은 포함되지 않습니다.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+<!-- //관리자 전용 메뉴 -->
+<script>
+
+
+
+var currentLocation = window.location.href;
+
+var boardListProductNotice = 'board_no=3001'; /* 제품소식 */
+var boardViewProductNotice = '/3001/'; /* 제품소식 */
+var boardViewProductReview = '/4/'; /* 제품 구매후기 */
+var boardViewProductQna = '/6/';  /* 제품Q&A */
+var boardViewCooper = '/5/'; /* 판매/제휴/수출문의 */
+var boardListEvent = 'board_no=8'; /* 이벤트 */
+var boardViewEvent = '/8/'; /* 이벤트 */
+var boardListNotice = 'board_no=1'; /* 공지사항 리스트 */
+var boardViewNotice = '/1/'; /* 공지사항 */
+var boardListVideo = 'board_no=12'; /* 홍보영상 */
+var boardViewVideo = '/12/'; /* 홍보영상 */
+	
+
+if(currentLocation.match(boardViewEvent)) {
+	document.getElementById("depthTwo").innerHTML = "소식";
+}
+if(currentLocation.match(boardListEvent)) {
+	document.getElementById("depthTwo").innerHTML = "소식";
+}
+
+if(currentLocation.match(boardListVideo)) {
+	document.getElementById("depthTwo").innerHTML = "소식";
+}
+if(currentLocation.match(boardViewVideo)) {
+	document.getElementById("depthTwo").innerHTML = "소식";
+}
+
+
+
+</script>

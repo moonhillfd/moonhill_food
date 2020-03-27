@@ -1,0 +1,109 @@
+
+	<!--코어-->
+	<!--@import(/_sp/core.html)-->
+
+	<!--스카이-->
+	<!--@css(/_sp/apps/layout/sky/sky-2/sky.css)-->
+	<!--@js(/_sp/apps/layout/sky/sky-2/sky.js)-->
+	<div id="sp-sky">
+
+		<!--디자인-->
+		<div id="sp-sky-design-2">
+			<div layout="sp-layout-fixed" class="sp-clear">
+				<!--왼쪽-->
+				<div class="sp-cover sp-left">
+					<ul class="sp-home">
+						<li><a href="/" class="sp-sky-link"><i class="sp-icon home"></i></a></li>
+					</ul>
+					<ul>
+						<li module="Layout_multishopList">
+							<!--언어선택-->
+							<!--@css(/_sp/apps/module/language/language.css)-->
+							<!--@js(/_sp/apps/module/language/language.js)-->
+							<a href="#none" class="sp-sky-link" chooselanguage data-url="/_sp/apps/module/language/language.html"><i class="sp-icon language"></i>KR</a>
+							<span class="sp-sky-ship" module="Layout_multishopListmultioption">
+								<a href="#none" class="sp-sky-link" module="Layout_multishopListmultioptionCountry">
+								   <span><i class="sp-icon shipto"></i>SHIP TO</span>
+								   <span module="Layout_multishopListmultioptionLanguage"><i class="sp-icon shipto"></i>현재 '{$language_name}'를 이용하고 있습니다<em>CHANGE</em></span>
+								</a>
+							</span>
+						</li>
+						<li>
+							<a href="/board/index.html" class="sp-sky-link"><i class="sp-icon help"></i>HELP</a>
+						</li>
+						<li module="Layout_bookmark">
+							<a href="/link/bookmark.html" class="sp-sky-link" target="_blank" onclick="winPop(this.href); return false;"><i class="sp-icon bookmark"></i>BOOKMARK</a>
+						</li>
+						<li module="Layout_shortcut">
+							<a href="/link/shortcut.html" class="sp-sky-link" target="_blank" onclick="winPop(this.href); return false;"><i class="sp-icon pcicon"></i>PC +</a>
+						</li>
+					</ul>
+				</div>
+				<!--오른쪽-->
+				<div class="sp-cover sp-right">
+					<!--회원가입포인트-->
+					<!--@css(/_sp/apps/addon/joinus/joinus.css)-->
+					<!--@js(/_sp/apps/addon/joinus/joinus.js)-->
+					<!--마이페이지-->
+					<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+					<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+					<ul module="Layout_statelogoff">
+						<li>
+							<a href="/myshop/index.html" class="sp-sky-link"><i class="sp-icon user"></i>MY</a>
+						</li>
+						<li>
+							<a href="/member/login.html" class="sp-sky-link">LOGIN</a>
+						</li>
+						<li>
+							<a href="/member/join.html" class="sp-sky-link sp-join-message"><strong>JOIN US</strong></a>
+						</li>
+						<li>
+							<a href="/myshop/order/list.html" class="sp-sky-link">ORDER</a>
+						</li>
+						<li>
+							<a href="#none" mypagemain data-url="/_sp/apps/module/mypage/mypage_main.html" class="sp-sky-link">QUICK</a>
+						</li>
+					</ul>
+					<ul module="Layout_stateLogon">
+						<li>
+							<a href="/myshop/index.html" class="sp-sky-link"><i class="sp-icon user"></i>MY</a>
+						</li>
+						<li>
+							<a href="{$action_logout}" class="sp-sky-link">LOGOUT</a>
+						</li>
+						<li>
+							<a href="/myshop/order/list.html" class="sp-sky-link">ORDER</a>
+						</li>
+						<li>
+							<a href="#none" mypagemain data-url="/_sp/apps/module/mypage/mypage_main.html" class="sp-sky-link">QUICK</a>
+						</li>
+					</ul>
+					<div class="sp-sky-iconbox">
+						<ul module="Layout_orderBasketcount">
+							<a href="/order/basket.html" class="sp-icon-link" desc="장바구니"><i class="sp-icon cart"></i><span class="sp-count" count="{$basket_count}">{$basket_count}</span></a>
+						</ul>
+						<ul>
+							<!--검색-->
+							<!--@css(/_sp/apps/module/search/search.css)-->
+							<!--@js(/_sp/apps/module/search/search.js)-->
+							<a href="#none" search data-url="/_sp/apps/module/search/search.html" class="sp-icon-link" desc="검색"><i class="sp-icon search"></i></a>
+						</ul>
+						<ul>
+							<!--최근 본 상품-->
+							<!--@css(/_sp/apps/module/today/today.css)-->
+							<!--@js(/_sp/apps/module/today/today.js)-->
+							<a href="#none" today data-url="/_sp/apps/module/today/today.html" class="sp-icon-link" desc="최근 본 상품"><i class="sp-icon recent"></i></a>
+						</ul>
+						<ul class="sp-sky-board">
+							<a href="/board/index.html" class="sp-icon-link"><i class="sp-icon board"></i></a>
+							<div class="sp-sky-board-layer" module="Layout_BoardInfo">
+								<a href="{$board_list_url}">{$board_name}</a>
+								<a href="{$board_list_url}">{$board_name}</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><div class="sp-sky-design-2-trick"></div><!--종료-->
+
+	</div><!--종료-->

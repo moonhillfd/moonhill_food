@@ -1,0 +1,6 @@
+.xans-myshop-boardlistsearch { font-size:0; color:#2e2e2e; text-align:center;}
+.xans-myshop-boardlistsearch #search { width:162px; }
+.xans-myshop-boardlistsearch .boardSearch { display:block; }
+
+.xans-myshop-boardlistsearch select { display:inline-block; vertical-align:top; border:0; height:30px; line-height:30px; padding:0 10px 0 10px; font-size:11px; background:#f5f5f5; border-radius:5px; }
+.xans-myshop-boardlistsearch #search { display:inline-block; margin:0 0 0 5px; vertical-align:top; border:0; height:30px; line-height:30px; padding:0 10px 0 10px; font-size:11px; background:#f5f5f5; border-top-left-radius:5px; border-bottom-left-radius:5px; }

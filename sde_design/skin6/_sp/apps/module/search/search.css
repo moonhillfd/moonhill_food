@@ -1,0 +1,85 @@
+
+	/*
+		<!--검색-->
+		<!--@css(/_sp/apps/search/search.css)-->
+		<!--@js(/_sp/apps/search/search.js)-->
+		<button search>검색</button>
+	*/
+
+	#sp-search-loading { z-index:99998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-search { text-align:center; z-index:99999; position:fixed; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-search { background-image:url(/_sp/image/opacity/wht-98.png); }
+	/* #sp-search { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-search,
+	#sp-search * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-search .sp-search-inside { display:inline-block; top:130px; position:relative; }
+	#sp-search > button { position:absolute; right:0; top:0; border:0; background:#000; }
+	#sp-search > button p { width:35px; height:35px; line-height:35px; color:#fff; font-size:16px; font-family:'dotum'; }
+	#sp-search > button p:after { content:'×'; padding-left:1px; }
+
+  	#sp-search-box {}
+	#sp-search-box > ul { font-size:0; text-align:center; }
+	#sp-search-box > ul > li { width:200px; display:none; padding:0 20px; }
+	#sp-search-box > ul > li.active { display:inline-block; vertical-align:top; }
+	#sp-search-box .scrollable .viewport .overview { width:100%; }
+	#sp-search-box .scrollable .scroll-bar.vertical { right:-20px; }
+	#sp-search-box h3 { font-size:16px; letter-spacing:0.2em; padding-bottom:80px; }
+	#sp-search-box h4 { font-size:12px; line-height:40px; letter-spacing:0.1em; text-align:left; padding:0 20px; position:relative; }
+	#sp-search-box h4:after { content:''; position:absolute; height:1px; bottom:-1px; left:20px; right:20px; background:#eaeaea; }
+	#sp-search-box .sp-search-box-inside li { 
+		color:#999;
+		cursor:pointer;
+		font-size:12px; 
+		text-align:left; 
+		display:block; 
+		letter-spacing:0.03em;
+		position:relative;
+		line-height:40px; padding:0 20px; border-radius:20px;
+		white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; word-wrap:break-word;
+		-webkit-transition-property : color,background-color;
+		 -khtml-transition-property : color,background-color;
+		   -moz-transition-property : color,background-color;
+			-ms-transition-property : color,background-color;
+			 -o-transition-property : color,background-color;
+				transition-property : color,background-color;
+		-webkit-transition : 300ms ease;
+		 -khtml-transition : 300ms ease;
+		   -moz-transition : 300ms ease;
+			-ms-transition : 300ms ease;
+			 -o-transition : 300ms ease;
+				transition : 300ms ease;
+	}
+	#sp-search-box .sp-search-box-inside li:after { content:''; position:absolute; height:1px; bottom:-1px; left:20px; right:20px; background:#eaeaea; }
+	#sp-search-box .sp-search-box-inside li:hover { color:#000; }
+	#sp-search-box .sp-search-box-inside li.active { color:#fff; background:#444; }
+
+	#sp-search-box .sp-search-field { position:relative; padding:0 0 0 40px; margin:20px 0 25px 0; }
+	#sp-search-box .sp-search-field input { width:100%; height:50px; line-height:50px; padding:0 60px 0 20px; border-radius:25px; border:1px solid #444; background:none; }
+	#sp-search-box .sp-search-field button { position:absolute; width:50px; height:50px; right:0; top:0; background:transparent url(/_sp/apps/module/search/search_btn.png) no-repeat center center; text-indent:-9999px; text-align:left; }
+
+	#sp-search-event { position:absolute; right:50px; top:6px; }
+	#sp-search-event a { color:#fff; background:#4FC1E9; line-height:37px; display:block; border-radius:19px; padding:0 19px; }
+	#sp-search-event a:hover { background:#73cae8; }
+	#sp-search-event a:before { content:'EVENT : '; letter-spacing:0.2em; font-size:9px; }
+
+	#sp-search-box .sp-search-keyword { text-align:left; font-size:0; padding-left:40px; }
+	#sp-search-box .sp-search-keyword a { position:relative; display:inline-block; height:25px; line-height:25px; padding:0 15px; background:#444; color:#fff; font-size:11px; border-radius:15px; }
+	#sp-search-box .sp-search-keyword a:before { content:attr(before); }
+
+	#sp-search-box .sp-search-keyword a:empty { display:none; }
+	#sp-search-box .sp-search-keyword a + a { margin-left:5px; }
+	#sp-search-box .sp-search-keyword a:hover { background:#912b45; color:#fff; }
+	.sp-no-result-found p {
+		background: transparent url(/_sp/image/no-result-found3.gif) no-repeat center center;
+	}

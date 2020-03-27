@@ -1,0 +1,109 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="mh_sub_visual">
+	
+</div>
+<div class="mh_content_w_fix">
+	<!--<div class="path">
+		<span>현재 위치</span>
+		<ol>
+			<li><a href="/">홈</a></li>
+			<li title="제나이야기"><strong>제나이야기</strong></li>
+		</ol>
+	</div>-->
+
+	<div class="titleArea mh_title_item">
+		<h2>제나이야기</h2>
+		<p class="desc">
+			<strong>제나</strong>는 <strong>제 것으로의 자신</strong>을 뜻하는 순 우리 말입니다.<br>
+			<strong>제나는 ‘제 것으로 의 아름다운 나’를 만나는 시간을 만들어 가는 브랜드 입니다. </strong>
+		</p>
+	</div>
+
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+
+		<div class="{$map_display|display}">
+			<h3>위치</h3>
+			<p>{$map_image}</p>
+		</div>
+	</div>
+</div>
+<div class="mh_brand_item">
+</div>
+<div class="mh_content_w_fix">
+	
+
+
+	<p class="mh_brand_text_1">
+		전통적으로 전해 내려오는 지혜를 배워 이어나가고<br>
+		<strong>자연의 재료</strong>를 선별하며 멈추지 않고 끊임없이 연구해 나가는 <strong>좋은 제품, 제나가 만들어 가는 브랜드의 기본입니다. </strong>
+	</p>
+
+	<div class="mh_brand_content_item">
+		<img src="/_wg/img/brand/mh_brand_content_text_box.png" alt="제나차 당신은 본래 아름답습니다. 제나의 제품들은 원래의 건강하고 맑은 나로 돌아 올 수 있게 합니다. 건강한 아름다움을 위한 비움과 채움으로  ‘나’를 찾는 경험을 해보세요."/>
+		<a class="mh_btn" href="http://moonhillfd.cafe24.com/product/detail.html?product_no=15">제나차 구매하기</a>
+	</div>
+
+</div>
+
+
+
+<style>
+.mh_brand_item {
+	width:100%;
+	height:435px;
+	margin-top:50px;
+	background-image:url('/_wg/img/brand/mh_brand_bg.jpg');
+	background-repeat:no-repeat;
+	background-size:auto 435px;
+	bakcground-position:center center;
+}
+.mh_brand_text_1 {
+	padding: 140px 0;
+	text-align:center;
+	letter-spacing:-2px;
+	line-height:46px;
+	color:#403f3f;
+	font-size:22px;
+    font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, AppleGothic, sans-serif;
+}
+.mh_brand_content_item {
+	position:relative;
+	width:100%;
+	height:530px;
+	text-align:center;
+	padding-top:50px;
+	background-image:url('/_wg/img/brand/mh_brand_content_bg.jpg');
+	background-repeat:no-repeat;
+}
+.mh_brand_content_item > img {
+
+}
+.mh_brand_content_item > .mh_btn {
+	position:absolute;
+	bottom:175px;
+	left:500px;
+	width:232px;
+	height:50px;
+	display:block;
+	text-align:center;
+	line-height:50px;
+    font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, AppleGothic, sans-serif;
+	font-size:20px;
+	letter-spacing:-2px;
+	color:#f8e3e5;
+	background-color:#55565a;
+	border-radius:50px;
+	cursor:pointer;
+    -webkit-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.mh_brand_content_item > .mh_btn:hover {
+	text-decoration:none;
+	background-color:#838383;
+}
+</style>

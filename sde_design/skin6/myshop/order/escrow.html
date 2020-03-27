@@ -1,0 +1,23 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderHistoryEscrow" class="ec-base-layer">
+    <!--@css(/css/module/myshop/orderHistoryEscrow.css)-->
+    <div class="header">
+        <h1>에스크로 구매확인</h1>
+    </div>
+
+    <div class="content">
+        <fieldset>
+            <legend>에스크로 구매확인</legend>
+            <p>주문하실 때 확인하신 주민등록번호를 입력하시고, 해당 버튼을 클릭하십시오.<br />('-'표시제외 숫자만 입력)</p>
+            {$form_label.ssn} {$form.ssn}
+        </fieldset>
+    </div>
+
+    <div class="ec-base-button">
+        <p class="sp-btn-group" grid="0">
+            <a href="#none" onclick="{$action_confirm}" class="sp-btn {$display_confirm|display}" theme="black" scale="medium">구매확인</a>
+            <a href="#none" onclick="{$action_reject}" class="sp-btn" theme="white" scale="medium"><span>환불요청</span></a>
+        </p>
+    </div>
+	<a class="close" onclick="window.close();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>

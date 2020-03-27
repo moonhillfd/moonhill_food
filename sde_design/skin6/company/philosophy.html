@@ -1,0 +1,73 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/_wg/css/company.css)-->
+<div class="mh_sub_visual">
+	
+</div>
+<div class="mh_content_w_fix">
+	<!--<div class="path">
+		<span>현재 위치</span>
+		<ol>
+			<li><a href="/">홈</a></li>
+			<li><a href="/shopinfo/company.html">회사소개</a></li>
+			<li title="현재 위치"><strong>제조철학</strong></li>
+		</ol>
+	</div>-->
+
+	<div class="titleArea mh_title_item">
+		<h2>제조원칙</h2>
+		<p class="desc">
+			<span class="point">정직한 제조과정을 거쳐 제품을 생산하는 것은 식품 제조의 기본 원칙이며,<br>식품 제조의 기본을 지키는 것은 <strong>달맞이자연식품</strong>의 신념입니다.</span>
+		</p>
+	</div>
+
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+
+		<div class="{$map_display|display}">
+			<h3>위치</h3>
+			<p>{$map_image}</p>
+		</div>
+	</div>
+</div>
+
+<div class="mh_content_wrap">
+	<div class="mh_rule_item">
+		<div class="mh_content_header">
+			<!--<h3 class="title">제조원칙</h3>
+			<p class="desc">
+				정직한 제조과정을 거쳐 제품을 생산하는 것은 식품 제조의 기본 원칙이며,<br>식품 제조의 기본을 지키는 것은 달맞이 자연식품의 신념입니다.
+			</p>-->
+			<p class="title_s">
+				<img src="/_wg/img/company/title_rule_txt.gif" alt="달맞이자연식품은 원칙을 지킴에 최선을 다할 것을 약속합니다!"/>
+			</p>
+		</div>
+		
+		<ul class="rule_content">
+			<li>
+				<img src="/_wg/img/company/mh_rule_1.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">한의사가<br>직접 선별한 <strong>원료</strong></p>
+			</li>
+			<li>
+				<img src="/_wg/img/company/mh_rule_2.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">고농축 원료의<br><strong>높은 함유량</strong></p>
+			</li>
+			<li>
+				<img src="/_wg/img/company/mh_rule_3.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">인증된 제조사의 철저한<br><strong>품질</strong> / <strong>위생관리</strong></p>
+			</li>
+			<li>
+				<img src="/_wg/img/company/mh_rule_4.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">제품 하나하나의<br>지극한 <strong>정성</strong></p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<style>
+.mh_content_wrap {
+	width:1260px;
+	border:1px solid black;
+}
+</style>

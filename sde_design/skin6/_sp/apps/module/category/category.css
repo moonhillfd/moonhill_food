@@ -1,0 +1,105 @@
+
+	/*
+		카테고리 팩
+
+		전체 카테고리를 넣고자 하는 장소
+		<div category data-cateno="1">
+			<div addcategory></div>
+		</div>
+
+		기본적인 마크업 구조
+		data-cateno="{$cate_no}" // 카테고리의 번호가 지정된다.
+		scrollbar  // 일정 높이가 되면 스크롤을 생성한다. 이 기능은 setScrollbarStyle(x) addon 이 존재해야 한다.
+		rule="prison" // 여기서 룰은 스크롤바 라이브러리에 귀속하라.
+		data-height="200" // 높이를 따로 지정할수도 있다. 필요없다면 지우자.
+		direction="left" // 중분류가 어느 방향으로 흐를지 결정한다. null == left
+
+		<!--카테고리-->
+		<div getcategory module="Layout_category">
+			<div category data-no="1">
+				<div addcategory scrollbar data-height="200" rule="prison"></div>
+			</div>
+			<hr />
+			<ul>
+				<li mom category data-no="{$cate_no}" direction="left"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+				<li mom category data-no="수동1"><a href="/">수동카테고리 1</a></li>
+				<li mom category data-no="{$cate_no}"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+				<li mom category data-no="수동2">
+					<a href="/">수동카테고리 2</a>
+					<div class="sp-sub-category">
+						<ul class="sp-sub-category-1">
+							<li><a href="/category/중분류-tees/32/" class="sp-more">수동카테고리 2 - 중분류 1</a>
+								<ul class="sp-sub-category-2">
+									<li><a href="/category/소분류-short-sleeve/36/" class="sp-more">수동카테고리 2 - 소분류 1</a>
+										<ul class="sp-sub-category-3">
+											<li><a href="/category/상세분류-cropped/38/">수동카테고리 2 - 상세분류 1</a></li>
+											<li><a href="/category/상세분류-graphic-tees/39/">수동카테고리 2 - 상세분류 2</a></li>
+										</ul>
+									</li>
+									<li><a href="/category/소분류-long-sleeve/37/" class="sp-more">수동카테고리 2 - 소분류 2</a>
+										<ul class="sp-sub-category-3">
+											<li><a href="/category/상세분류-cropped/40/">수동카테고리 2 - 상세분류 1</a></li>
+											<li><a href="/category/상세분류-graphic-tees/41/">수동카테고리 2 - 상세분류 2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="/category/중분류-shirts/33/">수동카테고리 2 - 중분류 2</a></li>
+						</ul>
+					</div>
+				</li>
+				<li mom category data-no="{$cate_no}"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+				<li mom category data-no="{$cate_no}"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+			</ul>
+		</div>
+
+		<!--싱글로 가져오기 : 수동 카테고리는 제외한다-->
+		<div getcategory="single">
+			<div category data-no><!--single 카테고리 연동-->
+				<div addcategory></div>
+			</div>
+		</div>
+
+		<!--카테고리 백업이미지-->
+		<div backupcategory class="displaynone">
+			<div backup="수동1"><a href="#"><img src="https://dummyimage.com/50x50/333/fff&text=X"></a></div>
+			<div backup="24"><div vimeoouter><div vimeo data-id="59777392" data-start="false" data-sound="false" data-loop="true" data-width="200" data-height="113"></div></div></div>
+			<div backup="28"><a href="#"><img src="https://dummyimage.com/50x50/333/fff&text=ACC"></a></div>
+			<div backup="수동2"><a href="#none" youtubeplayer data-id="M7lc1UVf-VE" data-start="true" data-sound="true" data-loop="false">유투브 레이어를 백업으로 사용함</a></div>
+		</div>
+
+		<!--카테고리 텍스트변형-->
+		<div changecategory class="displaynone">
+			<i backup="수동1" change="올렸음"></i>
+			<i backup="수동2" change="서브를 가지고 있을 경우"></i>
+			<i backup="26" change="드레스 굿"></i>
+			<i backup="37" change="더 서브로 갔을땐 글자가 길어질수도 아닐수도 있습니다."></i>
+		</div>
+	*/
+
+
+	/*
+		카테고리 백업 이미지
+	 
+		수동카테고리의 경우
+		backup attr을 서로 맞춰줘야 합니다.
+		<div backup="수동메뉴명">컨텐츠</div>
+
+		동영상을 넣으시려면, 아래 코드를 확인하세요.
+		<div backup="수동메뉴명"><div youtubeouter><div youtube data-id="M7lc1UVf-VE" data-start="false" data-sound="false" data-loop="true" data-width="640" data-height="360"></div></div></div>
+		
+	*/
+
+	/*
+		수동으로만 가능합니다
+		카테고리를 텍스트로 변환하는 기능입니다.
+		실제 카테고리 명칭과 정확하게 일치해야 합니다.
+		&amp; 와 같이 decode 형태로 특수문자를 일치시켜야 합니다.
+
+		만약 OUTER 라는 카테고리가 있다면
+		<span backup="OUTER" change="아우터" />
+		이렇게 매칭시킬 수 있습니다. 쉽죠 ?
+	*/
+
+	.sp-sub-category-layer { position:absolute; }
+	.sp-category-text-change { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }

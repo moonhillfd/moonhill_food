@@ -1,0 +1,100 @@
+
+	<!--코어-->
+	<!--@import(/_sp/core.html)-->
+
+	<!--카테고리-->
+	<!--@css(/_sp/apps/layout/category/category-1/category.css)-->
+	<!--@js(/_sp/apps/layout/category/category-1/category.js)-->
+	<div id="sp-category">
+
+		<!--디자인-->
+		<div id="sp-category-design-1" class="sp-box" data-fixgap="37">
+			<ul layout="sp-layout-fixed">
+
+				<div id="sp-category-1-all" grid="5" getcategory>
+					<button><i></i></button>
+					<!--스크롤바-->
+					<!--@css(/_sp/apps/addon/scrollbar/scrollbar.css)-->
+					<!--@js(/_sp/apps/addon/scrollbar/scrollbar.js)-->
+					<div category data-no="1">
+						<div addcategory after-scrollbar data-height="410" rule="prison"></div>
+					</div>
+				</div>
+				<div module="bannermanage2_display_4" id="sp-category-1-event">
+					<button><i></i></button>
+					<div id="sp-category-1-event-inside">
+						<ul>
+							<li class="sp-opa-out"><a href="{$href}" {$target}>{$banner}</a></li>
+							<li class="sp-opa-out"><a href="{$href}" {$target}>{$banner}</a></li>
+						</ul>
+					</div>
+				</div>
+				<li>
+					<!--카테고리-->
+					<!--@css(/_sp/apps/module/category/category.css)-->
+					<!--@js(/_sp/apps/module/category/category.js)-->
+					<div id="sp-category-1-normal" getcategory module="Layout_category">
+						<ul>
+							<li class="nohave" mom category data-no="{$cate_no}" direction="left"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li class="nohave" mom category data-no="{$cate_no}" direction="left"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li class="nohave" mom category data-no="{$cate_no}" direction="left"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li class="nohave" mom category data-no="{$cate_no}" direction="left"><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li class="nohave" mom category data-no="LOOKBOOK" direction="left">
+								<a href="/product/lookbook.html?cate_no=54">LOOKBOOK</a>
+								<div class="sp-sub-category">
+									<ul class="sp-sub-category-1">
+										<li data-no="BRAND"><a href="/product/brand.html">BRAND</a></li>
+										<li data-no="TIMESALE"><a href="/product/timesale.html">TIMESALE</a></li>
+										<li data-no="PHOTOREVIEW"><a href="/board/review/list.html?board_no=4" style="color:#912b45;font-weight:bold;">PHOTO REVIEW</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nohave" mom category data-no="TIMESALE" direction="left"><a href="/product/timesale.html">TIMESALE</a></li>
+						</ul>
+					</div>
+					<!--카테고리 백업이미지-->
+					<!--유투브 플레이어-->
+					<!--@css(/_sp/apps/addon/youtube/youtube.css)-->
+					<!--@js(/_sp/apps/addon/youtube/youtube.js)-->
+					<div module="bannermanage2_display_5" backupcategory class="displaynone">
+						<div backup="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+						<div backup="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+					</div>
+					<!--카테고리 텍스트변형-->
+					<div module="bannermanage2_display_6" changecategory class="displaynone">
+						<i {$title}></i>
+						<i {$title}></i>
+					</div>
+				</li>
+
+			</ul>
+		</div><div class="sp-category-design-1-trick"></div><!--종료-->
+
+		<!--수동 카테고리코드-->
+		<!-- 
+			이 코드는 수동 카테고리 코드입니다.
+			이미지 연동시 배너관리v2 모듈에서 제목을 "ABOUT" 로 입력하시면 연동됩니다.
+		--> 
+		<!--
+		<li mom="" category="" data-no="ABOUT" direction="left" class="have">
+			<a href="#링크0">링크0</a>
+			<div class="sp-sub-category">
+				<ul class="sp-sub-category-1">
+					<li data-no=""><a href="#링크1">텍스트1</a></li>
+					<li data-no=""><a href="#링크2">텍스트2</a></li>
+				</ul>
+			</div>
+		</li>
+		-->
+
+		<!--전체보기 수동코드-->
+		<!--
+		<div id="sp-category-1-all-trick" class="displaynone">
+			<li data-no="">
+				<a href="#" class="sp-more">샘플</a>
+				<ul class="sp-sub-category-2"></ul>
+			</li>
+		</div>
+		-->
+		
+	</div><!--종료-->

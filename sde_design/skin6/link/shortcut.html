@@ -1,0 +1,19 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="link_shortcut" class="ec-base-layer">
+    <!--@css(/css/module/link/shortcut.css)-->
+    <div class="header">
+        <h1>{$shortcut_name}</h1>
+    </div>
+    <div class="content">
+        <p class="info">
+            <strong>바로가기 아이콘</strong>이 설치됩니다. <br />바탕화면에 지금 설치하시겠습니까?
+        </p>
+    </div>
+    <div class="ec-base-button">
+        <p class="sp-btn-group" grid="0">
+            <a href="#none" onclick="{$action_create_shortcut}" class="sp-btn" theme="black" scale="medium">설치하기</a>
+            <a href="#none" onclick="{$action_close}" class="sp-btn" theme="white" scale="medium">취소하기</a>
+        </p>
+    </div>
+    <a class="close" onclick="{$action_close}"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>

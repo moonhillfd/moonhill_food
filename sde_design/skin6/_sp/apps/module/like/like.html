@@ -1,0 +1,77 @@
+<div id="sp-result">
+	<div id="sp-like">
+		<div class="sp-like-inside">
+			<!--
+				$count = 100
+			-->
+			<button class="sp-like-close"></button>
+			<h3>좋아요</h3>
+			<div class="sp-like-tab">
+				<ul>
+					<li class="left">
+
+						<p>PRODUCT</p>
+						<div class="sp-like-loop" module="myshop_likeitPrdPackage" scrollbar="product" rule="winsize,prison" data-height="317">
+							<ul module="myshop_LikeProductList" class="{$list_display|display}">
+							<!--
+								$count = 100
+							-->
+								<li>
+									<div class="box">
+										<div class="left"><a href="{$link_product_detail}" ><img src="{$image_medium}"></a></div>
+										<div class="center">
+											<a href="{$link_product_detail}" >{$disp_product_name} {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</a>
+										</div>
+										<div class="right">{$zoom_icon}</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="left"><a href="{$link_product_detail}" ><img src="{$image_medium}"></a></div>
+										<div class="center">
+											<a href="{$link_product_detail}" >{$disp_product_name} {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</a>
+										</div>
+										<div class="right">{$zoom_icon}</div>
+									</div>
+								</li>
+							</ul>
+							<div class="sp-no-result">
+								<p>상품 '좋아요' 내역이 없습니다.</p>
+							</div>
+							<div class="sp-no-result">
+								<p>상품 '좋아요' 기능을 지원하지 않습니다.</p>
+							</div>
+						</div>
+						<div class="sp-btn-group mgt1" grid="1">
+							<a href="/myshop/likeit/product.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span likeprdcount="product">좋아요 상품 전체보기</span></a>
+						</div>
+
+					</li>
+					<li class="right">
+
+						<p>CATEGORY</p>
+						<div class="sp-like-loop" module="myshop_likeitCatePackage" scrollbar="category" rule="winsize,prison" data-height="317">
+							<ul module="myshop_LikeCategoryList" class="{$list_display|display}">
+							<!--
+								$count = 100
+							-->
+								<li><a href="/product/list.html{$param}" class="single">{$disp_cate_path}{$disp_cate_name}</a></li>
+								<li><a href="/product/list.html{$param}" class="single">{$disp_cate_path}{$disp_cate_name}</a></li>
+							</ul>
+							<div class="sp-no-result">
+								<p>카테고리 '좋아요' 내역이 없습니다.</p>
+							</div>
+							<div class="sp-no-result">
+								<p>카테고리 '좋아요' 기능을 지원하지 않습니다.</p>
+							</div>
+						</div>
+						<div class="sp-btn-group mgt1" grid="1">
+							<a href="/myshop/likeit/category.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span likeprdcount="category">좋아요 상품 전체보기</span></a>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

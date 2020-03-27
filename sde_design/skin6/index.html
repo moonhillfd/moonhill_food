@@ -1,0 +1,619 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="index" path="" file=""></i>
+
+<!--플로팅 쿠키배너 1-->
+<!--@css(/_sp/apps/addon/floating/floating.css)-->
+<!--@js(/_sp/apps/addon/floating/floating.js)-->
+<div module="bannermanage2_display_18" floating data-cookie="uniqueCookieName1" data-wait="2000" data-speed="600" data-width="500" data-height="400" data-top="" data-left="30" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating.html"><div class="sp-floating-open" data-cookie="uniqueCookieName1"><button>팝업<br>보기</button></div>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+</div>
+
+<!--플로팅 쿠키배너 2-->
+<!--@css(/_sp/apps/addon/floating/floating.css)-->
+<!--@js(/_sp/apps/addon/floating/floating.js)-->
+<div module="bannermanage2_display_19" floating data-cookie="uniqueCookieName2" data-wait="3000" data-speed="600" data-width="300" data-height="300" data-top="" data-left="550" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating_2.html"><div class="sp-floating-open" data-cookie="uniqueCookieName2"><button>새소식</button></div>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+</div>
+
+<!--인덱스-->
+<!--@css(/_sp/apps/addon/slick/slick.css)-->
+<!--@js(/_sp/apps/addon/slick/slick.js)-->
+<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+<!--@js(/_sp/apps/layout/index/index-1/index.js)-->
+<!--@css(/_sp/apps/layout/index/index-1/index.css)-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<!--
+	<div lazyhtmlelem="1"></div>
+	이 모습의 영역은 /_sp/apps/layout/index/index-1/index_load.html 에서 실제로 수정합니다.
+-->
+
+
+
+<div lazyhtml data-url="/_sp/apps/layout/index/index-1/index_load.html"></div>
+
+<!--대배너-->
+<div module="bannermanage2_display_7" class="sp-slider-index-1 sp-slider full hold" data-fade="true" data-autoplayspeed="4000" data-custompaging="true" data-speed="500" hover="false" arrows="blk-h-l" arrowsArea="h-in-46" arrowfix="false" dots="button" dotsArea="in-b-c">
+	<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+	<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+    <div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+	<!--
+		동영상은 수동으로 등록합니다.
+		<div class="sp-slider-loop" data-title="[ ▶ ] ZARA SPRING SUMMER 2016">
+			<div youtubeouter="fixed"><div youtube data-id="0Rmz9_jagKo" data-start="true" data-sound="false" data-loop="true" data-width="3000" data-height="1350" data-fixheight="1000" data-center="true"></div></div>
+		</div>
+	-->
+</div><!--//여기까지-->
+
+<!--핫이슈-->
+<!--//여기까지-->
+
+<!--스토리
+<div class="ourstory">
+	<div class="mh_main_product_header"><img src="/image/main/title_ourstory.png" alt="스토리타이틀" /></div>
+	<ul class="videoclip">
+		<li>
+			<iframe height="320" src="https://www.youtube.com/embed/cXygqoUAgN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="subText">
+				<strong>EP.01</strong>
+				<h3>제나차 만나러 가는 길</h3>
+				<p>홍현희와 함께 떠나는 제나차 여행</p>
+			</div>
+		</li>
+		<li>
+			<iframe height="320" src="https://www.youtube.com/embed/85T_JP6kNYA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="subText">
+				<strong>EP.02</strong>
+				<h3>홍현희 차 바꿨다</h3>
+				<p>그녀의 선택, 제나선</p>
+			</div>
+		</li>
+	</ul>
+</div>
+-->
+
+<div module="product_listmain_1">
+    <!--@css(/css/module/product/3245/listmain_1.css)-->
+    <!--
+        $count = 6
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <div class="mh_main_product">
+        <div class="mh_main_product_header"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
+        <ul class="prdList column3">
+            <li class="item" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <p class="prdImg">
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <span class="sp-product-imagestyle" module="product_Imagestyle">
+                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+                            </span>
+                        </a>
+                    </p>
+                    <!--
+                    <div class="status">
+                        <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon}
+                        </div>
+                    </div>
+					-->
+                    <p class="name">
+                        <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}">{$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <p class="prdImg">
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                            <img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <span class="sp-product-imagestyle" module="product_Imagestyle">
+                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+                            </span>
+                        </a>
+                    </p>
+                    <!--
+                    <div class="status">
+                        <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon}
+                        </div>
+                    </div>
+					-->
+                    <p class="name">
+                        <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}">{$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+	</div>
+</div>
+
+<!--베스트리뷰
+<div class="best_review">
+	<div class="mh_main_product_header"><img src="/image/main/title_bestreview.png" alt="베스트리뷰타이틀" /></div>
+	<ul>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/865/page/4/">
+				<figure><img src="/image/main/best_review01.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenamini.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 Mini 10포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>제나차 없음 안돼요</h3>
+						<p>
+							아침에 일어나 공복에 한잔, 특히나 근무할때 배고프거나 당땡길때 한잔씩 마셔주면 채워지는 느낌도 있고, 배고픔도 완화되더라구요. 식욕도 줄여주는것 같아 예식 45일정도 남겨둔 지금 열심히 마시고 있답니다.
+							20포 일주일만에 클리어해서 또 사러 왔어용 :)
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">백민****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/762/page/6/">
+				<figure><img src="/image/main/best_review02.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenaset.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 1Set 60포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>이거 진짜 말이 됩니까?</h3>
+						<p>
+							원래부터 좀 *는 몸이 였지만, 한 한달정도 됬을꺼예요. 갑자기 너무 많이 *어서
+							걸을때 종아리가 뻣뻣하다고 느껴질만큼 그렇게 *었는데,
+							이러다 말겠지 하고 방치하다 보니 살이 터지기 까지 하더라구요.
+							그러다가 bj꽃자님 방송 보다가 제나차 먹고 생활이 달라졌다는 말에 번뜩여서
+							사이트 접소해보니, 가격이 너무 비싸서 망설였습니다ㅜㅜ
+							그래도 지금 너무 최악의 상황이니 지푸라기 잡는 심경으로 주문했는데
+							아침에 일어나서 공복에 따듯하게 한잔, 자기전에 공복에 한잔 그렇게 지켰더니
+							2일만에 결혼 반지가 껴지네요?
+							신발을 신었는데 저는 그 동안 신발이 작은줄 알고 불편해서 신기 싫었는데,
+							그 신발 신었는데 신발이 널널 하더라구요.
+							그 동안 **가 그렇게 심했는데 방치했던 저 자신을 반성합니다ㅜㅜ
+							정말 어떻게 이럴수가 있어요????
+							일주일도 아니고 2일만에 이런 변화가 있다구요 ????
+							저희 신랑이 가격보고 놀라더니 아침에 제 얼굴보고는 한달 잘 먹어보라고
+							또 시켜준다고 하더라구요 ㅠㅠ 진짜 생활이 달라졌다는말이 무슨말인지 알것 같아요!
+							효과는 이렇게 천사인데, 어떻게 가격은 이렇게 사악하나요 ㅠㅠ
+							다른거 줄이시지 말고 딱 패키지 디자인만 줄이셔도 가격 내려 갈꺼 같아요!!!!!!!!!!!!!!
+							사장님!!!!!!!!!!!!!!! 패키지 이렇게 많이 안하셔도 제나차 효과만으로도 명품 그 자체예요!!!!!!!!!!!!!!!!!!!!
+							차라리 1포를 더 주세요... 진짜 까만 비닐봉지에 담아 보내셔도 저는 먹을껍니다.
+							진짜 제나차가 저를 살렸어요 ㅜㅜ생명의 은인 흑흑흑
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">망고****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/728/page/7/">
+				<figure><img src="/image/main/best_review03.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenaset.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 1Set 60포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>**빼주는 차중에서는 최고인것같아요!</h3>
+						<p>
+							아침에 일어나면 자주 *는 체질이라 호박즙도 먹어보고 *기에 좋다는건 다 먹고 마셔봤는데 별로 효과를 못봤어요.
+							다이어트 중이라 *기를 더 빨리 빼고싶어서 제나차가 유명하길래 구매했는데요
+							우선 배송 엄청 빨라요! 하루만에 배송 됐습니다 ㅎㅎㅎㅎ
+							제품 받고 아침 저녁으로 하루 2포 마시고 있는데요, 확실히 아침에 일어났을때 *기가 덜하고 개운합니다
+							너무 좋은 제품이에요 :) 한달치 다 마시고 재구매하도록 하겠습니다! ♥
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">백다****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/408/page/14/">
+				<figure><img src="/image/main/best_review04.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenaset.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 1Set 60포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>너무 좋아요</h3>
+						<p>
+							맛도 역하지 않고 *는게 조금 완화 되었어요 그리고 생불이 심해서 두달한번 석달한번일 때가 잦았는디 요거 마시고 삼일째 되는날 아랫배가 살살 아프더니 ^^ 무엇보다 확실히 몸이 가벼워 지는 느낌이에요 이번엔 양을 늘려서 구매하려고요 혹시나 실패할까봐 한박스만 했거든요 ㅋ 설 이벵 할인 중이라 짱 기쁩니당 ㅋ
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">조채****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/346/page/16/">
+				<figure><img src="/image/main/best_review05.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenaset.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 1Set 60포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>2박스 먹어보니</h3>
+						<p>
+							2박스 먹고 2박스 추가로 더 시켰어요 저한테 맞는것같아요
+							출산후 밤에 손발이 저리고 몸도 부어잇고 힘들었는데
+							아침저녁 제나차 마시고 *기도 덜하고 손발 저림도 하루 첫날 마시고 바로 사라지는 현상을 느끼니 더더욱 잘 챙겨 마시게 되더라구요 아직 수유중이라 다이어트는 못하고 있었고 저녁마다 야식을 챙겨먹었었는데 제나차 마시고 담날 *기도 사라지고 배고플때 제나차 마시니 배고픔도 덜한것같고해서 지금 2-3키로 빠졌어요^^ 신랑도 가끔 마시는데 담날 정말 *지도 않는다고 좋아해요 ㅎㅎ 전 수족냉증도 심각한편인데 출산후 달라진것 없더라구요 근데 제나차 꾸준히 먹으면 낳아진단말에 더더욱 열심히 마시고 있는중이에요
+							두박스 더 챙겨놓으니 뭔가 마음이 두둑하고 좋아요!! ㅎㅎ
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">오연****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li class="review_wrap">
+			<a href="https://moonhillfood.com/article/%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%ED%9B%84%EA%B8%B0/4/55/page/24/">
+				<figure><img src="/image/main/best_review06.jpg" alt="photo_review" /></figure>
+				<div class="description">
+					<div class="product_info">
+						<figure class="thumb">
+							<img src="/image/main/thumb_zenaset.jpg" alt="thumb" />
+						</figure>
+						<strong>제나차 1Set 60포</strong>
+						<div class="starpoint five">
+							<img src="/image/main/starpoint_five.png" alt="starpoint" />
+						</div>
+					</div>
+
+					<div class="text">
+						<h3>내돈주고 사먹은 제나차 실제후기 *참트루참후기*</h3>
+						<p>
+							직장에 다니기 시작하면서 오래서있어야 하고 필요하면 퉁퉁부은 다리로
+							뛰어다녀야하는 직업이다 보니까 일단 살고보자 싶어서 *기차를 찾어요.
+							솔직히 하루먹고 *기가 빠지는건 아니에요. 일주일 먹으니까
+							그냥 안*는 정도? 눈에띄게 빠지지는 않았어요.
+							그런데ㅋㅋㅋ 먹고나서 한달 좀 덜될 때부터 *기 빠지고 몸 가벼워지는데
+							먹은날 안먹은날 너무 차이가 많이나서 두달 째 꾸준히 먹고있어요.
+						</p>
+						<span>더보기</span>
+						<div class="writer_name">강동****</div>
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+-->
+
+<!--인스타그램-->
+<!--@import(/_sp/apps/module/insta/insta.html)-->
+
+<!--공지배너-->
+<div layout="sp-layout-fixed">
+	<div class="sp-index-point-1" grid="3">
+		<div class="mh_main_product_header"><img src="/image/main/title_notice.png" alt="공지타이틀" /></div>
+		<ul>
+			<!-- 공지사항 -->
+			<li module="board_listpackage_1">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=1">NOTICE<span class="desc">제나의 새로운 공지를 알려드려요! '◡'✿</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_1">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div module="board_notice_1"  class="sp-slider-loop notice "><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div module="board_notice_1"  class="sp-slider-loop notice"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- 제나소식 -->
+			<li module="board_listpackage_1">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=3001">제나소식<span class="desc">제나의 제품 소식을 알려드려요! ٩( ᐛ )و</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_3001">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div module="board_notice_1"  class="sp-slider-loop notice "><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div module="board_notice_1"  class="sp-slider-loop notice"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- FAQ -->
+			<li module="board_listpackage_1" class="mh_main_faq">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=3">FAQ<span class="desc">제나에게 자주 물어보는 질문에 대한 답변이에요! (๑❛ڡ❛๑)</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_3">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="9"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+
+<!--
+			<li class="mh_event_banner">
+				<div module="bannermanage2_display_8" class="sp-slider" data-infinite="true" data-autoplayspeed="2000" data-speed="600" hover="true" arrows="wht-h-m" arrowsArea="h-in-99" dots="circle-s" dotsArea="in-b-l" between="30">
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+				</div>
+			</li>
+-->
+		</ul>
+	</div>
+</div><!--//여기까지-->
+
+<!--공지바-->
+<div class="mh_main_zenanotice" module="board_listpackage_1">
+	<div module="board_list_3001">
+<!--
+	$count = 4
+	$main_list = yes
+-->
+		<span class="label">zena notice</span>
+		<ul class="sp-slider" data-infinite="true" data-autoplayspeed="2000" data-speed="700" data-variableWidth="true" hover="true" between="20">
+			<li class="sp-slider-loop">
+				<a class="title" href="/board/product/read.html{$param_read}">
+					<span class="text">{$subject|cut:22,..}</span>
+					<span class="date">{$write_date|date:Y/m/d}</span>
+				</a>
+			</li>
+			<li class="sp-slider-loop">
+				<a class="title" href="/board/product/read.html{$param_read}">
+					<span class="text">{$subject|cut:22,..}</span>
+					<span class="date">{$write_date|date:Y/m/d}</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- FAQ
+<div layout="sp-layout-fixed">
+	<div class="sp-index-point-1 mh_section_2" grid="3">
+		<ul>
+			<li class="mh_main_info_banner">
+				<div module="bannermanage2_display_9" class="sp-slider" data-fade="true" data-autoplayspeed="13000" data-speed="600" hover="true" arrows="wht-h-m" arrowsArea="h-in-99" dots="circle-s" dotsArea="in-b-l" between="30">
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+					<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+-->
+
+<!-- 대표상품
+<i class="nav" data-title="대표상품"></i>
+<div class="mh_main_product">
+	<div class="mh_main_product_header">
+		<p class="title">쇼핑하기</p>
+		<p class="desc">달맞이자연식품 대표 브랜드 제나차</p>
+	</div>
+	<div class="mh_main_product_container">
+		<a class="main_product" href="/product/제나선-다이어트-차-1set-30일분-60포/41/category/49/display/1/">
+			<p class="image"><img src="_sp/image/main/main_product_set2.png" alt="제나선 다이어트 차"></p>
+			<p class="text">
+				<strong>제나선 다이어트 차 1set</strong> 30일분 60포<br>
+				(11g × 20스틱 × 3case)<br>
+				<span class="deco">提(제) 끌어올릴 제, 娜(나) 날씬하고 아리따워지는, 嬋(선) 고울 선 <br>‘내 안의 고운 선’ 을 찾는 시간</span>
+			</p>
+		</a>
+		<a class="main_product incase" href="/product/detail.html?product_no=15">
+			<p class="image"><img src="_sp/image/main/main_product_set.png" alt="제나차"></p>
+			<p class="text">
+				<strong>제나차 1set</strong> 30일분 60포<br>
+				(10g × 20스틱 × 3case)<br>
+				<span class="deco">除(제) 덜어내어, 娜(나) 날씬하고 아리따워지는, 茶(차)<br>‘제 것으로 아름다운 나’ 를 만나는 시간</span>
+			</p>
+		</a>
+	</div>
+</div>
+-->
+<!-- //대표상품 -->
+
+<!-- 동영상
+<i class="nav" data-title="브랜드 스토리"></i>
+<div class="brand_story_wrap">
+	<div class="brand_story_item">
+		<div class="brand_story_content">
+			<p class="title">달맞이자연식품 브랜드 스토리</p>
+			<p class="desc">
+				전통의 지혜를 찻잔에 담다.<br>
+				제나의 제품들은 원래의 건강하고 맑은 나로 돌아 올 수 있게 합니다.<br>
+				건강한 아름다움을 위한 비움과 채움으로 '나'를 찾는 경험을 해보세요.
+			</p>
+			<a class="btn_view" href="/board/gallery/list.html?board_no=12">다른 영상보기</a>
+		</div>
+		<div class="brand_story_video">
+			<a class="btn_view_list" href="/board/gallery/list.html?board_no=12"><img src="_sp/image/main/icon_list_view.png" alt="제나차 영상 리스트"></a>
+			<div id="playerMain" class="video"></div>
+		</div>
+	</div>
+</div>
+<script>
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+	player = new YT.Player('playerMain', {
+	  height: '330',
+	  width: '480',
+	  videoId: 'Dl30NKIVh6M',
+
+	  playerVars: {
+		autoplay: 1,            // Auto-play the video on load
+		controls: 1,            // Show pause/play buttons in player
+		showinfo: 1,            // Hide the video title
+		modestbranding: 1,      // Hide the Youtube Logo
+		fs: 1,                  // Hide the full screen button
+		cc_load_policy: 1,      // Hide closed captions
+		iv_load_policy: 3,      // Hide the Video Annotations
+		autohide: 1, // Hide video controls when playing
+		enablejsapi: 1,
+		mute : 1,
+		loop: 1,
+		playlist: 'l-HtAtC-bmU',
+		rel : 0,
+		modestbranding: 1,
+	  },
+		events: {
+		  onReady: function(e) {
+			e.target.mute();
+
+		  },
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		}
+
+	});
+
+  }
+
+  function onPlayerReady(event) {
+	   event.target.setVolume(2);
+   event.target.playVideo();
+  }
+
+  var done = true;
+  function onPlayerStateChange(event) {
+	if (event.data == YT.PlayerState.ENDED) {
+//      setTimeout(stopVideo, 6000);
+			  player.playVideo();
+	}
+	   event.target.setVolume(2);
+  }
+</script>
+-->
+
+<!-- 공식 SNS
+<i class="nav" data-title="공식 SNS"></i>
+<div class="mh_main_product_header" style="padding-top:0">
+	<p class="title">공식 SNS</p>
+	<p class="desc">달맞이자연식품 소통채널 인스타그램, 페이스북, 네이버 블로그 </p>
+</div>
+ -->
+<!--@import(/company안해용/mainSns.html)-->
+
+<!--회원가입-->
+<!--@css(/_sp/apps/addon/cookies/cookies.css)-->
+<!--@js(/_sp/apps/addon/cookies/cookies.js)-->
+<!--
+<div class="sp-index-userbox" module="Layout_statelogoff" spcookie="cover" data-cookie="sp_index_userbox_1" data-reset="false">
+	<div layout="sp-layout-fixed"><button spcookie="button"><p></p></button></div>
+	<ul module="Layout_footer">
+		<li class="msg-1">아직 {$mall_name} 회원이 아니신가요?<!--{$company_name}--></li>
+<!--
+		<li class="msg-2">지금 회원가입을 하시면 <span class="point">3,000원 할인 쿠폰</span> 과 각종 다양한 혜택으로 즐거운 쇼핑을 할 수 있습니다 :D</li>
+		<li>
+			<a href="/member/login.html" class="login"><span>로그인</span></a>
+			<a href="/member/join.html" class="joinus"><span>회원가입</span></a>
+		</li>
+	</ul>
+</div>
+-->
+
+<!--@define(cmc_log)-->

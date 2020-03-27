@@ -1,0 +1,59 @@
+
+	/*
+		<!--미확인 입금자-->
+		<!--@css(/_sp/apps/banklink/banklink.css)-->
+		<!--@js(/_sp/apps/banklink/banklink.js)-->
+		<button banklink>미확인입금자안내</button>
+
+		홈 > 상점관리 > 기본정보 > 관리 > 기타이용안내 설정 [ 회원가입안내 ] 의 html에 아래의 코드를 입력하면 모바일과 연동이 가능하다.
+
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+		<i connect="은행링크" data-connect="연동형^http://www.naver.com"></i>
+	*/
+
+	#sp-banklink-loading { z-index:99998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-banklink { z-index:99999; position:absolute; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-banklink { background-image:url(/_sp/image/opacity/blk-50.png); }
+	/* #sp-banklink { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-banklink,
+	#sp-banklink * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-banklink .sp-banklink-inside { width:600px; margin:0 auto; border:1px solid #333; background:#fff; padding:30px; position:relative; -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1); -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1); box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.1);	}
+	#sp-banklink button { position:absolute; right:0; top:0; border:0; background:#333; }
+	#sp-banklink button p { width:35px; height:35px; line-height:35px; color:#fff; font-size:16px; font-family:'dotum'; }
+	#sp-banklink button p:after { content:'×'; padding-left:1px; }
+	#sp-banklink h2 { font-size:15px; font-weight:600; padding-left:10px; position:relative; }
+	#sp-banklink h2:before { content:''; width:3px; height:13px; background:#333; position:absolute; top:2px; left:-1px; }
+	#sp-banklink h3 { font-size:11px; font-weight:normal; color:#777; padding:3px 0 0 11px; }
+	#sp-banklink table { margin-top:20px; }
+	#sp-banklink table thead td { background:##f7f7f7; padding:8px 10px; font-size:11px; border-bottom:1px solid #e6e5e5;}
+    #sp-banklink table thead td.center { text-align: center }
+	#sp-banklink table tbody td { background:#ffffff; padding:8px 10px; font-size:11px; vertical-align:middle; border-bottom:1px solid #f0f0f0; }
+    #sp-banklink table tbody tr:hover td { background-color:#f5f5f5; -webkit-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; transition: all 0.2s ease-out;}
+    
+
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+		#sp-banklink { cursor:pointer; -webkit-overflow-scrolling:touch; padding:10px; position:fixed; width:100% !important; height:100% !important; overflow-x:hidden; overflow-y:scroll; }
+		#sp-banklink .sp-banklink-inside { width:auto; top:0 !important; padding:20px; }
+		#sp-banklink table colgroup { display:none; }
+		#sp-banklink table thead td { width:50%; display:inline-block; }
+		#sp-banklink table tbody td { width:30%; display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+		#sp-banklink table tbody td + td { width:70%; }
+		#sp-banklink table tbody td + td + td { width:30%; }
+		#sp-banklink table tbody td + td + td + td { width:70%; }
+		#sp-banklink table thead td + td + td { display:none; }
+	}
+
+

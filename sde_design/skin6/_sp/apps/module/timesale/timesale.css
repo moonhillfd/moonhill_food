@@ -1,0 +1,49 @@
+
+	/*
+		상품과 연결된 부위가 날짜를 '표시함' 으로 해야한다.
+		이 상품은 지정된 날짜가 존재해야 한다. ( 프로모션 할인등록 )
+		아래 3개의 마크업에 종속관계로 이루어져야 한다.
+		<div id="sp-timesale">
+			<div timesale data-salestart="2017-11-09 00:00" data-saleend="2018-11-08 23:55">
+				<div timesale-counter></div>
+			</div>
+			<div timesale data-salestart="2017-11-09 00:00" data-saleend="2018-11-08 23:55">
+				<div timesale-counter></div>
+			</div>
+		</div>
+
+		상세페이지는 날짜를 소트할 수 없다.
+		문자열을 잘라서 사용하는 수 밖에 없다.
+		{$product_promotion_date|striptag} == 남은시간 32일 11:39:11 (1,750원 할인)2017-03-17 00:00 ~ 2017-12-31 23:55
+		<div id="sp-timesale">
+			<div timesale data-promotion="{$product_promotion_date|striptag}">
+				<div timesale-counter></div>
+			</div>
+		</div>
+	*/
+	#sp-timesale * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-timesale .sp-timesale-field {  }
+	#sp-timesale .sp-timesale-field-timer { font-size:0; text-align:left; position:relative; line-height:21px; }
+	#sp-timesale .sp-timesale-field-timer span,
+	#sp-timesale .sp-timesale-field-timer strong { font-size:11px; display:inline-block; margin:0 1px 0 0; }
+	#sp-timesale .sp-timesale-field-timer span { margin:0 6px 0 2px; }
+	#sp-timesale .sp-timesale-field-timer strong { color:#fff; background-color:#bbb; text-align:center; border-radius:3px; width:14px; }
+	#sp-timesale .sp-timesale-field-timer strong.-on { color:#fff; background-color:#333; }
+	#sp-timesale .sp-timesale-field-enddate { text-align:center; font-size:11px; background-color:#f9f9f9; }
+
+	@media screen and ( min-width:1px ) and ( max-width:600px ){
+		#sp-timesale .sp-timesale-field-timer { line-height:14px; }
+		#sp-timesale .sp-timesale-field-timer span,
+		#sp-timesale .sp-timesale-field-timer strong { font-size:9px; }
+		#sp-timesale .sp-timesale-field-timer span { margin:0 5px 0 0; }
+		#sp-timesale .sp-timesale-field-timer strong { width:10px; border-radius:2px; }
+		#sp-timesale .sp-timesale-field-enddate { font-size:9px; }
+	}

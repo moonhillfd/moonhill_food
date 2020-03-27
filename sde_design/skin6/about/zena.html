@@ -1,0 +1,102 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_sp/css/company.css)-->
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">브랜드</a>
+			<a href="#none">제나스토리</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<div class="head_title">
+			<span class="en">ZENA</span>
+			<span class="ko">제나스토리</span>
+		</div>
+	</h1>
+</div><!--//종료-->
+
+<div class="zena_about_item">
+    <ul class="zena">
+	    <li><img src="/image/common/brand_story01.png" alt="brand_story" /></li>
+	    <li><img src="/image/common/brand_story02.png" alt="brand_story" /></li>
+	    <li><img src="/image/common/brand_story03.png" alt="brand_story" /></li>
+    </ul>
+</div>
+
+<script>
+var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+	player = new YT.Player('playerMain', {
+	  height: '480',
+	  width: '750',
+	  videoId: 'Dl30NKIVh6M',
+	  
+	  playerVars: {
+		autoplay: 1,            // Auto-play the video on load
+		controls: 1,            // Show pause/play buttons in player
+		showinfo: 1,            // Hide the video title
+		modestbranding: 1,      // Hide the Youtube Logo 
+		fs: 1,                  // Hide the full screen button
+		cc_load_policy: 1,      // Hide closed captions
+		iv_load_policy: 3,      // Hide the Video Annotations
+		autohide: 1, // Hide video controls when playing
+		enablejsapi: 1,
+		mute : 1,
+		loop: 1, 
+		playlist: 'l-HtAtC-bmU',
+		rel : 0,
+		modestbranding: 1,
+	  },
+		events: {
+		  onReady: function(e) {
+			e.target.mute();
+			   
+		  },
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		}
+		
+	});
+	  
+  }
+// 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+	   event.target.setVolume(2);
+   event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = true;
+  function onPlayerStateChange(event) {
+	if (event.data == YT.PlayerState.ENDED) {
+//      setTimeout(stopVideo, 6000);
+			  player.playVideo();
+	}
+	   event.target.setVolume(2);
+  }
+</script>
+		

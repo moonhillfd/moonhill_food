@@ -1,0 +1,366 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<div id="sp-board" theme="product" path="list" module="Board_ListPackage_4">
+
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_4">
+		<!--네비게이션-->
+		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+		<div id="sp-navigation">
+			<ul layout="sp-layout-fixed">
+				<li>
+					<a href="/">HOME</a>
+					<a href="/board/index.html">COMMUNITY</a>
+					<a href="#none">{$board_name}</a>
+				</li>
+				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+			</ul>
+		</div><!--//종료-->
+
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<!--@css(/_sp/css/mh-title.css)-->
+		<div id="sp-title">
+			<h1 class="mh-title-item">
+				<span class="en">{$board_info}</span>
+				<span class="ko">{$board_title}</span>
+			</h1>
+		</div><!--//종료-->
+
+		<!--<div id="sp-title">
+			<h2><span>{$board_top_image}</span></h2>
+			<h1>
+				<span>{$board_title} {$board_adult_icon}</span>
+				<div class="sp-title-message">{$board_info}</div>
+			</h1>
+		</div>--><!--//종료-->
+    </div>
+
+	<!--게시판 공통-->
+	<!--@import(/_sp/apps/module/board/board_header.html)-->
+
+	<!--게시판-->
+	<!--@js(/_sp/apps/module/board/board.js)-->
+	<!--@css(/_sp/apps/module/board/board.css)-->
+	<div layout="sp-layout-fixed">
+
+		<!--박스-->
+		<div class="sp-board-box">
+			<ul class="sp-clear">
+				<li class="sp-left">
+					<!--소트-->
+					<div select="1">
+						<span scale="150" module="board_category_4">{$form.board_category}</span>
+						<span module="board_ReplySort_4">{$reply_sort}</span>
+					</div>
+				</li>
+
+				<!--버튼-->
+				<li class="sp-right {$write_display|display}" grid="0" module="board_ButtonList_4" style="margin-left:5px;">
+					<a href="/board/review/write.html{$param_write}" class="sp-btn {$write_display|display}" theme="black" scale="medium" change="edit">글쓰기</a>
+				</li>
+
+
+				<li class="sp-right">
+					<!--검색-->
+					<div class="sp-board-search" position="left" input="1" select="1" module="board_search_4">
+						<!--@css(/css/module/board/search.css--not use--)-->
+						<fieldset>
+							<legend>게시물 검색</legend>
+							<ul>
+								<li class="{$form.product_category_selector_display|display}">{$form.product_category_selector}</li>
+								<li>{$form.search_date}</li>
+								<li>{$form.search_key}</li>
+								<li>
+									{$form.search}
+									<a href="#none" onclick="{$action_search}" class="sp-btn" theme="black" scale="medium" change="search">찾기</a>
+								</li>
+							</ul>
+						</fieldset>
+					</div><!--//종료-->
+				</li>
+
+
+			</ul>
+		</div>
+
+		<div class="ec-base-table typeList gBorder">
+			<table border="1" summary="">
+			<caption>상품 게시판 목록</caption>
+			<colgroup module="board_listheader_4">
+				<col style="width:70px;" />
+				<col style="width:70px;" />
+				<col style="width:110px;" class="{$config.is_category|display}" />
+				<col style="width:auto;" />
+				<col style="width:120px;" />
+				<col style="width:100px;" class="{$config.use_date|display}" />
+				<col style="width:60px;" class="{$config.use_cnt|display}" />
+				<col style="width:60px;" class="{$config.is_use_recom|display}" />
+				<col style="width:110px;" class="{$config.is_use_point|display}" />
+			</colgroup>
+			<thead module="board_listheader_4">
+				<tr>
+					<th scope="col">{$checkbox} 번호</th>
+					<th scope="col">이미지</th>
+					<th scope="col" class="{$config.is_category|display}">카테고리</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col" class="{$config.use_date|display}">작성일</th>
+					<th scope="col" class="{$config.use_cnt|display}">조회</th>
+					<th scope="col" class="{$config.is_use_recom|display}">추천</th>
+					<th scope="col" class="{$config.is_use_point|display}">평점</th>
+				</tr>
+			</thead>
+			<tbody module="board_notice_4" class="center">
+				<!--
+					$count = 6
+					$product_name_cut = 30
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$notice_icon}</span></td>
+					<td class="thumb"><a href="{$link_product_detail}">{$product_img}</a><i></i></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<a href="#none" class="fold {$spread_display|display}" onclick="{$action_content_spread}"><img src="/_sp/image/cafe24/board/btn_unfold.png" alt="내용 보기" /></a>
+						{$icon_re}<a href="{$link_board_detail}" style="{$link_color}"><span class="{$product_name|display}">[ {$product_name} ]<br /></span><strong>{$subject}</strong></a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$notice_icon}</span></td>
+					<td class="thumb"><a href="{$link_product_detail}">{$product_img}</a><i></i></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<a href="#none" class="fold {$spread_display|display}" onclick="{$action_content_spread}"><img src="/_sp/image/cafe24/board/btn_unfold.png" alt="내용 보기" /></a>
+						{$icon_re}<a href="{$link_board_detail}" style="{$link_color}"><span class="{$product_name|display}">[ {$product_name} ]<br /></span><strong>{$subject}</strong></a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+			</tbody>
+			<tbody module="board_fixed_4" class="center">
+				<!--
+					$count = 6
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$fixed_icon}</span></td>
+					<td class="thumb"><a href="{$link_product_detail}">{$product_img}</a><i></i></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<a href="#none" class="fold {$spread_display|display}" onclick="{$action_content_spread}"><img src="/_sp/image/cafe24/board/btn_unfold.png" alt="내용 보기" /></a>
+						{$icon_re}<a href="{$link_board_detail}" style="{$link_color}"><span class="{$product_name|display}">[ {$product_name} ]<br /></span><strong>{$subject}</strong></a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+				<tr>
+					<td class="chk">{$checkbox}<span class="txtNum">{$fixed_icon}</span></td>
+					<td class="thumb"><a href="{$link_product_detail}">{$product_img}</a><i></i></td>
+					<td class="{$category_display|display}"><span class="txtNum">{$category_name}</span></td>
+					<td class="subject left txtBreak">
+						<a href="#none" class="fold {$spread_display|display}" onclick="{$action_content_spread}"><img src="/_sp/image/cafe24/board/btn_unfold.png" alt="내용 보기" /></a>
+						{$icon_re}<a href="{$link_board_detail}" style="{$link_color}"><span class="{$product_name|display}">[ {$product_name} ]<br /></span><strong>{$subject}</strong></a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
+					<td class="{$vote_display|display}"><span class="txtNum">{$vote}</span></td>
+					<td class="{$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+				</tr>
+			</tbody>
+			</table>
+
+
+<!--리스트리뷰-->
+<!--@js(/_sp/apps/module/listreview/listreview.js)-->
+<!--@css(/_sp/apps/module/listreview/listreview.css)-->
+<!--SLICK:v1.12.4-->
+<!--@css(/_sp/apps/addon/slick/slick.css)-->
+<!--@js(/_sp/apps/addon/slick/slick.js)-->
+<div id="sp-listreview" module="board_list_4">
+	<ul class="reviewloop prod-{$product_img|display} reply-{$icon_re|display}" data-no="{$no}" data-idx="{$idx}" data-board="{$board_no}">
+		<li class="left {$product_img|display}"><a href="{$link_product_detail}" class="prodthumb" style="background-image:url('{$product_img_src}')" togglethumb="{$product_img_src}"></a></li>
+		<li class="article">
+			<div class="content">
+				<div class="prdname {$product_name|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="prdpoint" point="{$point_count}">
+					<span class="point {$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif"></span>
+					<!--<span class="vote {$vote_display|display}" vote="{$vote}">( <strong>{$vote}</strong>명이 이 후기가 도움이 된다고 선택 했습니다 )</span>-->
+					<span class="hit {$hit_display|display}" hit="{$hit_count}">({$hit_count} views)</span>
+				</div>
+				<div class="reviewbox">
+					<div class="reviewheader" toggleopen>
+						<span class="reviewicon before">{$icon_re}</span>
+						<span class="reviewicon before lock {$icon_lock|display}">[ {$icon_lock} 비밀글 ]</span>
+						<span class="reviewtitle">{$subject} <span>... 더보기</span></span>
+						<span class="reviewicon after">{$icon_file}{$icon_new}{$icon_hit}{$icon_mobile}</span>
+					</div>
+					<div class="reviewcount {$comment_count|display}" toggleopen><span>{$comment_count}</span>개의 댓글이 있습니다.</div>
+					<div class="reviewcontent"></div>
+				</div>
+			</div>
+		</li>
+		<li class="right">
+			<div class="reviewuser">
+				<p class="reviewnick">{$member_icon}{$writer}<span class="checkbox {$checkbox|display}">{$checkbox}</span></p>
+				<span class="reviewdate {$date_display|display}">{$write_date}</span>
+				<span class="reviewip {$client_ip|display}">({$client_ip})</span>
+			</div>
+			<div class="reviewimage"></div>
+		</li>
+	</ul>
+	<ul class="reviewloop prod-{$product_img|display} reply-{$icon_re|display}" data-no="{$no}" data-idx="{$idx}" data-board="{$board_no}">
+		<li class="left {$product_img|display}"><a href="{$link_product_detail}" class="prodthumb" style="background-image:url('{$product_img_src}')" togglethumb="{$product_img_src}"></a></li>
+		<li class="article">
+			<div class="content">
+				<div class="prdname {$product_name|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="prdpoint" point="{$point_count}">
+					<span class="point {$point_display|display}"><img src="/_sp/image/cafe24/board/ico_point{$point_count}.gif"></span>
+					<!--<span class="vote {$vote_display|display}" vote="{$vote}">( <strong>{$vote}</strong>명이 이 후기가 도움이 된다고 선택 했습니다 )</span>-->
+					<span class="hit {$hit_display|display}" hit="{$hit_count}">({$hit_count} views)</span>
+				</div>
+				<div class="reviewbox">
+					<div class="reviewheader" toggleopen>
+						<span class="reviewicon before">{$icon_re}</span>
+						<span class="reviewicon before lock {$icon_lock|display}">[ {$icon_lock} 비밀글 ]</span>
+						<span class="reviewtitle">{$subject} <span>... 더보기</span></span>
+						<span class="reviewicon after">{$icon_file}{$icon_new}{$icon_hit}{$icon_mobile}</span>
+					</div>
+					<div class="reviewcount {$comment_count|display}" toggleopen><span>{$comment_count}</span>개의 댓글이 있습니다.</div>
+					<div class="reviewcontent"></div>
+				</div>
+			</div>
+		</li>
+		<li class="right">
+			<div class="reviewuser">
+				<p class="reviewnick">{$member_icon}{$writer}<span class="checkbox {$checkbox|display}">{$checkbox}</span></p>
+				<span class="reviewdate {$date_display|display}">{$write_date}</span>
+				<span class="reviewip {$client_ip|display}">({$client_ip})</span>
+			</div>
+			<div class="reviewimage"></div>
+		</li>
+	</ul>
+</div><!--//종료-->
+
+		</div>
+
+		<!--빈값-->
+		<div class="sp-no-result-found {$empty_display|display}" module="board_empty_4" theme="board" scale="medium">
+			<p>{$empty_message}</p>
+		</div><!--//종료-->
+
+
+
+	</div><!--픽스종료-->
+</div><!--패키지종료-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="board_paging_4">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="#none" class="first">FIRST</a></li>
+			<li><a href="{$param_prev}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+			<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="#none" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div><!--종료-->
+
+<!--고객지원센터-->
+<!--@css(/_sp/apps/module/board/cscenter.css)-->
+<!--게시판-->
+<!--@js(/_sp/apps/module/board/board.js)-->
+<!--@css(/_sp/apps/module/board/board.css--not use--)-->
+<!--고객지원센터 : 게시판 분리-->
+<div layout="sp-layout-fixed">
+	<div grid="0" class="sp-base-box-detail sp-base-box sp-box">
+		<ul>
+			<li class="sp-clear">
+				<div id="sp-cscenter">
+					<div class="sp-board-group" grid="1">
+						<!--루프-->
+						<div class="sp-board-group-loop">
+							<!--게시판 : FAQ-->
+							<div class="sp-board-group-category" data-start="0"><span>자주 묻는 질문들</span></div>
+							<div class="sp-board-group-element" theme="list" module="board_listpackage_3">
+								<ul module="board_list_3">
+									<!--
+										$count = 100
+										$main_list = yes
+										$main_list_reply_view = no
+									-->
+									<li category="{$category_name}"><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+									<li category="{$category_name}"><!--@import(/_sp/apps/module/board/board_group_element.html)--></li>
+								</ul>
+							</div><!--종료-->
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div><!--고객지원센터 : 게시판 분리 종료-->
+
+<!-- 관리자 전용 메뉴 -->
+<div class="sp-board-admin" layout="sp-layout-fixed" module="board_catemove_4" select="1" scale="150">
+	<!--@css(/css/module/board/catemove.css--not use--)-->
+	<div class="sp-board-admin-inside">
+		<span>선택된 글을</span>
+		<span>{$form.board_category_move}</span>
+		<span><a href="#none" onclick="{$action_category_move}" class="sp-btn" theme="white" scale="medium" change="check">글 이동</a></span>
+	</div>
+</div>
+<div class="sp-board-admin" layout="sp-layout-fixed" module="board_function_4" select="1" scale="150">
+	<!--@css(/css/module/board/function.css)-->
+	<div class="sp-board-admin-inside">
+		<span>선택된 글을</span>
+		<span>{$form.boardGroup}</span>
+		<span>
+			<a href="#none" onclick="{$action_article_move}" class="sp-btn" theme="white" scale="medium" change="check">글 이동</a>
+			<a href="#none" onclick="{$action_article_copy}" class="sp-btn" theme="white" scale="medium" change="check">글 복사</a>
+		</span>
+	</div>
+	<div class="ec-base-help">
+		<div class="inner">
+			<h4>관리자 전용 메뉴</h4>
+			<ol>
+				<li class="item1">이동과 복사를 잘 구분해서 사용하시길 바랍니다.</li>
+				<li class="item2">게시글의 댓글은 이동시 포함되지만, 답변은 포함되지 않습니다.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+<!-- //관리자 전용 메뉴 -->

@@ -1,0 +1,50 @@
+
+	<div class="sp-product-item" id="anchorBoxId_{$product_no}">
+		<div class="sp-product-item-thumb">
+			<a href="{$link_product_detail}" class="sp-product-item-thumb-href"><p class="sp-product-item-thumb-cover"><!--<img src="{$image_small}" alt="{$seo_alt_tag}" />--></p><i class="sp-product-item-thumb-origin"><img src="{$image_medium}" alt="{$seo_alt_tag}" /></i><span class="sp-product-imagestyle" module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+			<div class="sp-product-layer">
+				<span class="sp-product-layer-func sp-zoom {$zoom_icon|display}">{$zoom_icon}</span>
+				<span class="sp-product-layer-func sp-basket {$basket_icon|display}">{$basket_icon}</span>
+				<span class="sp-product-layer-func sp-option {$option_preview_icon|display}">{$option_preview_icon}</span>
+				{$list_wish_icon}
+				<span class="sp-product-layer-func sp-wish {$list_wish_icon|display}">{$list_wish_icon}</span>
+				<span class="sp-product-layer-func sp-like {$disp_likeprd_class} sp-cnt-{$disp_likeprd_count|striptag}">{$disp_likeprd_icon} {$disp_likeprd_count}</span>
+				<span class="sp-product-layer-func sp-detailzoom" detailzoom data-url="/_sp/apps/module/zoom/zoom.html?product_no={$product_no}">zoom</span>
+			</div>
+			<div class="sp-product-colorchip {$colorchip_display|display}">
+				<p module="search_Colorchip">
+					<span style="background-color:{$color}"></span>
+					<span style="background-color:{$color}"></span>
+				</p>
+			</div>
+		</div>
+		<div class="sp-product-spec">
+			<div class="sp-product-name">
+				<a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="{$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a>
+			</div>
+			<div class="sp-product-count">
+				<a href="{$link_product_detail}#use_qna" class="sp-product-count-qna sp-product-count-{$qna_cnt}">{$qna_cnt}</a>
+				<a href="{$link_product_detail}#use_review" class="sp-product-count-review sp-product-count-{$review_cnt}">{$review_cnt}</a>
+			</div>
+			<div class="sp-product-description" module="search_ListItem">
+				<div class="{$item_display|display}" rel="{$item_title|striptag}"><span class="{$item_title_display|display}">{$item_title} :</span> {$item_content|nl2br}</div>
+				<div class="{$item_display|display}" rel="{$item_title|striptag}"><span class="{$item_title_display|display}">{$item_title} :</span> {$item_content|nl2br}</div>
+			</div>
+			<div class="sp-product-icons">
+				{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}
+			</div>
+		</div>
+		<p class="sp-product-check {$product_compare_display|display}"><input type="checkbox" id="checkbox-{$product_no}" class="{$product_compare_class} {$product_compare_display|display}" /><label for="checkbox-{$product_no}"></label></p>
+		<p class="sp-product-inputs"
+			data-id="{$product_no}"
+			data-custom="{$product_custom}"
+			data-price="{$product_price}"
+			data-sale="{$prd_price_sale|striptag}"
+			data-small="{$image_small}"
+			data-medium="{$image_medium}"
+			data-big="{$image_big}"
+			data-link="{$link_product_detail}"
+			data-qna="{$qna_cnt}"
+			data-review="{$review_cnt}"
+		></p>
+	</div>

@@ -1,0 +1,18 @@
+#popup { width:600px; height:482px; overflow-x:hidden; }
+.xans-search-frompackage fieldset { text-align:center; }
+.xans-search-frompackage #search_type { width:120px; }
+.xans-search-frompackage #keyword { width:240px; }
+
+.xans-search-frompackage .resultArea { overflow:hidden; margin:10px 0 0; padding:10px 0 5px 0; text-align:right; line-height:24px; }
+.xans-search-frompackage .total { float:left; color:#333; margin:5px 0 0 1px; }
+
+.xans-search-frompackage table td.thumb img { max-width:50px; }
+
+.xans-search-frompackage select,
+.xans-search-frompackage #keyword { background:#f9f9f9; border:0; height:30px; padding:0 10px; border-radius:3px; }
+
+.xans-search-frompackage .btn { cursor:pointer; }
+
+.xans-search-frompackage .sp-no-result-found { display:none; border-top:1px solid #f0f0f0; }
+.xans-search-frompackage .sp-no-result-found.sp-0 { display:block; }
+.xans-search-frompackage .sp-no-result-found p { height:200px; }

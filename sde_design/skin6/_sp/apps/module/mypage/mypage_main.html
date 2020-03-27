@@ -1,0 +1,69 @@
+
+	<div id="sp-result">
+		<div id="sp-mypage-main" theme="quick">
+			<div class="sp-mypage-main-inside">
+				<button><p></p></button>
+
+				<!--정보:트릭-->
+				<div grid="1" class="sp-base-box sp-box">
+					<ul>
+						<li>
+							<a href="/myshop/index.html" class="sp-btn-layer sp-btn" theme="black" scale="small">마이페이지 바로가기</a>
+							<h3>빠른메뉴</h3>
+						</li>
+					</ul>
+				</div><!--종료-->
+
+				<!--디테일-->
+				<div id="sp-mypage-quick">
+					<ul>
+						<li class="sp-left">
+							
+							<!--@import(/_sp/apps/module/mypage/mypage_main_content.html)-->
+
+						</li>
+						<li class="sp-right">
+
+							<div class="sp-mypage-quick-other">
+								<div module="Layout_project">
+									<a event href="/product/project.html{$param}" class="sp-navtitle"><span class="sp-navsplit red">Event</span> {$category_text}<i class="count">n</i></a>
+									<a event href="/product/project.html{$param}" class="sp-navtitle"><span class="sp-navsplit red">Event</span> {$category_text}<i class="count">n</i></a>
+								</div>
+								<div class="sp-mypage-quick-poll" module="Layout_Poll">
+									<a event href="#none" class="sp-navtitle"><span class="sp-navsplit dark">Poll</span> {$poll_title}</a>
+									<div class="sp-mypage-quick-poll-layer">
+										<h4>{$poll_title}</h4>
+										<ul>
+											<li>{$poll}{$poll_name}</li>
+											<li>{$poll}{$poll_name}</li>
+											<li>{$poll}{$poll_name}</li>
+											<li>{$poll}{$poll_name}</li>
+										</ul>
+										<p class="sp-btn-group mgt1" grid="2">
+											<a href="#none" class="sp-btn" onclick="{$action_poll_submit}" theme="black" scale="pong" hover="투표하기"><span>VOTE</span></a>
+											<a href="#none" class="sp-btn" onclick="{$action_poll_result}" theme="white" scale="pong" hover="결과보기"><span>RESULT</span></a>
+										</p>
+									</div>
+								</div>
+								<div module="Layout_attendBanner">
+									<!--
+										$stamp_type_url = /attend/stamp.html
+										$comment_type_url = /attend/comment.html
+									-->
+									<a event href="{$attend_url}" class="sp-navtitle"><span class="sp-navsplit dark">Attend</span> 출석 체크하기</a>
+								</div>
+								<div module="Layout_couponzoneBanner"><a event href="/coupon/coupon_zone.html" class="sp-navtitle"><span class="sp-navsplit green">Coupon</span> 쿠폰 전체보기</a></div>
+								<div module="Layout_giftBanner"><a event href="/order/gift_list.html" class="sp-navtitle"><span class="sp-navsplit green">Gift</span> 사은품 증정 이벤트</a></div>
+								<div module="Layout_opdiaryBanner"><a help href="/board/opdiary/list.html" class="sp-navtitle"><span class="sp-navsplit">Diary</span> 스토어 운영일지</a></div>
+								<div module="Layout_calendarBanner"><a help href="{$calendar_view_page}" class="sp-navtitle"><span class="sp-navsplit">Calendar</span> 스토어 캘린더</a></div>
+								<div module="Layout_sosBanner"><a help href="/board/urgency/urgency.html" class="sp-navtitle"><span class="sp-navsplit">Sos</span> 긴급 문의하기</a></div>
+								<div module="myshop_main"><a help href="/board/consult/list.html" class="sp-navtitle {$consult_display|display}"><span class="sp-navsplit">Consult</span> 1:1 상담하기</a></div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>

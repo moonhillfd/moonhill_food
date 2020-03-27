@@ -1,0 +1,169 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/product/search.html">SEARCH</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title">
+	<h1>SEARCH</h1>
+</div><!--//종료-->
+
+<!--상품소트-->
+<div layout="sp-layout-fixed">
+
+	<!--검색결과-->
+	<div class="sp-sort-result" module="search_form">
+
+		<!--트릭-->
+		<div class="displaynone">
+			<fieldset>
+				<legend>상품 검색</legend>
+				<div class="item"><strong>상품분류</strong> {$form.category_no}</div>
+				<div class="item">
+					<strong>검색조건</strong>
+					{$form.search_type}
+					{$form.keyword}
+				</div>
+				<div class="popular" id="{$except_keyword_wrap_id}" style="display:none">
+					<strong>제외검색어</strong>
+					{$form.exceptkeyword}
+				</div>
+				<div class="popular" module="search_hotkeyword">
+					<strong>인기검색어</strong>
+					<p>
+						<a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+						<a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+					</p>
+				</div>
+				<div class="item"><strong>판매가격대</strong> {$form.product_price1} ~ {$form.product_price2}</div>
+				<div class="item"><strong>검색정렬기준</strong> {$form.order_by}</div>
+			</fieldset>
+		</div>
+
+		<!--재검색유도-->
+		<div class="sp-sort-research sp-box">
+			<ul>
+				<li class="sp-left">
+					<!--검색-->
+					<!--@css(/_sp/apps/module/search/search.css)-->
+					<!--@js(/_sp/apps/module/search/search.js)-->
+					<div class="sp-sort-research-box">
+						<i class="sp-search-ico"></i>
+						<h3>Find item</h3>
+						<p>
+							검색어/제외검색어의 입력이 정확한지 확인해 보세요.<br />
+							두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.<br />
+							검색 옵션을 다시 확인해 보세요.
+						</p>
+						<div class="sp-btn-group" grid="1">
+							<button type="button" search data-url="/_sp/apps/module/search/search.html" class="sp-btn" theme="my" scale="medium" change="search">다시 검색하기</button>
+						</div>
+					</div>
+				</li>
+				<li class="sp-right">
+					<!--최근 본 상품-->
+					<!--@css(/_sp/apps/module/today/today.css)-->
+					<!--@js(/_sp/apps/module/today/today.js)-->
+					<div class="sp-sort-research-box">
+						<i class="sp-recent-ico"></i>
+						<h3>Recent views</h3>
+						<p>
+							혹시 최근에 본 상품을 찾고 계신가요?<br />
+							만일 그러시다면 아래 버튼을 눌러 확인하세요.<br />
+							상품을 더 오래 보관하고 싶다면, 관심상품에 등록하세요.
+						</p>
+						<div class="sp-btn-group" grid="2">
+							<button type="button" today data-url="/_sp/apps/module/today/today.html" class="sp-btn" theme="white" scale="medium" change="heart">최근 본 상품 찾기</button>
+							<a href="/product/recent_view_product.html" class="sp-btn" theme="white" scale="medium" change="check">전체보기</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--소트-->
+		<ul class="sp-clear">
+			<li class="sp-left">
+				<div class="sp-sort-element">
+					<a href="#none" class="wide active"><strong>{$total_count}</strong>PRODUCT RESULT</a>
+					<p class="{$product_compare_display|display}">
+						<button onclick="{$product_compare_action}" class="sp-btn" theme="white" scale="pong" hover="상품 비교">COMPARE</button>
+					</p>
+				</div>
+			</li>
+			<li class="sp-right">
+				<div class="sp-sort-element" module="search_Orderby">
+					<a class="btn_order" rel="{$rel}" text="{$sort_name}" style="{$style}"><span>{$sort_name}</span></a>
+					<a class="btn_order" rel="{$rel}" text="{$sort_name}" style="{$style}"><span>{$sort_name}</span></a>
+				</div>
+				<div class="sp-sort-element">
+					<div class="sp-product-style" theme="single" grid="4">
+						<button type="button" grid="0"></button>
+						<button type="button" grid="2"></button>
+						<button type="button" grid="3"></button>
+						<button type="button" grid="4"></button>
+						<button type="button" grid="5"></button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--상품목록-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-product" module="Search_Result" grid="4" control="false" compare="true">
+		<!--
+			$count = 24
+			$basket_result = /product/add_basket.html
+			$basket_option = /product/basket_option.html
+		-->
+		<!--@import(/_sp/apps/layout/product/product-1/product_search_package.html)-->
+	</div>
+	<div class="sp-no-result-found">
+		<p>검색 결과가 없습니다.</p>
+	</div><!--//종료-->
+</div><!--//여기까지-->
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div layout="sp-layout-fixed">
+	<div class="sp-pagination mgt3 mgb5" module="search_paging">
+		<ul class="sp-pagination-arrow sp-left">
+			<li><a href="{$param_first}" class="first">FIRST</a></li>
+			<li><a href="{$param_before}" class="prev">PREV</a></li>
+		</ul>
+		<ul class="sp-pagination-page">
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+		</ul>
+		<ul class="sp-pagination-arrow sp-right">
+			<li><a href="{$param_next}" class="next">NEXT</a></li>
+			<li><a href="{$param_last}" class="last">LAST</a></li>
+		</ul>
+	</div>
+</div>

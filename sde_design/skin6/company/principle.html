@@ -1,0 +1,82 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_sp/css/company.css)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">회사소개</a>
+			<a href="#none">제조원칙</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">ZENA</span>
+		<span class="ko">제조원칙</span>
+	</h1>
+</div><!--//종료-->
+
+<!--어바웃어스-->
+
+<div module="mall_company">
+	<!--@css(/css/module/mall/company.css)-->
+	<div>{$info}</div>
+	<div class="{$map_display|display}">
+		<!--타이틀-->
+		<!--@css(/_sp/apps/module/title/title.css)-->
+		<div id="sp-title">
+			<h1>LOCATION</h1>
+		</div><!--//종료-->
+		<p>{$map_image}</p>
+	</div>
+</div>
+
+<div class="mh_content_wrap">
+
+	<div class="mh_rule_item">
+		
+		<div class="mh_rule_header">
+			<p class="title_desc">
+				원료 선별에서부터 정성을 더하고 건강을 생각하는 마음으로 제품을 생산하며<br>
+				고객이 행복한 오늘, 더 아름다운 내일을 설계합니다.
+			</p>
+			<p class="title">
+				<img src="/_sp/image/company/title_rule_txt2.gif" alt="달맞이자연식품은 원칙을 지키기 위해 언제나 최선을 다합니다!"/>
+			</p>
+			<span class="bg"></span>
+		</div>
+		
+		<ul class="rule_content">
+			<li>
+				<img src="/_sp/image/company/mh_rule2_1.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">40여넌 경력의<br><strong>한의사가 개발</strong></p>
+			</li>
+			<li>
+				<img src="/_sp/image/company/mh_rule2_2.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">높은 함유량의<br><strong>고농축 원료</strong></p>
+			</li>
+			<li>
+				<img src="/_sp/image/company/mh_rule2_3.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">인증된 제조사의<br><strong>품질 위생관리</strong></p>
+			</li>
+			<li>
+				<img src="/_sp/image/company/mh_rule2_4.png" alt="달맞이자연식품 제조원칙"/>
+				<p class="txt">제품에 대한<br><strong>지극한 정성</strong></p>
+			</li>
+		</ul>
+	</div>
+</div>
+

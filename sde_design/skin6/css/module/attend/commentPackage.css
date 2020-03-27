@@ -1,0 +1,59 @@
+/* 댓글형 > 댓글 작성 */
+.xans-attend-commentwrite { margin:15px 0 0px; padding:11px 20px; border:5px solid #e8e8e8; background:#fbfafa; font-size:12px; color:#353535; }
+.xans-attend-commentwrite legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
+.xans-attend-commentwrite .form { position:relative; padding:0 96px 0 0; }
+.xans-attend-commentwrite .form textarea { width:100%; height:44px; padding:2px 2px 2px 4px; border:1px solid #d9d9d9; color:#202020; }
+.xans-attend-commentwrite .form a { position:absolute; top:0; right:0; }
+    /* 보안문자 */
+    .xans-attend-commentwrite .security { margin:10px 0 0; font-size:11px; color:#757575; }
+    .xans-attend-commentwrite .security img,
+    .xans-attend-commentwrite .security .keyword { vertical-align:middle; }
+    .xans-attend-commentwrite .security .keyword { width:130px; height:20px; margin:0 2px; line-height:20px; border:1px solid #d9d9d9; color:#202020; }
+
+/* 댓글형 > 댓글리스트 */
+.xans-attend-commentlist { border-top:1px solid #d7d5d5; margin:20px 0 0 0;}
+.xans-attend-commentlist .memoArea { position:relative; overflow:hidden; border:1px solid #d7d5d5; border-top:none; color:#353535; }
+.xans-attend-commentlist .memoArea p { padding:12px 20px 7px; }
+.xans-attend-commentlist .memoArea .name { float:left; font-weight:bold; }
+.xans-attend-commentlist .memoArea .date { margin:0 15px; font-weight:normal; font-size:11px; }
+.xans-attend-commentlist .memoArea .memo { clear:both; border-top:1px solid #e9e9e9; padding:15px 0 10px 30px; }
+
+/* 코멘트 작성폼 */
+#commentForm { display:block; }
+
+/* 댓글형 > 이벤트 제목 */
+.xans-attend-commenttitle p { font-size:14px; font-weight:bold; color:#747474; }
+.xans-attend-commenttitle select { width:100%; font-size:12px; color:#747474; }
+
+
+
+
+    /********************************************************************
+        판다씨 시작
+    ********************************************************************/
+
+	.xans-attend-commentwrite { margin:20px 0; padding:30px; border:1px solid #f0f0f0; background: #f9f9f9; font-size: 12px; color: #333; }
+	.xans-attend-commentwrite .security input { width: 120px;height: 30px;line-height: 30px;background: #eaeaea;margin-left:9px;border: 0;padding: 0 10px;text-align: left;border-radius: 5px;display:inline-block; vertical-align:top; }
+	#sp-attend .sp-no-result-found p { height:190px; }
+	#sp-attend .xans-attend-commentlist + .sp-no-result-found { display:none; }
+
+	#sp-attend .sp-attend-box {  }
+	#sp-attend .sp-attend-box > ul {}
+	#sp-attend .sp-attend-box > ul > li.sp-left { float:left; width:49%; }
+	#sp-attend .sp-attend-box > ul > li.sp-right { float:right; width:49%; }
+
+	.xans-attend-commentlist { border:0; }
+	.xans-attend-commentlist .memoArea { position: relative; overflow: visible; border: 1px solid #f0f0f0; color: #353535; border-radius:5px; background:#fff; padding:30px; }
+	.xans-attend-commentlist .memoArea + .memoArea { margin-top:5px; }
+
+	.xans-attend-commentlist .memoArea .name { padding:0 0 0 70px; margin:0; }
+	.xans-attend-commentlist .memoArea .name i { position:absolute; font-style:normal; top:30px; left:30px; width:40px; height:40px; border-radius:40px; line-height:40px; letter-spacing:0; font-size:16px; background:#444; color:#fff; text-align:center; }
+	.xans-attend-commentlist .memoArea .name span { position:relative; top:-1px; display:inline-block; font-size:9px; letter-spacing:0.1em; color:#999; background:#f0f0f0; padding:2px 7px 1px 7px; margin-left:3px; border-radius:8px; }
+	.xans-attend-commentlist .memoArea .memo { border:0; padding:5px 0 0 70px; margin:0; color:#888; }
+
+	.xans-attend-commenttitle { margin-top:20px; }
+	.xans-attend-commenttitle select { height:40px; padding:0 15px; line-height:34px; background:#f9f9f9; border:1px solid #f0f0f0 }
+
+    /********************************************************************
+        판다씨 종료
+    ********************************************************************/

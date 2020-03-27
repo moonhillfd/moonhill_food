@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer---x---" module="product_headcategory">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#">TIMESALE</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--상품목록-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<!--타임세일-->
+<!--@css(/_sp/apps/module/timesale/timesale.css)-->
+<!--@js(/_sp/apps/module/timesale/timesale.js)-->
+<div id="sp-timesale" class="sp-product" module="product_listmain_12" grid="3" control="true" compare="false" class="layer">
+	<!--
+		$count = 100
+		$basket_result = /product/add_basket.html
+		$basket_option = /product/basket_option.html
+	-->
+	<!--@import(/_sp/apps/layout/product/product-1/product_timesale_package.html)-->
+</div>
+<div class="sp-no-result-found">
+	<p>검색 결과가 없습니다.</p>
+</div><!--//종료-->

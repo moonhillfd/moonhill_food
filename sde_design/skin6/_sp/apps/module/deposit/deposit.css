@@ -1,0 +1,83 @@
+
+	/*
+		<!--위시리스트 미리보기-->
+		<!--@css(/_sp/apps/module/deposit/deposit.css)-->
+		<!--@js(/_sp/apps/module/deposit/deposit.js)-->
+		<button deposit data-url="/_sp/apps/module/deposit/deposit.html">최근 본 상품</button>
+	*/
+
+	#sp-deposit-loading { z-index:998; position:absolute; display:none; font-size:11px; height:21px; line-height:18px; background:#333; color:#fff; border-radius:5px; padding:2px 8px 0 6px; letter-spacing:-1px; }
+	#sp-deposit { z-index:999; position:fixed; display:none; width:100%; height:100%; top:0; left:0; overflow-y:auto; }
+
+	/* 선택사항 */
+	#sp-deposit { background-image:url(/_sp/image/opacity/wht-50.png); }
+	/* #sp-deposit { background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#30000000', endColorstr='#30000000'); } */
+
+	#sp-deposit,
+	#sp-deposit * { 
+		outline:none; 
+		-webkit-box-sizing : border-box;
+		 -khtml-box-sizing : border-box;
+		   -moz-box-sizing : border-box;
+		    -ms-box-sizing : border-box;
+		     -o-box-sizing : border-box;
+		        box-sizing : border-box;
+	}
+	#sp-deposit .sp-deposit-inside { 
+		top:50%;
+		width:600px;
+		height:300px;
+		margin:-150px auto 0 auto;
+		position:relative;
+		background-image:url(/_sp/image/opacity/wht-95.png);
+		box-shadow:0 1px 3px 0 rgba(0,0,0,0.15),0 4px 8px 3px rgba(0,0,0,0.07);
+	}
+
+	#sp-deposit .sp-deposit-inside { visibility:hidden; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0); 
+		-moz-transform: translate(0, 10px);
+		-webkit-transform: translate(0, 10px);
+		-o-transform: translate(0, 10px);
+		-ms-transform: translate(0, 10px);
+		transform: translate(0, 10px);
+		-webkit-transition : all 0.3s ease;
+		-khtml-transition : all 0.3s ease;
+		-moz-transition : all 0.3s ease;
+		-ms-transition : all 0.3s ease;
+		-o-transition : all 0.3s ease;
+		transition : all 0.3s ease;
+	}
+	#sp-deposit .sp-deposit-inside.active { visibility:visible; opacity:1; filter:alpha(opacity=100); -ms-filter:alpha(opacity=100); 
+		-moz-transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+
+	#sp-deposit .sp-deposit-close { position:absolute; width:50px; height:50px; right:0; top:0; border:0; background:transparent url(/_sp/image/cafe24/common/btn_close.gif) no-repeat center center; }
+	#sp-deposit h3 { font-size:13px; color:#fff; text-align:left; line-height:52px; height:50px; padding-left:25px; background:#444 url(/_sp/image/cafe24/layer_background.gif) no-repeat center left; }
+
+	#sp-deposit .overview { width:100%; }
+	#sp-deposit .scroll-bar { z-index:9; }
+	#sp-deposit .sp-deposit-loop {}
+	#sp-deposit .sp-deposit-loop ul {}
+	#sp-deposit .sp-deposit-loop ul li {}
+	#sp-deposit .sp-deposit-loop ul li + li { border-top:1px solid #f0f0f0; }
+	#sp-deposit .sp-deposit-loop ul li .box { display:block; *display:inline-block;_width /**/:100%;padding:15px 110px 15px 110px; }
+	#sp-deposit .sp-deposit-loop ul li .box:hover { background:#f9f9f9; }
+	#sp-deposit .sp-deposit-loop ul li .box:after { clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; }
+	#sp-deposit .sp-deposit-loop ul li .box .left { float:left;position:relative;left:-110px;width:110px;margin-right:-110px; padding:0 15px 0 25px; }
+	#sp-deposit .sp-deposit-loop ul li .box .left a { display:block; }
+	#sp-deposit .sp-deposit-loop ul li .box .left img { width:100%; }
+	#sp-deposit .sp-deposit-loop ul li .box .center { float:left;width:100%;  }
+	#sp-deposit .sp-deposit-loop ul li .box .right { float:left;position:relative;left:110px;width:110px;margin-left:-110px; text-align:right; padding:0 25px 0 15px; }
+	#sp-deposit .sp-deposit-loop ul li .box .center p { font-weight:bold; font-size:11px; }
+	#sp-deposit .sp-deposit-loop ul li .box .center img { height:16px; margin-left:5px; }
+	#sp-deposit .sp-deposit-count { font-size:11px; font-weight:bold; font-style:normal; position:absolute; top:50%; margin:-10px 0 0 7px; line-height:21px; height:20px; padding:0 7px 0 7px; border-radius:10px; background:#912b45; color:#fff; }
+	#sp-deposit .sp-deposit-count[count="0"] { background:#666; }
+	#sp-deposit .sp-btn-group { position:absolute; left:0; bottom:0; width:100%; }
+	#sp-deposit .sp-no-result { font-size:11px; color:#666; margin:20px; background:#f9f9f9; text-align:center; padding:20px; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+
+	}

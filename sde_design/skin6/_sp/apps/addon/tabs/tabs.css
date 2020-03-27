@@ -1,0 +1,59 @@
+
+	/*
+		탭
+
+		data-start="2" // 시작할 인덱스
+		data-speed="300" // 페이드 속도 , 1이면 삭제에 가깝다.
+
+		 > tabsControl 의 컨트롤은 자동으로 생성되며, 좌우 100%를 맞춘다.
+
+		기본 마크업
+		<div style="width:300px;border:1px solid #333;">
+			<div tabs data-start="2" data-speed="300">
+				<div tabsContainer>
+					<div data-title="TAB 1">1</div>
+					<div data-title="TAB 2">2<br />2</div>
+					<div data-title="TAB 3 LONG TITLE">3<br />3<br />3<br />3<br />3</div>
+				</div>
+			</div>
+		</div>
+	*/
+
+	[tabs] { position:relative; }
+	[tabs] [tabsControl]:after { clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; }
+	[tabs] [tabsControl] li { float:left; cursor:pointer; }
+	[tabs] [tabsControl] li span { display:block; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding:0 10px; }
+	[tabs] [tabsContainer] [tabsLoop] { display:none; }
+
+	/* xbar 디자인 */
+	[tabs][design="xbar"] [tabsControl] { z-index:1; position:relative; top:1px; overflow:hidden; }
+	[tabs][design="xbar"][count="1"] [tabsControl] { display:none; }
+	[tabs][design="xbar"] [tabsControl] li span { z-index:11; position:relative; }
+
+	[tabs][design="xbar"] [tabsControl] li { font-size:12px; color:#999; letter-spacing:0.1em; position:relative; line-height:50px; background-image:url(/_sp/apps/addon/tabs/tabs_xbar_bg2.png); }
+	[tabs][design="xbar"] [tabsControl] li:before,
+	[tabs][design="xbar"] [tabsControl] li:after { content:''; z-index:1; top:0; position:absolute; width:100px; height:50px; background:transparent url(/_sp/apps/addon/tabs/tabs_xbar.png) no-repeat 0 0; }
+	[tabs][design="xbar"] [tabsControl] li:before { left:-50px; background-position:0 -100px; }
+	[tabs][design="xbar"] [tabsControl] li:after { right:-50px; background-position:0 -150px; }
+	[tabs][design="xbar"] [tabsControl] li.active { color:#000; z-index:10 !important; background-image:url(/_sp/apps/addon/tabs/tabs_xbar_bg1.png); }
+	[tabs][design="xbar"] [tabsControl] li.active:before,
+	[tabs][design="xbar"] [tabsControl] li.active:after { content:''; z-index:1; top:0; position:absolute; width:100px; height:50px; background:transparent url(/_sp/apps/addon/tabs/tabs_xbar.png) no-repeat 0 0; }
+	[tabs][design="xbar"] [tabsControl] li.active:before { left:-50px; background-position:0 -50px; }
+	[tabs][design="xbar"] [tabsControl] li.active:after { right:-50px; }
+
+	[tabs][design="xbar"] [tabsControl] li[area="first"]:before { background-position:-49px -250px; }
+	[tabs][design="xbar"] [tabsControl] li[area="first"].active:before { background-position:-49px -200px; }
+	[tabs][design="xbar"] [tabsControl] li[area="last"]:after { background-position:-49px -250px; }
+	[tabs][design="xbar"] [tabsControl] li[area="last"].active:after { background-position:-49px -200px; }
+	[tabs][design="xbar"] [tabsControl]:before { content:''; display:block; z-index:11; position:absolute; width:1px; height:100%; background:#eaeaea; top:0; right:0;}
+
+	[tabs][design="xbar"] h3 { display:none; }
+
+	/* 타입 2 : 그림자 박스형 */
+	[tabs][design="xbar"] h3 { display:none; width:100%; position:absolute; text-align:center; color:#ff3000; font-size:0; top:-18px; }
+	[tabs][design="xbar"][count="1"] h3 { display:block; }
+	[tabs][design="xbar"][count="1"] h3 span { position:relative; display:inline-block !important; }
+	[tabs][design="xbar"][count="1"] h3 span.sp-fix {  }
+	[tabs][design="xbar"][count="1"] h3 span:before { content:''; z-index:1; width:100%; height:100%; position:absolute; border:2px solid #333; top:4px; left:4px; -webkit-box-sizing:border-box; -khtml-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+	[tabs][design="xbar"][count="1"] h3 span.sp-fix:before  { background:none !important; }
+	[tabs][design="xbar"][count="1"] h3 span em { letter-spacing:0.1em; position:relative; z-index:2; display:block; font-size:11px; border:2px solid #333; color:#333; padding:9px 19px 8px 19px; line-height:100%; background:#fff; font-weight:bold; font-style:normal; }

@@ -1,0 +1,28 @@
+
+	/*
+		쿠키 제어하기
+
+		id="sp-tee"								// 디자인을 위해 사용하라. 이 라이브러리완 관계없다.
+		spcookie="cover"						// 쿠키 적용의 부모격 division
+		data-cookie="sp_tee_1"					// 쿠키의 유니크한 이름을 적자.
+		data-style="body{padding-top:100px;}"	// 이 쿠키가 죽어있을 때 표현하고픈 간략한 스타일시트. 나는 바디에 적용했다.
+		spcookie="button"						// 쿠키 커버 내부에 존재해야 하며, 이 attribute 를 요구한다. 클릭하면 부모의 이름을 가진 쿠키가 굽힌다.
+
+		data-reset="true"						// 테스트를 할거면 쿠키를 삭제해주는 옵션을 이용하자. 기본 false
+
+		기본적인 구성
+
+		<style>
+			#sp-layout { z-index:2; position:relative; background:#fff; }
+			#sp-tee { z-index:1; position:fixed; top:0; left:0; right:0; }
+			#sp-tee > button { z-index:3; position:absolute; top:0; right:0; }
+		</style>
+		<div id="sp-tee" spcookie="cover" data-cookie="sp_tee_1" data-reset="false" data-style="body{padding-top:100px;}">
+			<button spcookie="button">하루동안 열지않기</button>
+			<!--쿠키-->
+			<!--@css(/_sp/apps/addon/cookies/cookies.css)-->
+			<!--@js(/_sp/apps/addon/cookies/cookies.js)-->
+	*/
+
+	[spcookie="cover"] { display:none; }
+	[spcookie="cover"].active { display:block; }

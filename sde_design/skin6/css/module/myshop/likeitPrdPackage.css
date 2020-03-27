@@ -1,0 +1,10 @@
+.xans-myshop-likeproductlist td.thumb img { width:60px !important; height:auto; }
+.xans-myshop-likeproductlist td strong a { font-size:12px; letter-spacing:0.02em; }
+
+.xans-myshop-likecategorylist td a { font-size:12px; letter-spacing:0.03em; }
+
+.xans-myshop-likeproductlist td,
+.xans-myshop-likecategorylist td { position:relative; }
+
+.xans-myshop-likeproductlist td a.sp-right,
+.xans-myshop-likecategorylist td a.sp-right { position:absolute; top:50%; right:15px; margin-top:-12px; }

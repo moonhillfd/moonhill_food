@@ -1,0 +1,52 @@
+
+	#sp-boardload { background:#fff; }
+	#sp-boardload h3 { text-align:center; padding:30px 0; }
+	#sp-boardload h3 span { display:inline-block; font-size:18px; letter-spacing:0.1em; font-weight:normal; }
+	#sp-boardload > ul { font-size:0; text-align:center; }
+	#sp-boardload > ul:after { clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; }
+	#sp-boardload > ul > li { display:inline-block; vertical-align:top; margin-top:20px; margin-bottom:20px; }
+	#sp-boardload .sp-boardload-element { text-align:center; position:relative; }
+	#sp-boardload .sp-boardload-element .sp-thumb { display:block; }
+	#sp-boardload .sp-boardload-element .sp-thumb img { width:100%; max-width:100%; }
+	#sp-boardload .sp-boardload-element .sp-subject { font-size:12px; padding:17px 20px 13px 20px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	#sp-boardload .sp-boardload-element .sp-content { font-size:11px; padding:0 20px; color:#999; line-height:16px; height:32px; overflow:hidden; }
+	#sp-boardload .sp-boardload-element .sp-rank { z-index:1; top:0; left:0; position:absolute; font-size:9px; padding:0 8px; line-height:22px; letter-spacing:0.1em; }
+	#sp-boardload .sp-boardload-element .sp-rank[theme="on"] { color:#fff; background:#444; }
+	#sp-boardload .sp-boardload-element .sp-rank[theme="off"] { color:#999; background:#fff; }
+	#sp-boardload .sp-boardload-element .sp-detail { color:#dadada; display:inline-block; font-size:9px; border:2px solid #f5f5f5; padding:0 22px; line-height:30px; margin-top:20px; border-radius:10px; 
+		-webkit-transition : all 0.3s ease;
+		 -khtml-transition : all 0.3s ease;
+		   -moz-transition : all 0.3s ease;
+			-ms-transition : all 0.3s ease;
+			 -o-transition : all 0.3s ease;
+				transition : all 0.3s ease;
+	}
+	#sp-boardload .sp-boardload-element:hover .sp-detail { color:#333; border:2px solid #eaeaea; }
+	#sp-boardload .sp-boardload-element .sp-detail:hover { border:2px solid #333; background:#333; color:#fff; }
+	#sp-boardload .sp-boardload-element .sp-detail:hover:after {  }
+
+	#sp-boardload[grid="2"] > ul { margin-left:-3%; }
+	#sp-boardload[grid="2"] > ul > li { width:47%; margin-left:3%; }
+	#sp-boardload[grid="2"] > ul > li + li ~ li { display:none; }
+
+	#sp-boardload[grid="3"] > ul { margin-left:-3.333%; }
+	#sp-boardload[grid="3"] > ul > li { width:30%; margin-left:3.333%; }
+	#sp-boardload[grid="3"] > ul > li + li + li ~ li { display:none; }
+
+	#sp-boardload[grid="4"] > ul { margin-left:-3%; }
+	#sp-boardload[grid="4"] > ul > li { width:22%; margin-left:3%; }
+	#sp-boardload[grid="4"] > ul > li + li + li + li ~ li { display:none; }
+
+	#sp-boardload[grid="5"] > ul { margin-left:-2%; }
+	#sp-boardload[grid="5"] > ul > li { width:18%; margin-left:2%; }
+	#sp-boardload[grid="5"] > ul > li + li + li + li + li ~ li { display:none; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+		
+		#sp-boardload h3 { padding:30px 0 10px 0; }
+		#sp-boardload h3 span { font-size:14px; }
+		#sp-boardload .sp-boardload-element .sp-subject { font-size:10px; padding:9px 20px 6px 20px; }
+		#sp-boardload .sp-boardload-element .sp-content { font-size:9px; padding:0 20px; line-height:13px; height:26px; }
+		#sp-boardload .sp-boardload-element .sp-detail { color:#333; padding:0 13px; line-height:22px; }
+
+	}

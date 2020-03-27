@@ -1,0 +1,78 @@
+<div module="Mall_UrgencycallPrdResult">
+
+    <p class="sp-board-layer-count">TOTAL <strong>{$totalPrd}</strong> RESULT</p>
+
+    <div class="ec-base-table typeList">
+        <table border="1" summary="">
+            <caption>검색결과</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:130px;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <tbody class="head">
+                <tr>
+                    <td scope="col">상품명</td>
+                    <td scope="col">상품코드</td>
+                    <td scope="col">{$form.prdPagenum}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="scroll">
+            <table border="1" summary="">
+                <caption>검색결과</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:130px;" />
+                    <col style="width:85px;" />
+                </colgroup>
+                <tbody class="{$displayPrdlist|display} center">
+                    <tr>
+                        <td class="product left">
+                            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                            <p>{$product_name}</p>
+                        </td>
+                        <td>{$product_code}</td>
+                        <td><a href="#none" onClick="{$selectfn}" class="sp-btn" theme="white" scale="medium" change="check"><span>선택</span></a></td>
+                    </tr>
+                    <tr>
+                        <td class="product left">
+                            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                            <p>{$product_name}</p>
+                        </td>
+                        <td>{$product_code}</td>
+                        <td><a href="#none" onClick="{$selectfn}" class="sp-btn" theme="white" scale="medium" change="check"><span>선택</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+			<div class="sp-no-result-found {$displayEmpty|display}" theme="product" scale="medium">
+				<p>검색 결과가 없습니다.</p>
+			</div><!--//종료-->
+        </div>
+    </div>
+</div>
+
+<!--페이지-->
+<!--@css(/_sp/apps/module/pagination/pagination.css)-->
+<div class="sp-pagination mgt3 mgb5" module="Mall_UrgencycallPrdPage">
+	<ul class="sp-pagination-arrow sp-left">
+		<li><a href="#none" class="first">FIRST</a></li>
+		<li><a href="{$prev}" class="prev">PREV</a></li>
+	</ul>
+	<ul class="sp-pagination-page">
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+		<li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+	</ul>
+	<ul class="sp-pagination-arrow sp-right">
+		<li><a href="{$next}" class="next">NEXT</a></li>
+		<li><a href="#none" class="last">LAST</a></li>
+	</ul>
+</div><!--종료-->

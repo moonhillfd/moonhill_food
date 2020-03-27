@@ -1,0 +1,51 @@
+<div id="sp-result">
+	<div id="sp-today">
+		<div class="sp-today-inside" module="product_recentlist">
+			<!--
+				$count = 100
+			-->
+			<button class="sp-today-close"></button>
+			<h3>최근 본 상품</h3>
+			<div class="sp-today-loop" module="product_listitem" scrollbar rule="winsize,prison" data-height="406">
+				<ul>
+					<li>
+						<div class="box">
+							<div class="left"><a href="{$link_product_detail}"><img src="{$image_medium}"></a></div>
+							<div class="center">
+								<a href="{$link_product_detail}"><strong>{$product_name} {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</strong></a>
+								<p>
+									{$product_price}{$product_tax_type_text}
+									<strong class="{$product_sale_price_display|display}">{$product_sale_price}</strong>
+								</p>
+							</div>
+							<div class="right">
+								{$zoom_icon}
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="box">
+							<div class="left"><a href="{$link_product_detail}"><img src="{$image_medium}"></a></div>
+							<div class="center">
+								<a href="{$link_product_detail}"><strong>{$product_name} {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</strong></a>
+								<p>
+									{$product_price}{$product_tax_type_text}
+									<strong class="{$product_sale_price_display|display}">{$product_sale_price}</strong>
+								</p>
+							</div>
+							<div class="right">
+								{$zoom_icon}
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="sp-no-result {$empty_display|display}">
+				<p>최근본 상품 내역이 없습니다.</p>
+			</div>
+			<div class="sp-btn-group" grid="1">
+				<a href="/product/recent_view_product.html" class="sp-btn" theme="my" scale="xlarge" change="right"><span todaycount>최근 본 상품 전체보기</span></a>
+			</div>
+		</div>
+	</div>
+</div>

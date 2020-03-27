@@ -1,0 +1,87 @@
+.xans-layout-categorysupplylist { position:relative; z-index:7; margin:0 0 40px 0; }
+.xans-layout-categorysupplylist .mainDirect a { 
+	display:block;
+	font-size:18px;
+	letter-spacing:0.05em;
+	margin:50px 0 20px 0;
+	border-bottom:1px solid #999;
+	padding:0 0 20px 20px;
+	position:relative;
+}
+.xans-layout-categorysupplylist .mainDirect a:before {
+	content:'';
+	position:absolute;
+	width:4px;
+	height:15px;
+	background:#333;
+	left:0;
+	margin-top:0;
+}
+.xans-layout-categorysupplylist .position { font-size:0; }
+.xans-layout-categorysupplylist .position > ul { margin-left:-20px; }
+.xans-layout-categorysupplylist .position > ul > li { position:relative; width:15.1%; display:inline-block; vertical-align:top; margin:0 0 20px 20px; }
+.xans-layout-categorysupplylist .position > ul > li > a { font-size:12px; display:block; padding:12px 20px; border:1px solid #f0f0f0; letter-spacing:0.07em; }
+
+.xans-layout-categorysupplylist .xans-layout-third { z-index:1; position:absolute; width:100%; top:100%; margin-top:-1px; display:none; }
+.xans-layout-categorysupplylist .position > ul > li:hover > a { border-left:1px solid #333; background:#fafafa; }
+.xans-layout-categorysupplylist .position > ul > li:hover .xans-layout-third { display:block; }
+.xans-layout-categorysupplylist .xans-layout-third > li { position:relative; }
+.xans-layout-categorysupplylist .xans-layout-third > li > a { display:block; font-size:11px; padding:10px 20px 9px; border:1px solid #f0f0f0; background:#fff; letter-spacing:0.07em; }
+
+.xans-layout-categorysupplylist .sub-category { z-index:2; position:absolute; width:100%; left:80%; top:0; margin-left:-1px; display:none; }
+.xans-layout-categorysupplylist .xans-layout-third > li:hover > a { border-left:1px solid #333; background:#fafafa; }
+.xans-layout-categorysupplylist .xans-layout-third > li:hover .sub-category  { display:block; }
+.xans-layout-categorysupplylist .sub-category > ul {}
+.xans-layout-categorysupplylist .sub-category > ul > li { position:relative; }
+.xans-layout-categorysupplylist .sub-category > ul > li + li { margin-top:-1px; }
+.xans-layout-categorysupplylist .sub-category > ul > li > a { display:block; font-size:11px; letter-spacing:0.07em; padding:10px 20px 9px; border:1px solid #f0f0f0; background:#fff; }
+
+.xans-layout-categorysupplylist .ecode { z-index:3; position:absolute; width:100%; left:80%; top:0; margin-left:-1px; display:none; }
+.xans-layout-categorysupplylist .sub-category > ul > li:hover > a { border-left:1px solid #333; background:#fafafa; }
+.xans-layout-categorysupplylist .sub-category > ul > li:hover .ecode { display:block; }
+.xans-layout-categorysupplylist .ecode > li { position:relative; }
+.xans-layout-categorysupplylist .ecode > li + li { margin-top:-1px; }
+.xans-layout-categorysupplylist .ecode > li > a { display:block; font-size:11px; letter-spacing:0.07em; padding:10px 20px 9px; border:1px solid #f0f0f0; background:#fff; }
+
+.xans-layout-categorysupplylist .ecode > li > a:hover { border-left:1px solid #333; background:#fafafa; }
+/*
+.xans-layout-categorysupplylist .position { border-bottom:1px solid #d5d5d5; }
+.xans-layout-categorysupplylist .position ul.xans-layout-third > li,
+.xans-layout-categorysupplylist .position a.second { border-left: 1px solid #d5d5d5; border-right:1px solid #d5d5d5; }
+.xans-layout-categorysupplylist .position a:hover { color:#008bcc; }
+.xans-layout-categorysupplylist .position ul li a { display:block; padding:12px 10px; border-top:1px solid #e8e8e8; color:#2e2e2e; word-spacing:-1px; text-decoration:none; }
+.xans-layout-categorysupplylist .position ul li.depth2 a { padding:12px 10px 12px 20px; }
+.xans-layout-categorysupplylist .position ul li.depth2 a:hover { background: #fff url("//img.echosting.cafe24.com/skin/base/layout/ico_category2.gif") no-repeat 161px 16px; }
+*/
+    /* 1depth */
+	/*
+    .xans-layout-categorysupplylist .position > ul > li > ul > li { position:relative; z-index:10; }
+    .xans-layout-categorysupplylist .position > ul > li > a { border-top: 1px solid #d5d5d5; font-size:14px; font-weight:bold; background: #f8f8f8 url("//img.echosting.cafe24.com/skin/base/layout/ico_category1_selected.gif") no-repeat 160px 18px; }
+    .xans-layout-categorysupplylist .position > ul > li > a:hover,
+    .xans-layout-categorysupplylist .position > ul > li.on > a { padding-left:10px; background: #f8f8f8 url("//img.echosting.cafe24.com/skin/base/layout/ico_category2_selected.gif") no-repeat 160px 18px; }
+	*/
+        /* 3depth ~ 4depth */
+		/*
+        .xans-layout-categorysupplylist .sub-category { position:absolute; top:0; left:178px; width:170px; background:#fff; }
+        .xans-layout-categorysupplylist .sub-category > ul > li a { border-bottom:1px solid #fff; }
+		*/
+        /* 3depth */
+		/*
+        .xans-layout-categorysupplylist .sub-category > ul > li > a { border:0; border-top:1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; }
+		*/
+        /* 4depth */
+		/*
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth { border:1px solid #d5d5d5; border-top:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth:first-child { border:1px solid #d5d5d5; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth > a { margin:0 10px; padding:12px 3px; border:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth li { margin:0 10px; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth li:first_child { border-top:1px solid #d8d8d8; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth a { margin:0 0 0 10px; padding:12px 3px; border:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth a:hover { background:none; }
+		*/
+
+
+.xans-mall-supplysearch { z-index:9; position:relative; }
+.xans-mall-supplysearch > ul { position:absolute; top:36px;right:0; }
+.xans-mall-supplysearch > ul > li { font-size:0; }
+.xans-mall-supplysearch > ul > li input { width:170px; height:30px; line-height:30px; border:0; background-color:#f5f5f5; padding:0 15px; }

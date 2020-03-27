@@ -1,0 +1,47 @@
+<style>
+	@font-face {
+		font-family: 'noto sans';
+		src: url('/_sp/font/noto_sans/NotoSans-Regular.eot');
+		src: url('/_sp/font/noto_sans/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/noto_sans/NotoSans-Regular.woff2') format('woff2'),
+			 url('/_sp/font/noto_sans/NotoSans-Regular.woff') format('woff'),
+			 url('/_sp/font/noto_sans/NotoSans-Regular.ttf') format('truetype'),
+			 url('/_sp/font/noto_sans/NotoSans-Regular.svg#source_sans_proregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'noto sans';
+		src: url('/_sp/font/noto_sans/NotoSans-Medium.eot');
+		src: url('/_sp/font/noto_sans/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+			 url('/_sp/font/noto_sans/NotoSans-Medium.woff2') format('woff2'),
+			 url('/_sp/font/noto_sans/NotoSans-Medium.woff') format('woff'),
+			 url('/_sp/font/noto_sans/NotoSans-Medium.ttf') format('truetype'),
+			 url('/_sp/font/noto_sans/NotoSans-Medium.svg#source_sans_proregular') format('svg');
+		font-weight: bold;
+		font-style: normal;
+	}
+	.sp-font-ready body {
+		font-family: 'noto sans', "³ª´®°íµñ","NanumGothic","NanumGothicWebFont","Malgun Gothic","¸¼Àº °íµñ","Dotum","µ¸¿ò","Helvetica","Apple SD Gothic Neo","sans-serif";
+	}
+</style>
+<script src="/_sp/font/fontfaceobserver.js"></script>
+<script>
+(function( w ){
+	// if the class is already set, we're good.
+	if( w.document.documentElement.className.indexOf('sp-font-ready') > -1 ){
+		return;
+	}
+	var fontA = new w.FontFaceObserver('noto sans', {
+		weight: 400
+	});
+	var fontB = new w.FontFaceObserver('noto sans', {
+		weight: 700
+	});
+	w.Promise
+		.all([fontA.load(), fontB.load()])
+		.then(function(){
+			w.document.documentElement.className += ' sp-font-ready';
+		});
+}( this ));
+</script>

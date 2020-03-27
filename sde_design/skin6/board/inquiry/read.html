@@ -1,0 +1,180 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/myshop/index.html">마이페이지</a>
+			<a href="#none">INQUIRY · READ</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<div id="sp-title">
+	<h1>INQUIRY · READ</h1>
+</div><!--//종료-->
+
+<!--게시판-->
+<!--@js(/_sp/apps/module/board/board.js)-->
+<!--@css(/_sp/apps/module/board/board.css)-->
+<div id="sp-board" theme="inquiry" path="read" layout="sp-layout-fixed">
+
+	<!--상품정보-->
+	<div grid="1" class="sp-base-box sp-box" module="board_InquiryHead">
+		<ul>
+			<li class="sp-clear">
+				<i class="sp-base-userdot"></i>
+				<i product class="sp-base-userboxline"></i>
+				<div product class="sp-base-userbox">
+					<p class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" onerror="this.src='/_sp/image/cafe24/thumb/img_product_small.gif';" class="myshop_benefit_group_image_tag"></a></p>
+					<div class="sp-base-description">
+						<h4 class="sp-base-usertitle">PRODUCT INFORMATION</h4>
+						<p>{$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}</p>
+						<p><a href="/product/detail.html{$param_product}">{$product_name}</a></p>
+						<p><strong class="txtWarn">{$product_price}</strong> {$product_tax_type_text}</p>
+						<br />
+						<p><a href="/product/detail.html{$param_product}" title="새창으로 이동" target="_blank" class="sp-btn" theme="white" scale="medium" change="search">상품정보 상세보기</a></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div><!--종료-->
+
+	<!--리콰이어-->
+	<br /><br />
+	<div class="sp-required-title"><span>대량구매문의 글 상세보기</span></div>
+
+	<div module="board_InquiryView">
+		<!--@css(/css/module/board/inquiryView.css)-->
+		<!--
+			$login_page = /member/login.html
+		-->
+		<div class="ec-base-table gLayoutFixed">
+			<table border="1" summary="">
+			<caption>대량구매문의 상세</caption>
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">제목</th>
+					<td colspan="3">{$title}</td>
+				</tr>
+				<tr>
+					<th scope="row">작성자</th>
+					<td>{$name}</td>
+					<th scope="row">수량</th>
+					<td>{$product_cnt} 개</td>
+				</tr>
+				<tr>
+					<th scope="row">회사명</th>
+					<td>{$company_name}</td>
+					<th scope="row">연락처</th>
+					<td>{$phone}</td>
+				</tr>
+				<tr>
+					<th scope="row">국가명</th>
+					<td>{$country_name}</td>
+					<th scope="row">이메일</th>
+					<td>{$email}</td>
+				</tr>
+				<tr>
+					<th scope="row">답변여부</th>
+					<td><i class="sp-answer-{$is_answer|lower}"></i><span class="txtNum">{$is_answer}</span></td>
+					<th scope="row">문의일시</th>
+					<td>{$inquiry_date|date:Y-m-d H:i:s}</td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td colspan="3">
+						[{$postcode}]<br />
+						{$address1}<br />
+						{$address2}
+					</td>
+				</tr>
+				<tr class="view">
+					<td colspan="4" class="detail">{$inquiry_content}{$content_image}</td>
+				</tr>
+				<tr module="board_inquiryViewFile_1" class="attach">
+					<th>첨부파일</th>
+					<td colspan="3">
+						<p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+						<p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>카탈로그 신청</th>
+					<td colspan="3"><i class="sp-answer-{$is_catalog|lower}"></i><span class="txtNum">{$is_catalog}</span></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<div class="{$display_answer|display}">
+			<div class="ec-base-table">
+				<table border="1" summary="">
+				<caption>대량구매문의 답변</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">답변자</th>
+						<td>{$answer_name}</td>
+					</tr>
+					<tr>
+						<th scope="row">답변일시</th>
+						<td>{$answer_date|date:Y-m-d H:i:s}</td>
+					</tr>
+					<tr class="view">
+						<td colspan="2" class="detail">{$answer_content}</td>
+					</tr>
+					<tr module="myshop_inquiryViewFile_2" class="attach">
+						<th>첨부파일</th>
+						<td>
+							<p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+							<p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!--대기메세지-->
+		<div grid="1" class="sp-base-box sp-box mgt2 {$display_answer_none|display}">
+			<ul>
+				<li class="sp-clear">
+					<p class="sp-message"><span>빠른시간내에 답변드리겠습니다. 잠시만 기다려 주세요!</span></p>
+				</li>
+			</ul>
+		</div><!--종료-->
+
+		<!--버튼-->
+		<div class="ec-base-button" module="myshop_inquiryButton">
+			<div class="sp-btn-group" grid="0">
+				<p class="sp-left">
+					<a href="/board/inquiry/list.html{$list_param}" class="sp-btn" theme="white" scale="large" change="list">목록</a>
+				</p>
+				<p class="sp-right">
+					<a href="/board/inquiry/modify.html{$modify_param}" class="sp-btn" theme="black" scale="large" change="check">수정</a>
+					<a href="#none" onclick="{$action_delete}" class="sp-btn" theme="white" scale="large" change="close">삭제</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div><!--종료-->

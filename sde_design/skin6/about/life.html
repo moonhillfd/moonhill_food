@@ -1,0 +1,53 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_sp/css/company.css)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">브랜드</a>
+			<a href="#none">제나라이프</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<div class="head_title">
+			<span class="en">ZENA</span>
+			<span class="ko">제나라이프</span>
+		</div>
+	</h1>
+</div><!--//종료-->
+
+<!--어바웃어스-->
+<div layout="sp-layout-fixed">
+	<div module="mall_company">
+		<!--@css(/css/module/mall/company.css)-->
+		<div>{$info}</div>
+		<div class="{$map_display|display}">
+			<!--타이틀-->
+			<!--@css(/_sp/apps/module/title/title.css)-->
+			<div id="sp-title">
+				<h1>LOCATION</h1>
+			</div><!--//종료-->
+			<p>{$map_image}</p>
+		</div>
+	</div>
+</div>
+
+<div class="layout_sub_item">
+	<div class="content">
+		<img src="/image/common/brand_life.jpg" alt="brand_life" />
+	</div>
+</div>

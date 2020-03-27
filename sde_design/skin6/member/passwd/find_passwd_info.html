@@ -1,0 +1,115 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+
+<style>
+#sp-navigation.layer {position:initial}
+.sp-login-messenger p span.message {background-color:#fefee8;}
+</style>
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">로그인</a>
+			<a href="#none">비밀번호 찾기</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+
+<!--타이틀-->
+<!--@css(/_sp/apps/module/title/title.css)-->
+<!--@css(/_sp/css/mh-title.css)-->
+<div id="sp-title">
+	<h1 class="mh-title-item">
+		<span class="en">Find Password</span>
+		<span class="ko">비밀번호 찾기</span>
+	</h1>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_findpasswd">
+						<!--
+							$nextURL = /member/passwd/find_passwd_question.html
+						 -->
+						<div class="findPw">
+							<fieldset>
+								<legend>비밀번호 찾기 1단계 정보 입력</legend>
+								<ul class="sp-find-othertype">
+									<li class="member_type" style="display:none;"><strong class="term">회원유형</strong><span class="desc">{$form.searchType}<span class="gBlank5">{$form.check_method}</span></span></li>
+									<li class="member_id" class="gBlank20"><strong class="term">아이디</strong><span class="desc">{$form.member_id}</span></li>
+									<li id="name_view" class="name"><strong class="term" id="name_lable">이름</strong><span class="desc">{$form.name}</span></li>
+									<li id="ssn_view" class="ssn_no"><strong class="term" id="ssn_name">법인번호로 찾기</strong><span class="desc"> {$form.ssn} <span class="gBlank5 txtInfo">(-) 없이 숫자만 입력하세요.</span></span></li>
+									<li id="email_view" class="email" style="display:none;"><strong class="term">이메일로 찾기</strong><span class="desc">{$form.email}</span></li>
+									<li id="mobile_view" class="mobile" style="display:none;"><strong class="term">휴대폰 번호로 찾기</strong><span class="desc">{$form.mobile1} - {$form.mobile2} - {$form.mobile3}</span></li>
+									<li id="ipin_view" class="ipin" style="display:none;"><strong class="term">아이핀 인증</strong><span class="desc">회원가입을 아이핀으로 가입하신 <br />회원님께서는 아이핀으로 인증하세요.<a href="#none" onclick="{$action_func_find_passwd_question}" class="sp-btn" theme="white" scale="medium" change="right">아이핀 인증</a></span>
+									</li>
+									<li id="mobile_auth_view" class="mobileauth" style="display:none;"><strong class="term">휴대폰 인증</strong><span class="desc txtInfo">본인 명의의 휴대폰으로<br /> 아이디 찾기를 진행할 수 있습니다. <br />휴대폰 명의자의 정보로 가입한 <br />아이디 찾기가 가능합니다.</span></li>
+								</ul>
+								<hr class="sp-form-textline mgb2" />
+								<p class="sp-btn-group" grid="1">
+									<a href="#none" onclick="{$action_func_find_passwd_question}" class="sp-btn" theme="black" scale="bubble" change="check">OK</a>
+								</p>
+							</fieldset>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<!--메신저-->
+					<div class="sp-login-messenger">
+						<p class="me">
+							<span class="time">00:00</span>
+							<span class="message">
+								비밀번호를 찾고 있어요
+							</span>
+						</p>
+						<p>
+							<span class="message">
+								가입하신 방법에 따라 비밀번호 찾기가 가능합니다.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								법인사업자 회원 또는 외국인 회원의 경우<br /> 
+								법인명과 법인번호 또는 이름과 등록번호를 입력해 주세요.
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+						<p>
+							<span class="message">
+								혹시 기억나셨다면 로그인을 해주세요.<br />
+								아이디가 없으시다면, 회원가입을 해주세요.
+								<br /><br />
+								<a href="/member/login.html" class="sp-btn" theme="white" scale="small" change="right">로그인</a>
+								<a href="/member/join.html" class="sp-btn" theme="white" scale="small" change="right">회원가입</a>
+								<br /><br />
+								: D
+							</span>
+                            <span class="time">00:00</span>
+						</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

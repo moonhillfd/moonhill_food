@@ -1,0 +1,79 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="#none">GIFT</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--사은품-->
+<!--@js(/_sp/apps/module/order/gift.js)-->
+<!--@css(/_sp/apps/module/order/gift.css)-->
+<div layout="sp-layout-fixed">
+
+    <!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>GIFT · EVENT</h1>
+	</div><!--//종료-->
+
+	<!--사은품-->
+	<div id="sp-gift-list" module="gift_list">
+		<p class="sp-gift-icon"><img src="/_sp/apps/module/order/gift.gif"></p>
+		<div class="sp-gift-list-loop sp-clear" module="gift_second">
+			<div class="sp-gift-list-element" module="gift_Third">
+				<h3>GIFT PRODUCT LIST</h3>
+				<ul scrollbar rule="prison" data-height="165">
+					<li class="sp-gift-list-element-loop sp-clear">
+						<p class="sp-left"><img src="{$gift_image}" alt="" /></p>
+						<p class="sp-right">
+							<span>{$product_name}</span>
+							<strong>GIFT POINT {$product_price|numberformat}</strong>
+						</p>
+					</li>
+					<li class="sp-gift-list-element-loop sp-clear">
+						<p class="sp-left"><img src="{$gift_image}" alt="" /></p>
+						<p class="sp-right">
+							<span>{$product_name}</span>
+							<strong>GIFT POINT {$product_price|numberformat}</strong>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="sp-gift-list-description">
+				<!--
+				(날짜만 : {$period_start_date} ~ {$period_end_date})
+				(시간만 : {$period_start_time} ~ {$period_end_time})
+				-->
+				<h3>{$benefit_name}</h3>
+				<ul>
+					<li><i>NAME</i><strong class="txtWarn">{$category_name}</strong> <span class="{$product_type_display|display}"> &nbsp; <a href="{$benefit_search_key}" class="sp-btn btnView" theme="white" scale="small">어떤 상품을 구매하면 증정되나요?</a></span></li>
+					<li giftsale data-promotion="{$period_start} ~ {$period_end}"><i>DATE</i>
+						<strong class="wide">{$period_start} ~ {$period_end}</strong>
+						<div giftsale-counter></div>
+					</li>
+					<li>
+						<i>DETAIL</i>
+						( {$benefit_member}
+						{$benefit_product_type}
+						{$order_price_range_min} 이상<span class="{$order_price_range_max_display|display}"> ~ {$order_price_range_max} 미만</span> 구매시 증정 )
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="sp-no-result-found" module="gift_listempty">
+		<p>현재 진행 중인 사은품 증정 이벤트가 없습니다.</p>
+	</div><!--//종료-->
+
+</div><!--종료-->

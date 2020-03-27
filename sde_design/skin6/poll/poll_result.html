@@ -1,0 +1,40 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="poll_result" class="ec-base-layer">
+    <!--@css(/css/module/poll/result.css)-->
+    <div class="header">
+        <h1>설문조사 결과</h1>
+    </div>
+    <div class="content">
+
+		<div id="sp-poll-popup" class="sp-box">
+			<h2>
+				<i>Q</i>
+				{$title}
+				<span>Total <strong class="txtWarn">{$total_count}</strong> people voted.</span>
+			</h2>
+			<ul class="sp-poll-popup-result">
+				<li>
+					<h3>{$comment_title}</h3>
+					<p class="sp-count">
+						<span class="sp-percent">
+							<i class="sp-vote">{$comment_count} user</i>
+							{$comment_percentage}%
+						</span>
+					</p>
+					<div class="sp-progress"><span style="width:{$comment_percentage}%;"></span></div>
+				</li>
+				<li>
+					<h3>{$comment_title}</h3>
+					<p class="sp-count">
+						<span class="sp-percent">
+							<i class="sp-vote">{$comment_count} user</i>
+							{$comment_percentage}%
+						</span>
+					</p>
+					<div class="sp-progress"><span style="width:{$comment_percentage}%;"></span></div>
+				</li>
+			</ul>
+		</div>
+
+    </div>
+</div>

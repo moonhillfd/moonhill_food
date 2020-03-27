@@ -1,0 +1,15 @@
+
+	/* 
+		회원가입 포인트 
+		<a href="#" class="sp-join-message">text</a>
+	*/
+	.sp-join-message { position:relative; }
+	.sp-join-message-inner { will-change:transform; }
+	.sp-join-message-inner { z-index:2; position:absolute; left:50%; top:80%; margin-top:5px; font-size:9px; letter-spacing:0.1em; color:#fff; background:#333; line-height:100%; padding:5px 7px 4px 7px; border-radius:3px; white-space:nowrap; }
+	.sp-join-message-inner:after { content:''; position:absolute; top:-4px; left:50%; margin-left:-4px; width:9px; height:5px; background:transparent url(/_sp/apps/addon/joinus/tooltip_package.png) no-repeat -2px -2px; }
+	.sp-join-message-inner{ animation: sp-join-message-inner-animations ease-in 2s; animation-iteration-count: infinite; transform-origin: 50% 50%; -webkit-animation: sp-join-message-inner-animations ease-in 2s; -webkit-animation-iteration-count: infinite; -webkit-transform-origin: 50% 50%; -moz-animation: sp-join-message-inner-animations ease-in 2s; -moz-animation-iteration-count: infinite; -moz-transform-origin: 50% 50%; -o-animation: sp-join-message-inner-animations ease-in 2s; -o-animation-iteration-count: infinite; -o-transform-origin: 50% 50%; -ms-animation: sp-join-message-inner-animations ease-in 2s; -ms-animation-iteration-count: infinite; -ms-transform-origin: 50% 50%; }
+	@keyframes sp-join-message-inner-animations{ 0% { transform:translate(0px,0px); } 13% { transform:translate(0px,4px); } 26% { transform:translate(0px,0px); } 38% { transform:translate(0px,4px); } 50% { transform:translate(0px,0px); } 100% { transform:translate(0px,0px); }}
+	@-moz-keyframes sp-join-message-inner-animations{ 0% { -moz-transform:translate(0px,0px); } 13% { -moz-transform:translate(0px,4px); } 26% { -moz-transform:translate(0px,0px); } 38% { -moz-transform:translate(0px,4px); } 50% { -moz-transform:translate(0px,0px); } 100% { -moz-transform:translate(0px,0px); } }
+	@-webkit-keyframes sp-join-message-inner-animations { 0% { -webkit-transform:translate(0px,0px); } 13% { -webkit-transform:translate(0px,4px); } 26% { -webkit-transform:translate(0px,0px); } 38% { -webkit-transform:translate(0px,4px); } 50% { -webkit-transform:translate(0px,0px); } 100% { -webkit-transform:translate(0px,0px); } }
+	@-o-keyframes sp-join-message-inner-animations { 0% { -o-transform:translate(0px,0px); } 13% { -o-transform:translate(0px,4px); } 26% { -o-transform:translate(0px,0px); } 38% { -o-transform:translate(0px,4px); } 50% { -o-transform:translate(0px,0px); } 100% { -o-transform:translate(0px,0px); } }
+	@-ms-keyframes sp-join-message-inner-animations { 0% { -ms-transform:translate(0px,0px); } 13% { -ms-transform:translate(0px,4px); } 26% { -ms-transform:translate(0px,0px); } 38% { -ms-transform:translate(0px,4px); } 50% { -ms-transform:translate(0px,0px); } 100% { -ms-transform:translate(0px,0px); } }

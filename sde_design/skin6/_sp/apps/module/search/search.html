@@ -1,0 +1,50 @@
+
+<div id="sp-result">
+	<div id="sp-search">
+		<button><p></p></button>
+		<div class="sp-search-inside">
+
+			<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+			<div module="search_form">
+				<div id="sp-search-box">
+					<h3>─ &nbsp; SEARCH &nbsp; ─</h3>
+					<ul>
+						<li class="select_category_no">
+							<h4>CATEGORY</h4>
+							<ul class="sp-search-box-inside" scrollbar rule="winsize,prison" data-height="200"></ul>
+						</li>
+						<li class="select_search_type">
+							<h4>TYPE</h4>
+							<ul class="sp-search-box-inside" scrollbar rule="winsize,prison" data-height="200"></ul>
+						</li>
+						<li class="select_price_range">
+							<h4>PRICE RANGE</h4>
+							<ul class="sp-search-box-inside" scrollbar rule="winsize,prison" data-height="200"></ul>
+						</li>
+						<li class="select_order_by">
+							<h4>ORDER BY</h4>
+							<ul class="sp-search-box-inside" scrollbar rule="winsize,prison" data-height="200"></ul>
+						</li>
+					</ul>
+					<div class="sp-search-field">
+						<div id="sp-search-event"></div>
+						{$form.keyword}
+						<button>SEARCH</button>
+					</div>
+					<div class="sp-search-keyword" module="search_hotkeyword">
+						<a href="{$hot_keyword_url}" before="# ">{$hot_keyword_name}</a>
+						<a href="{$hot_keyword_url}" before="# ">{$hot_keyword_name}</a>
+					</div>
+				</div>
+				<div class="displaynone">
+					<p>{$form.category_no}</p>
+					<p>{$form.search_type}</p>
+					<p id="{$except_keyword_wrap_id}" style="display:none">{$form.exceptkeyword}</p>
+					<p>{$form.product_price1} ~ {$form.product_price2}</p>
+					<p>{$form.order_by}</p>
+				</div>
+			</div><!-- //참고 -->
+
+		</div>
+	</div>
+</div>

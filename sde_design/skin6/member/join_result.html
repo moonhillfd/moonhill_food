@@ -1,0 +1,124 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+
+<!--네비게이션-->
+<!--@js(/_sp/apps/module/navigation/navigation.js)-->
+<!--@css(/_sp/apps/module/navigation/navigation.css)-->
+<div id="sp-navigation" class="layer">
+	<ul layout="sp-layout-fixed">
+		<li>
+			<a href="/">HOME</a>
+			<a href="/member/login.html">LOGIN</a>
+			<a href="/member/id/find_id.html">FIND ID</a>
+			<a href="#none">RESULT</a>
+		</li>
+		<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
+	</ul>
+</div><!--//종료-->
+
+<!--로그인-->
+<!--@css(/_sp/apps/module/login/login.css)-->
+<!--@js(/_sp/apps/module/login/login.js)-->
+<div id="sp-login">
+
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>COMPLETED - MEMBERSHIP</h1>
+	</div><!--//종료-->
+
+	<div layout="sp-layout-fixed">
+		<div class="sp-login-box">
+			<ul>
+				<li class="sp-left">
+
+					<div class="sp-login-form" module="member_joinComplete">
+						<div class="sp-join-result">
+							<h3>THANKS</h3>
+							<div class="sp-join-userinfo">
+								<p><img src="{$group_image}" alt="{$group_name}" onerror="this.src='/_sp/image/cafe24/img_member_default.gif';" /></p>
+								<div>
+									<ul>
+										<li><strong>아이디</strong>{$member_id}</li>
+										<li><strong>이름</strong>{$member_name}</li>
+										<li><strong>이메일</strong>{$member_email}</li>
+									</ul>
+								</div>
+							</div>
+
+							<br /><br />
+							<h3>MORE INFO</h3>
+							<div class="sp-join-messege memberSpecial" module="member_BenefitJoin">
+								<p><strong>{$member_name} 님</strong>은 [{$group_name}] 회원이십니다.</p>
+								<p class="{$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+								<p class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
+							</div>
+							<div class="sp-join-messege">
+								<p class="memberEmail {$display_email_auth|display}">이메일 주소로 발송된 인증 메일을 통해 인증하신 후에 로그인이 가능합니다.</p>
+							</div>
+							<div class="sp-join-messege">
+								<p class="memberAge {$under_fourteen_display|display}">
+									<strong>{$member_name} 님</strong>은 14세 미만 회원이므로 <br />관리자 인증 후 아이디 사용이 가능합니다.
+								</p>
+							</div>
+
+							<br >
+							<p class="sp-btn-group" grid="0">
+								<a href="/member/login.html" class="{$display_login_chk|display} sp-btn" theme="black" scale="bubble" change="check">LOGIN</a>
+								<a href="/index.html" class="sp-btn" theme="white" scale="bubble" change="right">GO HOME</a>
+							</p>
+						</div>
+					</div>
+
+				</li>
+				<li class="sp-right">
+
+					<div class="sp-login-form">
+						<div class="sp-join-result">
+							<h3>COUPONS</h3>
+
+							<!--쿠폰-->
+							<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+							<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+							<div id="sp-coupon" module="coupon_join">
+								<ul>
+									<p class="sp-coupon-message">쿠폰이 발급되었습니다</p>
+									<li couponsale data-promotion="{$coupon_period}">
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+									<li couponsale data-promotion="{$coupon_period}">
+										<div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+											<div class="detail">
+												<p class="title">{$coupon_name}</p>
+												<p class="discount">{$coupon_content}</p>
+												<p class="period">{$coupon_period}</p>
+											</div>
+										</div>
+										<div couponsale-counter></div>
+									</li>
+								</ul>
+								<p class="sp-btn-group" grid="0">
+									<a href="/myshop/coupon/coupon.html" class="sp-btn" theme="white" scale="bubble" change="right">MY COUPONS</a>
+								</p>
+							</div>
+							<div id="sp-coupon-empty">발급중인 쿠폰이 없습니다</div>
+
+						</div>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--로그인 텀즈-->
+	<!--@import(/_sp/apps/module/login/login_terms.html)-->
+</div>

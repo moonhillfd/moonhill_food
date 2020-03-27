@@ -1,0 +1,34 @@
+
+	/*
+		커스터마이징
+	*/
+
+	/* 로그인 부분 배너 사용 안할시 */
+	/*
+	#sp-login .sp-login-box:after,
+	#sp-login .sp-login-box > ul > li.sp-right { display:none; }
+	#sp-login .sp-login-box > ul > li.sp-left { margin:0 26%; }
+	*/
+
+	/* 인스타그램 바텀부 패드 삭제 */
+	#sp-footer-design-3 .xans-instagramwidget-display.typeGrid .thumb.slide ul { padding:0; }
+
+	/* 쿠폰 다운로드 이미지 임의변경 (상세페이지) */
+	#sp-detail img[src="//img.echosting.cafe24.com/skin/admin_ko_KR/product/btn_coupon_down.gif"] {
+		content:url("/_sp/image/cafe24/btn_coupon_down.gif");
+	}
+
+	/* 게시판 */
+	#sp-board-reply .sp-board-reply-list-element .sp-content { padding:0 100px 0 0; }
+
+	/* 상단 카테고리 싱글일 경우 이미지 정의 */
+	#sp-category-1-normal .nohave .sp-sub-category.single { left:auto; }
+	#sp-category-1-normal .nohave .sp-sub-category.single .sp-sub-category-backup { background:#fff; border:1px solid #f0f0f0; border-top:0; }
+	#sp-category-1-normal .nohave .sp-sub-category.single .sp-sub-category-backup:before { display:none; }
+
+
+
+    /* 메인네비게이션 */
+    #sp-category-1-normal > ul > li[data-no="LOOKBOOK"] > a { color:#912b45; font-weight:bold; }
+
+	

@@ -1,0 +1,420 @@
+<!--@layout(/layout/basic/layout.html)-->
+	
+	<!--컨플릭트-->
+	<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+	<i id="sp-path" scope="apps" path="" file=""></i>
+
+	<!--인덱스-->
+	<!--@css(/_sp/apps/addon/slick/slick.css)-->
+	<!--@js(/_sp/apps/addon/slick/slick.js)-->
+	<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+	<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+	<!--@js(/_sp/apps/layout/index/index-1/index.js)-->
+	<!--@css(/_sp/apps/layout/index/index-1/index.css)-->
+	<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+	<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+
+	<!--플로팅 쿠키배너 1-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<!--/_sp/apps/addon/floating/floating.html-->
+	<!--
+	<div module="bannermanage2_display_18" floating data-cookie="uniqueCookieName1" data-wait="2000" data-speed="600" data-width="500" data-height="400" data-top="" data-left="30" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating.html"><div class="sp-floating-open" data-cookie="uniqueCookieName1"><button>팝업<br>보기</button></div>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	</div>
+	-->
+
+	<!--플로팅 쿠키배너 2-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<!--/_sp/apps/addon/floating/floating.html-->
+	<div module="bannermanage2_display_19" floating data-cookie="uniqueCookieName2" data-wait="2000" data-speed="600" data-width="300" data-height="300" data-top="" data-left="" data-bottom="0" data-right="70" data-url="/_sp/apps/addon/floating/floating_2.html"><div class="sp-floating-open" data-cookie="uniqueCookieName2"><button>새소식</button></div>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	</div>
+
+	<!--플로팅 쿠키배너 3-->
+	<!--@css(/_sp/apps/addon/floating/floating.css)-->
+	<!--@js(/_sp/apps/addon/floating/floating.js)-->
+	<!--/_sp/apps/addon/floating/floating.html-->
+	<div module="bannermanage2_display_18" floating data-cookie="uniqueCookieName3" data-wait="1000" data-speed="600" data-width="500" data-height="" data-top="" data-left="30" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating_3.html"><div class="sp-floating-open" data-cookie="uniqueCookieName3"><button>팝업<br>보기</button></div>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+		<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	</div>
+
+	<!--탭 슬라이더-->
+	<div lazyhtmltarget="1">
+		<div layout="sp-layout-fixed">
+			<br /><br /><br /><br /><br /><br />
+			<br /><br /><br /><br /><br />
+			<div class="sp-slider" data-fade="true" data-custompaging="true" data-autoplayspeed="8000" data-speed="300" hover="false" dots="bubble" dotsArea="out-t-c">
+				<div class="sp-slider-loop sp-product" module="product_listmain_5" data-title="{$category_title_text}" grid="3" hover="blackbottom">
+					<!--
+						$count = 3
+					-->
+					<div class="sp-product-box">
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+					</div>
+				</div>
+				<div class="sp-slider-loop sp-product" module="product_listmain_6" data-title="{$category_title_text}" grid="3" hover="whitebottom">
+					<!--
+						$count = 3
+					-->
+					<div class="sp-product-box">
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+					</div>
+				</div>
+				<div class="sp-slider-loop sp-product" module="product_listmain_7" data-title="{$category_title_text}" grid="3" hover="blackbottom">
+					<!--
+						$count = 3
+					-->
+					<div class="sp-product-box">
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+					</div>
+				</div>
+				<div class="sp-slider-loop sp-product" module="product_listmain_8" data-title="{$category_title_text}" grid="3" hover="whitebottom">
+					<!--
+						$count = 3
+					-->
+					<div class="sp-product-box">
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+						<!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)-->
+					</div>
+				</div>
+			</div>
+			<br /><br />
+		</div><!--//여기까지-->
+	</div>
+
+	<!--카로셀 상품 슬라이더-->
+	<div lazyhtmltarget="2">
+		<div class="sp-index-product-carousel-1">
+			<br /><br />
+			<ul>
+				<div class="sp-product" module="product_listmain_9" grid="2" header="normal" hover="leftright">
+					<!--
+						$count = 6
+					-->
+					<p class="sp-text {$category_title_text|display}"><span><em>{$category_title_text}</em></span></p>
+					<span class="sp-image {$category_title_img|display}"><span><img src="{$category_title_img}"></span></span>
+					<div class="sp-product-box sp-slider" data-initialslide="1" data-autoplayspeed="10000" data-slidestoshow="1" data-variablewidth="620" data-infinite="true" data-centermode="true" data-centerpadding="100" data-speed="400" arrows="blk-h-m" arrowsArea="h-in-46" arrowfix="true" dots="circle-m" dotsArea="out-b-c" between="20">
+						<div class="sp-slider-loop"><!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)--></div>
+						<div class="sp-slider-loop"><!--@import(/_sp/apps/layout/product/product-1/product_list_package_element.html)--></div>
+					</div>
+				</div>
+			</ul>
+			<br /><br /><br /><br /><br />
+		</div>
+	</div>
+
+	<!--좌우슬라이더-->
+	<div lazyhtmltarget="3" module="bannermanage2_display_10-----x-----">
+		<div layout="sp-layout-fixed">
+			<br /><br /><br /><br /><br /><br /><br />
+			<div class="sp-slider" data-autoplayspeed="12000" data-speed="800" data-slidestoshow="2" hover="false" arrows="blk-h-l" arrowsArea="h-out-46" dots="circle-m" dotsArea="out-b-c" between="20">
+				<!--
+				<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+				<div class="sp-slider-loop"><a href="{$href}" {$target}>{$banner}</a></div>
+				-->
+				<div class="sp-slider-loop"><a href="#none" {$target}><img src="//dummyimage.com/620x460/f9f9f9/f9f9f9"></a></div>
+				<div class="sp-slider-loop"><a href="#none" {$target}><img src="//dummyimage.com/620x460/f9f9f9/f9f9f9"></a></div>
+				<div class="sp-slider-loop"><a href="#none" {$target}><img src="//dummyimage.com/620x460/f9f9f9/f9f9f9"></a></div>
+				<div class="sp-slider-loop"><a href="#none" {$target}><img src="//dummyimage.com/620x460/f9f9f9/f9f9f9"></a></div>
+			</div>
+			<br /><br /><br /><br /><br /><br />
+		</div>
+	</div>
+
+	<!--포퓰러-->
+	<div lazyhtmltarget="4">
+		<div class="sp-index-popular-1">
+			<br /><br /><br /><br /><br />
+			<ul>
+				<div layout="sp-layout-fixed">
+					<div class="sp-index-popular-title"><span>S U B T I T L E</span></div>
+					<br /><br /><br /><br />
+					<!--SLICK:v1.12.4-->
+					<!--@css(/_sp/apps/addon/slick/slick.css)-->
+					<!--@js(/_sp/apps/addon/slick/slick.js)-->
+					<div layout="sp-layout-fixed">
+						<div class="sp-slider" data-fade="true" data-custompaging="true" data-autoplayspeed="14000" data-speed="600" hover="false" arrows="blk-h-l" arrowsArea="h-out-46" dots="bubble" dotsArea="out-t-c" between="30">
+							<!-- 1 PAGE -->
+							<div module="bannermanage2_display_11-----x-----" class="sp-slider-loop" data-title="SUB MENU A">
+								<table class="sp-mastable" line="f9f9f9">
+									<tr>
+										<!--
+										<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										-->
+										<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="20%" ratio="1"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+									</tr>
+									<tr>
+										<!--
+										<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										-->
+										<td width="20%" ratio="1"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 2 PAGE -->
+							<div module="bannermanage2_display_12-----x-----" class="sp-slider-loop" data-title="SUB MENU B">
+								<table class="sp-mastable" line="f9f9f9">
+									<tr>
+										<!--
+										<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										-->
+										<td width="40%" ratio="2-1" colspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="20%" ratio="1"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="40%" ratio="1" colspan="2" rowspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+									</tr>
+									<tr>
+										<!--
+										<td width="20%" ratio="1"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="{$href}" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">{$title}</p></li></ul></a><p class="sp-mastable-trick">{$banner}</p></td>
+										-->
+										<td width="20%" ratio="1"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+										<td width="40%" ratio="2-1" colspan="2"><a href="#none" {$target} class="sp-mastable-element" hover="true"><ul><li><p class="sp-text">TEST</p></li></ul></a><p class="sp-mastable-trick"><img src="//dummyimage.com/620x460/f0f0f0/333333&text=."></p></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<br /><br />
+		</div><!--//여기까지-->
+	</div>
+
+
+
+	<!--회원가입-->
+	<!--@css(/_sp/apps/addon/cookies/cookies.css)-->
+	<!--@js(/_sp/apps/addon/cookies/cookies.js)-->
+	<div class="sp-index-userbox" module="Layout_statelogoff" spcookie="cover" data-cookie="sp_index_userbox_1" data-reset="true">
+		<div layout="sp-layout-fixed"><button spcookie="button"><p></p></button></div>
+		<ul module="Layout_footer">
+			<li class="msg-1">아직 {$mall_name} 회원이 아니신가요?<!--{$company_name}--></li>
+			<li class="msg-2">지금 회원가입을 하시면 각종 다양한 혜택으로 즐거운 쇼핑을 할 수 있습니다 :D</li>
+			<li>
+				<a href="/member/login.html" class="login"><span>로그인</span></a>
+				<a href="/member/join.html" class="joinus"><span>회원가입</span></a>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+	<!--코어-->
+	<!--@import(/_sp/core.html)-->
+
+	<!--푸터-->
+	<!--@css(/_sp/apps/layout/footer/footer-3/footer.css)-->
+	<!--@js(/_sp/apps/layout/footer/footer-3/footer.js)-->
+	<div id="sp-footer">
+
+		<!--디자인-->
+		<div id="sp-footer-design-3" class="sp-box" module="Layout_footer">
+
+			<!--하단 공통슬라이더-->
+			<!--SLICK:v1.12.4-->
+			<!--@css(/_sp/apps/addon/slick/slick.css)-->
+			<!--@js(/_sp/apps/addon/slick/slick.js)-->
+			<!--
+			<div class="sp-footer-slider">
+				<div class="sp-slider" data-initialslide="0" data-autoplayspeed="15000" data-slidestoshow="4" data-variablewidth="300" data-infinite="true" data-centermode="true" data-centerpadding="100" data-speed="500" arrows="blk-h-m" arrowsArea="h-in-46" arrowfix="true" dots="circle-m" dotsArea="out-b-c" between="20">
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_1.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_2.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_3.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_4.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_5.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_6.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_7.png"></div>
+					<div class="sp-slider-loop"><a href="#none"><img src="/_sp/image/sample/footer_slider_8.png"></div>
+				</div>
+			</div>--><!--//여기까지-->
+
+			<div class="sp-footer-instagram">
+				<!--
+					module="instagramwidget_display_1" 는 위젯리스트중 적용하고자 하는 위젯의 코드로 변경하여 사용하시면 됩니다.
+				-->
+				<div module="instagramwidget_display_1" class="widget {$sWidgetClass}" style="{$sWidgetStyle}">
+					<!--@css(/apps/instagramwidget/skin1/skin1.css)-->
+					<h2><a target="_blank" class="widget-title">{$sWidgetTitle}</a></h2>
+					<strong class="idTag {$sIdTagClass}">
+						<a target="_blank" class="widget-id-tag" href="{$sIdTagLink}">{$sIdTag}</a>
+						<a target="_blank" class="widget-id-tag" href="{$sIdTagLink}">{$sIdTag}</a>
+					</strong>
+					<div class="thumb {$sThumbClass}" style="{$sThumbStyle}"></div>
+				</div>
+			</div>
+
+			<div class="sp-footer-content">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li>
+
+						<h3>cs center</h3>
+						<h2>{$phone}</h2>
+						<p class="sp-footer-content-runtime">{$runtime|nl2br}</p>
+						<div class="sp-btn-group sp-left mgt1" grid="0">
+							<!--마이페이지-->
+							<!--@js(/_sp/apps/module/mypage/mypage.js)-->
+							<!--@css(/_sp/apps/module/mypage/mypage.css)-->
+							<a href="#none" mypagemain data-url="/_sp/apps/module/mypage/mypage_main.html" class="sp-btn" theme="my" scale="small" change="list">M Y</a>
+							<a href="/board/index.html" class="sp-btn" theme="white" scale="small" change="right">고객센터</a>
+						</div>
+
+					</li>
+					<li>
+
+						<h3>bank info</h3>
+						<div class="sp-bank">
+							<!--인터넷 뱅킹-->
+							<!--@css(/_sp/apps/addon/banklink/banklink.css)-->
+							<!--@js(/_sp/apps/addon/banklink/banklink.js)-->
+							<p banklink data-url="/_sp/apps/addon/banklink/banklink.html"><span>인터넷뱅킹</span></p>
+						</div>
+						<!--은행정보-->
+						<div class="sp-footer-content-bank">
+							<!--@import(/_sp/html/bank_information.html)-->
+						</div>
+						<div class="sp-btn-group sp-left mgt1" grid="0">
+							<!--인터넷 뱅킹-->
+							<a href="#none" banklink data-url="/_sp/apps/addon/banklink/banklink.html" class="sp-btn" theme="my" scale="small" change="list">B A N K</a>
+							<!--미확인 입금자-->
+							<!--@css(/_sp/apps/addon/bankmiss/bankmiss.css)-->
+							<!--@js(/_sp/apps/addon/bankmiss/bankmiss.js)-->
+							<a href="#none" bankmiss data-url="/_sp/apps/addon/bankmiss/bankmiss.html" class="sp-btn" theme="white" scale="small" change="dot">미확인입금</a>
+							<!--무이자 할부-->
+							<!--@css(/_sp/apps/addon/cardinfo/cardinfo.css)-->
+							<!--@js(/_sp/apps/addon/cardinfo/cardinfo.js)-->
+							<a href="#none" cardinfo data-url="/_sp/apps/addon/cardinfo/cardinfo.html" class="sp-btn" theme="white" scale="small" change="dot">무이자할부</a>
+						</div>
+
+					</li>
+					<li>
+
+						<h3>store guide</h3>
+						<div class="sp-footer-content-split">
+							<a href="/board/index.html">
+								<i theme="notice" cover="true"></i>
+								<i theme="notice"></i>
+								<p>
+									<strong>HELP</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">고객센터</span>
+								</p>
+							</a>
+							<a href="/myshop/order/list.html">
+								<i theme="order" cover="true"></i>
+								<i theme="order"></i>
+								<p>
+									<strong>ORDER</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">배송조회</span>
+								</p>
+							</a>
+							<a href="/board/product/list.html?board_no=6">
+								<i theme="qna" cover="true"></i>
+								<i theme="qna"></i>
+								<p>
+									<strong>Q &amp; A</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">상품문의</span>
+								</p>
+							</a>
+							<a href="/board/product/list.html?board_no=4">
+								<i theme="review" cover="true"></i>
+								<i theme="review"></i>
+								<p>
+									<strong>REVIEW</strong>
+									<span class="sp-btn sp-block" theme="white" scale="small">상품후기</span>
+								</p>
+							</a>
+						</div>
+
+					</li>
+					<li class="last">
+
+						<h3>return · exchange</h3>
+
+						<!--탭-->
+						<!--@css(/_sp/apps/addon/tabs/tabs.css)-->
+						<!--@js(/_sp/apps/addon/tabs/tabs.js)-->
+						<div class="sp-footer-tab" tabs data-start="1" data-speed="300">
+							<!--@import(/_sp/html/return_exchange.html)-->
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="sp-footer-linkline">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li class="sp-left">
+						<a href="/">HOME</a>
+						<a href="/shopinfo/company.html">ABOUT US</a>
+						<a href="/member/agreement.html">AGREEMENT</a>
+						<a href="/member/privacy.html" class="active">PRIVACY POLICY</a>
+						<a href="/shopinfo/guide.html">STORE GUIDE</a>
+						<a href="/board/index.html">CS CENTER</a>
+					</li>
+					<li module="bannermanage2_display_14" scope="social" class="sp-right">
+						<p>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="sp-footer-description">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li class="sp-left">
+						<p>
+							<span><strong>{$company_name}</strong></span>
+							<span>STORE <em></em> {$mall_name}</span>
+							<span>OWNER <em></em> {$president_name}</span>
+							<span>COMPANY REG.NO <em></em> {$company_regno}</span>
+							<span>NETWORK REG.NO <em></em> {$network_regno} <em></em> <a href="#none" class="{$action_biz_info|display}" onclick="{$action_biz_info}">CHECK</a></span>
+						</p>
+						<p>
+							<span>ADDRESS <em></em> {$mall_addr1} {$mall_addr2} ( {$mall_zipcode} )</span>
+							<span>MASTER <em></em> <a href="mailto:{$cpo_email}">{$cpo_name} <em></em> {$cpo_email}</a></span>
+							<span>ALLIANCE <em></em> <a href="mailto:{$email}">{$email}</a></span>
+						</p>
+					</li>
+					<li module="bannermanage2_display_14" scope="footer" class="sp-right">
+						<p>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+							<a href="{$href}" {$target} class="displaynone" scope="{$title}">{$banner}</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sp-footer-copyright">
+				<ul class="sp-clear" layout="sp-layout-fixed">
+					<li module="bannermanage2_display_1" scope="bottom" class="sp-left">
+						<p class="displaynone" scope="{$title}"><a href="/">{$banner}</a></p>
+						<p class="displaynone" scope="{$title}"><a href="/">{$banner}</a></p>
+						Copyright © 2018 <strong>{$mall_name}</strong> Inc. All rights reserved. / <a href="http://www.pandassi.com" target="_blank">designed by pandassi ©</a>
+					</li>
+					<li module="bannermanage2_display_14" scope="mark" class="sp-right">
+						<span class="displaynone" scope="{$title}">{$banner}</span>
+						<span class="displaynone" scope="{$title}">{$banner}</span>
+					</li>
+				</ul>
+			</div>
+
+		</div><!--종료-->
+
+	</div><!--종료-->
+
+<!--@define(cmc_log)-->

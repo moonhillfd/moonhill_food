@@ -1,0 +1,46 @@
+
+	/*
+		data-id="xxx" 유투브 아이디
+		data-start="false"	시작여부 : true, false
+		data-sound="false"  소리여부 : true, false
+		data-loop="true"	반복여부 : true, false
+		data-width="640"	가로사이즈
+		data-height="360"	세로사이즈 : 둘다 없으면 와이드로 변경됨
+
+		일반
+		<div youtubeouter><div youtube data-id="M7lc1UVf-VE" data-start="false" data-sound="false" data-loop="true" data-width="640" data-height="360"></div></div>
+		전체화면 ( 모바일 반응형 )
+		<div youtubeouter><div youtube data-id="M7lc1UVf-VE" data-start="false" data-sound="false" data-loop="true"></div></div>
+		클릭시 레이어로 출력
+		<li youtubeplayer data-id="M7lc1UVf-VE" data-start="true" data-sound="true" data-loop="false">영상레이어</li>
+	*/
+
+	[youtubeouter] iframe { max-width:100%; }
+
+	[youtubeouter="wide"] { position:relative;padding-bottom:56.25%;height:0;overflow:hidden; }
+	[youtubeouter="wide"] iframe,[youtubeouter="wide"] object,[youtubeouter="wide"] embed { position:absolute;top:0;left:0;width:100%;height:100%; }
+
+	[youtubeouter="fixed"] { position:relative; }
+	[youtubeouter="fixed"] iframe,[youtubeouter="fixed"] object,[youtubeouter="fixed"] embed { position:absolute;top:0;left:0;max-width:unset; }
+	[youtubeouter="fixed"]:after { content:''; z-index:1; position:absolute; width:100%; height:100%; } /* 스크롤버그 방지 */
+
+	#sp-youtube-layer { z-index:99999; position:fixed; display:none; top:0; left:0; right:0; bottom:0; width:100%; height:100%; }
+
+	/* 선택사항 */
+	#sp-youtube-layer { background-image:url(/_sp/image/opacity/blk-80.png); }
+	/* #sp-youtube-layer { background-color:rgba(0,0,0,0.8); filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000'); } */
+
+	#sp-youtube-layer * { outline:none; }
+	#sp-youtube-layer button { z-index:3; position:absolute; top:0; right:0; background:#fff; }
+	#sp-youtube-layer button p { width:40px; height:40px; line-height:40px; color:#333; font-size:16px; font-family:'dotum'; }
+	#sp-youtube-layer button p:after { content:'×'; padding-left:1px; }
+	#sp-youtube-layer ul { display:table; width:100%; height:100%; }
+	#sp-youtube-layer ul li { display:table-cell; vertical-align:middle; }
+	#sp-youtube-layer ul li div { width:50%; min-width:700px; margin:0 auto; }
+	#sp-youtube-layer ul li div ol { position:relative; width:100%; height:0; padding-bottom:56.25%; }
+	#sp-youtube-layer ul li div ol iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+
+	@media screen and ( min-width:1px ) and ( max-width:700px ){
+		#sp-youtube-layer { cursor:pointer; }
+		#sp-youtube-layer ul li div { width:100%; min-width:100%; }
+	}

@@ -1,0 +1,8 @@
+/* 상품상세 > 재고수량 레이어 */
+.xans-product-stocklayer .layer { width:410px; }
+.xans-product-stocklayer .layer .content table { font-size:11px; }
+.xans-product-stocklayer .layer .content thead th { text-align:center; background:#fafafa; }
+.xans-product-stocklayer .layer .content p { font-size:11px; }
+
+
+.xans-product-stocklayer .layer .content { max-height:200px; overflow-y:auto; }

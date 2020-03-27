@@ -1,0 +1,41 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<!--쿠폰다운로드-->
+<!--@css(/_sp/apps/module/coupon/coupon.css)-->
+<!--@js(/_sp/apps/module/coupon/coupon.js)-->
+<div id="sp-coupon" class="ec-base-layer" theme="detail" grade="BEST COUPON" module="coupon_productpopup">
+    <!--@css(/css/module/coupon/productPopup.css)-->
+    <div class="header">
+        <h1>최대 할인쿠폰 다운받기</h1>
+    </div>
+	<!--타이틀-->
+	<!--@css(/_sp/apps/module/title/title.css)-->
+	<div id="sp-title">
+		<h1>COUPON</h1>
+	</div><!--//종료-->
+	<ul>
+		<li couponsale data-promotion="{$coupon_period}">
+			<div {$call_coupon_detail} class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+				<div class="detail">
+					<p class="title">{$coupon_name}</p>
+					<p class="discount">{$coupon_content}</p>
+					<p class="period">{$coupon_period}</p>
+					<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+				</div>
+			</div>
+			<div couponsale-counter></div>
+		</li>
+		<li couponsale data-promotion="{$coupon_period}">
+			<div {$call_coupon_detail} class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+				<div class="detail">
+					<p class="title">{$coupon_name}</p>
+					<p class="discount">{$coupon_content}</p>
+					<p class="period">{$coupon_period}</p>
+					<p class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></p>
+				</div>
+			</div>
+			<div couponsale-counter></div>
+		</li>
+	</ul>
+	<a class="close" onclick="javascript:self.close();"><img src="/_sp/image/cafe24/common/btn_close.gif" alt="닫기" /></a>
+</div>
