@@ -21,8 +21,9 @@
 }
 .insta .insta_hashtag > a {
 	font-weight: 600;
-    color: inherit;
 	font-style: italic;
+    color: inherit;
+	padding: 0 5px;
 	-webkit-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
