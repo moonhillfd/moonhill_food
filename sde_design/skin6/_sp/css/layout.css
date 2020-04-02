@@ -13,7 +13,7 @@
 
 	/* 전체 컨트롤 */
 	body { min-width:1260px; }
-	[layout="sp-layout-fixed"] { width:1260px; margin:0 auto; }
+	[layout="sp-layout-fixed"] { width:1200px; margin:0 auto; }
 
 	/* 드래그 텍스트 */
 	::-moz-selection { background:#333; color:#fff; }
@@ -24,7 +24,7 @@
 	#sp-sky			{ z-index:98; position:relative; }
 	#sp-header		{ z-index:97; position:relative; }
 	#sp-category	{ z-index:97; position:relative; }
-	#sp-content		{ position:relative; min-width:1200px; padding-top: 90px;}
+	#sp-content		{ position:relative; min-width:1200px; padding-top: 200px;}
 	#sp-footer		{ position:relative; }
 	#sp-panel		{ position:relative; }
 	#sp-navigation	{ z-index:70; padding-top: 0 !important; }

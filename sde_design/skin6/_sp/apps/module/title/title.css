@@ -14,7 +14,7 @@
 	#sp-title h1.with-image { padding:0; }
 	#sp-title h2 { text-align:center; overflow:hidden; }
 	#sp-title h1 > span,
-	#sp-title h2 > span { position:relative; display:block; width:5000px; left:50%; margin-left:-2500px; text-align:center; }
+	#sp-title h2 > span { position:relative; display:block; text-align:center; }
 	#sp-title h1.with-imagedisplaynone { height:15px; }
 	#sp-title h1.with-imagedisplaynone > span { width:auto; display:inline-block; left:auto; margin:0; vertical-align:top; }
 

@@ -121,6 +121,10 @@
                                     <col style="width:auto" />
                                 </colgroup>
                                 <tbody id="{$total_benefit_list_id}">
+                                    <tr class="{$total_subscriptionpayseqsale_price|display} {$total_subscriptionpayseqsale_price_wrap}">
+                                        <th scope="row">정기배송할인</th>
+                                        <td class="right">-<span id="{$total_subscriptionpayseq_price_id}">{$price_unit_head}{$total_subscriptionpayseqsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
                                     <tr class="{$total_periodsale_price_display|display} {$total_periodsale_price_wrap}">
                                         <th scope="row">기간할인</th>
                                         <td class="right">-<span id="{$total_periodsale_price_id}">{$price_unit_head}{$total_periodsale_price}{$price_unit_tail}</span></td>

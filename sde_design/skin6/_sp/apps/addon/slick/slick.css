@@ -85,7 +85,10 @@
 	.sp-slider.full { overflow-x:hidden; }
 	.sp-slider.full .slick-list { width:100%; }
 	.sp-slider.full .sp-slider-loop a { position:relative; width:100%; height: 850px;}
-	.sp-slider.full .slick-track { overflow:hidden; } /* 동영상때문에 잔상 버그가 있음. */
+	.sp-slider.full .slick-track {
+
+		overflow:hidden;
+	} /* 동영상때문에 잔상 버그가 있음. */
 
 	/* 도트 */
 	.sp-slider .slick-dots { z-index:18; position:absolute; font-size:0; text-align:center; }

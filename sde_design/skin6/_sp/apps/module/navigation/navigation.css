@@ -1,5 +1,5 @@
 
-	#sp-navigation { position:relative; background:#464646; padding-top:170px;}
+	#sp-navigation { position:relative; padding-top:170px; border-bottom: 1px solid #e6e6e6;}
 	#sp-navigation.layer { width:100%; z-index:3; position:absolute; }
 	#sp-navigation ul { position:relative; }
 	#sp-navigation ul:after { clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; }

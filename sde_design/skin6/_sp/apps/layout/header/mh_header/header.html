@@ -1,80 +1,69 @@
-
-
 <!--헤더-->
 <!--@css(/_sp/apps/layout/header/mh_header/header.css)-->
 <!--@js(/_sp/apps/layout/header/mh_header/header.js)-->
 
 <div class="main_header">
-	<h1 class="logo">
-		<a href="/index.html"><img src="/image/main/logo.png" alt="제나차" /></a>
-	</h1>
-	<!--<h1 class="sp-header-logo" module="bannermanage2_display_1" scope="top">
+	<!--
+	<h1 class="sp-header-logo" module="bannermanage2_display_1" scope="top">
 		<a href="/" {$target} class="before displaynone" scope="{$title}">{$banner}</a>
 		<a href="/" {$target} class="after displaynone" scope="{$title}">{$banner}</a>
-	</h1>-->
+	</h1>
+	-->
+	<div class="header_links">
+		<ul class="left">
+			<li>
+				<a href="https://www.instagram.com/zenatea_official" target="_blank">인스타그램</a>
+			</li>
+			<li class="oversea">
+				<a href="https://www.moonhillfood.com/article/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/1/101/">해외배송안내</a>
+			</li>
+		</ul>
+		<ul id="JS_topMenu" class="right">
+			<!-- 로그인전 -->
+			<li module="Layout_statelogoff"><a href="/member/login.html" class="log"><strong>로그인</strong></a></li>
+			<li module="Layout_statelogoff" class="mh_header_join_count"><a href="/member/join.html">회원가입<span class="join_count">쿠폰 3,000원</span></a>
+			</li>
+			<!-- //로그인전 -->
 
-	<ul id="JS_topMenu" class="header_links">
-		<li class="header_icon"><a href="https://www.instagram.com/zenatea_official" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			<!-- 로그인후 -->
+			<li module="Layout_statelogon"><a href="{$action_logout}">로그아웃</a></li>
+			<li module="Layout_statelogon"><a href="/member/modify.html">정보수정</a></li>
+			<li module="Order_DcInfo" class="mh_header_coupon"><a href="/myshop/coupon/coupon.html">쿠폰<span class="count">{$coupon_cnt}</span></a></li>
+			<!-- //로그인후 -->
 
-		<li class="oversea">
-			<a href="https://www.moonhillfood.com/article/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/1/101/">해외배송안내</a>
-		</li>
-		<!-- 로그인전 -->
-		<li module="Layout_statelogoff"><a href="/member/login.html" class="log"><strong>로그인</strong></a></li>
-		<li module="Layout_statelogoff" class="mh_header_join_count"><a href="/member/join.html">회원가입<span class="join_count">쿠폰 3,000원</span></a>
-		</li>
-		<!-- //로그인전 -->
+			<li><a href="/myshop/order/list.html">주문배송조회</a></li>
 
-		<!-- 로그인후 -->
-		<li module="Layout_statelogon"><a href="{$action_logout}">로그아웃</a></li>
-		<li module="Layout_statelogon"><a href="/member/modify.html">정보수정</a></li>
-		<li module="Order_DcInfo" class="mh_header_coupon"><a href="/myshop/coupon/coupon.html">쿠폰<span class="count">{$coupon_cnt}</span></a></li>
-		<!-- //로그인후 -->
+			<li>
+				<a href="/myshop/index.html">마이페이지</a>
+			</li>
+			<li class="basket" module="Layout_orderBasketcount">
+				<a href="/order/basket.html">장바구니 <span class="count" count="{$basket_count}">( {$basket_count} )</span></a>
+			</li>
+		</ul>
+	</div>
 
-		<li><a href="/myshop/order/list.html">주문배송조회</a></li>
+	<h1 class="logo">
+		<a href="/index.html"><img src="/image/common/logo.svg" alt="제나차" /></a>
+	</h1>
 
-		<li>
-			<a href="/myshop/index.html">마이페이지</a>
-		</li>
-		<li class="basket" module="Layout_orderBasketcount">
-			<a href="/order/basket.html">장바구니 <span class="count" count="{$basket_count}">( {$basket_count} )</span></a>
-		</li>
-
-		<!-- SNS Button
-		<li class="header_icon naver"><a href="https://blog.naver.com/moonhillfood" target="_blank"><img src="/_sp/image/icon/icon_naver2.png" alt="네이버"/></a></li>
-		<li class="header_icon"><a href="https://www.facebook.com/moonhillfoodofficial" target="_blank"><i class="fab fa-facebook"></i></a></li>
-		<li class="header_icon youtube"><a href="https://www.youtube.com/channel/UCKBMkFRPWZQ-rmGPOxdFamg/videos" target="_blank"><i class="fab fab fa-youtube"></i></a></li>
-		-->
-	</ul>
 	<ul class="menu">
 		<li>
 			<a><span>브랜드</span></a>
 			<ul>
-				<li><a href="/about/zena.html">제나스토리</a></li>
+<!--			<li><a href="/about/zena.html">제나스토리</a></li>-->
 				<li><a href="/about/life.html">제나라이프</a></li>
 				<li><a href="/about/info.html">원료이야기</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="/product/list.html?cate_no=49"><span>쇼핑하기</span></a>
+			<a><span>쇼핑하기</span></a>
 			<ul>
-				<li><a href="/product/10off-제나차-1set-30일분-60포/15/category/49/display/1">제나차 60스틱</a></li>
-				<li><a href="/product/제나차-1box-20포/81/category/49/display/1">제나차 20스틱</a></li>
-				<li><a href="/product/제나차-mini-10포/46/category/49/display/1">제나차 10스틱</a></li>
-                <li><a href="/product/10off-제나선-다이어트-차-1set-30일분-60포/41/category/49/display/1">제나선 60스틱</a></li>
-				<li><a href="/product/제나선-다이어트-차-1box-20포/80/category/49/display/1">제나선 20스틱</a></li>
-				<li><a href="/product/제나선-다이어트-차-mini-10포/43/category/49/display/1">제나선 10스틱</a></li>
+				<li><a href="/product/list.html?cate_no=49">제품구매</a></li>
                 <li><a href="/product/list.html?cate_no=53">개인결제창</a></li>
 			</ul>
 		</li>
 		<li>
-			<!--
 			<a href="/board/product/list.html?board_no=4"><span>구매후기</span></a>
-			<ul>
-				<li><a>제품 구매후기</a></li>
-				<li><a href="/shopinfo/experience.html">체험단 후기</a></li>
-			</ul>
-			-->
 		</li>
 		<li>
 			<a><span>커뮤니티</span></a>
@@ -83,11 +72,8 @@
 				<li><a href="/board/free/list.html?board_no=3">자주묻는 질문</a></li>
 				<li><a href="/board/product/list.html?board_no=6">제품 Q&A</a></li>
 				<li><a href="/board/free/list.html?board_no=5">판매 / 제휴 / 입점</a></li>
-				<!--<li><a href="/board/inquiry/write.html?product_no=15">대량구매문의</a></li>
-				<li><a href="/board/inquiry/list.html">대량구매문의</a></li>-->
 			</ul>
 		</li>
-
 		<li>
 			<a><span>소식</span></a>
 			<ul>
@@ -97,144 +83,8 @@
 				<li><a href="/company/sns.html">공식 SNS</a></li>
 			</ul>
 		</li>
-
 		<li class="last">
 			<a href="/board/gallery/list.html?board_no=8"><span>이벤트</span></a>
 		</li>
-<!--
-		<li>
-			<a><span>회사소개</span></a>
-			<ul>
-				<li><a href="/company/company.html">달맞이자연식품</a></li>
-				<li><a href="/company/principle.html">제조원칙</a></li>
-				<li><a href="/company/society.html">사회활동</a></li>
-				<li><a href="/company/catalogue.html">e-카달로그</a></li>
-				<li><a href="/company/location.html">오시는 길</a></li>
-			</ul>
-		</li>
--->
 	</ul>
-
-	<!--
-	<ul class="global_menu">
-		<li>
-			<a href="#none" search="" data-url="/_sp/apps/module/search/search.html">
-				<i class="fas fa-search"></i>
-			</a>
-		</li>
-		<li>
-			<a href="/myshop/index.html"><i class="fas fa-user-circle"></i></a>
-		</li>
-		<li class="basket" module="Layout_orderBasketcount">
-			<a href="/order/basket.html"><i class="fas fa-shopping-basket"></i><span class="count" count="{$basket_count}">{$basket_count}</span></a>
-		</li>
-		<li class="total_menu">
-			<a><i class="fas fa-bars"></i></a>
-		</li>
-	</ul>
-	-->
 </div><!--종료-->
-
-
-
-
-<div class="all_menu">
-	<div class="bg"></div>
-	<div class="content">
-		<h1><img src="/_sp/image/main/logo_active.png" alt="달맞이자연식품 제나차 제나선"></h1>
-		<p>
-			내가 먹는 음식이 바로 나 자신입니다.<br>
-			달맞이자연식품은 언제나 좋은 재료를 정성으로 고르고 변함없는 마음으로 제품을 만듭니다.
-		</p>
-		<ul class="sitemap">
-			<li>
-				<a><span>브랜드</span></a>
-				<ul>
-					<li><a href="/about/zena.html">제나탄생기</a></li>
-					<li><a href="/about/life.html">제나라이프</a></li>
-					<li><a href="/about/info.html">원료이야기</a></li>
-				</ul>
-			</li>
-			<li>
-				<a><span>제품구매</span></a>
-				<ul>
-					<li><a href="/product/list.html?cate_no=49">제나 제품구매</a></li>
-					<li><a href="/product/list.html?cate_no=53">개인결제창</a></li>
-					<li><a href="/product/list.html?cate_no=50">파트너쉽</a></li>
-				</ul>
-			</li>
-			<li>
-				<a><span>구매후기</span></a>
-				<ul>
-					<li><a href="/board/product/list.html?board_no=4">제품 구매후기</a></li>
-					<li><a href="/shopinfo/experience.html">체험단 후기</a></li>
-				</ul>
-			</li>
-			<li>
-				<a><span>커뮤니티</span></a>
-				<ul>
-					<li><a href="/board/index.html">고객센터</a></li>
-					<li><a href="/board/free/list.html?board_no=3">자주묻는 질문</a></li>
-					<li><a href="/board/product/list.html?board_no=6">제품 Q&A</a></li>
-					<li><a href="/board/free/list.html?board_no=5">판매 / 제휴 / 입점</a></li>
-					<!--<li><a href="/board/inquiry/write.html?product_no=15">대량구매문의</a></li>-->
-				</ul>
-			</li>
-
-			<li class="last">
-				<a><span>소식</span></a>
-				<ul>
-					<li><a href="/board/gallery/list.html?board_no=8">이벤트</a></li>
-					<li><a href="/board/free/list.html?board_no=1">공지사항</a></li>
-					<li><a href="/board/free/list.html?board_no=3001">제나소식</a></li>
-					<li><a href="/board/gallery/list.html?board_no=12">홍보영상</a></li>
-					<!--<li><a href="/company/sns.html">공식 SNS</a></li>-->
-				</ul>
-			</li>
-			<li>
-				<a><span>회사소개</span></a>
-				<ul>
-					<li><a href="/company/company.html">달맞이자연식품</a></li>
-					<li><a href="/company/principle.html">제조원칙</a></li>
-					<li><a href="/company/society.html">사회활동</a></li>
-					<li><a href="/company/catalogue.html">e-카달로그</a></li>
-					<li><a href="/company/location.html">오시는 길</a></li>
-				</ul>
-			</li>
-		</ul>
-		<ul class="sitemap gap">
-			<li>
-				<a><span>마이페이지</span></a>
-				<ul>
-					<li><a href="/member/modify.html">개인정보수정</a></li>
-					<li><a href="/myshop/order/list.html">주문내역</a></li>
-					<li><a href="/myshop/board_list.html">내 게시글</a></li>
-					<li><a href="/myshop/coupon/coupon.html">쿠폰</a></li>
-					<li><a href="/myshop/addr/list.html">배송 주소록</a></li>
-				</ul>
-			</li>
-			<li>
-				<a><span>기타</span></a>
-				<ul>
-					<li><a href="/member/agreement.html">이용약관</a></li>
-					<li><a href="/member/privacy.html">개인정보취급방침</a></li>
-					<li><a href="/shopinfo/guide.html">이용방법</a></li>
-				</ul>
-			</li>
-			<li class="">
-				<a><span>공식 SNS</span></a>
-				<ul>
-					<li><a href="https://www.facebook.com/moonhillfoodofficial" target="_blank">인스타그램</a></li>
-					<li><a href="https://blog.naver.com/moonhillfood" target="_blank">네이버 블로그</a></li>
-					<li><a href="https://pf.kakao.com/_bxjuyC" target="_blank">카카오톡 스토리</a></li>
-					<li><a href="https://www.instagram.com/moonhillfood_official/" target="_blank">페이스북</a></li>
-					<li><a href="https://www.youtube.com/channel/UCKBMkFRPWZQ-rmGPOxdFamg/videos" target="_blank">Youtube</a></li>
-				</ul>
-			</li>
-			<li class="last">
-				<a href="http://www.moonhill.co.kr/" target="_blank"><span>달맞이한의원</span></a>
-			</li>
-		</ul>
-		<a class="popup_btn_close"><i class="fas fa-times" style="font-size: 16px;"></i></a>
-	</div>
-</div>
