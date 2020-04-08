@@ -1,0 +1,188 @@
+<!--@layout(/layout/basic/main.html)-->
+
+<div moduel="layout_logincheck">
+    <!--
+        // 변수에 주소가 있는경우 입력한 주소로이동
+        $url = /member/login.html
+    -->
+</div>
+
+<!-- 메인 슬라이드 배너 -->
+<!--@import(/_wg/import/JS_mainBnr.html)-->
+
+<!-- 이벤트 롤링
+@import(/_wg/import/JS_quickEvent.html)-->
+
+
+<div class="mPrdList typeThumb" module="product_listmain_1">
+<!--@css(/css/module/product/8/listmain_1.css)-->
+    <!--
+        $count = 10
+        $moreview = yes
+    -->
+<!--<h2>{$category_title_text}</h2>-->
+    <div class="main_header_title"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
+    <ul class="grid2">
+        <li>
+            <div class="thumbnail">
+                <a href="/product/detail.html{$param}"><img src="{$image_medium}" alt=""><div module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></div></a>
+            </div>
+            <div class="information">
+                <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
+                <p class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</p>
+                <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price}원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
+                <p class="price {$product_sale_display|display}">{$product_sale_price}</p>
+                <div class="{$colorchip_display|display}">
+                    <div class="color" module="product_Colorchip">
+                        <span class="chips" style="background-color:{$color};"></span>
+                        <span class="chips" style="background-color:{$color};"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail">
+                <a href="/product/detail.html{$param}"><img src="{$image_medium}" alt=""><div module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></div></a>
+            </div>
+            <div class="information">
+                <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
+                <p class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</p>
+                <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price}원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
+                <p class="price {$product_sale_display|display}">{$product_sale_price}</p>
+                <div class="{$colorchip_display|display}">
+                    <div class="color" module="product_Colorchip">
+                        <span class="chips" style="background-color:{$color};"></span>
+                        <span class="chips" style="background-color:{$color};"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- MD's PICK -->
+<!--(/_wg/import/JS_rollingItem.html)-->
+
+<!-- 탭롤링상품 -->
+<!--@import(/_wg/import/JS_tabRolling.html)-->
+
+<!-- 신상품 (New arrivals) -->
+<div module="product_listmain_2" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //신상품 (New arrivals) -->
+
+
+<!--@import(/_wg/import/SD_main_review.html)-->
+
+<!-- 추가카테고리1 (ETC 1) -->
+<div module="product_listmain_3" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- 추가카테고리1 (ETC 1) -->
+
+<!-- 추가카테고리2 (ETC 2) -->
+<div module="product_listmain_4" class="ec-base-product ">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- 추가카테고리2 (ETC 2) -->
+
+<!-- 추가카테고리3 (ETC 3) -->
+<div module="product_listmain_5" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리3 (ETC 3) -->
+
+<!-- 추가카테고리4 (ETC 4) -->
+<div module="product_listmain_6" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- 추가카테고리4 (ETC 4) -->
+
+<!-- 추가카테고리5 (ETC 5) -->
+<div module="product_listmain_7" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리5 (ETC 5) -->
+
+<!-- 추가카테고리6 (세일) -->
+<div module="product_listmain_8" class="ec-base-product gallery">
+    <!--
+        $count = 8
+        $moreview = no
+    -->
+    <h3>
+        {$category_title_text}
+    </h3>
+    <ul class="prdList grid1">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리6 (세일) -->
+
+<!-- 출석체크 -->
+<p module="Layout_attendBanner">
+<!--@css(/css/module/layout/attendBanner.css)-->
+    <!--
+        $stamp_type_url = /attend/stamp.html
+        $comment_type_url = /attend/comment.html
+    -->
+    <a href="{$attend_url}"><img src="http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bnr_attend.png" alt="출석체크 이벤트(매일매일 출석도장 쾅쾅쾅!)"></a>
+</p>
+
+<!-- 인스타그램 -->
+<!--@import(/_wg/import/insta.html)-->
+
+<!-- 공지사항 롤링 -->
+<!--@import(/_wg/import/JS_quickNotice.html)-->
+
+<!-- 제품소식 롤링 -->
+<!--@import(/_wg/import/JS_quickzenaNotice.html)-->
+
