@@ -148,9 +148,10 @@
 		var boardListVideo = 'board_no=12'; /* 홍보영상 */
 		var boardViewVideo = '/12/'; /* 홍보영상 */
 		var boardListCooper = 'board_no=5'; /* 판매/제휴/수출문의 */
-		var boardViewCooper = '/5/'; /* 판매/제휴/수출문의 */
 		var boardProduct = 'board_no=4' /* 구매후기 */;
 		var boardQna = 'board_no=6' /* 상품Q&A */;
+		var boardListSupporters = 'board_no=1002' /* 체험단 */;
+		var boardViewSupporters = '/1002/' /* 체험단 */;
 
 
 		if(currentLocation.match(boardListNotice)) {
@@ -192,5 +193,11 @@
 			document.getElementById("notice").style.display = "none";
 		}
 
+		if(currentLocation.match(boardListSupporters)) {
+			document.getElementById("supporters").innerHTML = "<img src='/image/sub/supporters_banner.jpg'>";
+		}
+		if(currentLocation.match(boardViewSupporters)) {
+			document.getElementById("supporters").innerHTML = "<img src='/image/sub/supporters_banner.jpg'>";
+		}
 
 	});

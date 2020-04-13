@@ -1,15 +1,8 @@
-/*
-    작업일자 : 2018-12-20
-    작업자 : 조은영
-*/
-
-
-
 /* sub title */
 #sp-title {min-width:1260px;}
 #sp-title h1.mh-title-item {position: relative; width: 100%;clear:both; overflow: hidden; padding:100px 0 50px 0}
 #sp-title h1.mh-title-item.product {padding:100px 0 10px 0}
-#sp-title h1.mh-title-item .en, #sp-title span.en {display: inline-block; font-size: 20px; font-weight: 800; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; letter-spacing: 20px; text-indent: 20px;}
+#sp-title h1.mh-title-item .en, #sp-title span.en {display: inline-block; font-size: 20px; font-weight: 800; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; letter-spacing: 15px; text-indent: 15px;}
 /*#sp-title h1.mh-title-item .en::after { display: block; content: ""; position: absolute; bottom: 1px; width:100%; height:9px; margin-left: -13px; background-color:#dadada; opacity: 0.3; }*/
 #sp-title h1.mh-title-item .ko, #sp-title span.ko {display: block; padding:10px 0 0 0;font-size: 60px; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; font-weight: 800; line-height: 1.25;}
 #sp-title h1.mh-title-item .ko, #sp-title span.ko font { color: #3a2a2a; }
@@ -19,5 +12,18 @@
 #sp-title h1.mh-title-item .ko.desc:after {display:inline-block;content:")"}
 #sp-title h1.mh-title-item #sp-mypage-ajax-btn {display: none;}
 #sp-title h1 > span, #sp-title h2 > span {left: 0;}
-#sp-title .notice {width:1260px; margin:0 auto 30px auto; padding:30px 20px;text-align:center; line-height:1.45;font-size:14px;font-family:"Noto sans KR";background-color:#f7f6f5;border-radius:5px;}
-	
+#sp-title .notice {
+	width:1260px;
+	line-height:1.7;
+	text-align:center;
+	color: #3c3c3c;
+	font-size:15px;
+	font-family:"nanum gothic";
+	font-weight: 600;
+	margin:0 auto 30px;
+	padding:30px 20px;
+	border: 1px solid #e6e6e6;
+}
+#sp-title .supporters {
+	padding-top: 30px;
+}

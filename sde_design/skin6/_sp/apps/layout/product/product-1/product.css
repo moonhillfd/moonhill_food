@@ -359,7 +359,7 @@
 
 	/* 상품 이미지 꾸미기 */
 	.xans-product-imagestyle .prdIcon { z-index:2; position:absolute; width:100px; height:100px; background-repeat:no-repeat; background-size: 100px;}
-	.ec-product-bgLT { top: 10px; left.mh_main_product .prdList li.item .xans-product-listitem li:first-child span: 10px; background-position: center; }
+	.ec-product-bgLT { top: 10px; left: 10px; background-position: center;}
 	.ec-product-bgLC { background-position:left center; }
 	.ec-product-bgLB { background-position:left bottom; }
 	.ec-product-bgRT { top: 10px; right: 10px; background-position: center; }

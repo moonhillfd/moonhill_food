@@ -89,13 +89,13 @@ function() {
 				<!--대표이미지-->
 				<div class="keyImg">
 					<div class="thumbnail">
+						<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" detailzoom data-url="/_sp/apps/module/zoom/zoom.html{$zoom_param}" />
 						<!--<a href="/product/image_zoom2.html{$zoom_param}" alt="{$product_code}" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=450,height=693,left=0,top=0', this);return false;">
 							<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" />
 							<span module="product_Imagestyle">
 								<span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
 							</span>
 						</a>-->
-						<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" detailzoom data-url="/_sp/apps/module/zoom/zoom.html{$zoom_param}" />
                         <span module="product_Imagestyle">
                             <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                         </span>
@@ -745,7 +745,6 @@ function() {
 									<!--네이버 체크아웃 구매 버튼-->
 									<div id="NaverChk_Button"></div><!--//네이버 체크아웃 구매 버튼-->
 
-
 									<!--클리어-->
 									<p class="sp-clear"></p>
 									<!--공통이벤트 : 상품 이미지 옆-->
@@ -1098,14 +1097,14 @@ function() {
     margin-top: 15px;
 }
 .talk_banner_div .talk_preview_area {
-    padding: 11px 0 0 10px;
+	display: flow-root !important;
+    padding: 11px 0 0;
     margin-top: 15px;
     border-top: 2px solid #2b2f3a;
 }
 .talk_banner_div .talk_preview_area .talk_banner_preview {
-	width: 181px !important;
+	width: 100% !important;
     height: 70px !important;
-    float: right;
    
 }
 .talk_banner_div .talk_preview_area .talk_banner_desc {

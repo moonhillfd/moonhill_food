@@ -12,7 +12,7 @@
 .xans-product-detail .supply span { padding:0 3px 0 0; font-size:16px; font-weight:bold; color:#555; }
 
 /* imgArea */
-.xans-product-detail .imgArea { width:55.5565%; float:left; }
+.xans-product-detail .imgArea { width:700px; float:left; }
 .xans-product-detail .imgArea .keyImg { width:100%; margin:0 auto; text-align:center; }
 .xans-product-detail .imgArea .keyImg .thumbnail { display:inline-block; position:relative; max-width:100%; }
 .xans-product-detail .imgArea .keyImg .thumbnail a { display:block; }
@@ -21,7 +21,7 @@
 .xans-product-detail .imgArea .listImg { margin-top:10px; }
 
 /* infoArea */
-.xans-product-detail .infoArea { width:39.683%; float:right; }
+.xans-product-detail .infoArea { width:470px; float:right; }
 
 #zoomGuideImage { display:none; }
 #zoomMouseGiude { width:auto !important; }
@@ -39,8 +39,8 @@
 
 
 
-.xans-product-detail .imgArea .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size: 100px; }
-.xans-product-detail .imgArea .keyImg img { max-width:344px; border:1px solid #ececec; cursor:pointer; }
+.xans-product-detail .imgArea .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size: 150px; }
+.xans-product-detail .imgArea .keyImg img { cursor:pointer; }
 /*
 .xans-product-detail .imgArea .listImg { overflow:hidden; width:346px; margin:30px auto 0; }
 .xans-product-detail .imgArea .listImg ul { min-width:400px; height:77px; margin:0 0 0 2px; font-size:0; line-height:0; }

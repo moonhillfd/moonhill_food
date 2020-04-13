@@ -2,7 +2,6 @@
 
 <!--컨플릭트-->
 <!--@js(/_sp/apps/addon/conflict/conflict.js)-->
-
 <div id="sp-board" theme="free" path="list" module="Board_ListPackage_1002">
 
     <!--@css(/css/module/board/listPackage.css)-->
@@ -21,20 +20,14 @@
 			</ul>
 		</div><!--//종료-->
 
-
-
 		<!--타이틀-->
 		<!--@css(/_sp/apps/module/title/title.css)-->
 		<!--@css(/_sp/css/mh-title.css)-->
 		<div id="sp-title">
 			<h1 class="mh-title-item">
-				<!--
 				<span class="en">{$board_info}</span>
 				<span class="ko">{$board_title}</span>
-				<span class="ko" id="marketing" style="font-size:18px;"></span>
-				-->
-				<span class="en">{$board_info}</span>
-				<span class="ko">{$board_title}</span>
+				<div class="supporters" id="supporters"></div>
 			</h1>
 		</div><!--//종료-->
 
@@ -59,7 +52,6 @@
 		<!--박스-->
 		<div class="sp-board-box">
 			<ul class="sp-clear">
-
 				<li class="sp-left">
 					<!--소트-->
 					<div select="1">
