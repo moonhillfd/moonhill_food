@@ -194,6 +194,9 @@
 		}
 
 		if(currentLocation.match(boardListSupporters)) {
+			document.getElementById("depthTwo").innerHTML = "¿Ã∫•∆Æ";
+		}
+		if(currentLocation.match(boardListSupporters)) {
 			document.getElementById("supporters").innerHTML = "<img src='/image/sub/supporters_banner.jpg'>";
 		}
 		if(currentLocation.match(boardViewSupporters)) {

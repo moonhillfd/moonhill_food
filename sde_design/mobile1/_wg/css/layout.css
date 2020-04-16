@@ -30,6 +30,97 @@ body { height:100%; }
 #main .mainBanner .paginate { position:absolute; bottom:8px; z-index:10; width:100%; text-align:center; font-size:0; line-height:0; background-color:transparent; }
 #main .mainBanner .afterNone { display:none; }
 
+
+/* 메인 - 이벤트 */
+.mh_main_product_header span.en {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 800;
+	color: #3a2a2a;
+	font-family: "Noto sans KR";
+	width: auto;
+	margin: 0;
+	text-align: unset;
+	letter-spacing: 10px;
+	text-indent: 10px;
+}
+.mh_main_product_header span.ko {
+	display: block;
+	padding: 10px 0 0 0;
+	font-size: 35px;
+	color: #3a2a2a;
+	font-family: "Noto sans KR";
+	width: auto;
+	margin: 0;
+	text-align: unset;
+	font-weight: 800;
+	line-height: 1.25;
+}
+
+.main_event {
+	position: relative;
+	padding-bottom: 50px;
+}
+.main_event .mh_main_product_header {
+	text-align: center;
+	padding: 20px 0 30px;
+}
+.main_event:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.main_event .eventclip {
+	padding: 10px;
+}
+.main_event .eventclip li {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.main_event .eventclip li img {
+	width: 100%;
+}
+.main_event .eventclip li > iframe {
+	width: 100%;
+}
+.main_event .eventclip li a {
+	display: block;
+}
+.main_event .eventclip li.small a {
+	width: 49%;
+	float: left;
+}
+.main_event .eventclip li.small:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.main_event .eventclip li.small a + a {
+	margin-left: 2%;
+}
+.main_event .subText {
+	font-family: "roboto", "NanumGothic", Sans-serif;
+	text-align: center;
+	padding: 30px 0 0;
+}
+.main_event .subText strong {
+	display: block;
+	line-height: 20px;
+	font-size: 20px;
+	color: #d46363;
+	margin-bottom: 20px;
+}
+.main_event .subText h3 {
+	line-height: 30px;
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+.main_event .subText p {
+	line-height: 20px;
+	font-size: 18px;
+	color: #646464;
+}
+
 .xans-popup-mobile .mainLayerArea { position:relative; z-index:120; height:0px; }
 .xans-popup-mobile .mMainLayer { position:absolute; left:7px; top:7px; right:7px; border:1px solid #9d9db0; }
 .xans-popup-mobile .mMainLayer .banner { position:relative; overflow:hidden; background-color:#fff; }

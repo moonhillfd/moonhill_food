@@ -18,10 +18,10 @@
 .xans-board-read .info .rating img { margin:-4px 0 0; width:auto; height:11px; }
 .xans-board-read .info .btnIcon img { width:12px; height:12px; }
 
-.xans-board-read .content { margin:-1px 0 0; padding:14px 14px 14px; word-wrap:break-word; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; text-align:center; line-height:1.45;}
+.xans-board-read .content { word-wrap:break-word; }
 .xans-board-read .content p,
 .xans-board-read .content div{ text-align:left; }
-.xans-board-read .content img { margin:0 auto 10px; max-width:100%; height: auto !important; }
+.xans-board-read .content img { margin:0; max-width:100%; height: auto !important; }
 .xans-board-read .content ul li { list-style:disc; }
 .xans-board-read .attach { oveflow:hidden; padding:14px 10px 14px; border-bottom:1px solid #d5d5d5; color:#757575; }
 .xans-board-read .attach:after { content:""; display:block; clear:both; }
