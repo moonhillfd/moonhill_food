@@ -12,8 +12,46 @@
 #sp-title h1.mh-title-item .ko.desc:after {display:inline-block;content:")"}
 #sp-title h1.mh-title-item #sp-mypage-ajax-btn {display: none;}
 #sp-title h1 > span, #sp-title h2 > span {left: 0;}
+#sp-title .best_link {
+	width: 1200px;
+	font-family: "nanum gothic";
+	text-align: center;
+	margin: 70px auto 0;
+}
+#sp-title .best_link ul:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+#sp-title .best_link ul li {
+	width: 230px;
+	float: left;
+}
+#sp-title .best_link ul li + li {
+	margin-left: 12.5px;
+}
+#sp-title .best_link ul li a {
+	display: block;
+}
+#sp-title .best_link ul li img {
+	width: 100%;
+}
+#sp-title .best_link ul li.soon {
+	height: 230px;
+	line-height: 30px;
+	font-size: 20px;
+	font-family: "nanum gothic";
+	font-weight: 500;
+	text-align: center;
+	color: #c8c8c8;
+	letter-spacing: -0.5px;
+	padding: 100px 0;
+	border: 1px solid #e6e6e6;
+	background: #fbfbfb;
+}
+
 #sp-title .notice {
-	width:1260px;
+	width:1200px;
 	line-height:1.7;
 	text-align:center;
 	color: #3c3c3c;

@@ -274,8 +274,8 @@ span[id*="afile_"] { display:none !important; }
 .sp-board-gallery-item .boardChk { visibility:hidden; z-index:3; position:absolute; top:20px; left:20px; }
 .sp-board-gallery-item:hover .boardChk,
 .sp-board-gallery-item .boardChk:checked { visibility:visible; }
--*/+
-.471center .sp-board-gallery-desc {
+
+.sp-board-gallery-item .sp-board-gallery-desc {
 	will-change : opacity , visibility ;
 	-webkit-transition : visibility 0.3s ease, opacity 0.3s ease;
 	 -khtml-transition : visibility 0.3s ease, opacity 0.3s ease;
