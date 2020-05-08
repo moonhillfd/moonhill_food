@@ -207,6 +207,7 @@
     .ec-base-product .description .line { display:block; height:0px; line-height:0; margin:0 0 10px; border-top:1px solid #eee; }
     .ec-base-product .description .icon { margin:10px 0 5px; }
     .ec-base-product .description .icon img { width:auto; max-height:11px; margin:0 4px 0 0; }
+    .ec-base-product .description .xans-product-listitem li { text-align: center; }
     .ec-base-product .description .xans-product-listitem li strong.title span { display: none; }
     .ec-base-product .description .xans-product-listitem li span { display: inline-block; line-height: 1.3em; font-weight: bold; }
 
@@ -281,7 +282,7 @@
      
       .ec-base-product .grid1 li .name { font-size:15px; }
       .ec-base-product .grid2 li .name,
-      .ec-base-product .grid3 li .name { font-size:12px; display: block; height: 30px; line-height: 15px; }
+      .ec-base-product .grid3 li .name { font-size:12px; text-align: center; display: block; height: 30px; line-height: 15px; }
       .ec-base-product .grid4 li .name { font-size:11px; }
     }
      

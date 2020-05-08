@@ -5,6 +5,23 @@ body { height:100%; }
 #container { position:relative; }
 #contents { }
 
+.app-smart-popup {
+	border: none !important;
+}
+.app-smart-popup .smart-popup-btns {
+	border: 1px solid #e6e6e6 !important;
+}
+.app-smart-popup .smart-popup-btns button {
+	height: 35px !important;
+	font-size: 12px !important;
+}
+.app-smart-popup .smart-popup-btns button + button {
+	border-left: 1px solid #e6e6e6 !important;
+}
+.app-smart-popup .smart-popup-btns button.smart-popup-close:first-child {
+	border: none !important;
+}
+
 .main_header_title {
 	position: relative;
 	text-align: center;
@@ -61,7 +78,7 @@ body { height:100%; }
 	position: relative;
 	padding-bottom: 50px;
 }
-.main_event .mh_main_product_header {
+.mh_main_product_header {
 	text-align: center;
 	padding: 20px 0 30px;
 }

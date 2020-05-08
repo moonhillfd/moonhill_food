@@ -33,53 +33,6 @@
 	</ul>
 </div>
 
-
-<div class="mPrdList typeThumb" module="product_listmain_1">
-<!--@css(/css/module/product/8/listmain_1.css)-->
-    <!--
-        $count = 10
-        $moreview = yes
-    -->
-<!--<h2>{$category_title_text}</h2>-->
-    <div class="main_header_title"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
-    <ul class="grid2">
-        <li>
-            <div class="thumbnail">
-                <a href="/product/detail.html{$param}"><img src="{$image_medium}" alt=""><div module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></div></a>
-            </div>
-            <div class="information">
-                <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
-                <p class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</p>
-                <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price}원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
-                <p class="price {$product_sale_display|display}">{$product_sale_price}</p>
-                <div class="{$colorchip_display|display}">
-                    <div class="color" module="product_Colorchip">
-                        <span class="chips" style="background-color:{$color};"></span>
-                        <span class="chips" style="background-color:{$color};"></span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="thumbnail">
-                <a href="/product/detail.html{$param}"><img src="{$image_medium}" alt=""><div module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></div></a>
-            </div>
-            <div class="information">
-                <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
-                <p class="icon">{$soldout_icon} {$new_icon} {$recommend_icon} {$product_icons}</p>
-                <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price}원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
-                <p class="price {$product_sale_display|display}">{$product_sale_price}</p>
-                <div class="{$colorchip_display|display}">
-                    <div class="color" module="product_Colorchip">
-                        <span class="chips" style="background-color:{$color};"></span>
-                        <span class="chips" style="background-color:{$color};"></span>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
-
 <!-- MD's PICK -->
 <!--(/_wg/import/JS_rollingItem.html)-->
 
@@ -92,9 +45,10 @@
         $count = 20
         $moreview = no
     -->
-    <h3>
-        {$category_title_text}
-    </h3>
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">{$category_title_text}</span>
+    </div>
     <ul class="prdList grid2">
         <!--@import(/_wg/import/prdList.html)-->
     </ul>
@@ -109,9 +63,10 @@
         $count = 20
         $moreview = no
     -->
-    <h3>
-        {$category_title_text}
-    </h3>
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">{$category_title_text}</span>
+    </div>
     <ul class="prdList grid2">
         <!--@import(/_wg/import/prdList.html)-->
     </ul>
