@@ -8,6 +8,7 @@
 .xans-product-additional ul.link li.selected:first-child { margin-left:0; }
 .xans-product-additional .cont { color:#353535; line-height:18px; }
 .xans-product-additional .cont h3 { margin:0 0 20px; color:#444; font-size:12px; }
+.xans-product-additional .prdct-notice img { width: 100%; }
 
 /* 상품 게시판 */
 .xans-product-additional div.board { padding:27px 0 46px; color:#353535; line-height:18px; }
