@@ -12,6 +12,13 @@
 #sp-title h1.mh-title-item .ko.desc:after {display:inline-block;content:")"}
 #sp-title h1.mh-title-item #sp-mypage-ajax-btn {display: none;}
 #sp-title h1 > span, #sp-title h2 > span {left: 0;}
+#sp-title h1.mh-title-item .subko {
+	font-size: 24px;
+	font-weight: 600;
+	color: #969696;
+	margin-top: 20px;
+	letter-spacing: 5px;
+}
 #sp-title .best_link {
 	width: 1200px;
 	font-family: "nanum gothic";
