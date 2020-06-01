@@ -1012,6 +1012,11 @@ input:-webkit-autofill { -webkit-box-shadow:0 0 0 50px #fff inset; -webkit-text-
 .shippingFee .wrap .btnClose:before { content:''; display:inline-block; position:absolute; top:25px; right:10px; width:28px; height:2px; border-radius:2px; background:#fff; transform:rotate(45deg)}
 .shippingFee .wrap .btnClose:after { content:''; display:inline-block; position:absolute; top:25px; right:10px; width:28px; height:2px; border-radius:2px; background:#fff; transform:rotate(-45deg)}
 
+/* 결제진행바 */
+#progressPaybarBackground { position:absolute; z-index:120; left:0; top:0; background:#000; filter:alpha(opacity=40); opacity:0.4; -moz-opacity:0.4; height:100%; width:100% !important;  }
+#progressPaybarView { position:fixed; padding:25px 0; margin:0 0 0 -180px; z-index:121; top:200px !important; left:50% !important;  width: 350px; font-size: 12px; text-align:center; border:5px solid #4764B3; border-radius:10px; background:#fff;}
+#progressPaybarView .graph {padding:0px 0 35px; color:#4764B3; font-weight:bold; font-size:20px; background:url(//img.echosting.cafe24.com/skin/base/layout/img_loading.gif) no-repeat center 38px; background-size:70%;}
+
 /* PC */
 @media all and (min-width:1024px) {
     body { width:900px; margin:0 auto; background:#fff; }

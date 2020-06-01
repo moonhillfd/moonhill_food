@@ -187,7 +187,7 @@
 			document.getElementById("best_link").innerHTML = "" +
 				"<ul>" +
 				"<li><a href='https://moonhillfood.com/article/review/4/1633/'><img src='/image/sub/best_04.jpg' /></a></li>" +
-				"<li class='soon'>COMING SOON</li>" +
+				"<li><a href='https://moonhillfood.com/article/review/4/1648/'><img src='/image/sub/best_05.jpg' /></a></li>" +
 				"<li class='soon'>COMING SOON</li>" +
 				"<li class='soon'>COMING SOON</li>" +
 				"<li class='soon'>COMING SOON</li>" +
