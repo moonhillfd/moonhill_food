@@ -8,6 +8,9 @@ body { height:100%; }
 .app-smart-popup {
 	border: none !important;
 }
+.app-smart-popup .smart-popup-img img {
+	max-width: 500px !important;
+}
 .app-smart-popup .smart-popup-btns {
 	border: 1px solid #e6e6e6 !important;
 }
