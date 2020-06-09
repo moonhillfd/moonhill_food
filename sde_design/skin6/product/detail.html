@@ -89,7 +89,7 @@ function() {
 				<!--대표이미지-->
 				<div class="keyImg">
 					<div class="thumbnail">
-						<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" detailzoom data-url="/_sp/apps/module/zoom/zoom.html{$zoom_param}" />
+						<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" /><!-- detailzoom data-url="/_sp/apps/module/zoom/zoom.html{$zoom_param}" -->
 						<!--<a href="/product/image_zoom2.html{$zoom_param}" alt="{$product_code}" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=450,height=693,left=0,top=0', this);return false;">
 							<img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" />
 							<span module="product_Imagestyle">
@@ -834,7 +834,6 @@ function() {
             <li><a href="#prdRelated">관련상품</a></li>
         </ul>
         <div class="cont">
-            <h3>상품상세정보</h3>
             {$product_detail}
         </div>
     </div><!-- //상품상세정보 -->
