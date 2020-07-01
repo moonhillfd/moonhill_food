@@ -68,6 +68,13 @@
                             <button type="button" class="btnAgree" onclick="viewRegularDelivery();">내용보기</button>
                         </div>
                     </li>
+                    <!-- 크라우드 펀딩 이용 동의 -->
+                    <li class="{$crowdfunding_show_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.crowdfunding_info_check_box}<label for="crowdfunding_info_check_box"><span class="txtEm">[필수]</span> 크라우드 펀딩 이용 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewCrowdfunding();">내용보기</button>
+                        </div>
+                    </li>
                     <!-- 청약철회방침 -->
                     <li class="{$subscription_display|display}">
                         <div class="agree">

@@ -179,11 +179,28 @@ function viewConsignmentAgree() {
         window.open('/order/ec_orderform/agreement/consignment_agreement.html?basket_type='+$('#basket_type').val()+'&delvtype='+getQueryString('delvtype'), '', 'width=450,height=350');
     }
 }
+//크라우드 펀딩 이용 동의
+function viewCrowdfunding() {
+    if (EC_MOBILE_DEVICE == true) {
+        window.open('/order/ec_orderform/agreement/crowdfunding.html?basket_type='+$('#basket_type').val()+'&delvtype='+getQueryString('delvtype'));
+    } else {
+        window.open('/order/ec_orderform/agreement/crowdfunding.html?basket_type='+$('#basket_type').val()+'&delvtype='+getQueryString('delvtype'), '', 'width=450,height=350');
+    }
+}
 function viewSafePhone() {
     if (EC_MOBILE_DEVICE == true) {
         window.open('/order/ec_orderform/popup/safePhone.html?basket_type='+$('#basket_type').val()+'&delvtype='+getQueryString('delvtype'));
     } else {
         window.open('/order/ec_orderform/popup/safePhone.html?basket_type='+$('#basket_type').val()+'&delvtype='+getQueryString('delvtype'), '', 'width=500,height=467');
+    }
+}
+
+// 결제대행서비스 약관 동의
+function viewPaymentAgree() {
+    if (EC_MOBILE_DEVICE == true) {
+        window.open('/protected/order/payment_agree_financial.html');
+    } else {
+        window.open('/protected/order/payment_agree_financial.html', '', 'width=450,height=350');
     }
 }
 
