@@ -102,19 +102,23 @@ body { height:100%; }
 }
 .main_event .eventclip li a {
 	display: block;
-}
-.main_event .eventclip li.small a {
-	width: 49%;
 	float: left;
 }
-.main_event .eventclip li.small:after {
+.main_event .eventclip li a.review {
+	width: 31%;
+}
+.main_event .eventclip li a.coupon {
+	width: 67%;
+}
+.main_event .eventclip li:after {
 	display: block;
 	content: "";
 	clear: both;
 }
-.main_event .eventclip li.small a + a {
+.main_event .eventclip li a + a {
 	margin-left: 2%;
 }
+
 .main_event .subText {
 	font-family: "roboto", "NanumGothic", Sans-serif;
 	text-align: center;

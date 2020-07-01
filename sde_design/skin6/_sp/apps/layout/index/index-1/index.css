@@ -161,14 +161,16 @@ div[layout="sp-layout-fixed"] {width:1200px;}
 }
 .main_event .eventclip li {
 	width: 370px;
-	height: 300px;
 	float: left;
 	margin-bottom: 30px;
 }
 .main_event .eventclip li.large {
 	width: 800px;
 }
-.main_event .eventclip li:nth-child(even) {
+.main_event .eventclip li.full {
+	width: 100%;
+}
+.main_event .eventclip li:nth-child(3) {
 	margin-left: 30px;
 }
 .main_event .eventclip li > iframe {
