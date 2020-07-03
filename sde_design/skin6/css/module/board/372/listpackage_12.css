@@ -1,4 +1,5 @@
-/* 게시판 메인 > 상품Q&A */
+/* 게시판 메인 > 비디오갤러리 */
+
 .board.xans-board-listpackage-12 {
 	position: relative;
 }
@@ -20,7 +21,6 @@
 	margin-right: 0;
 }
 .board.xans-board-listpackage-12 .galleryList li h3 {
-	display: block;
 	line-height: 30px;
 	font-size: 18px;
 	color: #3d3d3d;
@@ -53,4 +53,14 @@
 .board.xans-board-listpackage-12 .more:hover {
 	color: #5d5d5d;
 	border: 1px solid #c8c8c8;
+}
+
+
+@media screen and (max-width: 600px) {
+
+	.videogallery {
+		position: relative;
+		padding: 0 5px;
+	}
+
 }

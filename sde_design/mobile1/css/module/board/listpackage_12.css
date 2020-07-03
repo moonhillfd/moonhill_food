@@ -1,0 +1,49 @@
+/* 게시판 메인 > 비디오갤러리 */
+
+@media screen and (max-width: 600px) {
+
+	.videogallery {
+		position: relative;
+		padding: 0 10px 30px;
+		border-bottom: 1px solid #e6e6e6;
+	}
+	.board.xans-board-listpackage-12 {
+		position: relative;
+	}
+	.board.xans-board-listpackage-12 .galleryList ul:after {
+		display: block;
+		content: "";
+		clear: both;;
+	}
+	.board.xans-board-listpackage-12 .galleryList li {
+		position: relative;
+		width: 100%;
+		padding-bottom: 15px;
+		word-break: break-all;
+		overflow: hidden;
+	}
+	.board.xans-board-listpackage-12 .galleryList li h3 {
+		line-height: 24px;
+		font-size: 16px;
+		color: #3d3d3d;
+		padding: 15px 0;
+		text-align: center;
+	}
+	.board.xans-board-listpackage-12 .galleryList li .imgLink {
+		display: block;
+	}
+	.board.xans-board-listpackage-12 .galleryList li .imgLink img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.board.xans-board-listpackage-12 .more {
+		display: block;
+		line-height: 34px;
+		font-size: 14px;
+		font-weight: 600;
+		color: #8d8d8d;
+		text-align: center;
+		border: 1px solid #e6e6e6;
+	}
+}

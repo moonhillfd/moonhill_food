@@ -263,8 +263,8 @@ span[id*="afile_"] { display:none !important; }
 .sp-board-gallery[grid="2"] .sp-board-gallery-item { width:620px; margin-left:20px; margin-top:20px; }
 .sp-board-gallery[grid="3"] .sp-board-gallery-box { margin:0 -30px; }
 .sp-board-gallery[grid="3"] .sp-board-gallery-item { width:400px; margin-left:30px; margin-top:30px; }
-.sp-board-gallery[grid="4"] .sp-board-gallery-box { margin:0 -20px; }
-.sp-board-gallery[grid="4"] .sp-board-gallery-item { width:290px; margin-left:20px; margin-top:20px; }
+.sp-board-gallery[grid="4"] .sp-board-gallery-box { margin:0 -15px; }
+.sp-board-gallery[grid="4"] .sp-board-gallery-item { width:290px; margin-left:13.33px; margin-top:20px; }
 .sp-board-gallery[grid="5"] .sp-board-gallery-box { margin:0 -20px; }
 .sp-board-gallery[grid="5"] .sp-board-gallery-item { width:236px; margin-left:20px; margin-top:20px; }
 

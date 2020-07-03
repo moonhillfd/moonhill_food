@@ -149,7 +149,39 @@
     <a href="{$attend_url}"><img src="http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bnr_attend.png" alt="출석체크 이벤트(매일매일 출석도장 쾅쾅쾅!)"></a>
 </p>
 
+
 <!--비디오갤러리-->
+<div class="videogallery">
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">홍보영상</span>
+    </div>
+    <div class="board" module="board_listpackage_12">
+        <!--@css(/css/module/board/listpackage_12.css)-->
+        <div class="galleryList" module="board_list_12">
+            <!--
+				$count = 3
+				$main_list = yes
+				$subject_cut = 20
+			-->
+            <ul>
+                <li>
+                    <a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+                        <!--<span>{$comment_count}</span>-->
+                        <!--<span>{$write_date|date:Y-m-d}</span>-->
+                    </a>
+                </li>
+                <li>
+                    <a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+                        <!--<span>{$comment_count}</span>-->
+                        <!--<span>{$write_date|date:Y-m-d}</span>-->
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a href="/board/gallery/list.html?board_no=12" class="more">홍보영상 더보기</a>
+    </div>
+</div>
 
 
 <!-- 공지사항 롤링 -->
