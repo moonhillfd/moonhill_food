@@ -140,6 +140,38 @@
 </div>
 
 
+<!--비디오갤러리-->
+<div layout="sp-layout-fixed">
+	<div class="mh_main_product_header">
+		<span class="en">ZENATEA</span>
+		<span class="ko">홍보영상</span>
+	</div>
+	<div class="board" module="board_listpackage_12">
+		<!--@css(/css/module/board/372/listpackage_12.css)-->
+		<div class="galleryList" module="board_list_12">
+			<!--
+				$count = 6
+				$main_list = yes
+				$subject_cut = 20
+			-->
+			<ul>
+				<li>
+					<a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+						<!--<span>{$comment_count}</span>-->
+						<!--<span>{$write_date|date:Y-m-d}</span>-->
+					</a>
+				</li>
+				<li>
+					<a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+						<!--<span>{$comment_count}</span>-->
+						<!--<span>{$write_date|date:Y-m-d}</span>-->
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="/board/gallery/list.html?board_no=12" class="more"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_board_more.gif" alt="더보기" /></a>
+	</div>
+</div>
 
 
 <!--공지배너-->
@@ -234,6 +266,7 @@
 		</ul>
 	</div>
 </div><!--//여기까지-->
+
 
 <!--공지바-->
 <div class="mh_main_zenanotice" module="board_listpackage_1">
