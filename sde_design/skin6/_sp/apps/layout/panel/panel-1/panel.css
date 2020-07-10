@@ -4,6 +4,7 @@
 	data-start="open" 연상태로 시작한다.
 */
 #sp-panel-design-1 {
+	display: none;
 	z-index:100;
 	position:fixed;
 	width:220px;
