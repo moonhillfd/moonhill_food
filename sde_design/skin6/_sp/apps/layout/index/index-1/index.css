@@ -179,6 +179,9 @@ div[layout="sp-layout-fixed"] {width:1200px;}
 .main_event .eventclip li a {
 	display: block;
 }
+.main_event .eventclip li a.readynow {
+	cursor: default;
+}
 .main_event .eventclip li a img {
 	width: 100%;
 }
