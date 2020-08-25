@@ -1,0 +1,313 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--컨플릭트-->
+<!--@js(/_sp/apps/addon/conflict/conflict.js)-->
+<i id="sp-path" scope="index" path="" file=""></i>
+
+<!--플로팅 쿠키배너 1-->
+<!--@css(/_sp/apps/addon/floating/floating.css)-->
+<!--@js(/_sp/apps/addon/floating/floating.js)-->
+<div module="bannermanage2_display_18" floating data-cookie="uniqueCookieName1" data-wait="2000" data-speed="600" data-width="500" data-height="400" data-top="" data-left="30" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating.html"><div class="sp-floating-open" data-cookie="uniqueCookieName1"><button>팝업<br>보기</button></div>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+</div>
+
+<!--플로팅 쿠키배너 2-->
+<!--@css(/_sp/apps/addon/floating/floating.css)-->
+<!--@js(/_sp/apps/addon/floating/floating.js)-->
+<div module="bannermanage2_display_19" floating data-cookie="uniqueCookieName2" data-wait="3000" data-speed="600" data-width="300" data-height="300" data-top="" data-left="550" data-bottom="30" data-right="" data-url="/_sp/apps/addon/floating/floating_2.html"><div class="sp-floating-open" data-cookie="uniqueCookieName2"><button>새소식</button></div>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+	<a href="{$href}" {$target} class="displaynone">{$banner}</a>
+</div>
+
+<!--인덱스-->
+<!--@css(/_sp/apps/addon/slick/slick.css)-->
+<!--@js(/_sp/apps/addon/slick/slick.js)-->
+<!--@css(/_sp/apps/addon/mastable/mastable.css)-->
+<!--@js(/_sp/apps/addon/mastable/mastable.js)-->
+<!--@js(/_sp/apps/layout/index/index-1/index.js)-->
+<!--@css(/_sp/apps/layout/index/index-1/index.css)-->
+<!--@css(/_sp/apps/layout/product/product-1/product.css)-->
+<!--@js(/_sp/apps/layout/product/product-1/product.js)-->
+<!--
+	<div lazyhtmlelem="1"></div>
+	이 모습의 영역은 /_sp/apps/layout/index/index-1/index_load.html 에서 실제로 수정합니다.
+-->
+
+
+
+<div lazyhtml data-url="/_sp/apps/layout/index/index-1/index_load.html"></div>
+
+<!--대배너-->
+<div module="bannermanage2_display_7" class="sp-slider-index-1 sp-slider full hold" data-fade="true" data-autoplayspeed="4000" data-custompaging="true" data-speed="500" hover="false" arrows="blk-h-l" arrowsArea="h-in-46" arrowfix="false" dots="false" dotsArea="in-b-c">
+	<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+	<div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+    <div class="sp-slider-loop" data-title="{$title}"><a href="{$href}" {$target}>{$banner}</a></div>
+	<!--
+		동영상은 수동으로 등록합니다.
+		<div class="sp-slider-loop" data-title="[ ▶ ] ZARA SPRING SUMMER 2016">
+			<div youtubeouter="fixed"><div youtube data-id="0Rmz9_jagKo" data-start="true" data-sound="false" data-loop="true" data-width="3000" data-height="1350" data-fixheight="1000" data-center="true"></div></div>
+		</div>
+	-->
+</div><!--//여기까지-->
+
+<!--이벤트-->
+<div class="main_event">
+	<div class="main_product_header">
+		<span class="img"><img src="/image/main/maintitle_hotpick.png" alt="" /></span>
+		<span class="title">ZENA BEST ITEM</span>
+		<span class="subtitle">제나차의 베스트셀러</span>
+	</div>
+	<ul class="bestseller">
+		<li>
+			<a href="#">
+				<img src="/image/main/bestseller_tea.jpg" alt="bestseller" />
+				<dl>
+					<dt>제나차<br />Set (60포) + Box (20포)</dt>
+					<dd>자세히보기</dd>
+				</dl>
+			</a>
+		</li>
+		<li></li>
+	</ul>
+	<ul class="eventclip">
+		<!-- onclick="return false;" -->
+		<li class="full">
+			<a href="http://shop1.moonhillfd.cafe24.com/article/event/8/1705/"><img src="/image/main/eventclip_light.jpg" alt="eventclip" /></a>
+		</li>
+		<li>
+			<a href="https://moonhillfood.com/article/event/8/1432/"><img src="/image/main/eventclip_review.jpg" alt="eventclip" /></a>
+		</li>
+		<li class="large">
+			<a href="https://moonhillfood.com/article/event/8/1431/"><img src="/image/main/eventclip_coupon.jpg" alt="eventclip" /></a>
+		</li>
+		<li class="full">
+			<a href="#" onclick="return false;"><img src="/image/main/jiyoung_radio.jpg" alt="jiyoung" /></a>
+		</li>
+	</ul>
+</div>
+
+<div module="product_listmain_1">
+    <!--@css(/css/module/product/3245/listmain_1.css)-->
+    <!--
+        $count = 12
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <div class="mh_main_product">
+        <div class="mh_main_product_header"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
+        <ul class="prdList column3">
+            <li class="item" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <p class="prdImg">
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <span class="sp-product-imagestyle" module="product_Imagestyle">
+                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+                            </span>
+                        </a>
+                    </p>
+                    <!--
+                    <div class="status">
+                        <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon}
+                        </div>
+                    </div>
+					-->
+                    <p class="name">
+                        <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}">{$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <p class="prdImg">
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                            <img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <span class="sp-product-imagestyle" module="product_Imagestyle">
+                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+                            </span>
+                        </a>
+                    </p>
+                    <!--
+                    <div class="status">
+                        <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                        <div class="button">
+                            <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+                            <div class="option">{$option_preview_icon}</div> {$basket_icon}
+                        </div>
+                    </div>
+					-->
+                    <p class="name">
+                        <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}">{$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+	</div>
+</div>
+
+
+<!--비디오갤러리-->
+<div layout="sp-layout-fixed">
+	<div class="mh_main_product_header">
+		<span class="en">ZENATEA</span>
+		<span class="ko">홍보영상</span>
+	</div>
+	<div class="board" module="board_listpackage_12">
+		<!--@css(/css/module/board/372/listpackage_12.css)-->
+		<div class="galleryList" module="board_list_12">
+			<!--
+				$count = 6
+				$main_list = yes
+				$subject_cut = 20
+			-->
+			<ul>
+				<li>
+					<a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+						<!--<span>{$comment_count}</span>-->
+						<!--<span>{$write_date|date:Y-m-d}</span>-->
+					</a>
+				</li>
+				<li>
+					<a href="/board/product/read.html{$param_read}" class="imgLink"><img src="{$img_src}" alt="" /><h3>{$subject}</h3>
+						<!--<span>{$comment_count}</span>-->
+						<!--<span>{$write_date|date:Y-m-d}</span>-->
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="/board/gallery/list.html?board_no=12" class="more">홍보영상 더보기</a>
+	</div>
+</div>
+
+
+<!--공지배너-->
+<div layout="sp-layout-fixed">
+	<div class="sp-index-point-1" grid="3">
+		<div class="mh_main_product_header"><img src="/image/main/title_notice.png" alt="공지타이틀" /></div>
+		<ul>
+			<!-- 공지사항 -->
+			<li module="board_listpackage_1">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=1">NOTICE<span class="desc">새로운 공지를 알려드려요</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_1">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div module="board_notice_1"  class="sp-slider-loop notice "><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div module="board_notice_1"  class="sp-slider-loop notice"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- 제나소식 -->
+			<li module="board_listpackage_1">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=3001">제나소식<span class="desc">제품 소식을 알려드려요</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_3001">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div module="board_notice_1"  class="sp-slider-loop notice "><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div module="board_notice_1"  class="sp-slider-loop notice"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="N"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- FAQ -->
+			<li module="board_listpackage_1" class="mh_main_faq">
+				<div class="sp-index-point-1-board">
+					<a href="/board/free/list.html?board_no=3">FAQ<span class="desc">자주 물어보는 질문</span><span>MORE</span></a>
+					<div class="sp-index-point-1-board-inside">
+						<!--SLICK:v1.12.4-->
+						<!--@css(/_sp/apps/addon/slick/slick.css)-->
+						<!--@js(/_sp/apps/addon/slick/slick.js)-->
+
+						<div class="sp-slider sp-slider-notice-1" data-vertical="true" data-slidestoshow="6" data-speed="200" data-autoplayspeed="2000" hover="true" arrows="wht-v-s" arrowsArea="v-in-33" module="board_list_3">
+							<!--
+								$count = 10
+								$main_list = yes
+								$main_list_reply_view = no
+							-->
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="1"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="2"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="3"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="4"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="5"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="6"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="7"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="8"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+							<div class="sp-slider-loop"><a href="{$link_board_detail}" class="sp-slider-keyword sp-one" date="{$write_date}"><i rank="9"></i><span class="{$category_display|display} faq_category">{$category_name}</span>{$subject}</a></div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div><!--//여기까지-->
+
+
+<!--공지바-->
+<div class="mh_main_zenanotice" module="board_listpackage_1">
+	<div module="board_list_3001">
+<!--
+	$count = 4
+	$main_list = yes
+-->
+		<span class="label">zena notice</span>
+		<ul class="sp-slider" data-infinite="true" data-autoplayspeed="2000" data-speed="700" data-variableWidth="true" hover="true" between="20">
+			<li class="sp-slider-loop">
+				<a class="title" href="/board/product/read.html{$param_read}">
+					<span class="text">{$subject|cut:22,..}</span>
+					<span class="date">{$write_date|date:Y/m/d}</span>
+				</a>
+			</li>
+			<li class="sp-slider-loop">
+				<a class="title" href="/board/product/read.html{$param_read}">
+					<span class="text">{$subject|cut:22,..}</span>
+					<span class="date">{$write_date|date:Y/m/d}</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--@define(cmc_log)-->

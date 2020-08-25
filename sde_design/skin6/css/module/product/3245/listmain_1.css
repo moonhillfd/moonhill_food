@@ -32,7 +32,7 @@
     transition: 0.2s all ease-in-out;
 }
 .mh_main_product .prdList li.item:hover a img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .mh_main_product .prdList li.item a img {
     width: 100%;
