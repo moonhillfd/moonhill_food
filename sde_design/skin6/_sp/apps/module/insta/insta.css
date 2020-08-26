@@ -1,68 +1,68 @@
 .insta {
 	position: relative;
-	padding: 100px 0;
-	background: url("/image/main/insta_bg.jpg") no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
 }
 .insta .insta_title {
 	text-align: center;
-	padding: 0 0 30px;
+	padding: 0 0 50px;
 }
-.insta .insta_hashtag {
-	line-height: 1.65;
-	font-size: 20px;
-    color: #9c9c9c;
-	text-align: center;
-	padding-bottom: 50px;
-	letter-spacing: -1px;
-}
-.insta .insta_hashtag > a {
-	font-weight: 600;
-	font-style: italic;
-    color: inherit;
-	padding: 0 5px;
-	-webkit-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-.insta .insta_hashtag > a:hover {
-	color:#80c4f8;
-	text-decoration:none;
-}
-.insta_thumb {
+#instagram {
 	position:relative;
-	width: 910px;
+	width: 1200px;
     margin: 0 auto;
 }
-.insta_thumb:after {
+#instagram:after {
 	display: block;
 	clear:both;
 	content: "";
 }
-.insta_thumb li {
+#instagram .instagram_item {
 	width: 32%;
-	margin: 0 2% 2% 0;
+	margin-right: 2%;
 	float:left;
+	padding-bottom: 40px;
 	overflow: hidden;
 }
-.insta_thumb li:nth-child(3n) {
-	margin: 0 0 2%;
+#instagram .instagram_item:nth-child(3n) {
+	margin-right: 0;
 }
-.insta_thumb li img {
+#instagram .instagram_item > a {
+	position: relative;
+	display: block;
+	padding-top: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.instagram_item > a:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity .55s cubic-bezier(.215, .61, .355, 1);
+	content: '';
+	opacity: 0;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .8) 100%);
+	z-index: 1;
+}
+.instagram_item p {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 100%;
-	transform: scale(1);
-	-webkit-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+	color: #fff;
+	padding: 19px 57px;
+	opacity: 0;
+	transition: opacity .55s cubic-bezier(.215,.61,.355,1);
+	z-index: 2;
 }
-.insta_thumb li img:hover {
-	transform: scale(1.1);
+.instagram_item:hover > a:before,
+.instagram_item:hover p {
+	opacity: 1;
 }
 
 .scroll_top {

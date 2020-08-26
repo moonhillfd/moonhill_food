@@ -1,29 +1,72 @@
 <!--@css(/_sp/apps/module/insta/insta.css)-->
 <!-- 인스타그램 -->
 <div class="insta">
-    <h2 class="insta_title">
-        <img src="/image/main/title_instagram.png" alt="인스타그램">
-    </h2>
-    <p class="insta_hashtag">
-        <a href="https://www.instagram.com/zenatea_official/" target="_blank">@zenatea_official</a><br />
-        <a href="https://www.instagram.com/explore/tags/제나차" target="_blank">#제나차</a>
-        <a href="https://www.instagram.com/explore/tags/제나차" target="_blank">#제나선</a>
-    </p>
-    
-    <div class="mh_insta_thumb_wrap">
-        <div class="thumb mh_insta_thumb">
-            <div id="instafeed"></div>
-        </div>
-    </div>
+    <h2 class="insta_title"><img src="/image/main/hash_instagram.png" alt="인스타그램"></h2>
+    <div id="instagram"></div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    //if(!$('.instagram').length) { return; }
+
+    var token = "IGQVJVLUVXOTVablJmRl9BWU1BS2gwanhkRXVxaGFFbENZAdmdNbkIzanJyMmVXSXpoeGNSaFdWdEJjTVpla1drU2tuTGJ1NTB5OVBwTEZASWW9UQ0VCemFYRkhFd0lUeko3Mzh4N29LOGdkNXBQemtsZAgZDZD";
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://graph.instagram.com/me/media?access_token=" + token + "&fields=id,caption,media_type,media_url,thumbnail_url,permalink",
+        success: function(response) {
+            console.log(response);
+            if (response.data != undefined && response.data.length > 0) {
+                for(i = 0; i < 6; i++){
+                    if(response.data[i]){
+                        var item = response.data[i];
+                        var image_url = "";
+                        var post = "";
+
+                        if(item.media_type === "VIDEO"){
+                            image_url = item.thumbnail_url;
+                        }else{
+                            image_url = item.media_url;
+                        }
+
+                        post += '<div class="instagram_item instagram_item'+i+'">';
+                        post += '<a href="'+ item.permalink +'" target="_blank" rel="noopener noreferrer" style="background-image: url(' + image_url + ');">';
+                        post += '<p>'+ item.caption +'</p>';
+                        post += '</a>';
+                        post += '</div>';
+
+                        $('#instagram').append(post);
+                    }else{
+                        // if no curent item
+                        show_fallback('#insta-item-'+i)
+                    }
+                }
+            }else{
+                // if api error
+                show_fallback('.instagram-item')
+            }
+        },
+        error :function(){
+            // if http error
+            show_fallback('.instagram-item')
+        }
+    });
+    function show_fallback(el){
+        $(el).addClass('loaded fallback');
+    }
+</script>
+
+
+
+<!--
 <script src="/_sp/apps/module/insta/instafeed.min.js"></script>
 <script>
 var userFeed = new Instafeed({
   get: 'user',
-  userId: 4061458299,
+  userId: 701260907140772,
   clientId: 'cc1f522375fb49999de3b02ef210cb10',
-  accessToken: '4061458299.cc1f522.30a56b8b63334df1be6304392a12c4ec',
+  accessToken: 'IGQVJVLUVXOTVablJmRl9BWU1BS2gwanhkRXVxaGFFbENZAdmdNbkIzanJyMmVXSXpoeGNSaFdWdEJjTVpla1drU2tuTGJ1NTB5OVBwTEZASWW9UQ0VCemFYRkhFd0lUeko3Mzh4N29LOGdkNXBQemtsZAgZDZD',
   resolution: 'standard_resolution',
   template: '<a class="insta_content" href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><p class="insta_like"><i class="xi-heart"></i><span class="text">{{likes}}</span></p><p class="insta_comment"><i class="xi-speech-o"></i><span class="text">{{comments}}</p></a>',
   sortBy: 'most-recent',
@@ -32,4 +75,4 @@ var userFeed = new Instafeed({
 });
 userFeed.run();
 </script>
-
+-->

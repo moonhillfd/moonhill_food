@@ -59,32 +59,31 @@
 		<span class="subtitle">제나차의 베스트셀러</span>
 	</div>
 	<ul class="bestseller">
-		<li>
-			<a href="#">
-				<img src="/image/main/bestseller_tea.jpg" alt="bestseller" />
+		<li class="tea">
+			<a href="https://moonhillfood.com/product/%EC%A0%9C%EB%82%98%EC%B0%A8-set-60%ED%8F%AC-box-20%ED%8F%AC/84/category/49/display/1/">
+				<figure><img src="/image/main/bestseller_tea.jpg" alt="bestseller" /></figure>
 				<dl>
 					<dt>제나차<br />Set (60포) + Box (20포)</dt>
 					<dd>자세히보기</dd>
 				</dl>
 			</a>
 		</li>
-		<li></li>
-	</ul>
-	<ul class="eventclip">
-		<!-- onclick="return false;" -->
-		<li class="full">
-			<a href="http://shop1.moonhillfd.cafe24.com/article/event/8/1705/"><img src="/image/main/eventclip_light.jpg" alt="eventclip" /></a>
-		</li>
-		<li>
-			<a href="https://moonhillfood.com/article/event/8/1432/"><img src="/image/main/eventclip_review.jpg" alt="eventclip" /></a>
-		</li>
-		<li class="large">
-			<a href="https://moonhillfood.com/article/event/8/1431/"><img src="/image/main/eventclip_coupon.jpg" alt="eventclip" /></a>
-		</li>
-		<li class="full">
-			<a href="#" onclick="return false;"><img src="/image/main/jiyoung_radio.jpg" alt="jiyoung" /></a>
+		<li class="sun">
+			<a href="https://moonhillfood.com/product/%EC%A0%9C%EB%82%98%EC%84%A0-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EC%B0%A8-set-60%ED%8F%AC-box-20%ED%8F%AC/86/category/49/display/1/">
+				<figure><img src="/image/main/bestseller_sun.jpg" alt="bestseller" /></figure>
+				<dl>
+					<dt>제나선 다이어트차<br />Set (60포) + Box (20포)</dt>
+					<dd>자세히보기</dd>
+				</dl>
+			</a>
 		</li>
 	</ul>
+
+	<figure class="start_title"><img src="/image/main/main_start.png" alt="start" /></figure>
+
+	<div module="bannermanage2_display_21" class="eventclip">
+		<a href="{$href}" {$target} >{$banner}</a>
+	</div>
 </div>
 
 <div module="product_listmain_1">
@@ -95,7 +94,6 @@
         $basket_option = /product/basket_option.html
     -->
     <div class="mh_main_product">
-        <div class="mh_main_product_header"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
         <ul class="prdList column3">
             <li class="item" id="anchorBoxId_{$product_no}">
                 <div class="box">
@@ -156,13 +154,18 @@
 	</div>
 </div>
 
+<div class="main_product_header">
+	<span class="img"><img src="/image/main/maintitle_issue.png" alt="" /></span>
+	<span class="title">ZENA CONTENTS</span>
+	<span class="subtitle">제나차의 다양한 콘텐츠</span>
+</div>
+
+<!--인스타그램-->
+<!--@import(/_sp/apps/module/insta/insta.html)-->
 
 <!--비디오갤러리-->
 <div layout="sp-layout-fixed">
-	<div class="mh_main_product_header">
-		<span class="en">ZENATEA</span>
-		<span class="ko">홍보영상</span>
-	</div>
+	<h2 class="youtube_title"><img src="/image/main/hash_youtube.png" alt="hash" /></h2>
 	<div class="board" module="board_listpackage_12">
 		<!--@css(/css/module/board/372/listpackage_12.css)-->
 		<div class="galleryList" module="board_list_12">
@@ -194,7 +197,11 @@
 <!--공지배너-->
 <div layout="sp-layout-fixed">
 	<div class="sp-index-point-1" grid="3">
-		<div class="mh_main_product_header"><img src="/image/main/title_notice.png" alt="공지타이틀" /></div>
+		<div class="main_product_header">
+			<span class="img"><img src="/image/main/maintitle_news.png" alt="" /></span>
+			<span class="title">ZENA NOTICE</span>
+			<span class="subtitle">제나차의 안내 & 소식</span>
+		</div>
 		<ul>
 			<!-- 공지사항 -->
 			<li module="board_listpackage_1">

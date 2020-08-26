@@ -28,12 +28,13 @@
 	text-align: center;
 }
 .board.xans-board-listpackage-12 .galleryList li .imgLink {
+	position: relative;
 	display: block;
 	opacity: 1;
 	transition: 0.2s all ease-in-out;
 }
 .board.xans-board-listpackage-12 .galleryList li .imgLink:hover {
-	opacity: .8;
+	opacity: 0.9;
 }
 .board.xans-board-listpackage-12 .galleryList li .imgLink img {
 	width: 100%;
