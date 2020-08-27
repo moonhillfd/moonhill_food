@@ -196,7 +196,7 @@
 
     /** 일반 진열 **/
     .ec-base-product [class*="grid"] { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:0 5px; font-size:0; line-height:0; }
-    .ec-base-product [class*="grid"] > li { display:inline-block; margin:0 0 30px; vertical-align:top; text-align:center; font-size:12px; line-height:1.4; }
+    .ec-base-product [class*="grid"] > li { display:inline-block; margin: 30px 0 0; vertical-align:top; text-align:center; font-size:12px; line-height:1.4; }
 
     .ec-base-product .thumbnail { position:relative; margin:0 7px 10px; }
     .ec-base-product .thumbnail a { display:block; }

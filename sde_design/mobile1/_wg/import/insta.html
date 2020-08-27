@@ -10,6 +10,69 @@
 <!--
     module="instagramwidget_mobile_2" 는 위젯리스트중 적용하고자 하는 위젯의 코드로 변경하여 사용하시면 됩니다.
 -->
+
+
+<!--@css(/_sp/apps/module/insta/insta.css)-->
+<!-- 인스타그램 -->
+<div class="insta">
+	<h2 class="insta_title"><img src="/image/main/hash_instagram.png" alt="인스타그램"></h2>
+	<div id="instagram"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	//if(!$('.instagram').length) { return; }
+
+	var token = "IGQVJVLUVXOTVablJmRl9BWU1BS2gwanhkRXVxaGFFbENZAdmdNbkIzanJyMmVXSXpoeGNSaFdWdEJjTVpla1drU2tuTGJ1NTB5OVBwTEZASWW9UQ0VCemFYRkhFd0lUeko3Mzh4N29LOGdkNXBQemtsZAgZDZD";
+	$.ajax({
+		type: "GET",
+		dataType: "jsonp",
+		cache: false,
+		url: "https://graph.instagram.com/me/media?access_token=" + token + "&fields=id,caption,media_type,media_url,thumbnail_url,permalink",
+		success: function(response) {
+			console.log(response);
+			if (response.data != undefined && response.data.length > 0) {
+				for(i = 0; i < 6; i++){
+					if(response.data[i]){
+						var item = response.data[i];
+						var image_url = "";
+						var post = "";
+
+						if(item.media_type === "VIDEO"){
+							image_url = item.thumbnail_url;
+						}else{
+							image_url = item.media_url;
+						}
+
+						post += '<div class="instagram_item instagram_item'+i+'">';
+						post += '<a href="'+ item.permalink +'" target="_blank" rel="noopener noreferrer" style="background-image: url(' + image_url + ');">';
+						post += '<p>'+ item.caption +'</p>';
+						post += '</a>';
+						post += '</div>';
+
+						$('#instagram').append(post);
+					}else{
+						// if no curent item
+						show_fallback('#insta-item-'+i)
+					}
+				}
+			}else{
+				// if api error
+				show_fallback('.instagram-item')
+			}
+		},
+		error :function(){
+			// if http error
+			show_fallback('.instagram-item')
+		}
+	});
+	function show_fallback(el){
+		$(el).addClass('loaded fallback');
+	}
+</script>
+
+
+<!--
 <div class="insta_widget mh_minsta_item">
 	<div class="main_header_title"><img src="/image/main/title_instagram.png" alt="인스타타이틀" /></div>
 	<p class="mh_insta_user"><a href="https://www.instagram.com/zenatea_official/" target="_blank">@zenatea_official</a></p>
@@ -19,7 +82,7 @@
 	</p>
 
 	<div class="thumb mh_insta_thumb">
-	    
+
 	    <div id="instafeed"></div>
 	</div>
 </div>
@@ -122,3 +185,4 @@
 	});
 	userFeed.run();
 </script>
+-->

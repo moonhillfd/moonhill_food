@@ -75,21 +75,123 @@ figure { margin: 0; }
 	line-height: 1.25;
 }
 
+.main_product_header {
+	padding: 100px 0 50px;
+}
+.main_product_header span {
+	display: block;
+	width: auto;
+	font-family: "Noto sans KR";
+	margin: 0;
+	text-align: center;
+}
+.main_product_header span.img {
+	margin-bottom: 20px;
+}
+.main_product_header span.img img {
+	height: 25px;
+}
+.main_product_header span.title {
+	line-height: 30px;
+	font-size: 30px;
+	font-weight: 800;
+	color: #3f4140;
+}
+.main_product_header span.subtitle {
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #8d8d8d;
+	margin-top: 10px;
+	letter-spacing: -0.5px;
+}
+
 .main_event {
 	position: relative;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 .mh_main_product_header {
 	text-align: center;
 	padding: 60px 0 30px;
 }
+
+/* 메인 - 베스트셀러 */
+.main_event .bestseller {
+	margin-bottom: 50px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.main_event .bestseller:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.main_event .bestseller > li {
+	width: 50%;
+	float: left;
+}
+.main_event .bestseller li a {
+	display: block;
+}
+.main_event .bestseller li a figure img {
+	width: 100%;
+}
+.main_event .bestseller li a dl {
+	font-family: "Noto Sans Serif KR";
+	color: #3f4140;
+	text-align: center;
+	letter-spacing: -1px;
+}
+.main_event .bestseller li a dl dt {
+	line-height: 20px;
+	font-size: 14px;
+}
+.main_event .bestseller li a dl dt li {
+	margin-top: 5px;
+}
+.main_event .bestseller li a dl dd {
+	display: inline-block;
+	line-height: 16px;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 20px;
+	padding: 7px 15px;
+	border-radius: 10px;
+	transition: 0.2s all ease-in-out;
+}
+.main_event .bestseller li.tea a dl dd {
+	color: #ff9d84;
+	border: 2px solid #ff9d84;
+}
+.main_event .bestseller li.sun a dl dd {
+	color: #6cceb6;
+	border: 2px solid #6cceb6;
+}
+
+.main_event figure.start_title {
+	width: 100%;
+	text-align: center;
+	margin: 100px 0 50px;
+}
+.main_event figure.start_title img {
+	max-width: 313px;
+}
+
 .main_event:after {
 	display: block;
 	clear: both;
 	content: "";
 }
 .main_event .eventclip {
+	width: 100%;
 	padding: 10px;
+	box-sizing: border-box;
+}
+.main_event .eventclip a {
+	display: block;
+}
+.main_event .eventclip a img {
+	max-width: 100%;
 }
 .main_event .eventclip li {
 	width: 100%;
@@ -142,6 +244,8 @@ figure { margin: 0; }
 	font-size: 18px;
 	color: #646464;
 }
+
+.ec-base-product { margin: 0; }
 
 .xans-popup-mobile .mainLayerArea { position:relative; z-index:120; height:0px; }
 .xans-popup-mobile .mMainLayer { position:absolute; left:7px; top:7px; right:7px; border:1px solid #9d9db0; }

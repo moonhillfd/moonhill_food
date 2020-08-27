@@ -7,6 +7,13 @@
 		padding: 0 10px 30px;
 		border-bottom: 1px solid #e6e6e6;
 	}
+	.videogallery .youtube_title {
+		text-align: center;
+		padding: 30px 0 20px;
+	}
+	.videogallery .youtube_title img {
+		width: 60px;
+	}
 	.board.xans-board-listpackage-12 {
 		position: relative;
 	}
@@ -17,16 +24,20 @@
 	}
 	.board.xans-board-listpackage-12 .galleryList li {
 		position: relative;
-		width: 100%;
-		padding-bottom: 15px;
+		width: 49%;
+		margin: 0 2% 2% 0;
+		float: left;
 		word-break: break-all;
 		overflow: hidden;
 	}
+	.board.xans-board-listpackage-12 .galleryList li:nth-child(2n) {
+		margin-right: 0;
+	}
 	.board.xans-board-listpackage-12 .galleryList li h3 {
-		line-height: 24px;
-		font-size: 16px;
+		line-height: 20px;
+		font-size: 13px;
 		color: #3d3d3d;
-		padding: 15px 0;
+		padding: 10px 0;
 		text-align: center;
 	}
 	.board.xans-board-listpackage-12 .galleryList li .imgLink {

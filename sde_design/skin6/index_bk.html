@@ -58,26 +58,59 @@
 		<span class="title">ZENA BEST ITEM</span>
 		<span class="subtitle">제나차의 베스트셀러</span>
 	</div>
-	<ul class="bestseller">
-		<li class="tea">
-			<a href="https://moonhillfood.com/product/%EC%A0%9C%EB%82%98%EC%B0%A8-set-60%ED%8F%AC-box-20%ED%8F%AC/84/category/49/display/1/">
-				<figure><img src="/image/main/bestseller_tea.jpg" alt="bestseller" /></figure>
-				<dl>
-					<dt>제나차<br />Set (60포) + Box (20포)</dt>
-					<dd>자세히보기</dd>
-				</dl>
-			</a>
-		</li>
-		<li class="sun">
-			<a href="https://moonhillfood.com/product/%EC%A0%9C%EB%82%98%EC%84%A0-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EC%B0%A8-set-60%ED%8F%AC-box-20%ED%8F%AC/86/category/49/display/1/">
-				<figure><img src="/image/main/bestseller_sun.jpg" alt="bestseller" /></figure>
-				<dl>
-					<dt>제나선 다이어트차<br />Set (60포) + Box (20포)</dt>
-					<dd>자세히보기</dd>
-				</dl>
-			</a>
-		</li>
-	</ul>
+
+	<div module="product_listmain_2">
+		<!--@css(/css/module/product/3245/listmain_1.css)-->
+		<!--
+			$count = 2
+			$basket_result = /product/add_basket.html
+			$basket_option = /product/basket_option.html
+		-->
+		<div class="mh_main_product">
+			<ul class="bestseller">
+				<li class="item tea" id="anchorBoxId_{$product_no}">
+					<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+						<figure><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
+							<span class="sp-product-imagestyle" module="product_Imagestyle">
+	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+	                        </span>
+						</figure>
+						<dl>
+							<dt>
+								<span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
+								<ul module="product_ListItem">
+									<li class="{$item_display|display}">{$item_content}</li>
+									<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+								</ul>
+							</dt>
+							<dd>자세히보기</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="item sun" id="anchorBoxId_{$product_no}">
+					<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+						<figure><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
+							<span class="sp-product-imagestyle" module="product_Imagestyle">
+	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+	                        </span>
+						</figure>
+						<dl>
+							<dt>
+								<span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
+								<ul module="product_ListItem">
+									<li class="{$item_display|display}">{$item_content}</li>
+									<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+								</ul>
+							</dt>
+							<dd>자세히보기</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
 
 	<figure class="start_title"><img src="/image/main/main_start.png" alt="start" /></figure>
 
@@ -98,7 +131,8 @@
             <li class="item" id="anchorBoxId_{$product_no}">
                 <div class="box">
                     <p class="prdImg">
-                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+	                        <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
                             <span class="sp-product-imagestyle" module="product_Imagestyle">
                                 <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                             </span>
@@ -126,7 +160,7 @@
                 <div class="box">
                     <p class="prdImg">
                         <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
-                            <img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
                             <span class="sp-product-imagestyle" module="product_Imagestyle">
                                 <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                             </span>
