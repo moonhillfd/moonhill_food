@@ -53,93 +53,67 @@
 
 <!--이벤트-->
 <div class="main_event">
-	<div class="mh_main_product_header">
-		<span class="en">제나차와 함께하는</span>
-		<span class="ko">이너뷰티 프로젝트</span>
+	<div class="main_product_header">
+		<span class="img"><img src="/image/main/maintitle_hotpick.png" alt="" /></span>
+		<span class="title">ZENA BEST ITEM</span>
+		<span class="subtitle">제나차의 베스트셀러</span>
 	</div>
-	<ul class="eventclip">
-		<!-- onclick="return false;" -->
-		<li class="full">
-			<a href="https://moonhillfood.com/article/event/8/1710/"><img src="/image/main/eventclip_ssum.jpg" alt="eventclip" /></a>
-		</li>
-		<li>
-			<a href="https://moonhillfood.com/article/event/8/1432/"><img src="/image/main/eventclip_review.jpg" alt="eventclip" /></a>
-		</li>
-		<li class="large">
-			<a href="https://moonhillfood.com/article/event/8/1431/"><img src="/image/main/eventclip_coupon.jpg" alt="eventclip" /></a>
-		</li>
-		<li class="full">
-			<a href="#" onclick="return false;"><img src="/image/main/jiyoung_radio.jpg" alt="jiyoung" /></a>
-		</li>
-	</ul>
-</div>
 
-<div module="product_listmain_2">
-	<!--@css(/css/module/product/3245/listmain_1.css)-->
-	<!--
-		$count = 12
-		$basket_result = /product/add_basket.html
-		$basket_option = /product/basket_option.html
-	-->
-	<div class="mh_main_product">
-		<div class="mh_main_product_header"><img src="/image/main/title_mdspick.png" alt="엠디추천" /></div>
-		<ul class="prdList column3">
-			<li class="item" id="anchorBoxId_{$product_no}">
-				<div class="box">
-					<p class="prdImg">
-						<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+	<div module="product_listmain_2">
+		<!--@css(/css/module/product/3245/listmain_1.css)-->
+		<!--
+			$count = 2
+			$basket_result = /product/add_basket.html
+			$basket_option = /product/basket_option.html
+		-->
+		<div class="mh_main_product">
+			<ul class="bestseller">
+				<li class="item tea" id="anchorBoxId_{$product_no}">
+					<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+						<figure><img src="{$image_tiny}" id="{$image_tiny_id}" alt="" class="thumb" />
 							<span class="sp-product-imagestyle" module="product_Imagestyle">
-                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
-                            </span>
-						</a>
-					</p>
-					<!--
-					<div class="status">
-						<div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
-						<div class="button">
-							<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
-							<div class="option">{$option_preview_icon}</div> {$basket_icon}
-						</div>
-					</div>
-					-->
-					<p class="name">
-						<strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
-					</p>
-					<ul module="product_ListItem">
-						<li class="{$item_display|display}">{$item_content}</li>
-						<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-					</ul>
-				</div>
-			</li>
-			<li class="item" id="anchorBoxId_{$product_no}">
-				<div class="box">
-					<p class="prdImg">
-						<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
-							<img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+	                        </span>
+						</figure>
+						<dl>
+							<dt>
+								<span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
+								<ul module="product_ListItem">
+									<li class="{$item_display|display}">{$item_content}</li>
+									<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+								</ul>
+							</dt>
+							<dd>자세히보기</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="item sun" id="anchorBoxId_{$product_no}">
+					<a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+						<figure><img src="{$image_tiny}" id="{$image_tiny_id}" alt="" class="thumb" />
 							<span class="sp-product-imagestyle" module="product_Imagestyle">
-                                <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
-                            </span>
-						</a>
-					</p>
-					<!--
-					<div class="status">
-						<div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
-						<div class="button">
-							<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
-							<div class="option">{$option_preview_icon}</div> {$basket_icon}
-						</div>
-					</div>
-					-->
-					<p class="name">
-						<strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
-					</p>
-					<ul module="product_ListItem">
-						<li class="{$item_display|display}">{$item_content}</li>
-						<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-					</ul>
-				</div>
-			</li>
-		</ul>
+	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
+	                        </span>
+						</figure>
+						<dl>
+							<dt>
+								<span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
+								<ul module="product_ListItem">
+									<li class="{$item_display|display}">{$item_content}</li>
+									<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+								</ul>
+							</dt>
+							<dd>자세히보기</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<figure class="start_title"><img src="/image/main/main_start.png" alt="start" /></figure>
+
+	<div module="bannermanage2_display_21" class="eventclip">
+		<a href="{$href}" {$target} >{$banner}</a>
 	</div>
 </div>
 
@@ -151,12 +125,12 @@
         $basket_option = /product/basket_option.html
     -->
     <div class="mh_main_product">
-        <div class="mh_main_product_header"><img src="/image/main/title_shopping.png" alt="쇼핑타이틀" /></div>
         <ul class="prdList column3">
             <li class="item" id="anchorBoxId_{$product_no}">
                 <div class="box">
                     <p class="prdImg">
-                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+	                        <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
                             <span class="sp-product-imagestyle" module="product_Imagestyle">
                                 <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                             </span>
@@ -184,7 +158,7 @@
                 <div class="box">
                     <p class="prdImg">
                         <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
-                            <img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
+                            <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" />
                             <span class="sp-product-imagestyle" module="product_Imagestyle">
                                 <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                             </span>
@@ -212,13 +186,18 @@
 	</div>
 </div>
 
+<div class="main_product_header">
+	<span class="img"><img src="/image/main/maintitle_issue.png" alt="" /></span>
+	<span class="title">ZENA CONTENTS</span>
+	<span class="subtitle">제나차의 다양한 콘텐츠</span>
+</div>
+
+<!--인스타그램-->
+<!--@import(/_sp/apps/module/insta/insta.html)-->
 
 <!--비디오갤러리-->
 <div layout="sp-layout-fixed">
-	<div class="mh_main_product_header">
-		<span class="en">ZENATEA</span>
-		<span class="ko">홍보영상</span>
-	</div>
+	<h2 class="youtube_title"><img src="/image/main/hash_youtube.png" alt="hash" /></h2>
 	<div class="board" module="board_listpackage_12">
 		<!--@css(/css/module/board/372/listpackage_12.css)-->
 		<div class="galleryList" module="board_list_12">
@@ -250,7 +229,11 @@
 <!--공지배너-->
 <div layout="sp-layout-fixed">
 	<div class="sp-index-point-1" grid="3">
-		<div class="mh_main_product_header"><img src="/image/main/title_notice.png" alt="공지타이틀" /></div>
+		<div class="main_product_header">
+			<span class="img"><img src="/image/main/maintitle_news.png" alt="" /></span>
+			<span class="title">ZENA NOTICE</span>
+			<span class="subtitle">제나차의 안내 & 소식</span>
+		</div>
 		<ul>
 			<!-- 공지사항 -->
 			<li module="board_listpackage_1">

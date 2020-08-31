@@ -1,13 +1,13 @@
 <!--@layout(/layout/basic/layout.html)-->
 
-<!--ÄÁÇÃ¸¯Æ®-->
+<!--ï¿½ï¿½ï¿½Ã¸ï¿½Æ®-->
 <!--@js(/_sp/apps/addon/conflict/conflict.js)-->
 
 <div id="sp-board" theme="product" path="write" module="board_writePackage_4">
 
     <!--@css(/css/module/board/writePackage.css)-->
     <div module="board_title_4">
-		<!--³×ºñ°ÔÀÌ¼Ç-->
+		<!--ï¿½×ºï¿½ï¿½ï¿½Ì¼ï¿½-->
 		<!--@js(/_sp/apps/module/navigation/navigation.js)-->
 		<!--@css(/_sp/apps/module/navigation/navigation.css)-->
 		<div id="sp-navigation">
@@ -19,9 +19,9 @@
 				</li>
 				<!--@import(/_sp/apps/module/navigation/navigation_right.html)-->
 			</ul>
-		</div><!--//Á¾·á-->
+		</div><!--//ï¿½ï¿½ï¿½ï¿½-->
 		
-		<!--Å¸ÀÌÆ²-->
+		<!--Å¸ï¿½ï¿½Æ²-->
 		<!--@css(/_sp/apps/module/title/title.css)-->
 		<!--@css(/_sp/css/mh-title.css)-->
 		<div id="sp-title">
@@ -29,10 +29,10 @@
 				<span class="en">{$board_title}</span>
 				<span class="ko">{$board_info}</span>
 			</h1>
-		</div><!--//Á¾·á-->
+		</div><!--//ï¿½ï¿½ï¿½ï¿½-->
     </div>
 
-	<!--°Ô½ÃÆÇ-->
+	<!--ï¿½Ô½ï¿½ï¿½ï¿½-->
 	<!--@js(/_sp/apps/module/board/board.js)-->
 	<!--@css(/_sp/apps/module/board/board.css)-->
 	<div layout="sp-layout-fixed">
@@ -43,10 +43,10 @@
 				$product_select_url = /product/search_board_list.html
 				$order_select_url = /order/search_board_list.html
 				$login_page_url = /member/login.html
-				$deny_access_url = /index.html
+				$deny_access_url = /index_20200831.html
 			-->
 
-			<!--»óÇ°Á¤º¸-->
+			<!--ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½-->
 			<div grid="1" class="sp-base-box sp-box {$display_product|display}">
 				<ul>
 					<li class="sp-clear">
@@ -61,38 +61,38 @@
 								<p><strong class="txtWarn">{$product_price}</strong> {$product_tax_type_text}</p>
 								<br />
 								<p class="sp-btn-group sp-left" grid="0">
-									<a href="/product/detail.html{$param_product}" id="{$product_link_id}" title="»õÃ¢À¸·Î ÀÌµ¿" target="_blank" class="sp-btn" theme="black" scale="medium" change="search">»óÇ°»ó¼¼º¸±â</a>
-									<a href="#none" onclick="{$action_product_select}" class="sp-btn {$display_product_select|display}" theme="white" scale="medium" change="edit">»óÇ°Á¤º¸ ¼±ÅÃÇÏ±â</a>
-									<a href="#none" onclick="{$action_order_select}" class="sp-btn {$display_order_select|display}" theme="white" scale="medium" change="edit">ÁÖ¹®»óÇ° ¼±ÅÃÇÏ±â</a>
+									<a href="/product/detail.html{$param_product}" id="{$product_link_id}" title="ï¿½ï¿½Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½" target="_blank" class="sp-btn" theme="black" scale="medium" change="search">ï¿½ï¿½Ç°ï¿½ó¼¼ºï¿½ï¿½ï¿½</a>
+									<a href="#none" onclick="{$action_product_select}" class="sp-btn {$display_product_select|display}" theme="white" scale="medium" change="edit">ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½</a>
+									<a href="#none" onclick="{$action_order_select}" class="sp-btn {$display_order_select|display}" theme="white" scale="medium" change="edit">ï¿½Ö¹ï¿½ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½</a>
 								</p>
 							</div>
 						</div>
 					</li>
 				</ul>
-			</div><!--Á¾·á-->
+			</div><!--ï¿½ï¿½ï¿½ï¿½-->
 
 			<div class="ec-base-table typeWrite" select="1" input="1">
 				<table border="1" summary="">
-				<caption>±Û¾²±â Æû</caption>
+				<caption>ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½</caption>
 				<colgroup>
 					<col style="width:130px;" />
 					<col style="width:auto;" />
 				</colgroup>
 				<tbody>
 					<tr>
-						<th scope="row">Á¦¸ñ</th>
+						<th scope="row">ï¿½ï¿½ï¿½ï¿½</th>
 						<td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
 					</tr>
 					<tr class="{$config.is_login|display}">
-						<th scope="row">ÀÛ¼ºÀÚ</th>
+						<th scope="row">ï¿½Û¼ï¿½ï¿½ï¿½</th>
 						<td>{$form.writer}</td>
 					</tr>
 					<tr class="{$config.use_write_email|display}">
-						<th scope="row">ÀÌ¸ÞÀÏ</th>
+						<th scope="row">ï¿½Ì¸ï¿½ï¿½ï¿½</th>
 						<td>{$form.email}</td>
 					</tr>
 					<tr class="{$config.is_use_point|display}">
-						<th scope="row">ÆòÁ¡</th>
+						<th scope="row">ï¿½ï¿½ï¿½ï¿½</th>
 						<td class="sp-board-write-point">{$form.point}</td>
 					</tr>
 					<tr>
@@ -108,66 +108,66 @@
 
 				<tbody class="{$config.use_attach|display}">
 					<tr>
-						<th scope="row">Ã·ºÎÆÄÀÏ1</th>
+						<th scope="row">Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1</th>
 						<td>{$form.attach_file}</td>
 					</tr>
 					<tr>
-						<th scope="row">Ã·ºÎÆÄÀÏ2</th>
+						<th scope="row">Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2</th>
 						<td>{$form.attach_file}</td>
 					</tr>
 					<tr>
-						<th scope="row">Ã·ºÎÆÄÀÏ3</th>
+						<th scope="row">Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3</th>
 						<td>{$form.attach_file}</td>
 					</tr>
 					<tr>
-						<th scope="row">Ã·ºÎÆÄÀÏ4</th>
+						<th scope="row">Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½4</th>
 						<td>{$form.attach_file}</td>
 					</tr>
 					<tr>
-						<th scope="row">Ã·ºÎÆÄÀÏ5</th>
+						<th scope="row">Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5</th>
 						<td>{$form.attach_file}</td>
 					</tr>
 				</tbody>
 
 				<tbody>
 					<tr class="{$config.use_password|display}">
-						<th scope="row">ºñ¹Ð¹øÈ£</th>
-						<td>{$form.password} <span class="{$password_rule_help_display|display}">(¿µ¹® ´ë¼Ò¹®ÀÚ/¼ýÀÚ/Æ¯¼ö¹®ÀÚ Áß 2°¡Áö ÀÌ»ó Á¶ÇÕ, 10ÀÚ~16ÀÚ)</span></td>
+						<th scope="row">ï¿½ï¿½Ð¹ï¿½È£</th>
+						<td>{$form.password} <span class="{$password_rule_help_display|display}">(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½/Æ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½, 10ï¿½ï¿½~16ï¿½ï¿½)</span></td>
 					</tr>
 					<tr class="{$config.use_secret|display}">
-						<th scope="row">ºñ¹Ð±Û¼³Á¤</th>
+						<th scope="row">ï¿½ï¿½Ð±Û¼ï¿½ï¿½ï¿½</th>
 						<td>{$form.secure}</td>
 					</tr>
 					<tr class="captcha {$config.use_captcha_write|display}">
-						<th scope="row">º¸¾È¹®ÀÚ</th>
+						<th scope="row">ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½</th>
 						<td>
 							{$captcha_image} {$captcha_refresh}
-							<p class="gBlank5">{$form.captcha} <span class="ec-base-help txtInfo">¿µ¹®, ¼ýÀÚ Á¶ÇÕÀ» °ø¹é¾øÀÌ ÀÔ·ÂÇÏ¼¼¿ä(´ë¼Ò¹®ÀÚ±¸ºÐ)</span></p>
+							<p class="gBlank5">{$form.captcha} <span class="ec-base-help txtInfo">ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½(ï¿½ï¿½Ò¹ï¿½ï¿½Ú±ï¿½ï¿½ï¿½)</span></p>
 						</td>
 					</tr>
 					<tr class="agree {$config.is_login|display}">
-						<th scope="row">°³ÀÎÁ¤º¸ ¼öÁý ¹× <br />ÀÌ¿ë µ¿ÀÇ</th>
+						<th scope="row">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ <br />ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½</th>
 						<td>
 							{$form.privacy_agreement}<br />
-							°³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë¿¡ µ¿ÀÇÇÏ½Ê´Ï±î? {$form.privacy_agreement_radio}
+							ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ë¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê´Ï±ï¿½? {$form.privacy_agreement_radio}
 						</td>
 					</tr>
 				</tbody>
 				</table>
 			</div>
 
-			<!--¹öÆ°-->
+			<!--ï¿½ï¿½Æ°-->
 			<div class="sp-btn-group mgt2" grid="0">
 				<p class="sp-left">
-					<a href="#none" onclick="{$action_comment_admin}" class="sp-btn {$config.is_admin|display}" theme="white" scale="large" change="dot">°ü¸®ÀÚ ´äº¯º¸±â</a>
-					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">¸ñ·Ï</a>
+					<a href="#none" onclick="{$action_comment_admin}" class="sp-btn {$config.is_admin|display}" theme="white" scale="large" change="dot">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½äº¯ï¿½ï¿½ï¿½ï¿½</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">ï¿½ï¿½ï¿½</a>
 				</p>
 				<p class="sp-right">
-					<a href="#none" onclick="{$action_write}" class="sp-btn" theme="black" scale="large" change="check">µî·Ï</a>
-					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">Ãë¼Ò</a>
+					<a href="#none" onclick="{$action_write}" class="sp-btn" theme="black" scale="large" change="check">ï¿½ï¿½ï¿½</a>
+					<a href="{$link_board_list}" class="sp-btn" theme="white" scale="large" change="list">ï¿½ï¿½ï¿½</a>
 				</p>
-			</div><!--//Á¾·á-->
+			</div><!--//ï¿½ï¿½ï¿½ï¿½-->
 		</div>
 
 	</div>
-</div><!--Á¾·á-->
+</div><!--ï¿½ï¿½ï¿½ï¿½-->

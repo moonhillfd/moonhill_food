@@ -59,6 +59,24 @@
 	-o-transition: all 100ms ease-in-out;
 	transition: all 100ms ease-in-out;
 }
+
+.main_header .join_coupon {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	padding: 0 60px;
+}
+.main_header.fixed .join_coupon {
+	top: 50px;
+}
+.main_header .join_coupon a {
+	display: block;
+	height: 30px;
+}
+.main_header .join_coupon a > img {
+	height: 100%;
+}
+
 .header_links {
 	position: relative;
 	width: 100%;

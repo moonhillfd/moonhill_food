@@ -146,6 +146,9 @@ figure { margin: 0; }
 	line-height: 20px;
 	font-size: 14px;
 }
+.main_event .bestseller li a dl dt p {
+	min-height: 40px;
+}
 .main_event .bestseller li a dl dt li {
 	margin-top: 5px;
 }
@@ -155,7 +158,7 @@ figure { margin: 0; }
 	font-size: 16px;
 	font-weight: 600;
 	margin-top: 20px;
-	padding: 7px 15px;
+	padding: 8px 15px;
 	border-radius: 10px;
 	transition: 0.2s all ease-in-out;
 }
@@ -220,6 +223,9 @@ figure { margin: 0; }
 }
 .main_event .eventclip li a + a {
 	margin-left: 2%;
+}
+.main_event .bannermanage2-none-info {
+	display: none;
 }
 
 .main_event .subText {

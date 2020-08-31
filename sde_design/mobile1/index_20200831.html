@@ -15,69 +15,46 @@
 
 <!--이벤트-->
 <div class="main_event">
-    <div class="main_product_header">
-        <span class="img"><img src="/image/main/maintitle_hotpick.png" alt="" /></span>
-        <span class="title">ZENA BEST ITEM</span>
-        <span class="subtitle">제나차의 베스트셀러</span>
-    </div>
-
-    <!-- MD's Pick // BEST SELLER -->
-    <div module="product_listmain_2" class="ec-base-product">
-        <!--
-			$count = 2
-			$moreview = no
-		-->
-        <ul class="bestseller">
-            <li class="item tea" id="anchorBoxId_{$product_no}">
-                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
-                    <figure><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
-                        <span class="sp-product-imagestyle" module="product_Imagestyle">
-	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
-	                        </span>
-                    </figure>
-                    <dl>
-                        <dt>
-                            <span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
-                            <ul module="product_ListItem">
-                                <li class="{$item_display|display}">{$item_content}</li>
-                                <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                            </ul>
-                        </dt>
-                        <dd>자세히보기</dd>
-                    </dl>
-                </a>
-            </li>
-            <li class="item sun" id="anchorBoxId_{$product_no}">
-                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
-                    <figure><img src="{$image_big}" id="{$image_big_id}" alt="" class="thumb" />
-                        <span class="sp-product-imagestyle" module="product_Imagestyle">
-	                            <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
-	                        </span>
-                    </figure>
-                    <dl>
-                        <dt>
-                            <span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}
-                            <ul module="product_ListItem">
-                                <li class="{$item_display|display}">{$item_content}</li>
-                                <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                            </ul>
-                        </dt>
-                        <dd>자세히보기</dd>
-                    </dl>
-                </a>
-            </li>
-        </ul>
-    </div><!-- MD's Pick // BEST SELLER -->
-
-    <figure class="start_title"><img src="/image/main/main_start.png" alt="start" /></figure>
-
-    <div module="bannermanage2_display_21" class="eventclip">
-        <a href="{$href}" {$target} >{$banner}</a>
-    </div>
+	<div class="mh_main_product_header">
+		<span class="en">제나차와 함께하는</span>
+		<span class="ko">이너뷰티 프로젝트</span>
+	</div>
+	<ul class="eventclip">
+        <!-- onclick="return false;" -->
+		<li>
+            <a href="https://moonhillfood.com/article/event/8/1710/"><img src="/image/main/eventclip_ssum.jpg" alt="eventclip" /></a>
+		</li>
+		<li>
+            <a class="review" href="https://moonhillfood.com/article/event/8/1432/"><img src="/image/main/eventclip_review.jpg" alt="eventclip" /></a>
+            <a class="coupon" href="https://moonhillfood.com/article/event/8/1431/"><img src="/image/main/eventclip_coupon.jpg" alt="eventclip" /></a>
+		</li>
+        <li class="full">
+            <a href="#" onclick="return false;"><img src="/image/main/jiyoung_radio.jpg" alt="jiyoung" /></a>
+        </li>
+    </ul>
 </div>
+
+<!-- MD's PICK -->
+<!--(/_wg/import/JS_rollingItem.html)-->
 
 <!-- 탭롤링상품 -->
 <!--@import(/_wg/import/JS_tabRolling.html)-->
+
+<!-- 신상품 (New arrivals) -->
+<div module="product_listmain_2" class="ec-base-product">
+    <!--
+        $count = 20
+        $moreview = no
+    -->
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">{$category_title_text}</span>
+    </div>
+    <ul class="prdList grid2">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //신상품 (New arrivals) -->
+
 
 <!--@import(/_wg/import/SD_main_review.html)-->
 
@@ -87,6 +64,10 @@
         $count = 20
         $moreview = no
     -->
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">{$category_title_text}</span>
+    </div>
     <ul class="prdList grid2">
         <!--@import(/_wg/import/prdList.html)-->
     </ul>
@@ -173,23 +154,17 @@
 </p>
 
 
-<div class="main_product_header">
-    <span class="img"><img src="/image/main/maintitle_issue.png" alt="" /></span>
-    <span class="title">ZENA CONTENTS</span>
-    <span class="subtitle">제나차의 다양한 콘텐츠</span>
-</div>
-
-<!--인스타그램-->
-<!--@import(/_wg/import/insta.html)-->
-
 <!--비디오갤러리-->
 <div class="videogallery">
-    <h2 class="youtube_title"><img src="/image/main/hash_youtube.png" alt="유튜브타이틀"></h2>
+    <div class="mh_main_product_header">
+        <span class="en">ZENATEA</span>
+        <span class="ko">홍보영상</span>
+    </div>
     <div class="board" module="board_listpackage_12">
         <!--@css(/css/module/board/listpackage_12.css)-->
         <div class="galleryList" module="board_list_12">
             <!--
-				$count = 4
+				$count = 3
 				$main_list = yes
 				$subject_cut = 20
 			-->
