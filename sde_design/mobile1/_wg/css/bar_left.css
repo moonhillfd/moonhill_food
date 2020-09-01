@@ -26,7 +26,12 @@
     .d_etc18.left .top_content { display:block; padding: 3px 15px 20px; }
 
     .d_content .intro { margin:0 0 15px; font-size:10px; letter-spacing:-0.03em; color:#888; font-weight:200; text-align: center;}
-    .d_content .intro a { display:inline-block; width: 40%; padding: 20px 0;}
+    .d_content .intro a {
+	    display: block;
+	    margin: 0 auto;
+	    width: 40%;
+	    padding: 20px 0;
+    }
     .d_content .intro a img {
 	    width: 100%;
     }

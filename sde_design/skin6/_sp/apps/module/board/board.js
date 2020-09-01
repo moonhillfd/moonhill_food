@@ -181,9 +181,9 @@
 		if(currentLocation.match(boardListCooper)) {
 			document.getElementById("marketing").innerHTML = "마케팅 담당 : 070.4652.3191";
 		}
-
 		if(currentLocation.match(boardProduct)) {
 			document.getElementById("depthTwo").innerHTML = "구매후기";
+/*
 			document.getElementById("best_link").innerHTML = "" +
 				"<ul>" +
 				"<li><a href='https://moonhillfood.com/article/review/4/1633/'><img src='/image/sub/best_04.jpg' /></a></li>" +
@@ -192,10 +192,10 @@
 				"<li><a href='https://moonhillfood.com/article/review/4/1697/'><img src='/image/sub/best_07.jpg' /></a></li>" +
 				"<li class='soon'>COMING SOON</li>" +
 				"</ul>";
+*/
 			document.getElementById("notice").innerHTML = "달맞이자연식품에서 판매하고 있는 식품, 건강기능식품은 질병의 예방과 치료를 위한 의약품이 아닙니다.<br>구매후기 작성 시 질병명, 치료 예방과 관련된 단어(효과, 효능 등)를 사용할 경우 과대광고로 오인할 수 있으니 가급적 의학적 용어나 효능/효과에 대한 표현은 삼가부탁드리며,<br>이런 내용으로 후기가 작성될 경우 부득이하게 게시글 삭제 또는 수정(** 처리)될 수 있다는 점 양해 부탁드립니다.";
 			document.getElementById("boardReview").style.display="block";
 		}
-
 		if(currentLocation.match(boardQna)) {
 			document.getElementById("notice").style.display = "none";
 		}
