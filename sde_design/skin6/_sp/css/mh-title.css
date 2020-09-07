@@ -4,7 +4,7 @@
 #sp-title h1.mh-title-item.product {padding:100px 0 10px 0}
 #sp-title h1.mh-title-item .en, #sp-title span.en {display: inline-block; font-size: 20px; font-weight: 800; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; letter-spacing: 15px; text-indent: 15px;}
 /*#sp-title h1.mh-title-item .en::after { display: block; content: ""; position: absolute; bottom: 1px; width:100%; height:9px; margin-left: -13px; background-color:#dadada; opacity: 0.3; }*/
-#sp-title h1.mh-title-item .ko, #sp-title span.ko {display: block; padding:10px 0 0 0;font-size: 60px; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; font-weight: 800; line-height: 1.25;}
+#sp-title h1.mh-title-item .ko, #sp-title span.ko {display: block; padding:10px 0 0 0;font-size: 50px; color:#3a2a2a; font-family: "Noto sans KR"; width: auto; margin: 0; text-align: unset; font-weight: 800; line-height: 1.25;}
 #sp-title h1.mh-title-item .ko, #sp-title span.ko font { color: #3a2a2a; }
 #sp-title h1.mh-title-item .mh_product_name {padding-top:0;}
 #sp-title h1.mh-title-item .ko.desc {font-size:22px}
@@ -17,7 +17,7 @@
 	font-weight: 600;
 	color: #969696;
 	margin-top: 20px;
-	letter-spacing: 5px;
+	letter-spacing: 5px;#titleArea
 }
 #sp-title .best_link {
 	width: 1200px;

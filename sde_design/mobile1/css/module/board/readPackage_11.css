@@ -32,5 +32,5 @@
 .xans-board-product .prdInfo h3 { font-size:13px; color:#1b1b1b; }
 .xans-board-product .prdInfo h3 img { vertical-align:middle; }
 .xans-board-product .prdInfo p { margin:14px 0 0; }
-.xans-board-product .prdInfo p.price { font-size:11px; color:#508bed; font-weight:bold; }
-.xans-board-product .prdInfo p.button a { margin-bottom:2px; }
+.xans-board-product .prdInfo p.price { font-size:12px; color:#508bed; font-weight:bold; }
+.xans-board-product .prdInfo p.button a { height: 20px; font-size: 11px; }

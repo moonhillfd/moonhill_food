@@ -361,7 +361,7 @@
 	.xans-product-imagestyle .prdIcon { z-index:2; position:absolute; width:100px; height:100px; background-repeat:no-repeat; background-size: 100px;}
 	.ec-product-bgLT { top: 10px; left: 10px; background-position: center;}
 	.ec-product-bgLC { background-position:left center; }
-	.ec-product-bgLB { background-position:left bottom; }
+	.ec-product-bgLB { left: 10px; bottom: 10px; background-position: center; }
 	.ec-product-bgRT { top: 10px; right: 10px; background-position: center; }
 	.ec-product-bgRC { background-position:right center; }
 	.ec-product-bgRB { right: 10px; bottom: 10px; background-position: center; }
