@@ -204,7 +204,7 @@
 	.sp-product-colorchip span { display:inline-block; width:6px; height:6px; border-radius:50%; margin-right:3px; }
 
 	/* 상품설명부 */
-	.sp-product-name { position:relative; border-bottom:1px solid #f0f0f0; padding:13px 0 10px; margin-bottom:13px; }
+	.sp-product-name { position:relative; padding:13px 0 10px; margin-bottom:13px; }
 
 	/* 상품랭킹부 */
 	.sp-product-ranked { position:relative; top:7px; margin:0 7px; border:1px solid #f5f5f5; border-bottom:none; text-align:center; padding:10px 0 9px 0; letter-spacing:0.2em; font-size:9px; }
@@ -378,7 +378,7 @@
 	.sp-sort-result:after { content:''; position:absolute; width:100%; height:1px; background:#f0f0f0; bottom:0; left:0; }
 	.sp-sort-result .sp-sort-element { display:inline-block; position:relative; vertical-align:top; }
 	.sp-sort-result .sp-left { float:left; }
-	.sp-sort-result .sp-right { float:right; }
+	.sp-sort-result .sp-right { display: none; float:right; }
 	.sp-sort-result a { cursor:pointer; color:#999; position:relative; z-index:1; font-size:9px; letter-spacing:0.1em; line-height:30px; padding:2px 0 0 0; display:inline-block; }
 	.sp-sort-result a:hover,
 	.sp-sort-result .sort,
