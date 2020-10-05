@@ -12,7 +12,7 @@
 
 /* 가로형 */
   /* 쓰기 타입 */
-    .ec-base-table.typeWrite td { padding:8px 10px 7px; }
+    .ec-base-table.typeWrite td { padding: 15px; }
     .ec-base-table.typeWrite img { max-width:100% !important; height:auto !important; }
 
 /* 세로형 */

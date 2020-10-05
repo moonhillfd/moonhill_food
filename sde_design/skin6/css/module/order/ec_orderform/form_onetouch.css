@@ -271,7 +271,7 @@ input:-webkit-autofill { -webkit-box-shadow:0 0 0 50px #fff inset; -webkit-text-
 #mCafe24Order .ec-base-table td.clear { padding:0 !important; }
 /* typeWrite */
 #mCafe24Order .ec-base-table.typeWrite tbody th { padding:14px 0 14px 14px; }
-#mCafe24Order .ec-base-table.typeWrite td { padding:8px 14px 7px 8px; }
+#mCafe24Order .ec-base-table.typeWrite td { padding: 15px; }
 /* typeView */
 #mCafe24Order .ec-base-table.typeView { color:#999; font-size:15px; }
 #mCafe24Order .ec-base-table.typeView > table > tbody > tr > th { padding:16px 0 26px; border-top:1px solid #eaeaea; }
