@@ -117,6 +117,8 @@ figure { margin: 0; }
 
 /* 메인 - 베스트셀러 */
 .main_event .bestseller {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 50px;
 	padding: 0 10px;
 	box-sizing: border-box;
@@ -128,7 +130,6 @@ figure { margin: 0; }
 }
 .main_event .bestseller > li {
 	width: 50%;
-	float: left;
 }
 .main_event .bestseller li a {
 	display: block;

@@ -180,7 +180,9 @@ div[layout="sp-layout-fixed"] {width:1200px;}
 
 /* 메인 - 베스트셀러 */
 .main_event .bestseller {
+	display: flex;
 	width: 1200px;
+	justify-content: center;
 	margin: 0 auto;
 }
 .main_event .bestseller:after {
@@ -191,7 +193,6 @@ div[layout="sp-layout-fixed"] {width:1200px;}
 .main_event .bestseller > li {
 	width: 50%;
 	padding: 0 50px;
-	float: left;
 }
 .main_event .bestseller li a {
 	display: block;
