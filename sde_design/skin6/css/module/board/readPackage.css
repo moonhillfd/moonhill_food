@@ -7,11 +7,12 @@
 /* read */
 .xans-board-read .ec-base-table .etcArea li { display:inline-block; margin:0 0 9px; padding:8px 20px 10px; vertical-align:top; line-height:22px; color:#666; }
 .xans-board-read .ec-base-table .etcArea li a { text-decoration:none; }
-.xans-board-read .ec-base-table .detail { padding:30px 20px; /*border-top:1px solid #eaeaea;*/ margin:-9px 0 0; word-break:break-all; /* 수정 → */ line-height:1.65; font-size:18px;}
+.xans-board-read .ec-base-table .detail { padding:30px 20px; /*border-top:1px solid #eaeaea;*/ word-break:break-all; /* 수정 → */ line-height:1.65; font-size:18px;}
 .xans-board-read .ec-base-table .detail ol,
 .xans-board-read .ec-base-table .detail ul { margin:15px 0; padding:0 0 0 40px; }
 .xans-board-read .ec-base-table .detail ol li { list-style:decimal; }
 .xans-board-read .ec-base-table .detail ul li { list-style:disc; }
+.xans-board-read .ec-base-table .detail p > span { font-size: 14px !important; }
 .xans-board-read .ec-base-table tr.attach a { padding:0 0 0 12px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 0; color:#8f8f8f; }
 .xans-board-read .ec-base-table tr.attach a:hover { text-decoration:underline; }
 

@@ -46,7 +46,7 @@ i.xans-layout-statelogoff + .sp-base-box { display:none; }
 /* 사용자 박스 */
 .sp-base-userbox { position:relative; padding-left:200px; line-height:1.4; min-height:60px; margin:0 0 10px 0; }
 .sp-base-userboxline { content:''; position:absolute; width:1px; top:30px; bottom:30px; left:200px; background:#f0f0f0; }
-.sp-base-userbox .thumb { position:absolute; top:0; left:20px; width:60px; }
+.sp-base-userbox .thumb { position:absolute; top:50%; left:20px; width:60px; transform: translateY(-50%) }
 .sp-base-userbox .thumb img { width:100%; }
 .sp-base-userbox .sp-base-description { font-size:12px; }
 .sp-base-userbox .sp-base-description-more { margin:11px 0 0 0; padding:10px 0 0 0; border-top:1px solid #f0f0f0; }
